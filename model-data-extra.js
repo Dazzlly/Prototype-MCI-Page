@@ -1,5 +1,6 @@
 // model-data-extra.js — Dados detalhados adicionais (complementa MODEL_DETAILS de data.js)
 // Cores, galerias e especificações extraídas do site oficial motochefebrasil.com.br
+// e da loja motochefeitaim.com.br
 
 Object.assign(MODEL_DETAILS, {
 
@@ -7,10 +8,9 @@ Object.assign(MODEL_DETAILS, {
 
   mia: {
     colors: [
+      { name: "Violeta Escuro", hex: "#4a3159" },
       { name: "Preto", hex: "#1a1a1a" },
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Vermelha", hex: "#a01d1d" },
-      { name: "Branca", hex: "#e8e8e8" }
+      { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_4-1.webp",
@@ -23,31 +23,37 @@ Object.assign(MODEL_DETAILS, {
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
       { icon: "📋", text: "Dispensa emplacamento" },
-      { icon: "🔋", text: "Bateria de lítio 60V 20A removível" },
+      { icon: "🔋", text: "Bateria de lítio 60V 20Ah removível" },
       { icon: "🔧", text: "Freios a disco dianteiro e traseiro" },
       { icon: "🖥️", text: "Painel digital moderno" },
       { icon: "📦", text: "Porta-treco sob o banco" },
       { icon: "🔊", text: "Alarme com sistema antifurto" },
-      { icon: "⚡", text: "3 níveis de velocidade" }
+      { icon: "🔄", text: "Marcha ré" },
+      { icon: "🛡️", text: "Resistência à água IP64" },
+      { icon: "🏍️", text: "Banco duplo com baú" }
     ],
     specs: [
       { label: "Motor", value: "1000W" },
-      { label: "Tipo de Bateria", value: "Lítio 60V 20A (removível)" },
+      { label: "Tipo de Bateria", value: "Lítio 60V 20Ah (removível)" },
       { label: "Autonomia", value: "até 40 km" },
       { label: "Velocidade Máxima", value: "32 km/h" },
-      { label: "Tempo de Recarga", value: "6 a 7 horas" },
-      { label: "Níveis de Velocidade", value: "3" },
+      { label: "Escalada", value: "30°" },
+      { label: "Carga Máxima", value: "150 kg" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
+      { label: "Tempo de Recarga", value: "6 a 8 horas" },
       { label: "Freios", value: "Disco dianteiro e traseiro" },
-      { label: "Painel", value: "Digital" },
-      { label: "Extras", value: "Porta-treco, Alarme antifurto" }
+      { label: "Resistência à Água", value: "IP64" },
+      { label: "Marcha Ré", value: "Sim" },
+      { label: "NFC", value: "Não" }
     ]
   },
 
   "jet-max": {
     colors: [
-      { name: "Preto", hex: "#1a1a1a" },
       { name: "Azul", hex: "#1e5b94" },
-      { name: "Vermelha", hex: "#a01d1d" }
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Branco", hex: "#e8e8e8" },
+      { name: "Vermelho", hex: "#a01d1d" }
     ],
     gallery: [
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jetmax_cor-3.webp",
@@ -59,31 +65,35 @@ Object.assign(MODEL_DETAILS, {
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
       { icon: "📋", text: "Dispensa emplacamento" },
-      { icon: "🔋", text: "Bateria LiFePo4 60V 30A" },
+      { icon: "🔋", text: "Bateria LiFePo4 60V 30Ah" },
       { icon: "📱", text: "Tecnologia NFC (pulseira e cartão)" },
       { icon: "💡", text: "Farol em LED" },
       { icon: "🖥️", text: "Painel em LED colorido" },
       { icon: "⚖️", text: "Carga máxima: 180 kg" },
-      { icon: "🔊", text: "Buzina e indicadores luminosos" }
+      { icon: "🔄", text: "Marcha ré" },
+      { icon: "🛡️", text: "Resistência à água IP64" },
+      { icon: "🔊", text: "Alarme com bloqueio" }
     ],
     specs: [
       { label: "Motor", value: "1000W" },
-      { label: "Tipo de Bateria", value: "Lítio Ferro Fosfato (LiFePo4) 60V 30A" },
+      { label: "Tipo de Bateria", value: "Lítio Ferro Fosfato (LiFePo4) 60V 30Ah" },
       { label: "Autonomia", value: "até 55 km" },
       { label: "Velocidade Máxima", value: "32 km/h" },
       { label: "Carga Máxima", value: "180 kg" },
-      { label: "Carregador", value: "Bivolt" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
       { label: "Tempo de Recarga", value: "6 a 8 horas" },
+      { label: "Freios", value: "Disco hidráulico (dianteiro e traseiro)" },
+      { label: "Resistência à Água", value: "IP64" },
       { label: "Conectividade", value: "NFC (pulseira e cartão)" },
-      { label: "Extras", value: "Amortecedor, Baú integrado, Chave reserva" }
+      { label: "Marcha Ré", value: "Sim" }
     ]
   },
 
   jet: {
     colors: [
-      { name: "Preto", hex: "#1a1a1a" },
       { name: "Azul", hex: "#1e5b94" },
-      { name: "Vermelha", hex: "#a01d1d" }
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jet_cor_1-1.webp",
@@ -95,23 +105,27 @@ Object.assign(MODEL_DETAILS, {
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
       { icon: "📋", text: "Dispensa emplacamento" },
-      { icon: "🔋", text: "Bateria de lítio 60V 20A removível" },
-      { icon: "🔧", text: "Freios a disco dianteiro e traseiro" },
+      { icon: "🔋", text: "Bateria de lítio 60V 20Ah removível" },
+      { icon: "🔧", text: "Freios hidráulicos a disco (dianteiro e traseiro)" },
       { icon: "🖥️", text: "Painel digital moderno" },
       { icon: "📦", text: "Porta-treco sob o banco" },
       { icon: "🔊", text: "Alarme com sistema antifurto" },
-      { icon: "⚖️", text: "Suporta até 150 kg" }
+      { icon: "🔄", text: "Marcha ré" },
+      { icon: "🏍️", text: "Baú e banco duplo" }
     ],
     specs: [
       { label: "Motor", value: "1000W" },
-      { label: "Tipo de Bateria", value: "Lítio 60V 20A (removível)" },
+      { label: "Tipo de Bateria", value: "Lítio 60V 20Ah (removível)" },
       { label: "Autonomia", value: "até 40 km" },
       { label: "Velocidade Máxima", value: "32 km/h" },
+      { label: "Escalada", value: "30°" },
       { label: "Carga Máxima", value: "150 kg" },
-      { label: "Tempo de Recarga", value: "6 a 7 horas" },
-      { label: "Níveis de Velocidade", value: "3" },
-      { label: "Freios", value: "Disco dianteiro e traseiro" },
-      { label: "Extras", value: "Bagageiro, Alarme antifurto, Painel digital" }
+      { label: "Carregador", value: "Bivolt 110/220V" },
+      { label: "Tempo de Recarga", value: "6 a 8 horas" },
+      { label: "Freios", value: "Disco hidráulico (dianteiro e traseiro)" },
+      { label: "Resistência à Água", value: "IP64" },
+      { label: "Marcha Ré", value: "Sim" },
+      { label: "NFC", value: "Não" }
     ]
   },
 
@@ -189,11 +203,11 @@ Object.assign(MODEL_DETAILS, {
 
   "joy-super": {
     colors: [
-      { name: "Preto", hex: "#1a1a1a" },
       { name: "Azul", hex: "#1e5b94" },
-      { name: "Vermelha", hex: "#a01d1d" },
-      { name: "Branca", hex: "#e8e8e8" },
-      { name: "Verde", hex: "#2d6a4f" }
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Branco", hex: "#e8e8e8" },
+      { name: "Cinza", hex: "#6b6b6b" },
+      { name: "Vermelho", hex: "#a01d1d" }
     ],
     gallery: [
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/joysuper5.webp",
@@ -206,8 +220,8 @@ Object.assign(MODEL_DETAILS, {
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
       { icon: "📋", text: "Dispensa emplacamento" },
-      { icon: "🔋", text: "Bateria de lítio 60V 20A removível" },
-      { icon: "🔧", text: "Freios a disco dianteiro e traseiro" },
+      { icon: "🔋", text: "Bateria de lítio 60V 20Ah removível" },
+      { icon: "🔧", text: "Freios a tambor dianteiro e traseiro" },
       { icon: "🛒", text: "Cesta frontal reforçada" },
       { icon: "🖥️", text: "Painel digital de alto contraste" },
       { icon: "⚖️", text: "Suporta até 150 kg" },
@@ -215,13 +229,16 @@ Object.assign(MODEL_DETAILS, {
     ],
     specs: [
       { label: "Motor", value: "800W" },
-      { label: "Tipo de Bateria", value: "Lítio 60V 20A (removível)" },
+      { label: "Tipo de Bateria", value: "Lítio 60V 20Ah (removível)" },
       { label: "Autonomia", value: "até 40 km" },
       { label: "Velocidade Máxima", value: "32 km/h" },
+      { label: "Escalada", value: "20°" },
       { label: "Carga Máxima", value: "150 kg" },
-      { label: "Carregador", value: "Bivolt" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
       { label: "Tempo de Recarga", value: "6 a 8 horas" },
+      { label: "Freios", value: "Tambor (dianteiro e traseiro)" },
       { label: "Rodas", value: "Ferro 14 x 2.75\"" },
+      { label: "Resistência à Água", value: "IP64" },
       { label: "Peso do Veículo", value: "48,5 kg" }
     ]
   },
@@ -300,22 +317,37 @@ Object.assign(MODEL_DETAILS, {
   },
 
   soma: {
+    colors: [
+      { name: "Prata", hex: "#b8b8b8" },
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Branco", hex: "#e8e8e8" }
+    ],
     gallery: [
-      "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/soma_prod3.webp"
+      "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/Soma-Prata.jpg",
+      "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/WhatsApp-Image-2024-09-12-at-13.27.37.jpeg"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
       { icon: "📋", text: "Dispensa emplacamento" },
-      { icon: "🔋", text: "Bateria de lítio removível" },
-      { icon: "🔧", text: "Suspensão dupla" },
-      { icon: "💺", text: "Banco confortável" }
+      { icon: "🔋", text: "Bateria de lítio 60V 20Ah removível" },
+      { icon: "🔧", text: "Freios disco hidráulico (diant.) / tambor (tras.)" },
+      { icon: "💡", text: "Faróis FULL LED" },
+      { icon: "📱", text: "Tecnologia NFC" },
+      { icon: "🔊", text: "Alarme antifurto" },
+      { icon: "🏍️", text: "Banco duplo" }
     ],
     specs: [
       { label: "Motor", value: "1000W" },
-      { label: "Autonomia", value: "até 40 km" },
+      { label: "Tipo de Bateria", value: "Lítio 60V 20Ah (removível)" },
+      { label: "Autonomia", value: "até 45 km" },
       { label: "Velocidade Máxima", value: "32 km/h" },
-      { label: "Bateria", value: "Lítio removível" },
-      { label: "Extras", value: "Suspensão dupla, Banco confortável" }
+      { label: "Escalada", value: "12°" },
+      { label: "Carga Máxima", value: "150 kg" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
+      { label: "Tempo de Recarga", value: "6 a 8 horas" },
+      { label: "Freios", value: "Disco hidráulico (diant.) / Tambor (tras.)" },
+      { label: "Resistência à Água", value: "IP64" },
+      { label: "NFC", value: "Sim" }
     ]
   },
 
@@ -407,21 +439,39 @@ Object.assign(MODEL_DETAILS, {
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
       { icon: "📋", text: "Dispensa emplacamento" },
-      { icon: "🔋", text: "Bateria removível" },
-      { icon: "💺", text: "Conforto prioritário" },
+      { icon: "🔋", text: "Bateria 60V 20Ah removível" },
+      { icon: "🔄", text: "Marcha ré" },
+      { icon: "🛡️", text: "Resistência à água IP64" },
       { icon: "🛡️", text: "Estabilidade de triciclo" }
     ],
     specs: [
       { label: "Motor", value: "1000W" },
-      { label: "Autonomia", value: "até 45 km" },
+      { label: "Tipo de Bateria", value: "Lítio 60V 20Ah (removível)" },
+      { label: "Autonomia", value: "até 40 km" },
       { label: "Velocidade Máxima", value: "32 km/h" },
-      { label: "Bateria", value: "Removível" }
+      { label: "Escalada", value: "30°" },
+      { label: "Carga Máxima", value: "150 kg" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
+      { label: "Marcha Ré", value: "Sim" },
+      { label: "NFC", value: "Não" }
     ]
   },
 
   x15: {
+    colors: [
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Azul", hex: "#1e5b94" },
+      { name: "Vermelho", hex: "#a01d1d" },
+      { name: "Branco", hex: "#e8e8e8" },
+      { name: "Cinza", hex: "#6b6b6b" }
+    ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x15.webp"
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x15.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cores_mc20-13.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cores_mc20-14.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cores_mc20-7.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x15_1.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg"
     ],
     features: [
       { icon: "🆔", text: "Partida por cartão NFC" },
@@ -429,7 +479,9 @@ Object.assign(MODEL_DETAILS, {
       { icon: "🔄", text: "Marcha ré" },
       { icon: "🖥️", text: "Painel digital" },
       { icon: "⚖️", text: "Capacidade: 200 kg" },
-      { icon: "🔋", text: "Suporte para bateria extra" }
+      { icon: "🔋", text: "Suporte para bateria extra" },
+      { icon: "💡", text: "Farol de LED com 3 níveis" },
+      { icon: "🛡️", text: "Resistente à água (IP65)" }
     ],
     specs: [
       { label: "Motor", value: "3000W" },
@@ -437,30 +489,47 @@ Object.assign(MODEL_DETAILS, {
       { label: "Velocidade Máxima", value: "50 km/h" },
       { label: "Carga Máxima", value: "200 kg" },
       { label: "Rodas", value: "Liga leve aro 10\"" },
-      { label: "Extras", value: "NFC, Marcha ré, Freios disco, Bateria extra" }
+      { label: "Tempo de Recarga", value: "6-8 horas" },
+      { label: "Extras", value: "NFC, Marcha ré, Alarme, Bateria extra" }
     ]
   },
 
   // ===== CICLOMOTORES =====
 
   x11: {
+    colors: [
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Azul", hex: "#1e5b94" },
+      { name: "Vermelho", hex: "#a01d1d" },
+      { name: "Branco", hex: "#e8e8e8" },
+      { name: "Cinza", hex: "#6b6b6b" }
+    ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11__-1.webp"
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11__-1.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-15.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-8.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-13.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-2.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11.webp"
     ],
     features: [
-      { icon: "🆔", text: "Partida NFC" },
+      { icon: "🆔", text: "Liga/desliga com cartão NFC" },
       { icon: "🔧", text: "Freios a disco" },
-      { icon: "🔋", text: "Bateria removível" },
+      { icon: "🔋", text: "Bateria removível + compartimento extra" },
       { icon: "🖥️", text: "Painel digital" },
-      { icon: "⚡", text: "Versões 2000W–3000W" },
-      { icon: "📋", text: "Exige CNH e emplacamento" }
+      { icon: "💡", text: "Farol de LED com 3 níveis" },
+      { icon: "⚖️", text: "Capacidade: até 180 kg" },
+      { icon: "🔊", text: "Alarme com bloqueio e trava" },
+      { icon: "🛡️", text: "Resistente à água (IP65)" }
     ],
     specs: [
-      { label: "Motor", value: "2000W–3000W" },
+      { label: "Motor", value: "2000W / 3000W" },
       { label: "Autonomia", value: "até 40 km (80 km com bateria extra)" },
-      { label: "Velocidade Máxima", value: "50 km/h" },
-      { label: "Bateria", value: "Removível" },
-      { label: "Extras", value: "NFC, Freios disco, Painel digital" }
+      { label: "Velocidade Máxima", value: "50 km/h (2000W) / 70 km/h (3000W)" },
+      { label: "Carga Máxima", value: "180 kg" },
+      { label: "Rodas", value: "Liga leve aro 10\" (2000W) / aro 12\" (3000W)" },
+      { label: "Tempo de Recarga", value: "6-8 horas" },
+      { label: "Extras", value: "NFC, Alarme, Bateria extra, IP65" }
     ]
   },
 
@@ -486,21 +555,38 @@ Object.assign(MODEL_DETAILS, {
   },
 
   roma: {
+    colors: [
+      { name: "Azul", hex: "#1e5b94" },
+      { name: "Creme", hex: "#f0e6d2" },
+      { name: "Preta", hex: "#1a1a1a" }
+    ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_ai_sombra-1.webp"
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_ai_sombra-1.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_color-1.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_color-2.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_color-3.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/bancoDuplo.webp"
     ],
     features: [
-      { icon: "🎨", text: "Design retrô" },
-      { icon: "🔋", text: "Bateria de lítio 72V 25Ah" },
-      { icon: "🔧", text: "Desempenho elétrico" },
+      { icon: "🎨", text: "Design retrô italiano" },
+      { icon: "🔋", text: "Bateria de lítio 72V 25Ah removível" },
+      { icon: "🔧", text: "Freios a disco hidráulicos" },
+      { icon: "📱", text: "Tecnologia NFC" },
+      { icon: "🔄", text: "Marcha ré e Modo parking" },
+      { icon: "🔊", text: "Alarme com bloqueio e trava" },
+      { icon: "⚡", text: "3 níveis de velocidade" },
       { icon: "📋", text: "Exige CNH e emplacamento" }
     ],
     specs: [
       { label: "Motor", value: "3000W" },
-      { label: "Tipo de Bateria", value: "Lítio 72V 25Ah" },
+      { label: "Tipo de Bateria", value: "Lítio 72V 25Ah (removível)" },
       { label: "Autonomia", value: "até 50 km" },
       { label: "Velocidade Máxima", value: "50 km/h" },
-      { label: "Extras", value: "Design retrô, Desempenho elétrico" }
+      { label: "Carregador", value: "Bivolt" },
+      { label: "Tempo de Recarga", value: "4 a 6 horas" },
+      { label: "Freios", value: "Disco hidráulico traseiro" },
+      { label: "Conectividade", value: "NFC" },
+      { label: "Extras", value: "Marcha ré, Parking, Alarme, Bateria extra" }
     ]
   },
 

@@ -125,10 +125,11 @@ const MODEL_DETAILS = {
   x12: {
     colors: [
       { name: "Preto", hex: "#1a1a1a" },
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Vermelha", hex: "#a01d1d" },
-      { name: "Cinza", hex: "#6b6b6b" },
-      { name: "Branca", hex: "#e8e8e8" },
+      { name: "Azul Celeste", hex: "#4a90d9" },
+      { name: "Vermelho", hex: "#a01d1d" },
+      { name: "Carbono", hex: "#3a3a3a" },
+      { name: "Branco", hex: "#e8e8e8" },
+      { name: "Amarelo", hex: "#d4a017" },
       { name: "Palmeiras", type: "shield", edition: "palmeiras" }
     ],
     gallery: [
