@@ -59,12 +59,17 @@
     .mci-adv-icon { font-size: 2.5rem; margin-bottom: 15px; }
 
     /* Destaques — pista horizontal deslizante */
+    .featured-track-wrap {
+      overflow: hidden;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
     #featured-grid {
       display: flex !important;
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 24px;
-      padding-bottom: 16px;
+      padding: 0 24px;
       -webkit-overflow-scrolling: touch;
     }
     #featured-grid::-webkit-scrollbar { height: 6px; }
@@ -162,7 +167,12 @@
         <h2 class="section-title">Destaques <span class="accent">da Loja</span></h2>
         <div class="bar" style="margin: 0 auto;"></div>
       </div>
+      </div>
+    </div>
+    <div class="featured-track-wrap">
       <div id="featured-grid"></div>
+    </div>
+    <div class="container">
       <div style="text-align:center;margin-top:48px;">
         <a href="./modelos.html" class="btn btn-outline" style="padding:12px 32px;border-color:rgba(224,168,46,0.4);color:var(--primary);">Ver Catálogo Completo →</a>
       </div>
@@ -290,7 +300,7 @@
     const featured = featuredOrder.map(name => VEHICLES.find(v => v.name === name)).filter(Boolean);
     const fmtP = v => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
     document.getElementById("featured-grid").innerHTML = featured.map(v => `
-      <article class="veh-card reveal" data-delay="0">
+      <article class="veh-card" data-delay="0">
         <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
           <div class="veh-img">
             <img src="${v.featured_image || v.image_url}" alt="${v.name}" loading="lazy">
