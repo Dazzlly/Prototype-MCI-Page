@@ -249,3 +249,25 @@ section { position: relative; }
 /* ---------- Animations ---------- */
 @keyframes floatA { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-20px) rotate(3deg); } }
 @keyframes floatB { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-15px) rotate(-2deg); } }
+
+/* CONFIGURAÇÕES GLOBAIS DO HEADER E SEÇÕES (MCI) */
+.site-header { position: fixed !important; top: 0; left: 0; width: 100%; z-index: 1000; background-color: rgba(10, 10, 10, 0.6) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.site-header .header-inner { max-width: 96% !important; width: 100% !important; justify-content: space-between !important; }
+.site-logo { height: 45px !important; object-fit: contain; }
+.nav-links a { font-family: 'Montserrat', sans-serif !important; font-size: 1.15rem !important; font-weight: 500 !important; color: #ffffff !important; text-decoration: none !important; position: relative; padding-bottom: 5px; }
+.nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: #F5C518; transition: width 0.3s ease; }
+.nav-links a:hover { color: #F5C518 !important; }
+.nav-links a:hover::after { width: 100%; }
+button, .btn, a.btn, [class*="btn"], [class*="button"] { border-radius: 0 !important; }
+.card, [class*="card"], article { border-radius: 12px !important; overflow: hidden; }
+
+/* CALCULADORA E VANTAGENS */
+.mci-custom-section { padding: 80px 5%; background-color: var(--bg-color, #0a0a0a); text-align: center; color: #fff;}
+.mci-custom-section-alt { background-color: var(--card-bg, #121212); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);}
+.mci-calc-box { max-width: 600px; margin: 0 auto; background-color: rgba(0,0,0,0.5); padding: 30px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); text-align: left;}
+.mci-calc-row { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1rem; }
+.mci-calc-result { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: var(--primary, #e0a82e); font-size: 1.5rem; font-weight: bold; text-align: center; }
+.mci-advantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;}
+.mci-adv-item { text-align: center; padding: 30px 20px; background-color: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;}
+.mci-adv-item:hover { transform: translateY(-5px); border-color: rgba(224,168,46,0.3); }
+.mci-adv-icon { font-size: 2.5rem; margin-bottom: 15px; }
