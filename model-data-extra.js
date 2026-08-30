@@ -8,15 +8,15 @@ Object.assign(MODEL_DETAILS, {
 
   mia: {
     colors: [
-      { name: "Violeta Escuro", hex: "#4a3159" },
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Branco", hex: "#e8e8e8" }
+      { name: "Preta", hex: "#1a1a1a" },
+      { name: "Azul", hex: "#1e5b94" },
+      { name: "Branca", hex: "#e8e8e8" }
     ],
     gallery: [
+      "images/mia-preta.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_4-1.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_3-1.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_1-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_5-1.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_farol.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/miaa-1.webp"
     ],
