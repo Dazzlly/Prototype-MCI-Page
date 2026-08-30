@@ -1,5 +1,4 @@
 // Render do catálogo com busca e filtro (página Modelos)
-
 const FILTERS = ["Todos", "Autopropelidos", "Ciclomotores", "Triciclos", "E-bikes"];
 
 function specIcon(type) {
@@ -15,9 +14,11 @@ function vehicleCard(v) {
   if (v.power_w) specs.push(`<span class="veh-spec">${specIcon("power")} ${v.power_w}W</span>`);
   if (v.range_km) specs.push(`<span class="veh-spec">${specIcon("range")} ${v.range_km} km</span>`);
   if (v.top_speed_kmh) specs.push(`<span class="veh-spec">${specIcon("speed")} ${v.top_speed_kmh} km/h</span>`);
-  const priceBlock = v.price
-    ? `<p class="veh-price">${fmtPrice(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>`
+  
+  const priceBlock = v.price 
+    ? `<p class="veh-price">${fmtPrice(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` 
     : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`;
+    
   return `
     <article class="veh-card reveal" data-delay="0">
       <div class="veh-img">
@@ -42,34 +43,31 @@ function renderCatalog() {
   const grid = document.getElementById("catalog-grid");
   const empty = document.getElementById("catalog-empty");
   if (!grid) return;
-
+  
   const search = document.getElementById("catalog-search").value.trim().toLowerCase();
   const filter = document.getElementById("catalog-filter").dataset.current || "Todos";
 
-  const filtered = VEHICLES.filter((v) => {
-      const productCategories = (v.category || "").split(',').map(c => c.trim().toLowerCase());
-      
-     // Função auxiliar para normalizar singular/plural de forma segura
-    const normalizeCategory = (str) => {
-      return (str || "").toLowerCase()
-        .replace(/es$/, '')
-        .replace(/s$/, '');
-    };
+  const normalizeCategory = (str) => {
+    return (str || "").toLowerCase()
+      .replace(/es$/, '')
+      .replace(/s$/, '');
+  };
 
-    const filtered = VEHICLES.filter((v) => {
-      const productCategories = (v.category || "").split(',').map((c) => normalizeCategory(c.trim()));
-      const cleanFilter = normalizeCategory(filter);
+  const filtered = VEHICLES.filter((v) => {
+    const productCategories = (v.category || "").split(',').map((c) => normalizeCategory(c.trim()));
+    const cleanFilter = normalizeCategory(filter);
+    
+    const matchCat = (filter === "Todos") || productCategories.some((cat) => cat === cleanFilter || cat.includes(cleanFilter));
+    
+    const searchStr = (search || "").toLowerCase();
+    const matchSearch = !search || 
+      (v.name || "").toLowerCase().includes(searchStr) || 
+      (v.description || "").toLowerCase().includes(searchStr) || 
+      (v.category || "").toLowerCase().includes(searchStr);
       
-      const matchCat = (filter === "Todos") || productCategories.some((cat) => cat === cleanFilter || cat.includes(cleanFilter));
-      
-      const searchStr = (search || "").toLowerCase();
-      const matchSearch = !search || 
-        (v.name || "").toLowerCase().includes(searchStr) || 
-        (v.description || "").toLowerCase().includes(searchStr) || 
-        (v.category || "").toLowerCase().includes(searchStr);
-        
-      return matchCat && matchSearch;
-    });
+    return matchCat && matchSearch;
+  });
+
   grid.innerHTML = filtered.map(vehicleCard).join("");
   if (empty) empty.style.display = filtered.length === 0 ? "block" : "none";
 
@@ -94,8 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
       filterRow.appendChild(b);
     });
   }
+  
   const search = document.getElementById("catalog-search");
   if (search) search.addEventListener("input", renderCatalog);
-
+  
   renderCatalog();
 });
