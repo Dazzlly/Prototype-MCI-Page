@@ -14,7 +14,7 @@ Object.assign(MODEL_DETAILS, {
     ],
     gallery: [
       "images/mia-preta.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_4-1.webp",
+      "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/mia.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_3-1.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_1-1.webp",
       "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_farol.webp",
