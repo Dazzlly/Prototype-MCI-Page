@@ -49,23 +49,24 @@ function renderCatalog() {
   const filtered = VEHICLES.filter((v) => {
       const productCategories = (v.category || "").split(',').map(c => c.trim().toLowerCase());
       
-     // Função auxiliar para normalizar singular/plural (ex: Ciclomotores -> Ciclomotor, Triciclos -> Triciclo)
+     // Função auxiliar para normalizar singular/plural de forma segura
     const normalizeCategory = (str) => {
-      return str.toLowerCase()
-        .replace(/es$/, '') // Remove o 'es' do final (ex: ciclomotores -> ciclomotor)
-        .replace(/s$/, '');  // Remove o 's' do final (ex: triciclos -> triciclo, autopropelidos -> autopropelido)
+      return (str || "").toLowerCase()
+        .replace(/es$/, '')
+        .replace(/s$/, '');
     };
 
     const filtered = VEHICLES.filter((v) => {
-      const productCategories = (v.category || "").split(',').map(c => normalizeCategory(c.trim()));
+      const productCategories = (v.category || "").split(',').map((c) => normalizeCategory(c.trim()));
       const cleanFilter = normalizeCategory(filter);
       
-      const matchCat = filter === "Todos" || productCategories.some(cat => cat === cleanFilter || cat.includes(cleanFilter));
+      const matchCat = (filter === "Todos") || productCategories.some((cat) => cat === cleanFilter || cat.includes(cleanFilter));
       
+      const searchStr = (search || "").toLowerCase();
       const matchSearch = !search || 
-        (v.name || "").toLowerCase().includes(search) || 
-        (v.description || "").toLowerCase().includes(search) || 
-        (v.category || "").toLowerCase().includes(search);
+        (v.name || "").toLowerCase().includes(searchStr) || 
+        (v.description || "").toLowerCase().includes(searchStr) || 
+        (v.category || "").toLowerCase().includes(searchStr);
         
       return matchCat && matchSearch;
     });
