@@ -87,21 +87,21 @@
   <section class="section-pad">
     <div class="container">
       <div class="cat-grid">
-        <a href="./modelos.html" class="cat-card reveal" data-delay="0">
+        <a href="./modelos.html?cat=Autopropelidos" class="cat-card reveal" data-delay="0">
           <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2024/09/mia.webp" alt="Autopropelidos"></div>
-          <div class="cat-body"><h3>AUTOPROPELIDOS</h3><p>13 Modelos</p></div>
+          <div class="cat-body"><h3>AUTOPROPELIDOS</h3><p id="count-Autopropelidos">Calculando...</p></div>
         </a>
-        <a href="./modelos.html" class="cat-card reveal" data-delay="100">
+        <a href="./modelos.html?cat=Ciclomotores" class="cat-card reveal" data-delay="100">
           <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x11.webp" alt="Ciclomotores"></div>
-          <div class="cat-body"><h3>CICLOMOTORES</h3><p>4 Modelos</p></div>
+          <div class="cat-body"><h3>CICLOMOTORES</h3><p id="count-Ciclomotores">Calculando...</p></div>
         </a>
-        <a href="./modelos.html" class="cat-card reveal" data-delay="200">
+        <a href="./modelos.html?cat=Triciclos" class="cat-card reveal" data-delay="200">
           <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2025/11/ved_product.webp" alt="Triciclos"></div>
-          <div class="cat-body"><h3>TRICICLOS</h3><p>4 Modelos</p></div>
+          <div class="cat-body"><h3>TRICICLOS</h3><p id="count-Triciclos">Calculando...</p></div>
         </a>
-        <a href="./modelos.html" class="cat-card reveal" data-delay="300">
+        <a href="./modelos.html?cat=E-bikes" class="cat-card reveal" data-delay="300">
           <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2025/10/Style_prodc.webp" alt="E-bikes"></div>
-          <div class="cat-body"><h3>E-BIKES</h3><p>3 Modelos</p></div>
+          <div class="cat-body"><h3>E-BIKES</h3><p id="count-E-bikes">Calculando...</p></div>
         </a>
       </div>
     </div>
@@ -283,6 +283,27 @@
           </div>
         </div>
       </article>`).join("");
+  </script>
+  <script src="./data.js"></script>
+  <script>
+    // Atualiza dinamicamente a contagem real de modelos em cada categoria na Home
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof VEHICLES !== 'undefined') {
+        const normalize = (s) => (s || "").toLowerCase().replace(/es$/, '').replace(/s$/, '');
+        const categories = ["Autopropelidos", "Ciclomotores", "Triciclos", "E-bikes"];
+        
+        categories.forEach((cat) => {
+          const cleanCat = normalize(cat);
+          const count = VEHICLES.filter((v) => {
+            const productCategories = (v.category || "").split(',').map((c) => normalize(c.trim()));
+            return productCategories.some((c) => c === cleanCat || c.includes(cleanCat));
+          }).length;
+          
+          const el = document.getElementById(`count-${cat}`);
+          if (el) el.textContent = `${count} Modelo${count === 1 ? '' : 's'}`;
+        });
+      }
+    });
   </script>
   <script src="./app.js"></script>
 </body>
