@@ -76,13 +76,24 @@ function renderCatalog() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Lê a categoria enviada via URL (ex: ?cat=Triciclos vindo da Home)
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('cat');
+  const initialFilter = catParam ? decodeURIComponent(catParam) : "Todos";
+  
+  // Define o filtro inicial no dataset
+  const filterTarget = document.getElementById("catalog-filter");
+  if (filterTarget) filterTarget.dataset.current = initialFilter;
+
   // filtros
   const filterRow = document.getElementById("filter-row");
   if (filterRow) {
-    FILTERS.forEach((f, i) => {
+    FILTERS.forEach((f) => {
       const b = document.createElement("button");
-      b.className = "filter-btn" + (i === 0 ? " active" : "");
+      const isActive = f.toLowerCase() === initialFilter.toLowerCase();
+      b.className = "filter-btn" + (isActive ? " active" : "");
       b.textContent = f;
+      
       b.addEventListener("click", () => {
         document.querySelectorAll(".filter-btn").forEach((x) => x.classList.remove("active"));
         b.classList.add("active");
