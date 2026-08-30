@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Motochefe Itaim | Itaim Bibi, São Paulo</title>
+  <meta name="description" content="Fale com a Motochefe Itaim. Endereço, WhatsApp, e-mail e formulário de contato direto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html"><img class="site-logo" src="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp" alt="Motochefe Itaim"></a>
+      <nav class="nav-links">
+        <a href="./index.html">Início</a>
+        <a href="./modelos.html">Modelos</a>
+        <a href="./contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://www.instagram.com/motochefe.itaim/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c72eff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a class="icon-btn" href="https://www.facebook.com/profile.php?id=61562114171718" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148aff" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a class="btn btn-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp</a>
+      </div>
+      <button class="menu-toggle" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="./index.html">Início</a>
+      <a href="./modelos.html">Modelos</a>
+      <a href="./contato.html">Contato</a>
+      <a class="btn btn-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </header>
+
+  <section class="page-hero" style="min-height:34vh;">
+    <div class="page-hero-blob1"></div>
+    <div class="page-hero-blob2"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Fale Conosco</span>
+      <h1>Vamos <span class="accent">conversar</span></h1>
+      <p>Tire suas dúvidas, agende um test-drive ou visite nossa loja no Itaim Bibi.</p>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-form-card">
+            <h2>Envie sua mensagem</h2>
+            <p>Sua mensagem será encaminhada direto para o nosso WhatsApp.</p>
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="field"><label for="name">Nome completo</label><input id="name" name="name" required placeholder="Seu nome"></div>
+                <div class="field"><label for="phone">Telefone</label><input id="phone" name="phone" placeholder="(11) 90000-0000"></div>
+              </div>
+              <div class="field"><label for="email">E-mail</label><input id="email" type="email" name="email" placeholder="seu@email.com"></div>
+              <div class="field"><label for="message">Mensagem</label><textarea id="message" name="message" rows="5" placeholder="Conte o que você procura..."></textarea></div>
+              <button type="submit" class="btn btn-wa btn-lg">Enviar pelo WhatsApp</button>
+              <p id="form-status" style="display:none;color:var(--primary);margin-top:16px;font-size:14px;">Abrimos o WhatsApp para você concluir o envio!</p>
+            </form>
+          </div>
+        </div>
+        <div class="reveal" data-delay="120">
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="loc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+              <div><p class="title">Endereço</p><p class="sub">Rua João Cachoeira, 1387<br>Itaim Bibi, São Paulo - SP</p><a href="https://www.google.com/maps/search/?api=1&query=Rua+João+Cachoeira+1387+Itaim+Bibi+São+Paulo" target="_blank" rel="noopener">Ver no Google Maps</a></div>
+            </div>
+            <div class="info-card">
+              <div class="loc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+              <div><p class="title">Telefone</p><p class="sub">(11) 94871-1047</p></div>
+            </div>
+            <div class="info-card">
+              <div class="loc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+              <div><p class="title">E-mail</p><p class="sub">atendimento@motochefeitaim.com.br</p></div>
+            </div>
+            <div class="info-card">
+              <div class="loc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+              <div><p class="title">Horário</p><p class="sub">Segunda a Sexta: 10h - 19h<br>Sábado e Domingo: 10h - 16h</p></div>
+            </div>
+            <div class="contact-socials">
+              <a href="https://www.instagram.com/motochefe.itaim/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+              <a href="https://www.facebook.com/profile.php?id=61562114171718" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+              <a class="wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guarantee" style="padding:80px 0;">
+    <div style="position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:500px;height:260px;background:rgba(224,168,46,0.1);border-radius:50%;filter:blur(110px);"></div>
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:40px;">
+        <span class="eyebrow">Localização</span>
+        <h2 class="section-title" style="font-size:clamp(28px,4vw,40px);color:#fff;margin-top:8px;">No coração do Itaim Bibi</h2>
+      </div>
+      <div class="map-wrap reveal" data-delay="100">
+        <iframe title="Localização Motochefe Itaim" src="https://www.google.com/maps?q=Rua%20João%20Cachoeira%2C%201387%2C%20Itaim%20Bibi%2C%20São%20Paulo&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-blob"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html"><img class="site-logo" src="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp" alt="Motochefe Itaim"></a>
+          <p>Loja Oficial Motochefe em São Paulo. O melhor em Bikes, Motos e Scooters Elétricas!</p>
+          <div class="social-row">
+            <a class="social-ig" href="https://www.instagram.com/motochefe.itaim/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a class="social-fb" href="https://www.facebook.com/profile.php?id=61562114171718" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a class="social-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navegação</h4><ul><li><a href="./index.html">Início</a></li><li><a href="./modelos.html">Modelos</a></li><li><a href="./contato.html">Contato</a></li></ul></div>
+        <div class="footer-col"><h4>Categorias</h4><ul><li><a href="./modelos.html">Scooters</a></li><li><a href="./modelos.html">Bicicletas</a></li><li><a href="./modelos.html">Triciclos</a></li><li><a href="./modelos.html">Autopropelidos</a></li></ul></div>
+        <div class="footer-col"><h4>Contato</h4><ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Rua+João+Cachoeira+1387+Itaim+Bibi+São+Paulo" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Rua João Cachoeira, 1387 — Itaim Bibi, SP</a></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> (11) 3044-7089</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> atendimento@motochefeitaim.com.br</li>
+        </ul></div>
+      </div>
+      <div class="footer-base"><p>© <span id="year"></span> Motochefe Itaim. Todos os direitos reservados.</p><p>Loja Oficial Motochefe em São Paulo</p></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="./contato.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
