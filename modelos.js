@@ -47,13 +47,17 @@ function renderCatalog() {
   const filter = document.getElementById("catalog-filter").dataset.current || "Todos";
 
   const filtered = VEHICLES.filter((v) => {
-    const matchCat = filter === "Todos" || v.category === filter;
-    const matchSearch = !search ||
-      (v.name || "").toLowerCase().includes(search) ||
-      (v.description || "").toLowerCase().includes(search) ||
-      (v.category || "").toLowerCase().includes(search);
-    return matchCat && matchSearch;
-  });
+      // Divide as categorias por vírgula e remove espaços para suportar itens com múltiplas tags
+      const productCategories = (v.category || "").split(',').map(c => c.trim().toLowerCase());
+      const matchCat = filter === "Todos" || productCategories.includes(filter.toLowerCase());
+      
+      const matchSearch = !search || 
+        (v.name || "").toLowerCase().includes(search) || 
+        (v.description || "").toLowerCase().includes(search) || 
+        (v.category || "").toLowerCase().includes(search);
+        
+      return matchCat && matchSearch;
+    });
 
   grid.innerHTML = filtered.map(vehicleCard).join("");
   if (empty) empty.style.display = filtered.length === 0 ? "block" : "none";
