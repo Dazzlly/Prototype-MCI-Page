@@ -57,6 +57,28 @@
     .mci-adv-item { text-align: center; padding: 30px 20px; background-color: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;}
     .mci-adv-item:hover { transform: translateY(-5px); border-color: rgba(224,168,46,0.3); }
     .mci-adv-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+    /* Destaques — pista horizontal deslizante */
+    #featured-grid {
+      display: flex !important;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 24px;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+    #featured-grid::-webkit-scrollbar { height: 6px; }
+    #featured-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+    #featured-grid::-webkit-scrollbar-thumb { background: rgba(224,168,46,0.4); border-radius: 3px; }
+    #featured-grid::-webkit-scrollbar-thumb:hover { background: rgba(224,168,46,0.6); }
+    #featured-grid .veh-card {
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+    }
+    @media (max-width: 639px) {
+      #featured-grid .veh-card { flex: 0 0 85%; }
+    }
   </style>
 </head>
 <body>
@@ -142,7 +164,7 @@
         <h2 class="section-title">Destaques <span class="accent">da Loja</span></h2>
         <div class="bar" style="margin: 0 auto;"></div>
       </div>
-      <div class="veh-grid" id="featured-grid"></div>
+      <div id="featured-grid"></div>
       <div style="text-align:center;margin-top:48px;">
         <a href="./modelos.html" class="btn btn-outline" style="padding:12px 32px;border-color:rgba(224,168,46,0.4);color:var(--primary);">Ver Catálogo Completo →</a>
       </div>
