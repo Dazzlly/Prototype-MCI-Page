@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos — Motochefe Itaim | Scooters, Bikes e Triciclos Elétricos</title>
+  <meta name="description" content="Catálogo oficial de scooters, bicicletas, triciclos e autopropelidos elétricos da Motochefe Itaim.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/webp" href="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html"><img class="site-logo" src="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp" alt="Motochefe Itaim"></a>
+      <nav class="nav-links">
+        <a href="./index.html">Início</a>
+        <a href="./modelos.html">Modelos</a>
+        <a href="./contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://www.instagram.com/motochefe.itaim/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c72eff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a class="icon-btn" href="https://www.facebook.com/profile.php?id=61562114171718" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148aff" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a class="btn btn-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> WhatsApp</a>
+      </div>
+      <button class="menu-toggle" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="./index.html">Início</a>
+      <a href="./modelos.html">Modelos</a>
+      <a href="./contato.html">Contato</a>
+      <a class="btn btn-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-blob1"></div>
+    <div class="page-hero-blob2"></div>
+    <div class="page-hero-inner">
+      <span class="eyebrow">Catálogo Oficial</span>
+      <h1>Nossos <span class="accent">Modelos</span></h1>
+      <p>Scooters, bicicletas, triciclos e autopropelidos elétricos — sem CNH, com bateria removível.</p>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="reveal">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="catalog-search" class="search-input" type="text" placeholder="Buscar por modelo, categoria...">
+        </div>
+        <div id="filter-row" class="filter-row">
+          <span class="filter-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg> Filtrar por:</span>
+        </div>
+      </div>
+      <div id="catalog-filter" data-current="Todos"></div>
+      <div id="catalog-grid" class="cat-veh-grid"></div>
+      <p id="catalog-empty" class="empty" style="display:none;">Nenhum modelo encontrado para a sua busca.</p>
+    </div>
+  </section>
+
+  <section class="guarantee">
+    <div style="position:absolute;bottom:0;left:33%;width:400px;height:300px;background:rgba(224,168,46,0.1);border-radius:50%;filter:blur(100px);"></div>
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:48px;">
+        <h2 class="section-title" style="font-size:clamp(28px,4vw,40px);color:#fff;">Por que comprar na Motochefe Itaim</h2>
+      </div>
+      <div class="guarantee-grid">
+        <div class="guarantee-card reveal">
+          <div class="guarantee-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <h3>Sem necessidade de CNH</h3>
+          <p>Todos os autopropelidos circulam sem carteira de motorista.</p>
+        </div>
+        <div class="guarantee-card reveal" data-delay="100">
+          <div class="guarantee-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"></rect><line x1="23" y1="13" x2="23" y2="11"></line></svg></div>
+          <h3>Bateria removível</h3>
+          <p>Carregue onde quiser, em qualquer tomada comum.</p>
+        </div>
+        <div class="guarantee-card reveal" data-delay="200">
+          <div class="guarantee-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+          <h3>Garantia de fábrica</h3>
+          <p>Suporte oficial Motochefe e assistência especializada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-blob"></div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html"><img class="site-logo" src="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp" alt="Motochefe Itaim"></a>
+          <p>Loja Oficial Motochefe em São Paulo. O melhor em Bikes, Motos e Scooters Elétricas!</p>
+          <div class="social-row">
+            <a class="social-ig" href="https://www.instagram.com/motochefe.itaim/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            <a class="social-fb" href="https://www.facebook.com/profile.php?id=61562114171718" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+            <a class="social-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navegação</h4><ul><li><a href="./index.html">Início</a></li><li><a href="./modelos.html">Modelos</a></li><li><a href="./contato.html">Contato</a></li></ul></div>
+        <div class="footer-col"><h4>Categorias</h4><ul><li><a href="./modelos.html">Scooters</a></li><li><a href="./modelos.html">Bicicletas</a></li><li><a href="./modelos.html">Triciclos</a></li><li><a href="./modelos.html">Autopropelidos</a></li></ul></div>
+        <div class="footer-col"><h4>Contato</h4><ul>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Rua+João+Cachoeira+1387+Itaim+Bibi+São+Paulo" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Rua João Cachoeira, 1387 — Itaim Bibi, SP</a></li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> (11) 3044-7089</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> atendimento@motochefeitaim.com.br</li>
+        </ul></div>
+      </div>
+      <div class="footer-base"><p>© <span id="year"></span> Motochefe Itaim. Todos os direitos reservados.</p><p>Loja Oficial Motochefe em São Paulo</p></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="./data.js"></script>
+  <script src="./modelos.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
