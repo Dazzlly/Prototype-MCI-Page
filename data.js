@@ -42,10 +42,10 @@ const VEHICLES = [
 ];
 
 const CATEGORIES = [
-  { name: "AUTOPROPELIDOS", count: "13 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/mia.webp", filter: "Autopropelido" },
-  { name: "CICLOMOTORES", count: "4 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x11.webp", filter: "Ciclomotor" },
-  { name: "TRICICLOS", count: "4 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/ved_product.webp", filter: "Triciclo" },
-  { name: "E-BIKES", count: "3 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/Style_prodc.webp", filter: "E-bike" }
+  { name: "AUTOPROPELIDOS", count: "13 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/jetmax_product.webp", filter: "Autopropelido" },
+  { name: "CICLOMOTORES", count: "4 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/roma_prodc.webp", filter: "Ciclomotor" },
+  { name: "TRICICLOS", count: "4 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/miatri2_.webp", filter: "Triciclo" },
+  { name: "E-BIKES", count: "3 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/grid.webp", filter: "E-bike" }
 ];
 
 // Helper para formatar preço
