@@ -50,3 +50,76 @@ const CATEGORIES = [
 
 // Helper para formatar preço
 const fmtPrice = (v) => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
+
+// Gera slug a partir do nome do veículo ("MC Giga" → "giga", "MC X12" → "x12")
+const slugify = (name) => name.toLowerCase().replace(/^mc\s+/, "").replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+
+// Detalhes por modelo (cores, galeria, especificações, edições especiais)
+// Modelos sem entrada aqui usam apenas os dados básicos de VEHICLES.
+const MODEL_DETAILS = {
+  giga: {
+    colors: [
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Azul", hex: "#1e5b94" },
+      { name: "Cinza", hex: "#6b6b6b" },
+      { name: "Vasco", type: "shield", edition: "vasco" }
+    ],
+    gallery: [
+      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_1_20260818140531_cc705015417d.jpg",
+      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_2_20260818140531_21c0be346ddd.jpg",
+      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_3_20260818140531_cc08557d39e3.jpg",
+      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_4_20260519105314_dbc60c9344d1.jpg"
+    ],
+    features: [
+      { icon: "🚫", text: "Sem necessidade de CNH" },
+      { icon: "📋", text: "Dispensa emplacamento" },
+      { icon: "📱", text: "Tecnologia NFC (pulseira e cartão)" },
+      { icon: "🔋", text: "Bateria de Lítio removível com alça" },
+      { icon: "🔊", text: "Alarme antifurto com bloqueio e controle" },
+      { icon: "💡", text: "Farol FULL LED e buzina elétrica" },
+      { icon: "🖥️", text: "Painel digital completo" },
+      { icon: "🔧", text: "Freio a disco hidráulico dianteiro" },
+      { icon: "⚖️", text: "Carga máxima de 160kg" },
+      { icon: "🔌", text: "Carregador Turbo Bivolt 110/220V" },
+      { icon: "🔄", text: "Marcha ré para manobras" },
+      { icon: "🌧️", text: "Resistente a chuva" }
+    ],
+    specs: [
+      { label: "Motor", value: "1000W" },
+      { label: "Tipo de Bateria", value: "Lítio Ferro Fosfato (LiFePO4) 60V 24Ah" },
+      { label: "Bateria", value: "Removível" },
+      { label: "Autonomia", value: "50–60 km" },
+      { label: "Velocidade Máxima", value: "32 km/h" },
+      { label: "Carga Máxima", value: "160 kg" },
+      { label: "Carregador", value: "Bivolt 110/220V (Turbo 5A)" },
+      { label: "Tempo de Recarga", value: "5 a 8 horas" },
+      { label: "Rodas", value: "Aro 10\" (New City sem câmara)" },
+      { label: "Freio", value: "Disco hidráulico dianteiro" },
+      { label: "Suspensão", value: "Dupla dianteira e traseira" },
+      { label: "Seletor", value: "3 velocidades" }
+    ],
+    vasco: {
+      badge: "CRVG × MOTOCHEFE · EDIÇÃO ESPECIAL OFICIAL",
+      title: "A COLINA DESCEU PRA RUA",
+      subtitle: "Club de Regatas Vasco da Gama × MotoChefe",
+      description: "A GIGA, edição especial oficial do Club de Regatas Vasco da Gama. A cruz vai na frente. Você vai atrás dela.",
+      limitedUnits: 212,
+      heroImage: "https://giga-vasco.motochefe.com.br/assets/img/g01-front-cross-wide.webp",
+      gallery: [
+        "https://giga-vasco.motochefe.com.br/assets/img/g01-front-cross-wide.webp",
+        "https://giga-vasco.motochefe.com.br/assets/img/g02-front-34-cross.webp",
+        "https://giga-vasco.motochefe.com.br/assets/img/g07-front-neon.webp",
+        "https://giga-vasco.motochefe.com.br/assets/img/g04-cruz-close.webp",
+        "https://giga-vasco.motochefe.com.br/assets/img/g08-flank-escudo.webp",
+        "https://giga-vasco.motochefe.com.br/assets/img/g09-side-profile.webp"
+      ],
+      details: [
+        { title: "A cruz vai na frente", text: "A Cruz de Malta vermelha fica no painel frontal, acima do farol, no ponto mais alto, virada para o caminho." },
+        { title: "O escudo nas duas laterais", text: "O escudo completo do CRVG, colorido, nas duas carenagens traseiras, ao lado do letreiro GIGA." },
+        { title: "A faixa virada de lado", text: "As barras diagonais correm na lateral traseira e no para-lama — a mesma inclinação da rota do manto." },
+        { title: "Branco em cima, preto embaixo", text: "A estrutura escura embaixo, a carenagem branca em cima. A cidade é o escuro. Você é a rota." },
+        { title: "O encosto também é do Vasco", text: "O encosto da garupa vem branco e assinado com o escudo do CRVG e a marca MotoChefe." }
+      ]
+    }
+  }
+};
