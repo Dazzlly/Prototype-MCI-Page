@@ -69,8 +69,9 @@
       -webkit-overflow-scrolling: touch;
       width: 100vw;
       margin-left: calc(50% - 50vw);
-      padding-left: max(24px, calc((100vw - 1280px) / 2 + 24px));
-      padding-right: max(24px, calc((100vw - 1280px) / 2 + 24px));
+      padding-left: 24px;
+      padding-right: 24px;
+      scroll-snap-type: x proximity;
     }
     #featured-grid::-webkit-scrollbar { height: 6px; }
     #featured-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
