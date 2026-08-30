@@ -293,7 +293,8 @@
   <script src="./data.js"></script>
   <script>
     // Render destaques na home (após data.js)
-    const featured = VEHICLES.filter(v => v.featured).slice(0, 5);
+    const featuredOrder = ["MC Mia", "MC X12", "MC Giga", "MC Roma", "MC Jet", "MC Big Tri"];
+    const featured = featuredOrder.map(name => VEHICLES.find(v => v.name === name)).filter(Boolean);
     const fmtP = v => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
     document.getElementById("featured-grid").innerHTML = featured.map(v => `
       <article class="veh-card reveal" data-delay="0">
