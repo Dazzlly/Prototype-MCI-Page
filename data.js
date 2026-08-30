@@ -104,9 +104,9 @@ const MODEL_DETAILS = {
       subtitle: "Club de Regatas Vasco da Gama × MotoChefe",
       description: "A GIGA, edição especial oficial do Club de Regatas Vasco da Gama. A cruz vai na frente. Você vai atrás dela.",
       limitedUnits: 212,
-      heroImage: "https://giga-vasco.motochefe.com.br/assets/img/g01-front-cross-wide.webp",
+      heroImage: "https://motochefebrasil.com.br/wp-content/uploads/2026/08/b1-1.webp",
       gallery: [
-        "https://giga-vasco.motochefe.com.br/assets/img/g01-front-cross-wide.webp",
+        "https://motochefebrasil.com.br/wp-content/uploads/2026/08/b1-1.webp",
         "https://giga-vasco.motochefe.com.br/assets/img/g02-front-34-cross.webp",
         "https://giga-vasco.motochefe.com.br/assets/img/g07-front-neon.webp",
         "https://giga-vasco.motochefe.com.br/assets/img/g04-cruz-close.webp",
@@ -121,5 +121,97 @@ const MODEL_DETAILS = {
         { title: "O encosto também é do Vasco", text: "O encosto da garupa vem branco e assinado com o escudo do CRVG e a marca MotoChefe." }
       ]
     }
+  },
+  x12: {
+    colors: [
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Azul", hex: "#1e5b94" },
+      { name: "Vermelha", hex: "#a01d1d" },
+      { name: "Cinza", hex: "#6b6b6b" },
+      { name: "Branca", hex: "#e8e8e8" },
+      { name: "Palmeiras", type: "shield", edition: "palmeiras" }
+    ],
+    gallery: [
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-2.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-5.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-4.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-8.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-7.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-1.webp"
+    ],
+    features: [
+      { icon: "🚫", text: "Sem necessidade de CNH" },
+      { icon: "📋", text: "Dispensa emplacamento" },
+      { icon: "📱", text: "Liga/desliga com cartão NFC" },
+      { icon: "🔋", text: "Bateria de Lítio 60V 20A removível" },
+      { icon: "💡", text: "Farol e setas em LED (3 intensidades)" },
+      { icon: "🖥️", text: "Painel digital em LED" },
+      { icon: "🔧", text: "Freios disco dianteiro e hidráulico traseiro" },
+      { icon: "💨", text: "Amortecedor a gás" },
+      { icon: "⚖️", text: "Peso suportado: até 150 kg" },
+      { icon: "🔌", text: "Carregador bivolt" },
+      { icon: "🔊", text: "Alarme antifurto com trava de motor" },
+      { icon: "🌧️", text: "Proteção IP65 contra água" }
+    ],
+    specs: [
+      { label: "Motor", value: "1000W" },
+      { label: "Tipo de Bateria", value: "Lítio 60V 20A (removível)" },
+      { label: "Autonomia", value: "até 40 km" },
+      { label: "Velocidade Máxima", value: "32 km/h" },
+      { label: "Carga Máxima", value: "150 kg" },
+      { label: "Carregador", value: "Bivolt" },
+      { label: "Tempo de Recarga", value: "5 a 7 horas" },
+      { label: "Níveis de Velocidade", value: "3" },
+      { label: "Freios", value: "Disco dianteiro e hidráulico traseiro" },
+      { label: "Rodas", value: "Liga leve" },
+      { label: "Proteção", value: "IP65 contra água" },
+      { label: "Conectividade", value: "NFC (cartão)" }
+    ],
+    palmeiras: {
+      badge: "SE Palmeiras × MotoChefe · Cor Exclusiva",
+      title: "O VERDE DO MAIOR CAMPEÃO",
+      subtitle: "Sociedade Esportiva Palmeiras × MotoChefe",
+      description: "A X12 na cor verde do Palmeiras. Para quem carrega o verde no peito e na rua. A mesma mobilidade elétrica, agora na cor do Maior Campeão do Brasil.",
+      heroImage: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x12_product.webp"
+    }
+  },
+  r10: {
+    badge: "EDIÇÃO LIMITADA · RONALDINHO GAÚCHO",
+    features: [
+      { icon: "🏆", text: "Edição Limitada Ronaldinho Gaúcho" },
+      { icon: "🚫", text: "Sem necessidade de CNH" },
+      { icon: "📋", text: "Dispensa emplacamento" },
+      { icon: "🟢", text: "Visual esportivo verde e amarelo" },
+      { icon: "📱", text: "Tecnologia NFC (pulseira e tag)" },
+      { icon: "🔋", text: "Bateria LiFePO4 60V 30A removível" },
+      { icon: "🔌", text: "USB Tipo A e USB Tipo C" },
+      { icon: "💡", text: "Faróis em LED" },
+      { icon: "🖥️", text: "Painel digital" },
+      { icon: "🔄", text: "Marcha ré e Modo Parking" },
+      { icon: "🔊", text: "Alarme antifurto com bloqueio" },
+      { icon: "⚖️", text: "Carga máxima de 160 kg" }
+    ],
+    specs: [
+      { label: "Motor", value: "1000W" },
+      { label: "Tipo de Bateria", value: "Lítio Ferro Fosfato (LiFePO4) 60V 30A" },
+      { label: "Bateria", value: "Removível" },
+      { label: "Autonomia", value: "50 km (média)" },
+      { label: "Velocidade Máxima", value: "32 km/h" },
+      { label: "Carga Máxima", value: "160 kg" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
+      { label: "Tempo de Recarga", value: "6 a 8 horas" },
+      { label: "Freios", value: "Hidráulicos a disco dianteiro e traseiro" },
+      { label: "Rodas", value: "Liga aro 12\"" },
+      { label: "Conectividade", value: "NFC (pulseira e tag) + USB A/C" },
+      { label: "Extras", value: "Marcha ré, Modo parking, Alarme" }
+    ],
+    gallery: [
+      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/qd12.png",
+      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-360.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-362.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-358.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-363.webp",
+      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-364.webp"
+    ]
   }
 };
