@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:alpine
+    user: root
+    working_dir: /usr/share/nginx/html
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    ports:
+      - "3000:80"
+    restart: unless-stopped
