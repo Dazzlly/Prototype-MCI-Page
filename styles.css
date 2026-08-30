@@ -133,6 +133,28 @@ section { position: relative; }
 @media (min-width: 640px) { .veh-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .veh-grid { grid-template-columns: repeat(4, 1fr); } }
 .veh-card { display: flex; flex-direction: column; transition: transform .5s; }
+
+/* Destaques — pista horizontal deslizante */
+#featured-grid {
+  display: flex !important;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 24px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+#featured-grid::-webkit-scrollbar { height: 6px; }
+#featured-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 3px; }
+#featured-grid::-webkit-scrollbar-thumb { background: rgba(224,168,46,0.4); border-radius: 3px; }
+#featured-grid::-webkit-scrollbar-thumb:hover { background: rgba(224,168,46,0.6); }
+#featured-grid .veh-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+}
+@media (max-width: 639px) {
+  #featured-grid .veh-card { flex: 0 0 85%; }
+}
 .veh-card:hover { transform: translateY(-4px); }
 .veh-img { aspect-ratio: 1; background: #fff; border: 3px solid var(--primary); border-radius: 16px 16px 0 0; overflow: hidden; position: relative; transition: box-shadow .5s; }
 .veh-card:hover .veh-img { box-shadow: 0 20px 40px -15px rgba(224,168,46,0.45); }
