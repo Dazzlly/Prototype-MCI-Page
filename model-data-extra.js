@@ -14,11 +14,11 @@ Object.assign(MODEL_DETAILS, {
     ],
     gallery: [
       "images/mia-preta.webp",
-      "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/mia.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_3-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_cor_1-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mia_farol.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/miaa-1.webp"
+      "images/extra-mia.webp",
+      "images/extra-mia_cor_3-1.webp",
+      "images/extra-mia_cor_1-1.webp",
+      "images/extra-mia_farol.webp",
+      "images/extra-miaa-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -56,11 +56,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelho", hex: "#a01d1d" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jetmax_cor-3.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jetmax_cor-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jetmax_cor-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/bau_30l.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/farol_full2.webp"
+      "images/extra-jetmax_cor-3.webp",
+      "images/extra-jetmax_cor-2.webp",
+      "images/extra-jetmax_cor-1.webp",
+      "images/extra-bau_30l.webp",
+      "images/extra-farol_full2.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -96,11 +96,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jet_cor_1-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jet_cor_3-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/jet_cor_2-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_1_19eff44202bb23ad1271e525ef0d71da-67544aca0bcdf.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp"
+      "images/extra-jet_cor_1-1.webp",
+      "images/extra-jet_cor_3-1.webp",
+      "images/extra-jet_cor_2-1.webp",
+      "images/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_1_19eff44202bb23ad1271e525ef0d71da-67544aca0bcdf.webp",
+      "images/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -135,11 +135,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Azul", hex: "#1e5b94" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cor-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cor-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/detalhe_bob-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/detalhe_bob-3.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/detalhe_bob-5.webp"
+      "images/extra-cor-2.webp",
+      "images/extra-cor-1.webp",
+      "images/extra-detalhe_bob-2.webp",
+      "images/extra-detalhe_bob-3.webp",
+      "images/extra-detalhe_bob-5.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -171,12 +171,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelha", hex: "#a01d1d" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/sofia_cor-3.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/sofia_cor-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/sofia_cor-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/painel_raw-1-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/farol-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/bau-1.webp"
+      "images/extra-sofia_cor-3.webp",
+      "images/extra-sofia_cor-1.webp",
+      "images/extra-sofia_cor-2.webp",
+      "images/extra-painel_raw-1-1.webp",
+      "images/extra-farol-2.webp",
+      "images/extra-bau-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -210,12 +210,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelho", hex: "#a01d1d" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/joysuper5.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/joysuper1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/joysuper2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/joysuper3.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/joysuper4.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/bicicleta_eletrica_joy_super_800w_sem_cnh_moto_chefe_variacao_-2.webp"
+      "images/extra-joysuper5.webp",
+      "images/extra-joysuper1.webp",
+      "images/extra-joysuper2.webp",
+      "images/extra-joysuper3.webp",
+      "images/extra-joysuper4.webp",
+      "images/extra-bicicleta_eletrica_joy_super_800w_sem_cnh_moto_chefe_variacao_-2.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -250,11 +250,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelha", hex: "#a01d1d" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mc20_detalhes_modelo-3.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mc20_detalhes_modelo-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mc20_detalhes_modelo-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mc20_detalhes_modelo-4.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mc20_detalhes_modelo-6.webp"
+      "images/extra-mc20_detalhes_modelo-3.webp",
+      "images/extra-mc20_detalhes_modelo-1.webp",
+      "images/extra-mc20_detalhes_modelo-2.webp",
+      "images/extra-mc20_detalhes_modelo-4.webp",
+      "images/extra-mc20_detalhes_modelo-6.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -286,12 +286,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelha", hex: "#a01d1d" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/ret3.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/ret1.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/ret2.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE.jpg",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-1.jpg",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-4.jpg"
+      "images/extra-ret3.png",
+      "images/extra-ret1.png",
+      "images/extra-ret2.png",
+      "images/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE.jpg",
+      "images/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-1.jpg",
+      "images/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-4.jpg"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -323,7 +323,7 @@ Object.assign(MODEL_DETAILS, {
       { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
-      "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/Soma-Prata.jpg",
+      "images/extra-Soma-Prata.jpg",
       "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/WhatsApp-Image-2024-09-12-at-13.27.37.jpeg"
     ],
     features: [
@@ -353,7 +353,7 @@ Object.assign(MODEL_DETAILS, {
 
   joyzinha: {
     gallery: [
-      "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/joy.webp"
+      "images/extra-joy.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -373,7 +373,7 @@ Object.assign(MODEL_DETAILS, {
 
   "joy-tri": {
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/JOY-TRI-1-1.webp"
+      "images/extra-JOY-TRI-1-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -393,7 +393,7 @@ Object.assign(MODEL_DETAILS, {
 
   "big-tri": {
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/big_tri.webp"
+      "images/extra-big_tri.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -415,7 +415,7 @@ Object.assign(MODEL_DETAILS, {
 
   "mia-tri": {
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/MIA-TRI-01-1.webp"
+      "images/extra-MIA-TRI-01-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -434,7 +434,7 @@ Object.assign(MODEL_DETAILS, {
 
   ved: {
     gallery: [
-      "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/ved_product.webp"
+      "images/extra-ved_product.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -466,12 +466,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Cinza", hex: "#6b6b6b" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x15.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cores_mc20-13.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cores_mc20-14.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/cores_mc20-7.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x15_1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg"
+      "images/extra-x15.webp",
+      "images/extra-cores_mc20-13.png",
+      "images/extra-cores_mc20-14.png",
+      "images/extra-cores_mc20-7.png",
+      "images/extra-x15_1.webp",
+      "images/extra-Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg"
     ],
     features: [
       { icon: "🆔", text: "Partida por cartão NFC" },
@@ -505,12 +505,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Cinza", hex: "#6b6b6b" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11__-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-15.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-8.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-13.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11_cores-2.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/x11.webp"
+      "images/extra-x11__-1.webp",
+      "images/extra-x11_cores-15.png",
+      "images/extra-x11_cores-8.png",
+      "images/extra-x11_cores-13.png",
+      "images/extra-x11_cores-2.png",
+      "images/extra-x11.webp"
     ],
     features: [
       { icon: "🆔", text: "Liga/desliga com cartão NFC" },
@@ -535,7 +535,7 @@ Object.assign(MODEL_DETAILS, {
 
   "20": {
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/mc20_pop-1.webp"
+      "images/extra-mc20_pop-1.webp"
     ],
     features: [
       { icon: "🆔", text: "Partida NFC" },
@@ -561,11 +561,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Preta", hex: "#1a1a1a" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_ai_sombra-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_color-1.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_color-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/roma_color-3.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/bancoDuplo.webp"
+      "images/extra-roma_ai_sombra-1.webp",
+      "images/extra-roma_color-1.webp",
+      "images/extra-roma_color-2.webp",
+      "images/extra-roma_color-3.webp",
+      "images/extra-bancoDuplo.webp"
     ],
     features: [
       { icon: "🎨", text: "Design retrô italiano" },
@@ -594,7 +594,7 @@ Object.assign(MODEL_DETAILS, {
 
   grid: {
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/GRID-LATERAL1-1.webp"
+      "images/extra-GRID-LATERAL1-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -616,7 +616,7 @@ Object.assign(MODEL_DETAILS, {
 
   style: {
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/style-1-1.webp"
+      "images/extra-style-1-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -639,7 +639,7 @@ Object.assign(MODEL_DETAILS, {
   liberty: {
     badge: "MODELO DOBRÁVEL",
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/liberty_product_web.webp"
+      "images/extra-liberty_product_web.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -662,7 +662,7 @@ Object.assign(MODEL_DETAILS, {
   space: {
     badge: "MODELO DOBRÁVEL",
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/11/space_ia-1.webp"
+      "images/extra-space_ia-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },

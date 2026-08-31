@@ -5,7 +5,7 @@ const WHATSAPP = "5511948711047";
 const INSTAGRAM = "https://www.instagram.com/motochefe.itaim/";
 const FACEBOOK = "https://www.facebook.com/profile.php?id=61562114171718";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Rua+João+Cachoeira+1387+Itaim+Bibi+São+Paulo";
-const LOGO_URL = "https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp";
+const LOGO_URL = "images/logo-branco.webp";
 const HERO_VIDEO = "https://motochefeitaim.com.br/wp-content/uploads/2024/08/copy_858DBB0B-331D-4BF6-BDB2-CD21B0F731C7.mp4";
 
 const waLink = (name, price, url) =>
@@ -15,37 +15,37 @@ const waLink = (name, price, url) =>
 
 const VEHICLES = [
   { name: "MC Mia", category: "Autopropelido", price: 9990, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "A Scooter Elétrica MIA 1000w da Moto Chefe é a opção ideal para você que procura mobilidade prática, econômica e sustentável!", image_url: "images/mia-preta.webp", product_url: "https://motochefeitaim.com.br/product/mc-mia-1000w-autopropelido-sem-cnh/", featured: true },
-  { name: "MC Jet Max", category: "Autopropelido", price: 12990, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "A Jet Max combina design robusto e moderno com tecnologia inteligente para o dia a dia. Motor de 1000W, 32 km/h, bateria de lítio 60V 30Ah de longa duração. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/jetmax_product.webp", product_url: "https://motochefeitaim.com.br/product/motochefe-jetmax-1000w-autopropelido-sem-cnh-copia/", featured: false },
-  { name: "MC R10", category: "Autopropelido", price: null, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Edição Limitada Ronaldinho Gaúcho. Inspirada na genialidade do R10, une visual esportivo, detalhes em verde e amarelo, motor de 1000W, autonomia de até 50 km e velocidade de 32 km/h. Sem necessidade de CNH.", image_url: "https://motochefebrasil.com.br/wp-content/uploads/2026/07/qd12.png", product_url: "https://motochefebrasil.com.br/modelos/r10/", featured: false },
-  { name: "MC X12", category: "Autopropelido", price: 10990, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "O modelo X12 é estiloso, moderno e inovador. Ideal para o dia a dia e momentos de lazer, com suspensão dupla e banco diferenciado. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x12_product.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-x12-1000w-autopropelido-sem-cnh/", featured: true },
-  { name: "MC Giga", category: "Autopropelido", price: null, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Estilo e design. Scooter elétrica autopropelida com 1000W e 50 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/mod_product_giga.webp", featured_image: "https://motochefebrasil.com.br/wp-content/uploads/2026/08/b1-1.webp", product_url: "https://itaim.motochefe.com.br", featured: true },
-  { name: "MC Joy Tri", category: "Triciclo, Autopropelido", price: null, power_w: 600, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e design. Triciclo elétrico com 600W e 55 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/joytri_w.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC X15", category: "Triciclo, Ciclomotor", price: null, power_w: 3000, range_km: 45, top_speed_kmh: 50, description: "Potência, design e agilidade. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x15.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC VED", category: "Triciclo, Autopropelido", price: 15290, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "A VED 1000W oferece uma maneira ecologicamente correta de se locomover e prioriza o conforto.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/ved_product.webp", product_url: "https://motochefeitaim.com.br/product/triciclo-ventane-1000w-autopropelido-sem-cnh/" },
-  { name: "MC Big Tri", category: "Triciclo, Autopropelido", price: null, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "Estilo, conforto e dia a dia. Triciclo elétrico com 1000W e 55 km de autonomia.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/big_tiny.webp", product_url: "https://itaim.motochefe.com.br", featured: true },
-  { name: "MC Mia Tri", category: "Triciclo, Autopropelido", price: 12490, power_w: 800, range_km: 40, top_speed_kmh: 32, description: "Triciclo ideal para quem busca alternativa prática e sustentável, sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/miatri2_.webp", product_url: "https://motochefeitaim.com.br/product/triciclo-mc-mia-800w-autopropelido-sem-cnh/" },
-  { name: "MC Space", category: "E-bike", price: null, power_w: 750, range_km: 35, top_speed_kmh: 32, description: "Estilo, mobilidade e dia a dia. Bicicleta elétrica com 750W e 35 km de autonomia. Quadro robusto, sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/space_prodc.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Grid", category: "E-bike", price: null, power_w: 750, range_km: 35, top_speed_kmh: 32, description: "Estilo, design e urban. Bicicleta elétrica com 750W e 35 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/grid.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Style", category: "E-bike", price: 10490, power_w: 750, range_km: 35, top_speed_kmh: 32, description: "Bicicleta Elétrica STYLE com motor de 750w e quadro em aço carbono para durabilidade e resistência. Desempenho potente para seus passeios.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/Style_prodc.webp", product_url: "https://motochefeitaim.com.br/product/bicicleta-eletrica-style-750w-ventane-motors/" },
-  { name: "MC Liberty", category: "E-bike", price: null, power_w: 600, range_km: 35, top_speed_kmh: 32, description: "Estilo, design e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/liberty_produto_front.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Roma", category: "Ciclomotor", price: null, power_w: 3000, range_km: 50, top_speed_kmh: 50, description: "Conforto, design e clássica. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/roma_prodc.webp", product_url: "https://motochefe.com.br", featured: true },
-  { name: "MC 20", category: "Ciclomotor", price: null, power_w: 2000, range_km: 50, top_speed_kmh: 50, description: "Estilo, potência e autonomia. Scooter elétrica de 2000W que atige 50 km/h com 80 km de autonomia. Exige CNH e emplacamento.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/mc20.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC X11", category: "Ciclomotor", price: 11990, power_w: 2000, range_km: 50, top_speed_kmh: 50, description: "O modelo X11 é estiloso e potente. Atinge 50 km/h com motor de 2000W e 80 km de autonomia. Exige CNH e emplacamento.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x11.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-mc-x11-3000w/" },
-  { name: "MC Soma", category: "Autopropelido", price: 8990, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "SOMA une estilo, modernidade e inovação. Suspensão dupla e banco confortável, bateria de lítio removível. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/soma_prod3.webp", product_url: "https://motochefeitaim.com.br/product/mc-soma-1000w-autopropelido-sem-cnh/" },
-  { name: "MC Sofia", category: "Autopropelido", price: null, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "Estilo, design e clássica. Scooter elétrica autopropelida com 1000W e 45 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/sofia_product-1.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC 20 Mini", category: "Autopropelido", price: null, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "Mobilidade, dia a dia e economia. Scooter elétrica autopropelida com 1000W e 45 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/20mini2_tiny_product.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Bob", category: "Autopropelido", price: null, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e economia. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/Camada-1_c2_tiny2.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Ret", category: "Autopropelido", price: null, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e design. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/11/ret_.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Joy Super", category: "Autopropelido", price: 7490, power_w: 800, range_km: 40, top_speed_kmh: 32, description: "A SUPER Joy 800W oferece mobilidade, conforto, economia e agilidade. Perfeita para o dia a dia.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/JOY-SUPER-1-1_front.webp", product_url: "https://motochefeitaim.com.br/product/mc-super-joy-800w-autopropelido-sem-cnh/" },
-  { name: "MC Joyzinha", category: "Autopropelido", price: null, power_w: 600, range_km: 40, top_speed_kmh: 32, description: "Mobilidade, leveza e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/joy.webp", product_url: "https://itaim.motochefe.com.br" },
-  { name: "MC Jet", category: "Autopropelido", price: 10990, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Se você precisa de um meio de transporte no dia a dia e não quer tirar carteira, o Jet é a escolha certa.", image_url: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/jet.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-jet-1000w-autopropelido-sem-cnh/", featured: true }
+  { name: "MC Jet Max", category: "Autopropelido", price: 12990, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "A Jet Max combina design robusto e moderno com tecnologia inteligente para o dia a dia. Motor de 1000W, 32 km/h, bateria de lítio 60V 30Ah de longa duração. Sem necessidade de CNH.", image_url: "images/jetmax.webp", product_url: "https://motochefeitaim.com.br/product/motochefe-jetmax-1000w-autopropelido-sem-cnh-copia/", featured: false },
+  { name: "MC R10", category: "Autopropelido", price: null, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Edição Limitada Ronaldinho Gaúcho. Inspirada na genialidade do R10, une visual esportivo, detalhes em verde e amarelo, motor de 1000W, autonomia de até 50 km e velocidade de 32 km/h. Sem necessidade de CNH.", image_url: "images/r10.png", product_url: "https://motochefebrasil.com.br/modelos/r10/", featured: false },
+  { name: "MC X12", category: "Autopropelido", price: 10990, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "O modelo X12 é estiloso, moderno e inovador. Ideal para o dia a dia e momentos de lazer, com suspensão dupla e banco diferenciado. Sem necessidade de CNH.", image_url: "images/x12.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-x12-1000w-autopropelido-sem-cnh/", featured: true },
+  { name: "MC Giga", category: "Autopropelido", price: null, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Estilo e design. Scooter elétrica autopropelida com 1000W e 50 km de autonomia. Sem necessidade de CNH.", image_url: "images/giga.webp", featured_image: "images/giga-featured.webp", product_url: "https://itaim.motochefe.com.br", featured: true },
+  { name: "MC Joy Tri", category: "Triciclo, Autopropelido", price: null, power_w: 600, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e design. Triciclo elétrico com 600W e 55 km de autonomia. Sem necessidade de CNH.", image_url: "images/joy-tri.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC X15", category: "Triciclo, Ciclomotor", price: null, power_w: 3000, range_km: 45, top_speed_kmh: 50, description: "Potência, design e agilidade. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.", image_url: "images/x15.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC VED", category: "Triciclo, Autopropelido", price: 15290, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "A VED 1000W oferece uma maneira ecologicamente correta de se locomover e prioriza o conforto.", image_url: "images/ved.webp", product_url: "https://motochefeitaim.com.br/product/triciclo-ventane-1000w-autopropelido-sem-cnh/" },
+  { name: "MC Big Tri", category: "Triciclo, Autopropelido", price: null, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "Estilo, conforto e dia a dia. Triciclo elétrico com 1000W e 55 km de autonomia.", image_url: "images/big-tri.webp", product_url: "https://itaim.motochefe.com.br", featured: true },
+  { name: "MC Mia Tri", category: "Triciclo, Autopropelido", price: 12490, power_w: 800, range_km: 40, top_speed_kmh: 32, description: "Triciclo ideal para quem busca alternativa prática e sustentável, sem necessidade de CNH.", image_url: "images/mia-tri.webp", product_url: "https://motochefeitaim.com.br/product/triciclo-mc-mia-800w-autopropelido-sem-cnh/" },
+  { name: "MC Space", category: "E-bike", price: null, power_w: 750, range_km: 35, top_speed_kmh: 32, description: "Estilo, mobilidade e dia a dia. Bicicleta elétrica com 750W e 35 km de autonomia. Quadro robusto, sem necessidade de CNH.", image_url: "images/space.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Grid", category: "E-bike", price: null, power_w: 750, range_km: 35, top_speed_kmh: 32, description: "Estilo, design e urban. Bicicleta elétrica com 750W e 35 km de autonomia. Sem necessidade de CNH.", image_url: "images/grid.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Style", category: "E-bike", price: 10490, power_w: 750, range_km: 35, top_speed_kmh: 32, description: "Bicicleta Elétrica STYLE com motor de 750w e quadro em aço carbono para durabilidade e resistência. Desempenho potente para seus passeios.", image_url: "images/style.webp", product_url: "https://motochefeitaim.com.br/product/bicicleta-eletrica-style-750w-ventane-motors/" },
+  { name: "MC Liberty", category: "E-bike", price: null, power_w: 600, range_km: 35, top_speed_kmh: 32, description: "Estilo, design e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "images/liberty.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Roma", category: "Ciclomotor", price: null, power_w: 3000, range_km: 50, top_speed_kmh: 50, description: "Conforto, design e clássica. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.", image_url: "images/roma.webp", product_url: "https://motochefe.com.br", featured: true },
+  { name: "MC 20", category: "Ciclomotor", price: null, power_w: 2000, range_km: 50, top_speed_kmh: 50, description: "Estilo, potência e autonomia. Scooter elétrica de 2000W que atige 50 km/h com 80 km de autonomia. Exige CNH e emplacamento.", image_url: "images/mc20.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC X11", category: "Ciclomotor", price: 11990, power_w: 2000, range_km: 50, top_speed_kmh: 50, description: "O modelo X11 é estiloso e potente. Atinge 50 km/h com motor de 2000W e 80 km de autonomia. Exige CNH e emplacamento.", image_url: "images/x11.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-mc-x11-3000w/" },
+  { name: "MC Soma", category: "Autopropelido", price: 8990, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "SOMA une estilo, modernidade e inovação. Suspensão dupla e banco confortável, bateria de lítio removível. Sem necessidade de CNH.", image_url: "images/soma.webp", product_url: "https://motochefeitaim.com.br/product/mc-soma-1000w-autopropelido-sem-cnh/" },
+  { name: "MC Sofia", category: "Autopropelido", price: null, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "Estilo, design e clássica. Scooter elétrica autopropelida com 1000W e 45 km de autonomia. Sem necessidade de CNH.", image_url: "images/sofia.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC 20 Mini", category: "Autopropelido", price: null, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "Mobilidade, dia a dia e economia. Scooter elétrica autopropelida com 1000W e 45 km de autonomia. Sem necessidade de CNH.", image_url: "images/20-mini.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Bob", category: "Autopropelido", price: null, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e economia. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "images/bob.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Ret", category: "Autopropelido", price: null, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e design. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "images/ret.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Joy Super", category: "Autopropelido", price: 7490, power_w: 800, range_km: 40, top_speed_kmh: 32, description: "A SUPER Joy 800W oferece mobilidade, conforto, economia e agilidade. Perfeita para o dia a dia.", image_url: "images/joy-super.webp", product_url: "https://motochefeitaim.com.br/product/mc-super-joy-800w-autopropelido-sem-cnh/" },
+  { name: "MC Joyzinha", category: "Autopropelido", price: null, power_w: 600, range_km: 40, top_speed_kmh: 32, description: "Mobilidade, leveza e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia.", image_url: "images/joyzinha.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Jet", category: "Autopropelido", price: 10990, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Se você precisa de um meio de transporte no dia a dia e não quer tirar carteira, o Jet é a escolha certa.", image_url: "images/jet.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-jet-1000w-autopropelido-sem-cnh/", featured: true }
 ];
 
 const CATEGORIES = [
-  { name: "AUTOPROPELIDOS", count: "13 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/11/jetmax_product.webp", filter: "Autopropelido" },
-  { name: "CICLOMOTORES", count: "4 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/roma_prodc.webp", filter: "Ciclomotor" },
-  { name: "TRICICLOS", count: "4 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/miatri2_.webp", filter: "Triciclo" },
-  { name: "E-BIKES", count: "3 Modelos", image: "https://itaim.motochefe.com.br/wp-content/uploads/2025/10/grid.webp", filter: "E-bike" }
+  { name: "AUTOPROPELIDOS", count: "13 Modelos", image: "images/jetmax.webp", filter: "Autopropelido" },
+  { name: "CICLOMOTORES", count: "4 Modelos", image: "images/roma.webp", filter: "Ciclomotor" },
+  { name: "TRICICLOS", count: "4 Modelos", image: "images/mia-tri.webp", filter: "Triciclo" },
+  { name: "E-BIKES", count: "3 Modelos", image: "images/grid.webp", filter: "E-bike" }
 ];
 
 // Helper para formatar preço
@@ -65,10 +65,10 @@ const MODEL_DETAILS = {
       { name: "Vasco", type: "shield", edition: "vasco" }
     ],
     gallery: [
-      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_1_20260818140531_cc705015417d.jpg",
-      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_2_20260818140531_21c0be346ddd.jpg",
-      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_3_20260818140531_cc08557d39e3.jpg",
-      "https://images.tcdn.com.br/img/img_prod/1263757/scooter_eltrica_giga_1000w_sem_cnh_moto_chefe_4_20260519105314_dbc60c9344d1.jpg"
+      "images/giga-gallery-1.jpg",
+      "images/giga-gallery-2.jpg",
+      "images/giga-gallery-3.jpg",
+      "images/giga-gallery-4.jpg"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -104,14 +104,14 @@ const MODEL_DETAILS = {
       subtitle: "Club de Regatas Vasco da Gama × MotoChefe",
       description: "A GIGA, edição especial oficial do Club de Regatas Vasco da Gama. A cruz vai na frente. Você vai atrás dela.",
       limitedUnits: 212,
-      heroImage: "https://motochefebrasil.com.br/wp-content/uploads/2026/08/b1-1.webp",
+      heroImage: "images/giga-featured.webp",
       gallery: [
-        "https://motochefebrasil.com.br/wp-content/uploads/2026/08/b1-1.webp",
-        "https://giga-vasco.motochefe.com.br/assets/img/g02-front-34-cross.webp",
-        "https://giga-vasco.motochefe.com.br/assets/img/g07-front-neon.webp",
-        "https://giga-vasco.motochefe.com.br/assets/img/g04-cruz-close.webp",
-        "https://giga-vasco.motochefe.com.br/assets/img/g08-flank-escudo.webp",
-        "https://giga-vasco.motochefe.com.br/assets/img/g09-side-profile.webp"
+        "images/giga-featured.webp",
+        "images/giga-vasco-2.webp",
+        "images/giga-vasco-3.webp",
+        "images/giga-vasco-4.webp",
+        "images/giga-vasco-5.webp",
+        "images/giga-vasco-6.webp"
       ],
       details: [
         { title: "A cruz vai na frente", text: "A Cruz de Malta vermelha fica no painel frontal, acima do farol, no ponto mais alto, virada para o caminho." },
@@ -133,12 +133,12 @@ const MODEL_DETAILS = {
       { name: "Palmeiras", type: "shield", edition: "palmeiras" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-2.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-5.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-4.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-8.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-7.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2025/10/x12_cores-1.webp"
+      "images/x12-gallery-1.webp",
+      "images/x12-gallery-2.webp",
+      "images/x12-gallery-3.webp",
+      "images/x12-gallery-4.webp",
+      "images/x12-gallery-5.webp",
+      "images/x12-gallery-6.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -173,7 +173,7 @@ const MODEL_DETAILS = {
       title: "O VERDE DO MAIOR CAMPEÃO",
       subtitle: "Sociedade Esportiva Palmeiras × MotoChefe",
       description: "A X12 na cor verde do Palmeiras. Para quem carrega o verde no peito e na rua. A mesma mobilidade elétrica, agora na cor do Maior Campeão do Brasil.",
-      heroImage: "https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x12_product.webp"
+      heroImage: "images/x12.webp"
     }
   },
   r10: {
@@ -207,12 +207,12 @@ const MODEL_DETAILS = {
       { label: "Extras", value: "Marcha ré, Modo parking, Alarme" }
     ],
     gallery: [
-      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/qd12.png",
-      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-360.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-362.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-358.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-363.webp",
-      "https://motochefebrasil.com.br/wp-content/uploads/2026/07/Frame-364.webp"
+      "images/r10.png",
+      "images/r10-gallery-1.webp",
+      "images/r10-gallery-2.webp",
+      "images/r10-gallery-3.webp",
+      "images/r10-gallery-4.webp",
+      "images/r10-gallery-5.webp"
     ]
   }
 };
