@@ -96,10 +96,10 @@ Object.assign(MODEL_DETAILS, {
       { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
+      "images/jet.webp",
       "images/extra-jet_cor_1-1.webp",
       "images/extra-jet_cor_3-1.webp",
       "images/extra-jet_cor_2-1.webp",
-      "images/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_1_19eff44202bb23ad1271e525ef0d71da-67544aca0bcdf.webp",
       "images/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp"
     ],
     features: [
