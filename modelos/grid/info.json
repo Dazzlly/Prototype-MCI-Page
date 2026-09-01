@@ -1,0 +1,59 @@
+{
+  "slug": "grid",
+  "nome": "MC Grid",
+  "categoria": "E-bike",
+  "apresentacao": "Estilo, design e urban. Bicicleta elétrica com 750W e 35 km de autonomia. Sem necessidade de CNH.",
+  "sobre": "Estilo, design e urban. Bicicleta elétrica com 750W e 35 km de autonomia. Sem necessidade de CNH.",
+  "especificacoes": {
+    "Motor": "750W",
+    "Tipo de Bateria": "48V (removível)",
+    "Autonomia": "até 35 km",
+    "Velocidade Máxima": "32 km/h",
+    "Quadro": "Aço carbono",
+    "Extras": "Farol LED, Painel digital"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria removível 48V"
+    },
+    {
+      "icone": "💡",
+      "texto": "Farol em LED"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel digital"
+    },
+    {
+      "icone": "🎨",
+      "texto": "Quadro em aço carbono"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [],
+  "imagens": {
+    "principal": "modelos/grid/principal.webp",
+    "galeria": [
+      "modelos/grid/galeria/1.webp"
+    ]
+  },
+  "product_url": "https://itaim.motochefe.com.br",
+  "featured": false,
+  "power_w": 750,
+  "range_km": 35,
+  "top_speed_kmh": 32
+}

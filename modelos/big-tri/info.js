@@ -1,0 +1,62 @@
+// Dados do modelo MC Big Tri — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["big-tri"] = {
+  "slug": "big-tri",
+  "nome": "MC Big Tri",
+  "categoria": "Triciclo, Autopropelido",
+  "apresentacao": "Estilo, conforto e dia a dia. Triciclo elétrico com 1000W e 55 km de autonomia.",
+  "sobre": "Estilo, conforto e dia a dia. Triciclo elétrico com 1000W e 55 km de autonomia.",
+  "especificacoes": {
+    "Motor": "1000W",
+    "Tipo de Bateria": "Lítio 60V",
+    "Autonomia": "até 40 km",
+    "Velocidade Máxima": "32 km/h",
+    "Carga Máxima": "180 kg",
+    "Extras": "Marcha ré, Painel digital"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "👥",
+      "texto": "Capacidade para 3 pessoas"
+    },
+    {
+      "icone": "⚖️",
+      "texto": "Suporta até 180 kg"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel digital"
+    },
+    {
+      "icone": "🔄",
+      "texto": "Marcha ré"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [],
+  "imagens": {
+    "principal": "modelos/big-tri/principal.webp",
+    "galeria": [
+      "modelos/big-tri/galeria/1.webp"
+    ]
+  },
+  "product_url": "https://itaim.motochefe.com.br",
+  "featured": true,
+  "power_w": 1000,
+  "range_km": 45,
+  "top_speed_kmh": 32
+};

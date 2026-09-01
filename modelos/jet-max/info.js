@@ -1,0 +1,112 @@
+// Dados do modelo MC Jet Max — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["jet-max"] = {
+  "slug": "jet-max",
+  "nome": "MC Jet Max",
+  "categoria": "Autopropelido",
+  "apresentacao": "A Jet Max combina design robusto e moderno com tecnologia inteligente para o dia a dia. Motor de 1000W, 32 km/h, bateria de lítio 60V 30Ah de longa duração. Sem necessidade de CNH.",
+  "sobre": "A Jet Max combina design robusto e moderno com tecnologia inteligente para o dia a dia. Motor de 1000W, 32 km/h, bateria de lítio 60V 30Ah de longa duração. Sem necessidade de CNH.",
+  "especificacoes": {
+    "Motor": "1000W",
+    "Tipo de Bateria": "Lítio Ferro Fosfato (LiFePo4) 60V 30Ah",
+    "Autonomia": "até 55 km",
+    "Velocidade Máxima": "32 km/h",
+    "Carga Máxima": "180 kg",
+    "Carregador": "Bivolt 110/220V",
+    "Tempo de Recarga": "6 a 8 horas",
+    "Freios": "Disco hidráulico (dianteiro e traseiro)",
+    "Resistência à Água": "IP64",
+    "Conectividade": "NFC (pulseira e cartão)",
+    "Marcha Ré": "Sim"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria LiFePo4 60V 30Ah"
+    },
+    {
+      "icone": "📱",
+      "texto": "Tecnologia NFC (pulseira e cartão)"
+    },
+    {
+      "icone": "💡",
+      "texto": "Farol em LED"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel em LED colorido"
+    },
+    {
+      "icone": "⚖️",
+      "texto": "Carga máxima: 180 kg"
+    },
+    {
+      "icone": "🔄",
+      "texto": "Marcha ré"
+    },
+    {
+      "icone": "🛡️",
+      "texto": "Resistência à água IP64"
+    },
+    {
+      "icone": "🔊",
+      "texto": "Alarme com bloqueio"
+    }
+  ],
+  "valores": {
+    "a_vista": 12990,
+    "parcelado_12x": 1083,
+    "parcelado_21x": 619,
+    "sob_consulta": false
+  },
+  "cores": [
+    {
+      "nome": "Azul",
+      "slug": "azul",
+      "hex": "#1e5b94",
+      "pasta": "azul"
+    },
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto"
+    },
+    {
+      "nome": "Branco",
+      "slug": "branco",
+      "hex": "#e8e8e8",
+      "pasta": "branco"
+    },
+    {
+      "nome": "Vermelho",
+      "slug": "vermelho",
+      "hex": "#a01d1d",
+      "pasta": "vermelho"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/jet-max/principal.webp",
+    "galeria": [
+      "modelos/jet-max/galeria/1.webp",
+      "modelos/jet-max/galeria/2.webp",
+      "modelos/jet-max/galeria/3.webp",
+      "modelos/jet-max/galeria/4.webp",
+      "modelos/jet-max/galeria/5.webp"
+    ]
+  },
+  "product_url": "https://motochefeitaim.com.br/product/motochefe-jetmax-1000w-autopropelido-sem-cnh-copia/",
+  "featured": false,
+  "power_w": 1000,
+  "range_km": 45,
+  "top_speed_kmh": 32
+};

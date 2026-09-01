@@ -1,0 +1,108 @@
+// Dados do modelo MC Mia — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["mia"] = {
+  "slug": "mia",
+  "nome": "MC Mia",
+  "categoria": "Autopropelido",
+  "apresentacao": "A Scooter Elétrica MIA 1000w da Moto Chefe é a opção ideal para você que procura mobilidade prática, econômica e sustentável!",
+  "sobre": "A Scooter Elétrica MIA 1000w da Moto Chefe é a opção ideal para você que procura mobilidade prática, econômica e sustentável!",
+  "especificacoes": {
+    "Motor": "1000W",
+    "Tipo de Bateria": "Lítio 60V 20Ah (removível)",
+    "Autonomia": "até 40 km",
+    "Velocidade Máxima": "32 km/h",
+    "Escalada": "30°",
+    "Carga Máxima": "150 kg",
+    "Carregador": "Bivolt 110/220V",
+    "Tempo de Recarga": "6 a 8 horas",
+    "Freios": "Disco dianteiro e traseiro",
+    "Resistência à Água": "IP64",
+    "Marcha Ré": "Sim",
+    "NFC": "Não"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria de lítio 60V 20Ah removível"
+    },
+    {
+      "icone": "🔧",
+      "texto": "Freios a disco dianteiro e traseiro"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel digital moderno"
+    },
+    {
+      "icone": "📦",
+      "texto": "Porta-treco sob o banco"
+    },
+    {
+      "icone": "🔊",
+      "texto": "Alarme com sistema antifurto"
+    },
+    {
+      "icone": "🔄",
+      "texto": "Marcha ré"
+    },
+    {
+      "icone": "🛡️",
+      "texto": "Resistência à água IP64"
+    },
+    {
+      "icone": "🏍️",
+      "texto": "Banco duplo com baú"
+    }
+  ],
+  "valores": {
+    "a_vista": 9990,
+    "parcelado_12x": 833,
+    "parcelado_21x": 476,
+    "sob_consulta": false
+  },
+  "cores": [
+    {
+      "nome": "Preta",
+      "slug": "preta",
+      "hex": "#1a1a1a",
+      "pasta": "preta"
+    },
+    {
+      "nome": "Azul",
+      "slug": "azul",
+      "hex": "#1e5b94",
+      "pasta": "azul"
+    },
+    {
+      "nome": "Branca",
+      "slug": "branca",
+      "hex": "#e8e8e8",
+      "pasta": "branca"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/mia/principal.webp",
+    "galeria": [
+      "modelos/mia/galeria/1.webp",
+      "modelos/mia/galeria/2.webp",
+      "modelos/mia/galeria/3.webp",
+      "modelos/mia/galeria/4.webp",
+      "modelos/mia/galeria/5.webp",
+      "modelos/mia/galeria/6.webp"
+    ]
+  },
+  "product_url": "https://motochefeitaim.com.br/product/mc-mia-1000w-autopropelido-sem-cnh/",
+  "featured": true,
+  "power_w": 1000,
+  "range_km": 40,
+  "top_speed_kmh": 32
+};

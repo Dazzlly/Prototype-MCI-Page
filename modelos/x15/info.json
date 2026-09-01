@@ -1,0 +1,104 @@
+{
+  "slug": "x15",
+  "nome": "MC X15",
+  "categoria": "Triciclo, Ciclomotor",
+  "apresentacao": "Potência, design e agilidade. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.",
+  "sobre": "Potência, design e agilidade. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.",
+  "especificacoes": {
+    "Motor": "3000W",
+    "Autonomia": "até 40 km",
+    "Velocidade Máxima": "50 km/h",
+    "Carga Máxima": "200 kg",
+    "Rodas": "Liga leve aro 10\"",
+    "Tempo de Recarga": "6-8 horas",
+    "Extras": "NFC, Marcha ré, Alarme, Bateria extra"
+  },
+  "diferenciais": [
+    {
+      "icone": "🆔",
+      "texto": "Partida por cartão NFC"
+    },
+    {
+      "icone": "🔧",
+      "texto": "Freios a disco"
+    },
+    {
+      "icone": "🔄",
+      "texto": "Marcha ré"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel digital"
+    },
+    {
+      "icone": "⚖️",
+      "texto": "Capacidade: 200 kg"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Suporte para bateria extra"
+    },
+    {
+      "icone": "💡",
+      "texto": "Farol de LED com 3 níveis"
+    },
+    {
+      "icone": "🛡️",
+      "texto": "Resistente à água (IP65)"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto"
+    },
+    {
+      "nome": "Azul",
+      "slug": "azul",
+      "hex": "#1e5b94",
+      "pasta": "azul"
+    },
+    {
+      "nome": "Vermelho",
+      "slug": "vermelho",
+      "hex": "#a01d1d",
+      "pasta": "vermelho"
+    },
+    {
+      "nome": "Branco",
+      "slug": "branco",
+      "hex": "#e8e8e8",
+      "pasta": "branco"
+    },
+    {
+      "nome": "Cinza",
+      "slug": "cinza",
+      "hex": "#6b6b6b",
+      "pasta": "cinza"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/x15/principal.webp",
+    "galeria": [
+      "modelos/x15/galeria/1.webp",
+      "modelos/x15/galeria/2.png",
+      "modelos/x15/galeria/3.png",
+      "modelos/x15/galeria/4.png",
+      "modelos/x15/galeria/5.webp",
+      "modelos/x15/galeria/6.jpg"
+    ]
+  },
+  "product_url": "https://itaim.motochefe.com.br",
+  "featured": false,
+  "power_w": 3000,
+  "range_km": 45,
+  "top_speed_kmh": 50
+}

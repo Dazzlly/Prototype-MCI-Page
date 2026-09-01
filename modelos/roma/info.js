@@ -1,0 +1,96 @@
+// Dados do modelo MC Roma — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["roma"] = {
+  "slug": "roma",
+  "nome": "MC Roma",
+  "categoria": "Ciclomotor",
+  "apresentacao": "Conforto, design e clássica. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.",
+  "sobre": "Conforto, design e clássica. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.",
+  "especificacoes": {
+    "Motor": "3000W",
+    "Tipo de Bateria": "Lítio 72V 25Ah (removível)",
+    "Autonomia": "até 50 km",
+    "Velocidade Máxima": "50 km/h",
+    "Carregador": "Bivolt",
+    "Tempo de Recarga": "4 a 6 horas",
+    "Freios": "Disco hidráulico traseiro",
+    "Conectividade": "NFC",
+    "Extras": "Marcha ré, Parking, Alarme, Bateria extra"
+  },
+  "diferenciais": [
+    {
+      "icone": "🎨",
+      "texto": "Design retrô italiano"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria de lítio 72V 25Ah removível"
+    },
+    {
+      "icone": "🔧",
+      "texto": "Freios a disco hidráulicos"
+    },
+    {
+      "icone": "📱",
+      "texto": "Tecnologia NFC"
+    },
+    {
+      "icone": "🔄",
+      "texto": "Marcha ré e Modo parking"
+    },
+    {
+      "icone": "🔊",
+      "texto": "Alarme com bloqueio e trava"
+    },
+    {
+      "icone": "⚡",
+      "texto": "3 níveis de velocidade"
+    },
+    {
+      "icone": "📋",
+      "texto": "Exige CNH e emplacamento"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [
+    {
+      "nome": "Azul",
+      "slug": "azul",
+      "hex": "#1e5b94",
+      "pasta": "azul"
+    },
+    {
+      "nome": "Creme",
+      "slug": "creme",
+      "hex": "#f0e6d2",
+      "pasta": "creme"
+    },
+    {
+      "nome": "Preta",
+      "slug": "preta",
+      "hex": "#1a1a1a",
+      "pasta": "preta"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/roma/principal.webp",
+    "galeria": [
+      "modelos/roma/galeria/1.webp",
+      "modelos/roma/galeria/2.webp",
+      "modelos/roma/galeria/3.webp",
+      "modelos/roma/galeria/4.webp",
+      "modelos/roma/galeria/5.webp"
+    ]
+  },
+  "product_url": "https://motochefe.com.br",
+  "featured": true,
+  "power_w": 3000,
+  "range_km": 50,
+  "top_speed_kmh": 50
+};

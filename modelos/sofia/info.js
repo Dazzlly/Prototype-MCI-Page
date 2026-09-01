@@ -1,0 +1,97 @@
+// Dados do modelo MC Sofia — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["sofia"] = {
+  "slug": "sofia",
+  "nome": "MC Sofia",
+  "categoria": "Autopropelido",
+  "apresentacao": "Estilo, design e clássica. Scooter elétrica autopropelida com 1000W e 45 km de autonomia. Sem necessidade de CNH.",
+  "sobre": "Estilo, design e clássica. Scooter elétrica autopropelida com 1000W e 45 km de autonomia. Sem necessidade de CNH.",
+  "especificacoes": {
+    "Motor": "1000W",
+    "Tipo de Bateria": "Lítio 60V 30A",
+    "Autonomia": "até 40 km",
+    "Velocidade Máxima": "32 km/h",
+    "Carga Máxima": "180 kg",
+    "Carregador": "Bivolt",
+    "Tempo de Recarga": "6 a 8 horas",
+    "Conectividade": "NFC (pulseira e cartão)",
+    "Extras": "Baú traseiro, Amortecedor, Chave reserva"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria de Lítio 60V 30A"
+    },
+    {
+      "icone": "📱",
+      "texto": "Tecnologia NFC (pulseira e cartão)"
+    },
+    {
+      "icone": "💡",
+      "texto": "Farol em LED"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel em LED colorido"
+    },
+    {
+      "icone": "⚖️",
+      "texto": "Carga máxima: 180 kg"
+    },
+    {
+      "icone": "📦",
+      "texto": "Baú traseiro incluso"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto"
+    },
+    {
+      "nome": "Azul",
+      "slug": "azul",
+      "hex": "#1e5b94",
+      "pasta": "azul"
+    },
+    {
+      "nome": "Vermelha",
+      "slug": "vermelha",
+      "hex": "#a01d1d",
+      "pasta": "vermelha"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/sofia/principal.webp",
+    "galeria": [
+      "modelos/sofia/galeria/1.webp",
+      "modelos/sofia/galeria/2.webp",
+      "modelos/sofia/galeria/3.webp",
+      "modelos/sofia/galeria/4.webp",
+      "modelos/sofia/galeria/5.webp",
+      "modelos/sofia/galeria/6.webp"
+    ]
+  },
+  "product_url": "https://itaim.motochefe.com.br",
+  "featured": false,
+  "power_w": 1000,
+  "range_km": 45,
+  "top_speed_kmh": 32
+};

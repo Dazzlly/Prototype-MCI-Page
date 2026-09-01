@@ -1,0 +1,150 @@
+// Dados do modelo MC X12 — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["x12"] = {
+  "slug": "x12",
+  "nome": "MC X12",
+  "categoria": "Autopropelido",
+  "apresentacao": "O modelo X12 é estiloso, moderno e inovador. Ideal para o dia a dia e momentos de lazer, com suspensão dupla e banco diferenciado. Sem necessidade de CNH.",
+  "sobre": "O modelo X12 é estiloso, moderno e inovador. Ideal para o dia a dia e momentos de lazer, com suspensão dupla e banco diferenciado. Sem necessidade de CNH.",
+  "especificacoes": {
+    "Motor": "1000W",
+    "Tipo de Bateria": "Lítio 60V 20A (removível)",
+    "Autonomia": "até 40 km",
+    "Velocidade Máxima": "32 km/h",
+    "Carga Máxima": "150 kg",
+    "Carregador": "Bivolt",
+    "Tempo de Recarga": "5 a 7 horas",
+    "Níveis de Velocidade": "3",
+    "Freios": "Disco dianteiro e hidráulico traseiro",
+    "Rodas": "Liga leve",
+    "Proteção": "IP65 contra água",
+    "Conectividade": "NFC (cartão)"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "📱",
+      "texto": "Liga/desliga com cartão NFC"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria de Lítio 60V 20A removível"
+    },
+    {
+      "icone": "💡",
+      "texto": "Farol e setas em LED (3 intensidades)"
+    },
+    {
+      "icone": "🖥️",
+      "texto": "Painel digital em LED"
+    },
+    {
+      "icone": "🔧",
+      "texto": "Freios disco dianteiro e hidráulico traseiro"
+    },
+    {
+      "icone": "💨",
+      "texto": "Amortecedor a gás"
+    },
+    {
+      "icone": "⚖️",
+      "texto": "Peso suportado: até 150 kg"
+    },
+    {
+      "icone": "🔌",
+      "texto": "Carregador bivolt"
+    },
+    {
+      "icone": "🔊",
+      "texto": "Alarme antifurto com trava de motor"
+    },
+    {
+      "icone": "🌧️",
+      "texto": "Proteção IP65 contra água"
+    }
+  ],
+  "valores": {
+    "a_vista": 10990,
+    "parcelado_12x": 916,
+    "parcelado_21x": 523,
+    "sob_consulta": false
+  },
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto"
+    },
+    {
+      "nome": "Azul Celeste",
+      "slug": "azulceleste",
+      "hex": "#4a90d9",
+      "pasta": "azulceleste"
+    },
+    {
+      "nome": "Vermelho",
+      "slug": "vermelho",
+      "hex": "#a01d1d",
+      "pasta": "vermelho"
+    },
+    {
+      "nome": "Carbono",
+      "slug": "carbono",
+      "hex": "#3a3a3a",
+      "pasta": "carbono"
+    },
+    {
+      "nome": "Branco",
+      "slug": "branco",
+      "hex": "#e8e8e8",
+      "pasta": "branco"
+    },
+    {
+      "nome": "Amarelo",
+      "slug": "amarelo",
+      "hex": "#d4a017",
+      "pasta": "amarelo"
+    },
+    {
+      "nome": "Palmeiras",
+      "slug": "palmeiras",
+      "hex": null,
+      "tipo": "shield",
+      "edicao": "palmeiras",
+      "pasta": "palmeiras"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/x12/principal.webp",
+    "galeria": [
+      "modelos/x12/galeria/1.webp",
+      "modelos/x12/galeria/2.webp",
+      "modelos/x12/galeria/3.webp",
+      "modelos/x12/galeria/4.webp",
+      "modelos/x12/galeria/5.webp",
+      "modelos/x12/galeria/6.webp"
+    ]
+  },
+  "product_url": "https://motochefeitaim.com.br/product/scooter-eletrica-x12-1000w-autopropelido-sem-cnh/",
+  "featured": true,
+  "power_w": 1000,
+  "range_km": 50,
+  "top_speed_kmh": 32,
+  "edicao_especial": {
+    "nome": "Palmeiras",
+    "badge": "SE Palmeiras × MotoChefe · Cor Exclusiva",
+    "titulo": "O VERDE DO MAIOR CAMPEÃO",
+    "subtitulo": "Sociedade Esportiva Palmeiras × MotoChefe",
+    "descricao": "A X12 na cor verde do Palmeiras. Para quem carrega o verde no peito e na rua. A mesma mobilidade elétrica, agora na cor do Maior Campeão do Brasil.",
+    "imagem_destaque": "modelos/x12/destaque.webp"
+  }
+};

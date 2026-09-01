@@ -1,0 +1,87 @@
+{
+  "slug": "bob",
+  "nome": "MC Bob",
+  "categoria": "Autopropelido",
+  "apresentacao": "Conforto, mobilidade e economia. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.",
+  "sobre": "Conforto, mobilidade e economia. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.",
+  "especificacoes": {
+    "Motor": "1000W",
+    "Tipo de Bateria": "Lítio 60V 20A (removível)",
+    "Autonomia": "até 40 km",
+    "Velocidade Máxima": "32 km/h",
+    "Carga Máxima": "180 kg",
+    "Carregador": "Bivolt 110V/220V",
+    "Tempo de Recarga": "5 a 7 horas",
+    "Freios": "Hidráulicos a disco dianteiro",
+    "Extras": "Cesta frontal, Suspensão dupla, Alarme"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria de lítio 60V 20A removível"
+    },
+    {
+      "icone": "🔧",
+      "texto": "Freios hidráulicos a disco"
+    },
+    {
+      "icone": "🛒",
+      "texto": "Cesta frontal inclusa"
+    },
+    {
+      "icone": "💡",
+      "texto": "Iluminação completa (farol, setas, buzina)"
+    },
+    {
+      "icone": "🔊",
+      "texto": "Alarme com sistema antifurto"
+    },
+    {
+      "icone": "⚖️",
+      "texto": "Carga máxima: 180 kg"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto"
+    },
+    {
+      "nome": "Azul",
+      "slug": "azul",
+      "hex": "#1e5b94",
+      "pasta": "azul"
+    }
+  ],
+  "imagens": {
+    "principal": "modelos/bob/principal.webp",
+    "galeria": [
+      "modelos/bob/galeria/1.webp",
+      "modelos/bob/galeria/2.webp",
+      "modelos/bob/galeria/3.webp",
+      "modelos/bob/galeria/4.webp",
+      "modelos/bob/galeria/5.webp"
+    ]
+  },
+  "product_url": "https://itaim.motochefe.com.br",
+  "featured": false,
+  "power_w": 1000,
+  "range_km": 40,
+  "top_speed_kmh": 32
+}
