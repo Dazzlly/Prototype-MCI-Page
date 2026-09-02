@@ -47,11 +47,22 @@
     "parcelado_21x": 728,
     "sob_consulta": false
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/ved/preto/ved.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/ved/principal.webp",
+    "card": "modelos/ved/preto/ved.webp",
     "galeria": [
-      "modelos/ved/galeria/1.webp"
+      "modelos/ved/galeria/extra-ved_product.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/triciclo-ventane-1000w-autopropelido-sem-cnh/",

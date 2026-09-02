@@ -63,29 +63,35 @@ window.MODEL_DATA["roma"] = {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": [
+        "modelos/roma/azul/roma.webp"
+      ]
     },
     {
       "nome": "Creme",
       "slug": "creme",
       "hex": "#f0e6d2",
-      "pasta": "creme"
+      "pasta": "creme",
+      "imagens": []
     },
     {
       "nome": "Preta",
       "slug": "preta",
       "hex": "#1a1a1a",
-      "pasta": "preta"
+      "pasta": "preta",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/roma/principal.webp",
+    "card": "modelos/roma/azul/roma.webp",
     "galeria": [
-      "modelos/roma/galeria/1.webp",
-      "modelos/roma/galeria/2.webp",
-      "modelos/roma/galeria/3.webp",
-      "modelos/roma/galeria/4.webp",
-      "modelos/roma/galeria/5.webp"
+      "modelos/roma/galeria/extra-roma_ai_sombra-1.webp",
+      "modelos/roma/galeria/extra-roma_color-1.webp",
+      "modelos/roma/galeria/extra-roma_color-2.webp",
+      "modelos/roma/galeria/extra-roma_color-3.webp",
+      "modelos/roma/galeria/extra-bancoDuplo.webp"
     ]
   },
   "product_url": "https://motochefe.com.br",

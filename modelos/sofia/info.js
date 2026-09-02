@@ -63,30 +63,36 @@ window.MODEL_DATA["sofia"] = {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/sofia/preto/sofia.webp"
+      ]
     },
     {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": []
     },
     {
       "nome": "Vermelha",
       "slug": "vermelha",
       "hex": "#a01d1d",
-      "pasta": "vermelha"
+      "pasta": "vermelha",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/sofia/principal.webp",
+    "card": "modelos/sofia/preto/sofia.webp",
     "galeria": [
-      "modelos/sofia/galeria/1.webp",
-      "modelos/sofia/galeria/2.webp",
-      "modelos/sofia/galeria/3.webp",
-      "modelos/sofia/galeria/4.webp",
-      "modelos/sofia/galeria/5.webp",
-      "modelos/sofia/galeria/6.webp"
+      "modelos/sofia/galeria/extra-sofia_cor-3.webp",
+      "modelos/sofia/galeria/extra-sofia_cor-1.webp",
+      "modelos/sofia/galeria/extra-sofia_cor-2.webp",
+      "modelos/sofia/galeria/extra-painel_raw-1-1.webp",
+      "modelos/sofia/galeria/extra-farol-2.webp",
+      "modelos/sofia/galeria/extra-bau-1.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

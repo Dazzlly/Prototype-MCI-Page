@@ -34,11 +34,22 @@
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/joyzinha/preto/joyzinha.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/joyzinha/principal.webp",
+    "card": "modelos/joyzinha/preto/joyzinha.webp",
     "galeria": [
-      "modelos/joyzinha/galeria/1.webp"
+      "modelos/joyzinha/galeria/extra-joy.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

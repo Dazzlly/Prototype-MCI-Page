@@ -13,12 +13,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Branca", hex: "#e8e8e8" }
     ],
     gallery: [
-      "modelos/mia/galeria/1.webp",
-      "modelos/mia/galeria/2.webp",
-      "modelos/mia/galeria/3.webp",
-      "modelos/mia/galeria/4.webp",
-      "modelos/mia/galeria/5.webp",
-      "modelos/mia/galeria/6.webp"
+      "modelos/mia/galeria/mia-preta.webp",
+      "modelos/mia/galeria/extra-mia.webp",
+      "modelos/mia/galeria/extra-mia_cor_3-1.webp",
+      "modelos/mia/galeria/extra-mia_cor_1-1.webp",
+      "modelos/mia/galeria/extra-mia_farol.webp",
+      "modelos/mia/galeria/extra-miaa-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -56,11 +56,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelho", hex: "#a01d1d" }
     ],
     gallery: [
-      "modelos/jet-max/galeria/1.webp",
-      "modelos/jet-max/galeria/2.webp",
-      "modelos/jet-max/galeria/3.webp",
-      "modelos/jet-max/galeria/4.webp",
-      "modelos/jet-max/galeria/5.webp"
+      "modelos/jet-max/galeria/extra-jetmax_cor-3.webp",
+      "modelos/jet-max/galeria/extra-jetmax_cor-2.webp",
+      "modelos/jet-max/galeria/extra-jetmax_cor-1.webp",
+      "modelos/jet-max/galeria/extra-bau_30l.webp",
+      "modelos/jet-max/galeria/extra-farol_full2.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -96,11 +96,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
-      "modelos/jet/galeria/1.webp",
-      "modelos/jet/galeria/2.webp",
-      "modelos/jet/galeria/3.webp",
-      "modelos/jet/galeria/4.webp",
-      "modelos/jet/galeria/5.webp"
+      "modelos/jet/galeria/jet.webp",
+      "modelos/jet/galeria/extra-jet_cor_1-1.webp",
+      "modelos/jet/galeria/extra-jet_cor_3-1.webp",
+      "modelos/jet/galeria/extra-jet_cor_2-1.webp",
+      "modelos/jet/galeria/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -135,11 +135,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Azul", hex: "#1e5b94" }
     ],
     gallery: [
-      "modelos/bob/galeria/1.webp",
-      "modelos/bob/galeria/2.webp",
-      "modelos/bob/galeria/3.webp",
-      "modelos/bob/galeria/4.webp",
-      "modelos/bob/galeria/5.webp"
+      "modelos/bob/galeria/extra-cor-2.webp",
+      "modelos/bob/galeria/extra-cor-1.webp",
+      "modelos/bob/galeria/extra-detalhe_bob-2.webp",
+      "modelos/bob/galeria/extra-detalhe_bob-3.webp",
+      "modelos/bob/galeria/extra-detalhe_bob-5.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -171,12 +171,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelha", hex: "#a01d1d" }
     ],
     gallery: [
-      "modelos/sofia/galeria/1.webp",
-      "modelos/sofia/galeria/2.webp",
-      "modelos/sofia/galeria/3.webp",
-      "modelos/sofia/galeria/4.webp",
-      "modelos/sofia/galeria/5.webp",
-      "modelos/sofia/galeria/6.webp"
+      "modelos/sofia/galeria/extra-sofia_cor-3.webp",
+      "modelos/sofia/galeria/extra-sofia_cor-1.webp",
+      "modelos/sofia/galeria/extra-sofia_cor-2.webp",
+      "modelos/sofia/galeria/extra-painel_raw-1-1.webp",
+      "modelos/sofia/galeria/extra-farol-2.webp",
+      "modelos/sofia/galeria/extra-bau-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -210,12 +210,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelho", hex: "#a01d1d" }
     ],
     gallery: [
-      "modelos/joy-super/galeria/1.webp",
-      "modelos/joy-super/galeria/2.webp",
-      "modelos/joy-super/galeria/3.webp",
-      "modelos/joy-super/galeria/4.webp",
-      "modelos/joy-super/galeria/5.webp",
-      "modelos/joy-super/galeria/6.webp"
+      "modelos/joy-super/galeria/extra-joysuper5.webp",
+      "modelos/joy-super/galeria/extra-joysuper1.webp",
+      "modelos/joy-super/galeria/extra-joysuper2.webp",
+      "modelos/joy-super/galeria/extra-joysuper3.webp",
+      "modelos/joy-super/galeria/extra-joysuper4.webp",
+      "modelos/joy-super/galeria/extra-bicicleta_eletrica_joy_super_800w_sem_cnh_moto_chefe_variacao_-2.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -250,11 +250,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelha", hex: "#a01d1d" }
     ],
     gallery: [
-      "modelos/20-mini/galeria/1.webp",
-      "modelos/20-mini/galeria/2.webp",
-      "modelos/20-mini/galeria/3.webp",
-      "modelos/20-mini/galeria/4.webp",
-      "modelos/20-mini/galeria/5.webp"
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-3.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-1.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-2.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-4.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-6.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -286,12 +286,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Vermelha", hex: "#a01d1d" }
     ],
     gallery: [
-      "modelos/ret/galeria/1.png",
-      "modelos/ret/galeria/2.png",
-      "modelos/ret/galeria/3.png",
-      "modelos/ret/galeria/4.jpg",
-      "modelos/ret/galeria/5.jpg",
-      "modelos/ret/galeria/6.jpg"
+      "modelos/ret/galeria/extra-ret3.png",
+      "modelos/ret/galeria/extra-ret1.png",
+      "modelos/ret/galeria/extra-ret2.png",
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE.jpg",
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-1.jpg",
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-4.jpg"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -323,7 +323,7 @@ Object.assign(MODEL_DETAILS, {
       { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
-      "modelos/soma/galeria/1.jpg",
+      "modelos/soma/galeria/extra-Soma-Prata.jpg",
       "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/WhatsApp-Image-2024-09-12-at-13.27.37.jpeg"
     ],
     features: [
@@ -353,7 +353,7 @@ Object.assign(MODEL_DETAILS, {
 
   joyzinha: {
     gallery: [
-      "modelos/joyzinha/galeria/1.webp"
+      "modelos/joyzinha/galeria/extra-joy.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -373,7 +373,7 @@ Object.assign(MODEL_DETAILS, {
 
   "joy-tri": {
     gallery: [
-      "modelos/joy-tri/galeria/1.webp"
+      "modelos/joy-tri/galeria/extra-JOY-TRI-1-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -393,7 +393,7 @@ Object.assign(MODEL_DETAILS, {
 
   "big-tri": {
     gallery: [
-      "modelos/big-tri/galeria/1.webp"
+      "modelos/big-tri/galeria/extra-big_tri.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -415,7 +415,7 @@ Object.assign(MODEL_DETAILS, {
 
   "mia-tri": {
     gallery: [
-      "modelos/mia-tri/galeria/1.webp"
+      "modelos/mia-tri/galeria/extra-MIA-TRI-01-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -434,7 +434,7 @@ Object.assign(MODEL_DETAILS, {
 
   ved: {
     gallery: [
-      "modelos/ved/galeria/1.webp"
+      "modelos/ved/galeria/extra-ved_product.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -466,12 +466,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Cinza", hex: "#6b6b6b" }
     ],
     gallery: [
-      "modelos/x15/galeria/1.webp",
-      "modelos/x15/galeria/2.png",
-      "modelos/x15/galeria/3.png",
-      "modelos/x15/galeria/4.png",
-      "modelos/x15/galeria/5.webp",
-      "modelos/x15/galeria/6.jpg"
+      "modelos/x15/galeria/extra-x15.webp",
+      "modelos/x15/galeria/extra-cores_mc20-13.png",
+      "modelos/x15/galeria/extra-cores_mc20-14.png",
+      "modelos/x15/galeria/extra-cores_mc20-7.png",
+      "modelos/x15/galeria/extra-x15_1.webp",
+      "modelos/x15/galeria/extra-Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg"
     ],
     features: [
       { icon: "🆔", text: "Partida por cartão NFC" },
@@ -505,12 +505,12 @@ Object.assign(MODEL_DETAILS, {
       { name: "Cinza", hex: "#6b6b6b" }
     ],
     gallery: [
-      "modelos/x11/galeria/1.webp",
-      "modelos/x11/galeria/2.png",
-      "modelos/x11/galeria/3.png",
-      "modelos/x11/galeria/4.png",
-      "modelos/x11/galeria/5.png",
-      "modelos/x11/galeria/6.webp"
+      "modelos/x11/galeria/extra-x11__-1.webp",
+      "modelos/x11/galeria/extra-x11_cores-15.png",
+      "modelos/x11/galeria/extra-x11_cores-8.png",
+      "modelos/x11/galeria/extra-x11_cores-13.png",
+      "modelos/x11/galeria/extra-x11_cores-2.png",
+      "modelos/x11/galeria/extra-x11.webp"
     ],
     features: [
       { icon: "🆔", text: "Liga/desliga com cartão NFC" },
@@ -535,7 +535,7 @@ Object.assign(MODEL_DETAILS, {
 
   "20": {
     gallery: [
-      "modelos/20/galeria/1.webp"
+      "modelos/20/galeria/extra-mc20_pop-1.webp"
     ],
     features: [
       { icon: "🆔", text: "Partida NFC" },
@@ -561,11 +561,11 @@ Object.assign(MODEL_DETAILS, {
       { name: "Preta", hex: "#1a1a1a" }
     ],
     gallery: [
-      "modelos/roma/galeria/1.webp",
-      "modelos/roma/galeria/2.webp",
-      "modelos/roma/galeria/3.webp",
-      "modelos/roma/galeria/4.webp",
-      "modelos/roma/galeria/5.webp"
+      "modelos/roma/galeria/extra-roma_ai_sombra-1.webp",
+      "modelos/roma/galeria/extra-roma_color-1.webp",
+      "modelos/roma/galeria/extra-roma_color-2.webp",
+      "modelos/roma/galeria/extra-roma_color-3.webp",
+      "modelos/roma/galeria/extra-bancoDuplo.webp"
     ],
     features: [
       { icon: "🎨", text: "Design retrô italiano" },
@@ -594,7 +594,7 @@ Object.assign(MODEL_DETAILS, {
 
   grid: {
     gallery: [
-      "modelos/grid/galeria/1.webp"
+      "modelos/grid/galeria/extra-GRID-LATERAL1-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -616,7 +616,7 @@ Object.assign(MODEL_DETAILS, {
 
   style: {
     gallery: [
-      "modelos/style/galeria/1.webp"
+      "modelos/style/galeria/extra-style-1-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -639,7 +639,7 @@ Object.assign(MODEL_DETAILS, {
   liberty: {
     badge: "MODELO DOBRÁVEL",
     gallery: [
-      "modelos/liberty/galeria/1.webp"
+      "modelos/liberty/galeria/extra-liberty_product_web.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -662,7 +662,7 @@ Object.assign(MODEL_DETAILS, {
   space: {
     badge: "MODELO DOBRÁVEL",
     gallery: [
-      "modelos/space/galeria/1.webp"
+      "modelos/space/galeria/extra-space_ia-1.webp"
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },

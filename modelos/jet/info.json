@@ -67,29 +67,35 @@
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": [
+        "modelos/jet/azul/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_1_19eff44202bb23ad1271e525ef0d71da-67544aca0bcdf.webp"
+      ]
     },
     {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/jet/principal.webp",
+    "card": "modelos/jet/azul/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_1_19eff44202bb23ad1271e525ef0d71da-67544aca0bcdf.webp",
     "galeria": [
-      "modelos/jet/galeria/1.webp",
-      "modelos/jet/galeria/2.webp",
-      "modelos/jet/galeria/3.webp",
-      "modelos/jet/galeria/4.webp",
-      "modelos/jet/galeria/5.webp"
+      "modelos/jet/galeria/jet.webp",
+      "modelos/jet/galeria/extra-jet_cor_1-1.webp",
+      "modelos/jet/galeria/extra-jet_cor_3-1.webp",
+      "modelos/jet/galeria/extra-jet_cor_2-1.webp",
+      "modelos/jet/galeria/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/scooter-eletrica-jet-1000w-autopropelido-sem-cnh/",

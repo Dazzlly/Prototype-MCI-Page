@@ -47,11 +47,22 @@ window.MODEL_DATA["big-tri"] = {
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/big-tri/preto/big-tri.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/big-tri/principal.webp",
+    "card": "modelos/big-tri/preto/big-tri.webp",
     "galeria": [
-      "modelos/big-tri/galeria/1.webp"
+      "modelos/big-tri/galeria/extra-big_tri.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

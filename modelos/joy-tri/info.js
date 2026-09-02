@@ -42,11 +42,22 @@ window.MODEL_DATA["joy-tri"] = {
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/joy-tri/preto/joy-tri.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/joy-tri/principal.webp",
+    "card": "modelos/joy-tri/preto/joy-tri.webp",
     "galeria": [
-      "modelos/joy-tri/galeria/1.webp"
+      "modelos/joy-tri/galeria/extra-JOY-TRI-1-1.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

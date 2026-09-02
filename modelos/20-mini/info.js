@@ -63,29 +63,35 @@ window.MODEL_DATA["20-mini"] = {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/20-mini/preto/20-mini.webp"
+      ]
     },
     {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": []
     },
     {
       "nome": "Vermelha",
       "slug": "vermelha",
       "hex": "#a01d1d",
-      "pasta": "vermelha"
+      "pasta": "vermelha",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/20-mini/principal.webp",
+    "card": "modelos/20-mini/preto/20-mini.webp",
     "galeria": [
-      "modelos/20-mini/galeria/1.webp",
-      "modelos/20-mini/galeria/2.webp",
-      "modelos/20-mini/galeria/3.webp",
-      "modelos/20-mini/galeria/4.webp",
-      "modelos/20-mini/galeria/5.webp"
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-3.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-1.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-2.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-4.webp",
+      "modelos/20-mini/galeria/extra-mc20_detalhes_modelo-6.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

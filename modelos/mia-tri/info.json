@@ -38,11 +38,22 @@
     "parcelado_21x": 595,
     "sob_consulta": false
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/mia-tri/preto/mia-tri.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/mia-tri/principal.webp",
+    "card": "modelos/mia-tri/preto/mia-tri.webp",
     "galeria": [
-      "modelos/mia-tri/galeria/1.webp"
+      "modelos/mia-tri/galeria/extra-MIA-TRI-01-1.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/triciclo-mc-mia-800w-autopropelido-sem-cnh/",

@@ -61,42 +61,50 @@ window.MODEL_DATA["x11"] = {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/x11/preto/x11.webp"
+      ]
     },
     {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": []
     },
     {
       "nome": "Vermelho",
       "slug": "vermelho",
       "hex": "#a01d1d",
-      "pasta": "vermelho"
+      "pasta": "vermelho",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     },
     {
       "nome": "Cinza",
       "slug": "cinza",
       "hex": "#6b6b6b",
-      "pasta": "cinza"
+      "pasta": "cinza",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/x11/principal.webp",
+    "card": "modelos/x11/preto/x11.webp",
     "galeria": [
-      "modelos/x11/galeria/1.webp",
-      "modelos/x11/galeria/2.png",
-      "modelos/x11/galeria/3.png",
-      "modelos/x11/galeria/4.png",
-      "modelos/x11/galeria/5.png",
-      "modelos/x11/galeria/6.webp"
+      "modelos/x11/galeria/extra-x11__-1.webp",
+      "modelos/x11/galeria/extra-x11_cores-15.png",
+      "modelos/x11/galeria/extra-x11_cores-8.png",
+      "modelos/x11/galeria/extra-x11_cores-13.png",
+      "modelos/x11/galeria/extra-x11_cores-2.png",
+      "modelos/x11/galeria/extra-x11.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/scooter-eletrica-mc-x11-3000w/",

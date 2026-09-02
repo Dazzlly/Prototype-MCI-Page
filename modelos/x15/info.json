@@ -58,42 +58,50 @@
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/x15/preto/x15.webp"
+      ]
     },
     {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": []
     },
     {
       "nome": "Vermelho",
       "slug": "vermelho",
       "hex": "#a01d1d",
-      "pasta": "vermelho"
+      "pasta": "vermelho",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     },
     {
       "nome": "Cinza",
       "slug": "cinza",
       "hex": "#6b6b6b",
-      "pasta": "cinza"
+      "pasta": "cinza",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/x15/principal.webp",
+    "card": "modelos/x15/preto/x15.webp",
     "galeria": [
-      "modelos/x15/galeria/1.webp",
-      "modelos/x15/galeria/2.png",
-      "modelos/x15/galeria/3.png",
-      "modelos/x15/galeria/4.png",
-      "modelos/x15/galeria/5.webp",
-      "modelos/x15/galeria/6.jpg"
+      "modelos/x15/galeria/extra-x15.webp",
+      "modelos/x15/galeria/extra-cores_mc20-13.png",
+      "modelos/x15/galeria/extra-cores_mc20-14.png",
+      "modelos/x15/galeria/extra-cores_mc20-7.png",
+      "modelos/x15/galeria/extra-x15_1.webp",
+      "modelos/x15/galeria/extra-Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

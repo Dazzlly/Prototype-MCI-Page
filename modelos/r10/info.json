@@ -75,15 +75,16 @@
     "sob_consulta": true
   },
   "cores": [],
+  "edicao_especial": true,
   "imagens": {
-    "principal": "modelos/r10/principal.png",
+    "card": "modelos/r10/galeria/r10.png",
     "galeria": [
-      "modelos/r10/galeria/1.png",
-      "modelos/r10/galeria/2.webp",
-      "modelos/r10/galeria/3.webp",
-      "modelos/r10/galeria/4.webp",
-      "modelos/r10/galeria/5.webp",
-      "modelos/r10/galeria/6.webp"
+      "modelos/r10/galeria/r10.png",
+      "modelos/r10/galeria/r10-gallery-1.webp",
+      "modelos/r10/galeria/r10-gallery-2.webp",
+      "modelos/r10/galeria/r10-gallery-3.webp",
+      "modelos/r10/galeria/r10-gallery-4.webp",
+      "modelos/r10/galeria/r10-gallery-5.webp"
     ]
   },
   "product_url": "https://motochefebrasil.com.br/modelos/r10/",

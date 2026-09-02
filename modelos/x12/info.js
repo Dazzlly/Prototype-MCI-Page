@@ -82,37 +82,45 @@ window.MODEL_DATA["x12"] = {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/x12/preto/x12.webp"
+      ]
     },
     {
       "nome": "Azul Celeste",
       "slug": "azulceleste",
       "hex": "#4a90d9",
-      "pasta": "azulceleste"
+      "pasta": "azulceleste",
+      "imagens": []
     },
     {
       "nome": "Vermelho",
       "slug": "vermelho",
       "hex": "#a01d1d",
-      "pasta": "vermelho"
+      "pasta": "vermelho",
+      "imagens": []
     },
     {
       "nome": "Carbono",
       "slug": "carbono",
       "hex": "#3a3a3a",
-      "pasta": "carbono"
+      "pasta": "carbono",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     },
     {
       "nome": "Amarelo",
       "slug": "amarelo",
       "hex": "#d4a017",
-      "pasta": "amarelo"
+      "pasta": "amarelo",
+      "imagens": []
     },
     {
       "nome": "Palmeiras",
@@ -123,15 +131,16 @@ window.MODEL_DATA["x12"] = {
       "pasta": "palmeiras"
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/x12/principal.webp",
+    "card": "modelos/x12/preto/x12.webp",
     "galeria": [
-      "modelos/x12/galeria/1.webp",
-      "modelos/x12/galeria/2.webp",
-      "modelos/x12/galeria/3.webp",
-      "modelos/x12/galeria/4.webp",
-      "modelos/x12/galeria/5.webp",
-      "modelos/x12/galeria/6.webp"
+      "modelos/x12/galeria/x12-gallery-1.webp",
+      "modelos/x12/galeria/x12-gallery-2.webp",
+      "modelos/x12/galeria/x12-gallery-3.webp",
+      "modelos/x12/galeria/x12-gallery-4.webp",
+      "modelos/x12/galeria/x12-gallery-5.webp",
+      "modelos/x12/galeria/x12-gallery-6.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/scooter-eletrica-x12-1000w-autopropelido-sem-cnh/",
@@ -139,12 +148,12 @@ window.MODEL_DATA["x12"] = {
   "power_w": 1000,
   "range_km": 50,
   "top_speed_kmh": 32,
-  "edicao_especial": {
-    "nome": "Palmeiras",
-    "badge": "SE Palmeiras × MotoChefe · Cor Exclusiva",
-    "titulo": "O VERDE DO MAIOR CAMPEÃO",
-    "subtitulo": "Sociedade Esportiva Palmeiras × MotoChefe",
-    "descricao": "A X12 na cor verde do Palmeiras. Para quem carrega o verde no peito e na rua. A mesma mobilidade elétrica, agora na cor do Maior Campeão do Brasil.",
-    "imagem_destaque": "modelos/x12/destaque.webp"
+  "edicao_especial_dados": {
+    "palmeiras": {
+      "badge": "SE Palmeiras × MotoChefe · Cor Exclusiva",
+      "titulo": "O VERDE DO MAIOR CAMPEÃO",
+      "subtitulo": "Sociedade Esportiva Palmeiras × MotoChefe",
+      "descricao": "A X12 na cor verde do Palmeiras. Para quem carrega o verde no peito e na rua. A mesma mobilidade elétrica, agora na cor do Maior Campeão do Brasil."
+    }
   }
 };

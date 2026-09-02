@@ -65,25 +65,32 @@ window.MODEL_DATA["soma"] = {
       "nome": "Prata",
       "slug": "prata",
       "hex": "#b8b8b8",
-      "pasta": "prata"
+      "pasta": "prata",
+      "imagens": [
+        "modelos/soma/prata/soma.webp"
+      ]
     },
     {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/soma/principal.webp",
+    "card": "modelos/soma/prata/soma.webp",
     "galeria": [
-      "modelos/soma/galeria/1.jpg"
+      "modelos/soma/galeria/extra-Soma-Prata.jpg",
+      "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/WhatsApp-Image-2024-09-12-at-13.27.37.jpeg"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/mc-soma-1000w-autopropelido-sem-cnh/",

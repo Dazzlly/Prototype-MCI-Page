@@ -63,42 +63,50 @@
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": [
+        "modelos/joy-super/azul/joy-super.webp"
+      ]
     },
     {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     },
     {
       "nome": "Cinza",
       "slug": "cinza",
       "hex": "#6b6b6b",
-      "pasta": "cinza"
+      "pasta": "cinza",
+      "imagens": []
     },
     {
       "nome": "Vermelho",
       "slug": "vermelho",
       "hex": "#a01d1d",
-      "pasta": "vermelho"
+      "pasta": "vermelho",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/joy-super/principal.webp",
+    "card": "modelos/joy-super/azul/joy-super.webp",
     "galeria": [
-      "modelos/joy-super/galeria/1.webp",
-      "modelos/joy-super/galeria/2.webp",
-      "modelos/joy-super/galeria/3.webp",
-      "modelos/joy-super/galeria/4.webp",
-      "modelos/joy-super/galeria/5.webp",
-      "modelos/joy-super/galeria/6.webp"
+      "modelos/joy-super/galeria/extra-joysuper5.webp",
+      "modelos/joy-super/galeria/extra-joysuper1.webp",
+      "modelos/joy-super/galeria/extra-joysuper2.webp",
+      "modelos/joy-super/galeria/extra-joysuper3.webp",
+      "modelos/joy-super/galeria/extra-joysuper4.webp",
+      "modelos/joy-super/galeria/extra-bicicleta_eletrica_joy_super_800w_sem_cnh_moto_chefe_variacao_-2.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/mc-super-joy-800w-autopropelido-sem-cnh/",

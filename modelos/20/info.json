@@ -43,11 +43,22 @@
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/20/preto/mc20.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/20/principal.webp",
+    "card": "modelos/20/preto/mc20.webp",
     "galeria": [
-      "modelos/20/galeria/1.webp"
+      "modelos/20/galeria/extra-mc20_pop-1.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

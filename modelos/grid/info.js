@@ -47,11 +47,22 @@ window.MODEL_DATA["grid"] = {
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/grid/preto/grid.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/grid/principal.webp",
+    "card": "modelos/grid/preto/grid.webp",
     "galeria": [
-      "modelos/grid/galeria/1.webp"
+      "modelos/grid/galeria/extra-GRID-LATERAL1-1.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

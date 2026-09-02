@@ -63,23 +63,28 @@ window.MODEL_DATA["bob"] = {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/bob/preto/bob.webp"
+      ]
     },
     {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/bob/principal.webp",
+    "card": "modelos/bob/preto/bob.webp",
     "galeria": [
-      "modelos/bob/galeria/1.webp",
-      "modelos/bob/galeria/2.webp",
-      "modelos/bob/galeria/3.webp",
-      "modelos/bob/galeria/4.webp",
-      "modelos/bob/galeria/5.webp"
+      "modelos/bob/galeria/extra-cor-2.webp",
+      "modelos/bob/galeria/extra-cor-1.webp",
+      "modelos/bob/galeria/extra-detalhe_bob-2.webp",
+      "modelos/bob/galeria/extra-detalhe_bob-3.webp",
+      "modelos/bob/galeria/extra-detalhe_bob-5.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

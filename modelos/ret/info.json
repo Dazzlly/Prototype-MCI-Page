@@ -60,30 +60,36 @@
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": [
+        "modelos/ret/preto/ret.webp"
+      ]
     },
     {
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": []
     },
     {
       "nome": "Vermelha",
       "slug": "vermelha",
       "hex": "#a01d1d",
-      "pasta": "vermelha"
+      "pasta": "vermelha",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/ret/principal.webp",
+    "card": "modelos/ret/preto/ret.webp",
     "galeria": [
-      "modelos/ret/galeria/1.png",
-      "modelos/ret/galeria/2.png",
-      "modelos/ret/galeria/3.png",
-      "modelos/ret/galeria/4.jpg",
-      "modelos/ret/galeria/5.jpg",
-      "modelos/ret/galeria/6.jpg"
+      "modelos/ret/galeria/extra-ret3.png",
+      "modelos/ret/galeria/extra-ret1.png",
+      "modelos/ret/galeria/extra-ret2.png",
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE.jpg",
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-1.jpg",
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-4.jpg"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

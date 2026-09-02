@@ -48,11 +48,22 @@
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/space/preto/space.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/space/principal.webp",
+    "card": "modelos/space/preto/space.webp",
     "galeria": [
-      "modelos/space/galeria/1.webp"
+      "modelos/space/galeria/extra-space_ia-1.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

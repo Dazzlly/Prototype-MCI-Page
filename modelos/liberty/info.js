@@ -47,11 +47,22 @@ window.MODEL_DATA["liberty"] = {
     "parcelado_21x": null,
     "sob_consulta": true
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/liberty/preto/liberty.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/liberty/principal.webp",
+    "card": "modelos/liberty/preto/liberty.webp",
     "galeria": [
-      "modelos/liberty/galeria/1.webp"
+      "modelos/liberty/galeria/extra-liberty_product_web.webp"
     ]
   },
   "product_url": "https://itaim.motochefe.com.br",

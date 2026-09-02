@@ -70,35 +70,42 @@
       "nome": "Azul",
       "slug": "azul",
       "hex": "#1e5b94",
-      "pasta": "azul"
+      "pasta": "azul",
+      "imagens": [
+        "modelos/jet-max/azul/jetmax.webp"
+      ]
     },
     {
       "nome": "Preto",
       "slug": "preto",
       "hex": "#1a1a1a",
-      "pasta": "preto"
+      "pasta": "preto",
+      "imagens": []
     },
     {
       "nome": "Branco",
       "slug": "branco",
       "hex": "#e8e8e8",
-      "pasta": "branco"
+      "pasta": "branco",
+      "imagens": []
     },
     {
       "nome": "Vermelho",
       "slug": "vermelho",
       "hex": "#a01d1d",
-      "pasta": "vermelho"
+      "pasta": "vermelho",
+      "imagens": []
     }
   ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/jet-max/principal.webp",
+    "card": "modelos/jet-max/azul/jetmax.webp",
     "galeria": [
-      "modelos/jet-max/galeria/1.webp",
-      "modelos/jet-max/galeria/2.webp",
-      "modelos/jet-max/galeria/3.webp",
-      "modelos/jet-max/galeria/4.webp",
-      "modelos/jet-max/galeria/5.webp"
+      "modelos/jet-max/galeria/extra-jetmax_cor-3.webp",
+      "modelos/jet-max/galeria/extra-jetmax_cor-2.webp",
+      "modelos/jet-max/galeria/extra-jetmax_cor-1.webp",
+      "modelos/jet-max/galeria/extra-bau_30l.webp",
+      "modelos/jet-max/galeria/extra-farol_full2.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/motochefe-jetmax-1000w-autopropelido-sem-cnh-copia/",

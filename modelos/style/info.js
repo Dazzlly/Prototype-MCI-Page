@@ -47,11 +47,22 @@ window.MODEL_DATA["style"] = {
     "parcelado_21x": 500,
     "sob_consulta": false
   },
-  "cores": [],
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/style/preto/style.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
   "imagens": {
-    "principal": "modelos/style/principal.webp",
+    "card": "modelos/style/preto/style.webp",
     "galeria": [
-      "modelos/style/galeria/1.webp"
+      "modelos/style/galeria/extra-style-1-1.webp"
     ]
   },
   "product_url": "https://motochefeitaim.com.br/product/bicicleta-eletrica-style-750w-ventane-motors/",
