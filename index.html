@@ -86,7 +86,7 @@
 </head>
 <body>
 <div id="header-dinamico"></div>
-  <script src="./menu.js"></script>
+  <script src="./menu.js" defer></script>
   
   <!-- Hero -->
   <section class="hero">
@@ -290,37 +290,37 @@
 
   <!-- Footer -->
   <div id="footer-dinamico"></div>
-  <script src="./footer.js"></script>
+  <script src="./footer.js" defer></script>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  <script src="./data.js"></script>
+  <script src="./data.js" defer></script>
   <script>
-    // Render destaques na home (após data.js)
-    const featuredOrder = ["MC Mia", "MC X12", "MC Giga", "MC Roma", "MC Jet", "MC Big Tri"];
-    const featured = featuredOrder.map(name => VEHICLES.find(v => v.name === name)).filter(Boolean);
-    const fmtP = v => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
-    document.getElementById("featured-grid").innerHTML = featured.map(v => `
-      <article class="veh-card" data-delay="0">
-        <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
-          <div class="veh-img">
-            <img src="${v.featured_image || v.image_url}" alt="${v.name}" loading="lazy">
-            <span class="veh-badge">${v.category}</span>
-          </div>
-        </a>
-        <div class="veh-body">
-          <a href="./modelo.html?m=${slugify(v.name)}" class="veh-title-link"><h3>${v.name}</h3></a>
-          <p class="veh-desc">${v.description || ""}</p>
-          <div class="veh-foot">
-            <div>${v.price ? `<p class="veh-price">${fmtP(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`}</div>
-            <div class="veh-foot-actions">
-              <a class="veh-details-link" href="./modelo.html?m=${slugify(v.name)}">Ver detalhes</a>
-              <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+    // Render destaques na home (após data.js defer + DOM pronto)
+    document.addEventListener("DOMContentLoaded", () => {
+      const featuredOrder = ["MC Mia", "MC X12", "MC Giga", "MC Roma", "MC Jet", "MC Big Tri"];
+      const featured = featuredOrder.map(name => VEHICLES.find(v => v.name === name)).filter(Boolean);
+      const fmtP = v => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
+      document.getElementById("featured-grid").innerHTML = featured.map(v => `
+        <article class="veh-card" data-delay="0">
+          <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
+            <div class="veh-img">
+              <img src="${v.featured_image || v.image_url}" alt="${v.name}" loading="lazy">
+              <span class="veh-badge">${v.category}</span>
+            </div>
+          </a>
+          <div class="veh-body">
+            <a href="./modelo.html?m=${slugify(v.name)}" class="veh-title-link"><h3>${v.name}</h3></a>
+            <p class="veh-desc">${v.description || ""}</p>
+            <div class="veh-foot">
+              <div>${v.price ? `<p class="veh-price">${fmtP(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`}</div>
+              <div class="veh-foot-actions">
+                <a class="veh-details-link" href="./modelo.html?m=${slugify(v.name)}">Ver detalhes</a>
+                <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+              </div>
             </div>
           </div>
-        </div>
-      </article>`).join("");
+        </article>`).join("");
+    });
   </script>
-  <script src="./data.js"></script>
   <script>
     // Atualiza dinamicamente a contagem real de modelos em cada categoria na Home
     document.addEventListener("DOMContentLoaded", () => {
@@ -341,6 +341,6 @@
       }
     });
   </script>
-  <script src="./app.js"></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>

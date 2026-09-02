@@ -1,4 +1,5 @@
-document.getElementById('header-dinamico').innerHTML = `
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('header-dinamico').innerHTML = `
   <header class="site-header">
     <div class="container header-inner">
       <a href="./index.html"><img class="site-logo" src="./MCI-Tw.png" alt="Motochefe Itaim"></a>
@@ -31,3 +32,4 @@ document.getElementById('header-dinamico').innerHTML = `
     </nav>
   </header>
 `;
+});
