@@ -55,9 +55,9 @@ window.MODEL_DATA["soma"] = {
     }
   ],
   "valores": {
-    "a_vista": 8990,
+    "a_vista": 8490,
     "parcelado_12x": 749,
-    "parcelado_21x": 428,
+    "parcelado_21x": 489.57,
     "sob_consulta": false
   },
   "cores": [

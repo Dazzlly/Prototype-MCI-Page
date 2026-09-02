@@ -72,9 +72,9 @@ window.MODEL_DATA["x12"] = {
     }
   ],
   "valores": {
-    "a_vista": 10990,
+    "a_vista": 9990,
     "parcelado_12x": 916,
-    "parcelado_21x": 523,
+    "parcelado_21x": 576.06,
     "sob_consulta": false
   },
   "cores": [

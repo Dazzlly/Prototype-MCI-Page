@@ -53,10 +53,10 @@ window.MODEL_DATA["ret"] = {
     }
   ],
   "valores": {
-    "a_vista": null,
-    "parcelado_12x": null,
-    "parcelado_21x": null,
-    "sob_consulta": true
+    "a_vista": 8490,
+    "parcelado_12x": 749,
+    "parcelado_21x": 489.57,
+    "sob_consulta": false
   },
   "cores": [
     {

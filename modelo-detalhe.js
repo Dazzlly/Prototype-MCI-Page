@@ -241,14 +241,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderCTA() {
-    const priceText = vehicle.price ? fmtPrice(vehicle.price) : "Sob Consulta";
+    if (!vehicle.price) {
+      return `
+        <section class="model-cta">
+          <div class="model-cta-blob"></div>
+          <div class="container model-cta-inner">
+            <h2>Pronto para o seu ${vehicle.name}?</h2>
+            <p>Sob Consulta — Fale com nossa equipe pelo WhatsApp</p>
+            <a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Falar no WhatsApp</a>
+          </div>
+        </section>`;
+    }
+    const pixPrice = fmtPrice(vehicle.price);
+    const price12x = vehicle.price_12x ? fmtPrice(vehicle.price_12x) : null;
+    const price21x = vehicle.price_21x ? fmtPrice(vehicle.price_21x) : null;
     return `
       <section class="model-cta">
         <div class="model-cta-blob"></div>
         <div class="container model-cta-inner">
           <h2>Pronto para o seu ${vehicle.name}?</h2>
-          <p>${priceText} — Fale com nossa equipe pelo WhatsApp</p>
-          <a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Falar no WhatsApp</a>
+          <div class="model-pricing">
+            <p class="model-price-pix">PIX ${pixPrice}</p>
+            ${price12x ? `<p class="model-price-12x">12x sem juros de ${price12x}</p>` : ''}
+            ${price21x ? `<p class="model-price-21x">21x de ${price21x}</p>` : ''}
+          </div>
+          <p class="model-price-neg">Outros valores negociáveis com valor de entrada pequeno</p>
+          <a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar em nosso WhatsApp</a>
         </div>
       </section>`;
   }

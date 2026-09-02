@@ -53,10 +53,10 @@ window.MODEL_DATA["bob"] = {
     }
   ],
   "valores": {
-    "a_vista": null,
-    "parcelado_12x": null,
-    "parcelado_21x": null,
-    "sob_consulta": true
+    "a_vista": 7990,
+    "parcelado_12x": 690,
+    "parcelado_21x": 460.74,
+    "sob_consulta": false
   },
   "cores": [
     {

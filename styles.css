@@ -169,9 +169,18 @@ section { position: relative; }
 .veh-spec { display: inline-flex; align-items: center; gap: 4px; }
 .veh-spec svg { width: 14px; height: 14px; color: var(--primary); }
 .veh-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); }
-.veh-price { font-size: 20px; font-weight: 900; color: #fff; }
+.veh-price { font-size: 22px; font-weight: 900; color: #fff; }
+.veh-price-12x { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.85); margin-top: 2px; }
+.veh-price-neg { font-size: 11px; color: var(--muted-fg); margin-top: 6px; font-style: italic; }
 .veh-price-install { font-size: 11px; color: rgba(255,255,255,0.6); }
 .veh-consult { font-size: 16px; font-weight: 700; color: var(--ring); }
+
+/* ---------- Model page pricing ---------- */
+.model-pricing { margin: 16px 0 8px; }
+.model-price-pix { font-size: 32px; font-weight: 900; color: var(--primary); }
+.model-price-12x { font-size: 22px; font-weight: 700; color: #fff; margin-top: 4px; }
+.model-price-21x { font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.8); margin-top: 2px; }
+.model-price-neg { font-size: 14px; color: var(--muted-fg); margin: 12px 0 20px; font-style: italic; }
 .veh-arrow { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: inline-flex; align-items: center; justify-content: center; color: #fff; transition: all .3s; flex-shrink: 0; }
 .veh-arrow:hover { background: var(--primary); color: hsl(0,0%,4.7%); }
 

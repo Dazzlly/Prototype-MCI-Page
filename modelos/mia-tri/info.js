@@ -36,9 +36,9 @@ window.MODEL_DATA["mia-tri"] = {
     }
   ],
   "valores": {
-    "a_vista": 12490,
-    "parcelado_12x": 1041,
-    "parcelado_21x": 595,
+    "a_vista": 11990,
+    "parcelado_12x": 1040,
+    "parcelado_21x": 691.39,
     "sob_consulta": false
   },
   "cores": [

@@ -64,9 +64,9 @@ window.MODEL_DATA["mia"] = {
     }
   ],
   "valores": {
-    "a_vista": 9990,
-    "parcelado_12x": 833,
-    "parcelado_21x": 476,
+    "a_vista": 9490,
+    "parcelado_12x": 749.16,
+    "parcelado_21x": 460.74,
     "sob_consulta": false
   },
   "cores": [

@@ -43,8 +43,8 @@ window.MODEL_DATA["style"] = {
   ],
   "valores": {
     "a_vista": 10490,
-    "parcelado_12x": 874,
-    "parcelado_21x": 500,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
     "sob_consulta": false
   },
   "cores": [

@@ -45,9 +45,9 @@ window.MODEL_DATA["ved"] = {
     }
   ],
   "valores": {
-    "a_vista": 15290,
+    "a_vista": 14990,
     "parcelado_12x": 1274,
-    "parcelado_21x": 728,
+    "parcelado_21x": 864.38,
     "sob_consulta": false
   },
   "cores": [

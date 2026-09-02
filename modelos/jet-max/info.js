@@ -63,9 +63,9 @@ window.MODEL_DATA["jet-max"] = {
     }
   ],
   "valores": {
-    "a_vista": 12990,
-    "parcelado_12x": 1083,
-    "parcelado_21x": 619,
+    "a_vista": 11990,
+    "parcelado_12x": 1082,
+    "parcelado_21x": 691.39,
     "sob_consulta": false
   },
   "cores": [

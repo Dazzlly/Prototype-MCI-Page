@@ -72,10 +72,10 @@ window.MODEL_DATA["r10"] = {
     }
   ],
   "valores": {
-    "a_vista": null,
-    "parcelado_12x": null,
-    "parcelado_21x": null,
-    "sob_consulta": true
+    "a_vista": 11990,
+    "parcelado_12x": 1082,
+    "parcelado_21x": 691.39,
+    "sob_consulta": false
   },
   "cores": [],
   "edicao_especial": true,

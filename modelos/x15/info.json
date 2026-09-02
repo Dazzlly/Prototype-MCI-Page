@@ -48,10 +48,10 @@
     }
   ],
   "valores": {
-    "a_vista": null,
-    "parcelado_12x": null,
-    "parcelado_21x": null,
-    "sob_consulta": true
+    "a_vista": 14490,
+    "parcelado_12x": 1274,
+    "parcelado_21x": 835.55,
+    "sob_consulta": false
   },
   "cores": [
     {

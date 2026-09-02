@@ -72,10 +72,10 @@ window.MODEL_DATA["giga"] = {
     }
   ],
   "valores": {
-    "a_vista": null,
-    "parcelado_12x": null,
-    "parcelado_21x": null,
-    "sob_consulta": true
+    "a_vista": 10990,
+    "parcelado_12x": 958,
+    "parcelado_21x": 633.73,
+    "sob_consulta": false
   },
   "cores": [
     {

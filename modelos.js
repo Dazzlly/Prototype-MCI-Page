@@ -16,7 +16,7 @@ function vehicleCard(v) {
   if (v.top_speed_kmh) specs.push(`<span class="veh-spec">${specIcon("speed")} ${v.top_speed_kmh} km/h</span>`);
   
   const priceBlock = v.price 
-    ? `<p class="veh-price">${fmtPrice(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` 
+    ? `<p class="veh-price">PIX ${fmtPrice(v.price)}</p>${v.price_12x ? `<p class="veh-price-12x">ou 12x de ${fmtPrice(v.price_12x)}</p>` : ''}<p class="veh-price-neg">Outros valores negociáveis com entrada pequena</p>` 
     : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`;
     
   return `
