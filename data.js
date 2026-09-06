@@ -69,7 +69,13 @@ const MODEL_DETAILS = {
       "modelos/giga/galeria/giga-gallery-1.jpg",
       "modelos/giga/galeria/giga-gallery-2.jpg",
       "modelos/giga/galeria/giga-gallery-3.jpg",
-      "modelos/giga/galeria/giga-gallery-4.jpg"
+      "modelos/giga/galeria/giga-gallery-4.jpg",
+      "modelos/giga/galeria/giga-maringa-1.jpg",
+      "modelos/giga/galeria/giga-maringa-2.jpg",
+      "modelos/giga/galeria/giga-maringa-3.jpg",
+      "modelos/giga/galeria/giga-maringa-4.jpg",
+      "modelos/giga/galeria/giga-maringa-5.jpg",
+      "modelos/giga/galeria/giga-maringa-6.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -139,7 +145,16 @@ const MODEL_DETAILS = {
       "modelos/x12/galeria/x12-gallery-3.webp",
       "modelos/x12/galeria/x12-gallery-4.webp",
       "modelos/x12/galeria/x12-gallery-5.webp",
-      "modelos/x12/galeria/x12-gallery-6.webp"
+      "modelos/x12/galeria/x12-gallery-6.webp",
+      "modelos/x12/galeria/x12-maringa-1.jpg",
+      "modelos/x12/galeria/x12-maringa-2.jpg",
+      "modelos/x12/galeria/x12-maringa-3.jpg",
+      "modelos/x12/galeria/x12-maringa-4.jpg",
+      "modelos/x12/galeria/x12-maringa-5.jpg",
+      "modelos/x12/galeria/x12-maringa-6.jpg",
+      "modelos/x12/galeria/x12-maringa-7.jpg",
+      "modelos/x12/galeria/x12-maringa-8.jpg",
+      "modelos/x12/galeria/x12-maringa-9.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -189,7 +204,13 @@ const MODEL_DETAILS = {
       "modelos/pitica/galeria/pitica-gallery-3.webp",
       "modelos/pitica/galeria/pitica-gallery-4.webp",
       "modelos/pitica/galeria/pitica-gallery-5.webp",
-      "modelos/pitica/galeria/pitica-gallery-6.webp"
+      "modelos/pitica/galeria/pitica-gallery-6.webp",
+      "modelos/pitica/galeria/pitica-maringa-1.jpg",
+      "modelos/pitica/galeria/pitica-maringa-2.jpg",
+      "modelos/pitica/galeria/pitica-maringa-3.jpg",
+      "modelos/pitica/galeria/pitica-maringa-4.jpg",
+      "modelos/pitica/galeria/pitica-maringa-5.jpg",
+      "modelos/pitica/galeria/pitica-maringa-6.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },

@@ -18,7 +18,12 @@ Object.assign(MODEL_DETAILS, {
       "modelos/mia/galeria/extra-mia_cor_3-1.webp",
       "modelos/mia/galeria/extra-mia_cor_1-1.webp",
       "modelos/mia/galeria/extra-mia_farol.webp",
-      "modelos/mia/galeria/extra-miaa-1.webp"
+      "modelos/mia/galeria/extra-miaa-1.webp",
+      "modelos/mia/galeria/mia-maringa-1.jpg",
+      "modelos/mia/galeria/mia-maringa-2.jpg",
+      "modelos/mia/galeria/mia-maringa-3.jpg",
+      "modelos/mia/galeria/mia-maringa-4.jpg",
+      "modelos/mia/galeria/mia-maringa-5.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -60,7 +65,15 @@ Object.assign(MODEL_DETAILS, {
       "modelos/jet-max/galeria/extra-jetmax_cor-2.webp",
       "modelos/jet-max/galeria/extra-jetmax_cor-1.webp",
       "modelos/jet-max/galeria/extra-bau_30l.webp",
-      "modelos/jet-max/galeria/extra-farol_full2.webp"
+      "modelos/jet-max/galeria/extra-farol_full2.webp",
+      "modelos/jet-max/galeria/jet-max-maringa-1.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-2.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-3.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-4.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-5.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-6.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-7.jpg",
+      "modelos/jet-max/galeria/jet-max-maringa-8.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -100,7 +113,14 @@ Object.assign(MODEL_DETAILS, {
       "modelos/jet/galeria/extra-jet_cor_1-1.webp",
       "modelos/jet/galeria/extra-jet_cor_3-1.webp",
       "modelos/jet/galeria/extra-jet_cor_2-1.webp",
-      "modelos/jet/galeria/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp"
+      "modelos/jet/galeria/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_4_dd80aff3b8fd07bb376a859d1afc0a85-67544acaebb33.webp",
+      "modelos/jet/galeria/jet-maringa-1.jpg",
+      "modelos/jet/galeria/jet-maringa-2.jpg",
+      "modelos/jet/galeria/jet-maringa-3.jpg",
+      "modelos/jet/galeria/jet-maringa-4.jpg",
+      "modelos/jet/galeria/jet-maringa-5.jpg",
+      "modelos/jet/galeria/jet-maringa-6.jpg",
+      "modelos/jet/galeria/jet-maringa-7.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -139,7 +159,14 @@ Object.assign(MODEL_DETAILS, {
       "modelos/bob/galeria/extra-cor-1.webp",
       "modelos/bob/galeria/extra-detalhe_bob-2.webp",
       "modelos/bob/galeria/extra-detalhe_bob-3.webp",
-      "modelos/bob/galeria/extra-detalhe_bob-5.webp"
+      "modelos/bob/galeria/extra-detalhe_bob-5.webp",
+      "modelos/bob/galeria/bob-maringa-1.jpg",
+      "modelos/bob/galeria/bob-maringa-2.jpg",
+      "modelos/bob/galeria/bob-maringa-3.jpg",
+      "modelos/bob/galeria/bob-maringa-4.jpg",
+      "modelos/bob/galeria/bob-maringa-5.jpg",
+      "modelos/bob/galeria/bob-maringa-6.jpg",
+      "modelos/bob/galeria/bob-maringa-7.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -176,7 +203,9 @@ Object.assign(MODEL_DETAILS, {
       "modelos/sofia/galeria/extra-sofia_cor-2.webp",
       "modelos/sofia/galeria/extra-painel_raw-1-1.webp",
       "modelos/sofia/galeria/extra-farol-2.webp",
-      "modelos/sofia/galeria/extra-bau-1.webp"
+      "modelos/sofia/galeria/extra-bau-1.webp",
+      "modelos/sofia/galeria/sofia-maringa-1.jpg",
+      "modelos/sofia/galeria/sofia-maringa-2.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -215,7 +244,15 @@ Object.assign(MODEL_DETAILS, {
       "modelos/joy-super/galeria/extra-joysuper2.webp",
       "modelos/joy-super/galeria/extra-joysuper3.webp",
       "modelos/joy-super/galeria/extra-joysuper4.webp",
-      "modelos/joy-super/galeria/extra-bicicleta_eletrica_joy_super_800w_sem_cnh_moto_chefe_variacao_-2.webp"
+      "modelos/joy-super/galeria/extra-bicicleta_eletrica_joy_super_800w_sem_cnh_moto_chefe_variacao_-2.webp",
+      "modelos/joy-super/galeria/joy-super-maringa-1.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-2.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-3.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-4.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-5.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-6.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-7.jpg",
+      "modelos/joy-super/galeria/joy-super-maringa-8.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -291,7 +328,14 @@ Object.assign(MODEL_DETAILS, {
       "modelos/ret/galeria/extra-ret2.png",
       "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE.jpg",
       "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-1.jpg",
-      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-4.jpg"
+      "modelos/ret/galeria/extra-Imagem-de-Moto-Eletrica-RET-1000w-SEM-CNH-MOTO-CHEFE-4.jpg",
+      "modelos/ret/galeria/ret-maringa-1.jpg",
+      "modelos/ret/galeria/ret-maringa-2.jpg",
+      "modelos/ret/galeria/ret-maringa-3.jpg",
+      "modelos/ret/galeria/ret-maringa-4.jpg",
+      "modelos/ret/galeria/ret-maringa-5.jpg",
+      "modelos/ret/galeria/ret-maringa-6.jpg",
+      "modelos/ret/galeria/ret-maringa-7.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -324,7 +368,14 @@ Object.assign(MODEL_DETAILS, {
     ],
     gallery: [
       "modelos/soma/galeria/extra-Soma-Prata.jpg",
-      "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/WhatsApp-Image-2024-09-12-at-13.27.37.jpeg"
+      "https://motochefeitaim.com.br/wp-content/uploads/Produtos/Soma/WhatsApp-Image-2024-09-12-at-13.27.37.jpeg",
+      "modelos/soma/galeria/soma-maringa-1.jpg",
+      "modelos/soma/galeria/soma-maringa-2.jpg",
+      "modelos/soma/galeria/soma-maringa-3.jpg",
+      "modelos/soma/galeria/soma-maringa-4.jpg",
+      "modelos/soma/galeria/soma-maringa-5.jpg",
+      "modelos/soma/galeria/soma-maringa-6.jpg",
+      "modelos/soma/galeria/soma-maringa-7.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -353,7 +404,16 @@ Object.assign(MODEL_DETAILS, {
 
   joyzinha: {
     gallery: [
-      "modelos/joyzinha/galeria/extra-joy.webp"
+      "modelos/joyzinha/galeria/extra-joy.webp",
+      "modelos/joyzinha/galeria/joyzinha-maringa-1.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-2.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-3.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-4.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-5.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-6.png",
+      "modelos/joyzinha/galeria/joyzinha-maringa-7.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-8.jpg",
+      "modelos/joyzinha/galeria/joyzinha-maringa-9.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -373,7 +433,10 @@ Object.assign(MODEL_DETAILS, {
 
   "joy-tri": {
     gallery: [
-      "modelos/joy-tri/galeria/extra-JOY-TRI-1-1.webp"
+      "modelos/joy-tri/galeria/extra-JOY-TRI-1-1.webp",
+      "modelos/joy-tri/galeria/joy-tri-maringa-1.jpg",
+      "modelos/joy-tri/galeria/joy-tri-maringa-2.jpg",
+      "modelos/joy-tri/galeria/joy-tri-maringa-3.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -393,7 +456,13 @@ Object.assign(MODEL_DETAILS, {
 
   "big-tri": {
     gallery: [
-      "modelos/big-tri/galeria/extra-big_tri.webp"
+      "modelos/big-tri/galeria/extra-big_tri.webp",
+      "modelos/big-tri/galeria/big-tri-maringa-1.jpg",
+      "modelos/big-tri/galeria/big-tri-maringa-2.jpg",
+      "modelos/big-tri/galeria/big-tri-maringa-3.jpg",
+      "modelos/big-tri/galeria/big-tri-maringa-4.jpg",
+      "modelos/big-tri/galeria/big-tri-maringa-5.jpg",
+      "modelos/big-tri/galeria/big-tri-maringa-6.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -415,7 +484,11 @@ Object.assign(MODEL_DETAILS, {
 
   "mia-tri": {
     gallery: [
-      "modelos/mia-tri/galeria/extra-MIA-TRI-01-1.webp"
+      "modelos/mia-tri/galeria/extra-MIA-TRI-01-1.webp",
+      "modelos/mia-tri/galeria/mia-tri-maringa-1.jpg",
+      "modelos/mia-tri/galeria/mia-tri-maringa-2.jpg",
+      "modelos/mia-tri/galeria/mia-tri-maringa-3.jpg",
+      "modelos/mia-tri/galeria/mia-tri-maringa-4.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -434,7 +507,10 @@ Object.assign(MODEL_DETAILS, {
 
   ved: {
     gallery: [
-      "modelos/ved/galeria/extra-ved_product.webp"
+      "modelos/ved/galeria/extra-ved_product.webp",
+      "modelos/ved/galeria/ved-maringa-1.jpg",
+      "modelos/ved/galeria/ved-maringa-2.jpg",
+      "modelos/ved/galeria/ved-maringa-3.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
@@ -471,7 +547,10 @@ Object.assign(MODEL_DETAILS, {
       "modelos/x15/galeria/extra-cores_mc20-14.png",
       "modelos/x15/galeria/extra-cores_mc20-7.png",
       "modelos/x15/galeria/extra-x15_1.webp",
-      "modelos/x15/galeria/extra-Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg"
+      "modelos/x15/galeria/extra-Imagem-de-Triciclo-Eletrico-X15-3000w-MOTO-CHEFE-4.jpg",
+      "modelos/x15/galeria/x15-maringa-1.jpg",
+      "modelos/x15/galeria/x15-maringa-2.jpg",
+      "modelos/x15/galeria/x15-maringa-3.jpg",
     ],
     features: [
       { icon: "🆔", text: "Partida por cartão NFC" },
@@ -510,7 +589,13 @@ Object.assign(MODEL_DETAILS, {
       "modelos/x11/galeria/extra-x11_cores-8.png",
       "modelos/x11/galeria/extra-x11_cores-13.png",
       "modelos/x11/galeria/extra-x11_cores-2.png",
-      "modelos/x11/galeria/extra-x11.webp"
+      "modelos/x11/galeria/extra-x11.webp",
+      "modelos/x11/galeria/x11-maringa-1.jpg",
+      "modelos/x11/galeria/x11-maringa-2.jpg",
+      "modelos/x11/galeria/x11-maringa-3.jpg",
+      "modelos/x11/galeria/x11-maringa-4.jpg",
+      "modelos/x11/galeria/x11-maringa-5.jpg",
+      "modelos/x11/galeria/x11-maringa-6.jpg",
     ],
     features: [
       { icon: "🆔", text: "Liga/desliga com cartão NFC" },
@@ -535,7 +620,12 @@ Object.assign(MODEL_DETAILS, {
 
   "20": {
     gallery: [
-      "modelos/20/galeria/extra-mc20_pop-1.webp"
+      "modelos/20/galeria/extra-mc20_pop-1.webp",
+      "modelos/20/galeria/20-maringa-1.jpg",
+      "modelos/20/galeria/20-maringa-2.jpg",
+      "modelos/20/galeria/20-maringa-3.jpg",
+      "modelos/20/galeria/20-maringa-4.jpg",
+      "modelos/20/galeria/20-maringa-5.jpg",
     ],
     features: [
       { icon: "🆔", text: "Partida NFC" },
@@ -565,7 +655,10 @@ Object.assign(MODEL_DETAILS, {
       "modelos/roma/galeria/extra-roma_color-1.webp",
       "modelos/roma/galeria/extra-roma_color-2.webp",
       "modelos/roma/galeria/extra-roma_color-3.webp",
-      "modelos/roma/galeria/extra-bancoDuplo.webp"
+      "modelos/roma/galeria/extra-bancoDuplo.webp",
+      "modelos/roma/galeria/roma-maringa-1.jpg",
+      "modelos/roma/galeria/roma-maringa-2.jpg",
+      "modelos/roma/galeria/roma-maringa-3.jpg",
     ],
     features: [
       { icon: "🎨", text: "Design retrô italiano" },
@@ -616,7 +709,11 @@ Object.assign(MODEL_DETAILS, {
 
   style: {
     gallery: [
-      "modelos/style/galeria/extra-style-1-1.webp"
+      "modelos/style/galeria/extra-style-1-1.webp",
+      "modelos/style/galeria/style-maringa-1.jpg",
+      "modelos/style/galeria/style-maringa-2.jpg",
+      "modelos/style/galeria/style-maringa-3.jpg",
+      "modelos/style/galeria/style-maringa-4.jpg",
     ],
     features: [
       { icon: "🚫", text: "Sem necessidade de CNH" },
