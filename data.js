@@ -38,11 +38,12 @@ const VEHICLES = [
   { name: "MC Ret", category: "Autopropelido", price: 8490, price_12x: 749, price_21x: 489.57, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e design. Scooter elétrica autopropelida com 1000W e 40 km de autonomia. Sem necessidade de CNH.", image_url: "modelos/ret/preto/ret.webp", product_url: "https://itaim.motochefe.com.br" },
   { name: "MC Joy Super", category: "Autopropelido", price: 6990, price_12x: 624, price_21x: 403.07, power_w: 800, range_km: 40, top_speed_kmh: 32, description: "A SUPER Joy 800W oferece mobilidade, conforto, economia e agilidade. Perfeita para o dia a dia.", image_url: "modelos/joy-super/azul/joy-super.webp", product_url: "https://motochefeitaim.com.br/product/mc-super-joy-800w-autopropelido-sem-cnh/" },
   { name: "MC Joyzinha", category: "Autopropelido", price: null, power_w: 600, range_km: 40, top_speed_kmh: 32, description: "Mobilidade, leveza e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia.", image_url: "modelos/joyzinha/preto/joyzinha.webp", product_url: "https://itaim.motochefe.com.br" },
+  { name: "MC Pitica", category: "Autopropelido", price: 5490, price_12x: 457.50, price_21x: 323.75, power_w: 500, range_km: 35, top_speed_kmh: 32, description: "Compacta, leve e econômica, a Pitica foi feita para quem quer entrar na mobilidade elétrica sem complicação. Ideal para trajetos curtos e rotina urbana. Sem necessidade de CNH.", image_url: "modelos/pitica/preto/pitica.webp", product_url: "https://motochefebrasil.com.br/modelos/pitica/" },
   { name: "MC Jet", category: "Autopropelido", price: 9990, price_12x: 916, price_21x: 576.06, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "Se você precisa de um meio de transporte no dia a dia e não quer tirar carteira, o Jet é a escolha certa.", image_url: "modelos/jet/azul/extra-moto_eletrica_jet_1000w_sem_cnh_moto_chefe_21_variacao_101_1_19eff44202bb23ad1271e525ef0d71da-67544aca0bcdf.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-jet-1000w-autopropelido-sem-cnh/", featured: true }
 ];
 
 const CATEGORIES = [
-  { name: "AUTOPROPELIDOS", count: "13 Modelos", image: "images/cat-autopropelidos.webp", filter: "Autopropelido" },
+  { name: "AUTOPROPELIDOS", count: "14 Modelos", image: "images/cat-autopropelidos.webp", filter: "Autopropelido" },
   { name: "CICLOMOTORES", count: "4 Modelos", image: "images/cat-ciclomotores.webp", filter: "Ciclomotor" },
   { name: "TRICICLOS", count: "4 Modelos", image: "images/cat-triciclos.webp", filter: "Triciclo" },
   { name: "E-BIKES", count: "3 Modelos", image: "images/cat-ebikes.webp", filter: "E-bike" }
@@ -175,6 +176,45 @@ const MODEL_DETAILS = {
       description: "A X12 na cor verde do Palmeiras. Para quem carrega o verde no peito e na rua. A mesma mobilidade elétrica, agora na cor do Maior Campeão do Brasil.",
       heroImage: "modelos/x12/palmeiras/x12.webp"
     }
+  },
+  pitica: {
+    colors: [
+      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Branco", hex: "#e8e8e8" },
+      { name: "Cinza Claro", hex: "#B3B9DA" }
+    ],
+    gallery: [
+      "modelos/pitica/galeria/pitica-gallery-1.webp",
+      "modelos/pitica/galeria/pitica-gallery-2.webp",
+      "modelos/pitica/galeria/pitica-gallery-3.webp",
+      "modelos/pitica/galeria/pitica-gallery-4.webp",
+      "modelos/pitica/galeria/pitica-gallery-5.webp",
+      "modelos/pitica/galeria/pitica-gallery-6.webp"
+    ],
+    features: [
+      { icon: "🚫", text: "Sem necessidade de CNH" },
+      { icon: "📋", text: "Dispensa emplacamento" },
+      { icon: "💡", text: "Farol em LED e cesta frontal" },
+      { icon: "🖥️", text: "Painel digital com leitura simples" },
+      { icon: "📱", text: "Suporte de celular no guidão" },
+      { icon: "🔊", text: "Alarme antifurto que trava as rodas ao disparar" },
+      { icon: "🔧", text: "Suspensão traseira para condução estável" },
+      { icon: "⚖️", text: "Carga máxima de 130kg (2 pessoas)" },
+      { icon: "🔌", text: "Carregador Bivolt 110/220V" }
+    ],
+    specs: [
+      { label: "Motor", value: "500W" },
+      { label: "Tipo de Bateria", value: "Lítio Ferro Fosfato (LiFePO4) 48V 15Ah" },
+      { label: "Autonomia", value: "30–35 km" },
+      { label: "Velocidade Máxima", value: "32 km/h" },
+      { label: "Carga Máxima", value: "130 kg (2 pessoas)" },
+      { label: "Carregador", value: "Bivolt 110/220V" },
+      { label: "Tempo de Recarga", value: "6 a 8 horas" },
+      { label: "Freios", value: "Tambor dianteiro e traseiro" },
+      { label: "Pneus", value: "2.50-10\"" },
+      { label: "Seletor", value: "Acelerador de punho com seletor de velocidade" },
+      { label: "Painel", value: "Digital com nível de marcha, velocímetro, farol, setas e bateria" }
+    ]
   },
   r10: {
     badge: "EDIÇÃO LIMITADA · RONALDINHO GAÚCHO",
