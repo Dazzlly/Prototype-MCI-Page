@@ -35,7 +35,7 @@ Object.assign(MODEL_DETAILS, {
         "modelos/mia/violeta-escuro/mia-violeta-escuro-10.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-11.jpg",
       ] },
-      { name: "Branco", hex: "#e8e8e8", images: [
+      { name: "Branca", hex: "#e8e8e8", images: [
         "modelos/mia/branco/mia-branco-1.jpg",
         "modelos/mia/branco/mia-branco-2.jpg",
         "modelos/mia/branco/mia-branco-3.jpg",
@@ -49,7 +49,7 @@ Object.assign(MODEL_DETAILS, {
         "modelos/mia/branco/mia-branco-11.jpg",
         "modelos/mia/branco/mia-branco-12.jpg",
       ] },
-      { name: "Preto", hex: "#1a1a1a", images: [
+      { name: "Preta", hex: "#1a1a1a", images: [
         "modelos/mia/preto/mia-preto-1.jpg",
         "modelos/mia/preto/mia-preto-2.jpg",
         "modelos/mia/preto/mia-preto-3.jpg",
@@ -62,8 +62,6 @@ Object.assign(MODEL_DETAILS, {
         "modelos/mia/preto/mia-preto-10.jpg",
         "modelos/mia/preto/mia-preto-11.jpg",
       ] },
-      { name: "Preta", hex: "#1a1a1a" },
-      { name: "Branca", hex: "#e8e8e8" },
     ],
     gallery: [
       "modelos/mia/galeria/mia-preta.webp",
