@@ -39,10 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const details = MODEL_DETAILS[slug] || {};
   const colors = details.colors || [];
   let selectedColorIndex = 0;
+  let heroIndex = 0;
 
   const page = document.getElementById("model-page");
   page.innerHTML = renderAll();
   setupColorSelector();
+  setupCarousel();
+  updateColorSelection();
 
   // --- helpers ---
   function getCurrentColor() { return colors[selectedColorIndex]; }
@@ -63,10 +66,51 @@ document.addEventListener("DOMContentLoaded", () => {
     return ed ? details[ed] : null;
   }
 
-  function getCurrentImage() {
+  function getCurrentImageList() {
     const ed = getEditionData();
-    if (ed && ed.heroImage) return ed.heroImage;
-    return vehicle.image_url;
+    if (ed && ed.gallery && ed.gallery.length) return ed.gallery;
+    const c = getCurrentColor();
+    if (c && c.images && c.images.length) return c.images;
+    const list = [vehicle.image_url];
+    (details.gallery || []).forEach(g => { if (!list.includes(g)) list.push(g); });
+    return list;
+  }
+
+  function updateHero() {
+    const list = getCurrentImageList();
+    if (heroIndex >= list.length) heroIndex = 0;
+    const mainImg = document.getElementById("model-main-img");
+    if (mainImg) mainImg.src = list[heroIndex] || vehicle.image_url;
+    const show = list.length > 1;
+    ["hero-prev", "hero-next"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = show ? "flex" : "none";
+    });
+    const counter = document.getElementById("hero-counter");
+    if (counter) {
+      counter.style.display = show ? "block" : "none";
+      counter.textContent = (heroIndex + 1) + " / " + list.length;
+    }
+  }
+
+  function openLightbox(index) {
+    if (window.ModelLightbox) {
+      ModelLightbox.open({ images: getCurrentImageList(), index, name: vehicle.name });
+    }
+  }
+
+  function setupCarousel() {
+    const prev = document.getElementById("hero-prev");
+    const next = document.getElementById("hero-next");
+    const mainImg = document.getElementById("model-main-img");
+    const step = (dir) => {
+      const list = getCurrentImageList();
+      heroIndex = (heroIndex + dir + list.length) % list.length;
+      updateHero();
+    };
+    if (prev) prev.addEventListener("click", (e) => { e.stopPropagation(); step(-1); });
+    if (next) next.addEventListener("click", (e) => { e.stopPropagation(); step(1); });
+    if (mainImg) mainImg.addEventListener("click", () => openLightbox(heroIndex));
   }
 
   function getWhatsAppLink() {
@@ -98,7 +142,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <h1>${vehicle.name}</h1>
           <div class="model-hero-grid">
             <div class="model-hero-image">
-              <img src="${vehicle.image_url}" alt="${vehicle.name}" id="model-main-img">
+              <img src="${vehicle.image_url}" alt="${vehicle.name}" id="model-main-img" title="Clique para ampliar">
+              <button class="hero-arrow" id="hero-prev" aria-label="Imagem anterior">❮</button>
+              <button class="hero-arrow" id="hero-next" aria-label="Próxima imagem">❯</button>
+              <div class="hero-counter" id="hero-counter"></div>
             </div>
             <div class="model-hero-specs">
               ${specs.map(s => `
@@ -287,9 +334,9 @@ document.addEventListener("DOMContentLoaded", () => {
       sw.classList.toggle("active", i === selectedColorIndex);
     });
 
-    // Atualiza imagem principal
-    const mainImg = document.getElementById("model-main-img");
-    if (mainImg) mainImg.src = getCurrentImage();
+    // Atualiza imagem principal e carrossel
+    heroIndex = 0;
+    updateHero();
 
     // Mostra/esconde seções de edição especial
     const selectedEd = getSelectedEdition();
@@ -305,14 +352,17 @@ document.addEventListener("DOMContentLoaded", () => {
       descText.textContent = (ed && ed.description) ? ed.description : (vehicle.description || "");
     }
 
-    // Atualiza galeria
+    // Atualiza galeria (imagens da cor selecionada, se houver)
     const galleryGrid = document.getElementById("gallery-grid");
     if (galleryGrid) {
-      const gallery = (ed && ed.gallery) ? ed.gallery : (details.gallery || []);
-      galleryGrid.innerHTML = gallery.map(img => `
-        <div class="gallery-item">
+      const gallery = getCurrentImageList();
+      galleryGrid.innerHTML = gallery.map((img, i) => `
+        <div class="gallery-item" data-index="${i}" title="Clique para ampliar">
           <img src="${img}" alt="${vehicle.name}" loading="lazy">
         </div>`).join("");
+      galleryGrid.querySelectorAll(".gallery-item").forEach((item, i) => {
+        item.addEventListener("click", () => openLightbox(i));
+      });
     }
 
     // Atualiza link do CTA

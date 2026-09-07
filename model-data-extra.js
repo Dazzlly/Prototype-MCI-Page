@@ -8,9 +8,62 @@ Object.assign(MODEL_DETAILS, {
 
   mia: {
     colors: [
+      { name: "Azul", hex: "#1e5b94", images: [
+        "modelos/mia/azul/mia-azul-1.jpg",
+        "modelos/mia/azul/mia-azul-2.jpg",
+        "modelos/mia/azul/mia-azul-3.jpg",
+        "modelos/mia/azul/mia-azul-4.jpg",
+        "modelos/mia/azul/mia-azul-5.jpg",
+        "modelos/mia/azul/mia-azul-6.jpg",
+        "modelos/mia/azul/mia-azul-7.jpg",
+        "modelos/mia/azul/mia-azul-8.jpg",
+        "modelos/mia/azul/mia-azul-9.jpg",
+        "modelos/mia/azul/mia-azul-10.jpg",
+        "modelos/mia/azul/mia-azul-11.jpg",
+        "modelos/mia/azul/mia-azul-12.jpg",
+      ] },
+      { name: "Violeta escuro", hex: "#7a3aa8", images: [
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-1.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-2.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-3.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-4.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-5.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-6.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-7.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-8.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-9.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-10.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-11.jpg",
+      ] },
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/mia/branco/mia-branco-1.jpg",
+        "modelos/mia/branco/mia-branco-2.jpg",
+        "modelos/mia/branco/mia-branco-3.jpg",
+        "modelos/mia/branco/mia-branco-4.jpg",
+        "modelos/mia/branco/mia-branco-5.jpg",
+        "modelos/mia/branco/mia-branco-6.jpg",
+        "modelos/mia/branco/mia-branco-7.jpg",
+        "modelos/mia/branco/mia-branco-8.jpg",
+        "modelos/mia/branco/mia-branco-9.jpg",
+        "modelos/mia/branco/mia-branco-10.jpg",
+        "modelos/mia/branco/mia-branco-11.jpg",
+        "modelos/mia/branco/mia-branco-12.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/mia/preto/mia-preto-1.jpg",
+        "modelos/mia/preto/mia-preto-2.jpg",
+        "modelos/mia/preto/mia-preto-3.jpg",
+        "modelos/mia/preto/mia-preto-4.jpg",
+        "modelos/mia/preto/mia-preto-5.jpg",
+        "modelos/mia/preto/mia-preto-6.jpg",
+        "modelos/mia/preto/mia-preto-7.jpg",
+        "modelos/mia/preto/mia-preto-8.jpg",
+        "modelos/mia/preto/mia-preto-9.jpg",
+        "modelos/mia/preto/mia-preto-10.jpg",
+        "modelos/mia/preto/mia-preto-11.jpg",
+      ] },
       { name: "Preta", hex: "#1a1a1a" },
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Branca", hex: "#e8e8e8" }
+      { name: "Branca", hex: "#e8e8e8" },
     ],
     gallery: [
       "modelos/mia/galeria/mia-preta.webp",
@@ -55,10 +108,51 @@ Object.assign(MODEL_DETAILS, {
 
   "jet-max": {
     colors: [
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Branco", hex: "#e8e8e8" },
-      { name: "Vermelho", hex: "#a01d1d" }
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/jet-max/preto/jet-max-preto-1.jpg",
+        "modelos/jet-max/preto/jet-max-preto-2.jpg",
+        "modelos/jet-max/preto/jet-max-preto-3.jpg",
+        "modelos/jet-max/preto/jet-max-preto-4.jpg",
+        "modelos/jet-max/preto/jet-max-preto-5.jpg",
+        "modelos/jet-max/preto/jet-max-preto-6.jpg",
+        "modelos/jet-max/preto/jet-max-preto-7.jpg",
+      ] },
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/jet-max/branco/jet-max-branco-1.jpg",
+        "modelos/jet-max/branco/jet-max-branco-2.jpg",
+        "modelos/jet-max/branco/jet-max-branco-3.jpg",
+        "modelos/jet-max/branco/jet-max-branco-4.jpg",
+        "modelos/jet-max/branco/jet-max-branco-5.jpg",
+        "modelos/jet-max/branco/jet-max-branco-6.jpg",
+        "modelos/jet-max/branco/jet-max-branco-7.jpg",
+      ] },
+      { name: "Azul escuro", hex: "#1e5b94", images: [
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-1.jpg",
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-2.jpg",
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-3.jpg",
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-4.jpg",
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-5.jpg",
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-6.jpg",
+        "modelos/jet-max/azul-escuro/jet-max-azul-escuro-7.jpg",
+      ] },
+      { name: "Vermelho escuro", hex: "#a01d1d", images: [
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-1.jpg",
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-2.jpg",
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-3.jpg",
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-4.jpg",
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-5.jpg",
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-6.jpg",
+        "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-7.jpg",
+      ] },
+      { name: "Cinza claro", hex: "#6b6b6b", images: [
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-1.jpg",
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-2.jpg",
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-3.jpg",
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-4.jpg",
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-5.jpg",
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-6.jpg",
+        "modelos/jet-max/cinza-claro/jet-max-cinza-claro-7.jpg",
+      ] },
     ],
     gallery: [
       "modelos/jet-max/galeria/extra-jetmax_cor-3.webp",
@@ -104,9 +198,40 @@ Object.assign(MODEL_DETAILS, {
 
   jet: {
     colors: [
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Branco", hex: "#e8e8e8" }
+      { name: "Azul escuro", hex: "#1e5b94", images: [
+        "modelos/jet/azul-escuro/jet-azul-escuro-1.jpg",
+        "modelos/jet/azul-escuro/jet-azul-escuro-2.jpg",
+        "modelos/jet/azul-escuro/jet-azul-escuro-3.jpg",
+        "modelos/jet/azul-escuro/jet-azul-escuro-4.jpg",
+        "modelos/jet/azul-escuro/jet-azul-escuro-5.jpg",
+        "modelos/jet/azul-escuro/jet-azul-escuro-6.jpg",
+      ] },
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/jet/branco/jet-branco-1.jpg",
+        "modelos/jet/branco/jet-branco-2.jpg",
+        "modelos/jet/branco/jet-branco-3.jpg",
+        "modelos/jet/branco/jet-branco-4.jpg",
+        "modelos/jet/branco/jet-branco-5.jpg",
+        "modelos/jet/branco/jet-branco-6.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/jet/preto/jet-preto-1.jpg",
+        "modelos/jet/preto/jet-preto-2.jpg",
+        "modelos/jet/preto/jet-preto-3.jpg",
+        "modelos/jet/preto/jet-preto-4.jpg",
+        "modelos/jet/preto/jet-preto-5.jpg",
+        "modelos/jet/preto/jet-preto-6.jpg",
+        "modelos/jet/preto/jet-preto-7.jpg",
+        "modelos/jet/preto/jet-preto-8.jpg",
+      ] },
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/jet/cinza/jet-cinza-1.jpg",
+        "modelos/jet/cinza/jet-cinza-2.jpg",
+        "modelos/jet/cinza/jet-cinza-3.jpg",
+        "modelos/jet/cinza/jet-cinza-4.jpg",
+        "modelos/jet/cinza/jet-cinza-5.jpg",
+        "modelos/jet/cinza/jet-cinza-6.jpg",
+      ] },
     ],
     gallery: [
       "modelos/jet/galeria/jet.webp",
@@ -151,8 +276,41 @@ Object.assign(MODEL_DETAILS, {
 
   bob: {
     colors: [
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Azul", hex: "#1e5b94" }
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/bob/cinza/bob-cinza-1.jpg",
+        "modelos/bob/cinza/bob-cinza-2.jpg",
+        "modelos/bob/cinza/bob-cinza-3.jpg",
+        "modelos/bob/cinza/bob-cinza-4.jpg",
+        "modelos/bob/cinza/bob-cinza-5.jpg",
+        "modelos/bob/cinza/bob-cinza-6.jpg",
+        "modelos/bob/cinza/bob-cinza-7.jpg",
+        "modelos/bob/cinza/bob-cinza-8.jpg",
+        "modelos/bob/cinza/bob-cinza-9.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/bob/preto/bob-preto-1.jpg",
+        "modelos/bob/preto/bob-preto-2.jpg",
+        "modelos/bob/preto/bob-preto-3.jpg",
+        "modelos/bob/preto/bob-preto-4.jpg",
+        "modelos/bob/preto/bob-preto-5.jpg",
+        "modelos/bob/preto/bob-preto-6.jpg",
+        "modelos/bob/preto/bob-preto-7.jpg",
+        "modelos/bob/preto/bob-preto-8.jpg",
+        "modelos/bob/preto/bob-preto-9.jpg",
+        "modelos/bob/preto/bob-preto-10.jpg",
+      ] },
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/bob/branco/bob-branco-1.jpg",
+        "modelos/bob/branco/bob-branco-2.jpg",
+        "modelos/bob/branco/bob-branco-3.jpg",
+        "modelos/bob/branco/bob-branco-4.jpg",
+        "modelos/bob/branco/bob-branco-5.jpg",
+        "modelos/bob/branco/bob-branco-6.jpg",
+        "modelos/bob/branco/bob-branco-7.jpg",
+        "modelos/bob/branco/bob-branco-8.jpg",
+        "modelos/bob/branco/bob-branco-9.jpg",
+      ] },
+      { name: "Azul", hex: "#1e5b94" },
     ],
     gallery: [
       "modelos/bob/galeria/extra-cor-2.webp",
@@ -232,11 +390,50 @@ Object.assign(MODEL_DETAILS, {
 
   "joy-super": {
     colors: [
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Branco", hex: "#e8e8e8" },
-      { name: "Cinza", hex: "#6b6b6b" },
-      { name: "Vermelho", hex: "#a01d1d" }
+      { name: "Azul", hex: "#1e5b94", images: [
+        "modelos/joy-super/azul/joy-super-azul-1.jpg",
+        "modelos/joy-super/azul/joy-super-azul-2.jpg",
+        "modelos/joy-super/azul/joy-super-azul-3.jpg",
+        "modelos/joy-super/azul/joy-super-azul-4.jpg",
+        "modelos/joy-super/azul/joy-super-azul-5.jpg",
+        "modelos/joy-super/azul/joy-super-azul-6.jpg",
+        "modelos/joy-super/azul/joy-super-azul-7.jpg",
+      ] },
+      { name: "Vermelho", hex: "#a01d1d", images: [
+        "modelos/joy-super/vermelho/joy-super-vermelho-1.jpg",
+        "modelos/joy-super/vermelho/joy-super-vermelho-2.jpg",
+        "modelos/joy-super/vermelho/joy-super-vermelho-3.jpg",
+        "modelos/joy-super/vermelho/joy-super-vermelho-4.jpg",
+        "modelos/joy-super/vermelho/joy-super-vermelho-5.jpg",
+        "modelos/joy-super/vermelho/joy-super-vermelho-6.jpg",
+        "modelos/joy-super/vermelho/joy-super-vermelho-7.jpg",
+      ] },
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/joy-super/cinza/joy-super-cinza-1.jpg",
+        "modelos/joy-super/cinza/joy-super-cinza-2.jpg",
+        "modelos/joy-super/cinza/joy-super-cinza-3.jpg",
+        "modelos/joy-super/cinza/joy-super-cinza-4.jpg",
+        "modelos/joy-super/cinza/joy-super-cinza-5.jpg",
+        "modelos/joy-super/cinza/joy-super-cinza-6.jpg",
+        "modelos/joy-super/cinza/joy-super-cinza-7.jpg",
+      ] },
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/joy-super/branco/joy-super-branco-1.jpg",
+        "modelos/joy-super/branco/joy-super-branco-2.jpg",
+        "modelos/joy-super/branco/joy-super-branco-3.jpg",
+        "modelos/joy-super/branco/joy-super-branco-4.jpg",
+        "modelos/joy-super/branco/joy-super-branco-5.jpg",
+        "modelos/joy-super/branco/joy-super-branco-6.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/joy-super/preto/joy-super-preto-1.jpg",
+        "modelos/joy-super/preto/joy-super-preto-2.jpg",
+        "modelos/joy-super/preto/joy-super-preto-3.jpg",
+        "modelos/joy-super/preto/joy-super-preto-4.jpg",
+        "modelos/joy-super/preto/joy-super-preto-5.jpg",
+        "modelos/joy-super/preto/joy-super-preto-6.jpg",
+        "modelos/joy-super/preto/joy-super-preto-7.jpg",
+      ] },
     ],
     gallery: [
       "modelos/joy-super/galeria/extra-joysuper5.webp",
@@ -318,9 +515,49 @@ Object.assign(MODEL_DETAILS, {
 
   ret: {
     colors: [
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Vermelha", hex: "#a01d1d" }
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/ret/branco/ret-branco-1.jpg",
+        "modelos/ret/branco/ret-branco-2.jpg",
+        "modelos/ret/branco/ret-branco-3.jpg",
+        "modelos/ret/branco/ret-branco-4.jpg",
+        "modelos/ret/branco/ret-branco-5.jpg",
+        "modelos/ret/branco/ret-branco-6.jpg",
+        "modelos/ret/branco/ret-branco-7.jpg",
+        "modelos/ret/branco/ret-branco-8.jpg",
+        "modelos/ret/branco/ret-branco-9.jpg",
+        "modelos/ret/branco/ret-branco-10.jpg",
+      ] },
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/ret/cinza/ret-cinza-1.jpg",
+        "modelos/ret/cinza/ret-cinza-2.jpg",
+        "modelos/ret/cinza/ret-cinza-3.jpg",
+        "modelos/ret/cinza/ret-cinza-4.jpg",
+        "modelos/ret/cinza/ret-cinza-5.jpg",
+        "modelos/ret/cinza/ret-cinza-6.jpg",
+        "modelos/ret/cinza/ret-cinza-7.jpg",
+        "modelos/ret/cinza/ret-cinza-8.jpg",
+        "modelos/ret/cinza/ret-cinza-9.jpg",
+        "modelos/ret/cinza/ret-cinza-10.jpg",
+        "modelos/ret/cinza/ret-cinza-11.jpg",
+        "modelos/ret/cinza/ret-cinza-12.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/ret/preto/ret-preto-1.jpg",
+        "modelos/ret/preto/ret-preto-2.jpg",
+        "modelos/ret/preto/ret-preto-3.jpg",
+        "modelos/ret/preto/ret-preto-4.jpg",
+        "modelos/ret/preto/ret-preto-5.jpg",
+        "modelos/ret/preto/ret-preto-6.jpg",
+        "modelos/ret/preto/ret-preto-7.jpg",
+        "modelos/ret/preto/ret-preto-8.jpg",
+        "modelos/ret/preto/ret-preto-9.jpg",
+        "modelos/ret/preto/ret-preto-10.jpg",
+      ] },
+      { name: "Azul", hex: "#1e5b94", images: [
+        "modelos/ret/azul/ret-azul-1.jpg",
+        "modelos/ret/azul/ret-azul-2.jpg",
+      ] },
+      { name: "Vermelha", hex: "#a01d1d" },
     ],
     gallery: [
       "modelos/ret/galeria/extra-ret3.png",
@@ -362,9 +599,31 @@ Object.assign(MODEL_DETAILS, {
 
   soma: {
     colors: [
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/soma/branco/soma-branco-1.jpg",
+        "modelos/soma/branco/soma-branco-2.jpg",
+        "modelos/soma/branco/soma-branco-3.jpg",
+        "modelos/soma/branco/soma-branco-4.jpg",
+        "modelos/soma/branco/soma-branco-5.jpg",
+        "modelos/soma/branco/soma-branco-6.jpg",
+      ] },
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/soma/cinza/soma-cinza-1.jpg",
+        "modelos/soma/cinza/soma-cinza-2.jpg",
+        "modelos/soma/cinza/soma-cinza-3.jpg",
+        "modelos/soma/cinza/soma-cinza-4.jpg",
+        "modelos/soma/cinza/soma-cinza-5.jpg",
+        "modelos/soma/cinza/soma-cinza-6.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/soma/preto/soma-preto-1.jpg",
+        "modelos/soma/preto/soma-preto-2.jpg",
+        "modelos/soma/preto/soma-preto-3.jpg",
+        "modelos/soma/preto/soma-preto-4.jpg",
+        "modelos/soma/preto/soma-preto-5.jpg",
+        "modelos/soma/preto/soma-preto-6.jpg",
+      ] },
       { name: "Prata", hex: "#b8b8b8" },
-      { name: "Preto", hex: "#1a1a1a" },
-      { name: "Branco", hex: "#e8e8e8" }
     ],
     gallery: [
       "modelos/soma/galeria/extra-Soma-Prata.jpg",
@@ -535,11 +794,35 @@ Object.assign(MODEL_DETAILS, {
 
   x15: {
     colors: [
-      { name: "Preto", hex: "#1a1a1a" },
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/x15/cinza/x15-cinza-1.jpg",
+        "modelos/x15/cinza/x15-cinza-2.jpg",
+        "modelos/x15/cinza/x15-cinza-3.jpg",
+        "modelos/x15/cinza/x15-cinza-4.jpg",
+        "modelos/x15/cinza/x15-cinza-5.jpg",
+        "modelos/x15/cinza/x15-cinza-6.jpg",
+        "modelos/x15/cinza/x15-cinza-7.jpg",
+      ] },
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/x15/preto/x15-preto-1.jpg",
+        "modelos/x15/preto/x15-preto-2.jpg",
+        "modelos/x15/preto/x15-preto-3.jpg",
+        "modelos/x15/preto/x15-preto-4.jpg",
+        "modelos/x15/preto/x15-preto-5.jpg",
+        "modelos/x15/preto/x15-preto-6.jpg",
+        "modelos/x15/preto/x15-preto-7.jpg",
+      ] },
+      { name: "Branco", hex: "#e8e8e8", images: [
+        "modelos/x15/branco/x15-branco-1.jpg",
+        "modelos/x15/branco/x15-branco-2.jpg",
+        "modelos/x15/branco/x15-branco-3.jpg",
+        "modelos/x15/branco/x15-branco-4.jpg",
+        "modelos/x15/branco/x15-branco-5.jpg",
+        "modelos/x15/branco/x15-branco-6.jpg",
+        "modelos/x15/branco/x15-branco-7.jpg",
+      ] },
       { name: "Azul", hex: "#1e5b94" },
       { name: "Vermelho", hex: "#a01d1d" },
-      { name: "Branco", hex: "#e8e8e8" },
-      { name: "Cinza", hex: "#6b6b6b" }
     ],
     gallery: [
       "modelos/x15/galeria/extra-x15.webp",
@@ -646,9 +929,31 @@ Object.assign(MODEL_DETAILS, {
 
   roma: {
     colors: [
-      { name: "Azul", hex: "#1e5b94" },
-      { name: "Creme", hex: "#f0e6d2" },
-      { name: "Preta", hex: "#1a1a1a" }
+      { name: "Preta", hex: "#1a1a1a", images: [
+        "modelos/roma/preto/roma-preto-1.jpg",
+        "modelos/roma/preto/roma-preto-2.jpg",
+        "modelos/roma/preto/roma-preto-3.jpg",
+        "modelos/roma/preto/roma-preto-4.jpg",
+        "modelos/roma/preto/roma-preto-5.jpg",
+        "modelos/roma/preto/roma-preto-6.jpg",
+      ] },
+      { name: "Branco Creme", hex: "#f0e6d2", images: [
+        "modelos/roma/creme/roma-creme-1.jpg",
+        "modelos/roma/creme/roma-creme-2.jpg",
+        "modelos/roma/creme/roma-creme-3.jpg",
+        "modelos/roma/creme/roma-creme-4.jpg",
+        "modelos/roma/creme/roma-creme-5.jpg",
+        "modelos/roma/creme/roma-creme-6.jpg",
+        "modelos/roma/creme/roma-creme-7.jpg",
+      ] },
+      { name: "Azul Retro", hex: "#1e5b94", images: [
+        "modelos/roma/azul-retro/roma-azul-retro-1.jpg",
+        "modelos/roma/azul-retro/roma-azul-retro-2.jpg",
+        "modelos/roma/azul-retro/roma-azul-retro-3.jpg",
+        "modelos/roma/azul-retro/roma-azul-retro-4.jpg",
+        "modelos/roma/azul-retro/roma-azul-retro-5.jpg",
+        "modelos/roma/azul-retro/roma-azul-retro-6.jpg",
+      ] },
     ],
     gallery: [
       "modelos/roma/galeria/extra-roma_ai_sombra-1.webp",
@@ -708,6 +1013,36 @@ Object.assign(MODEL_DETAILS, {
   },
 
   style: {
+    colors: [
+      { name: "Preto", hex: "#1a1a1a", images: [
+        "modelos/style/preto/style-preto-1.jpg",
+        "modelos/style/preto/style-preto-2.jpg",
+        "modelos/style/preto/style-preto-3.jpg",
+        "modelos/style/preto/style-preto-4.jpg",
+        "modelos/style/preto/style-preto-5.jpg",
+        "modelos/style/preto/style-preto-6.jpg",
+        "modelos/style/preto/style-preto-7.jpg",
+        "modelos/style/preto/style-preto-8.jpg",
+        "modelos/style/preto/style-preto-9.jpg",
+        "modelos/style/preto/style-preto-10.jpg",
+      ] },
+      { name: "Cinza", hex: "#6b6b6b", images: [
+        "modelos/style/cinza/style-cinza-1.jpg",
+        "modelos/style/cinza/style-cinza-2.jpg",
+        "modelos/style/cinza/style-cinza-3.jpg",
+        "modelos/style/cinza/style-cinza-4.jpg",
+        "modelos/style/cinza/style-cinza-5.jpg",
+        "modelos/style/cinza/style-cinza-6.jpg",
+        "modelos/style/cinza/style-cinza-7.jpg",
+        "modelos/style/cinza/style-cinza-8.jpg",
+        "modelos/style/cinza/style-cinza-9.jpg",
+        "modelos/style/cinza/style-cinza-10.jpg",
+        "modelos/style/cinza/style-cinza-11.jpg",
+        "modelos/style/cinza/style-cinza-12.jpg",
+        "modelos/style/cinza/style-cinza-13.jpg",
+        "modelos/style/cinza/style-cinza-14.jpg",
+      ] },
+    ],
     gallery: [
       "modelos/style/galeria/extra-style-1-1.webp",
       "modelos/style/galeria/style-maringa-1.jpg",

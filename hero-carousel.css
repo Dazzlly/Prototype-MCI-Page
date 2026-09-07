@@ -1,0 +1,51 @@
+/* hero-carousel.css — Setas de navegação e contador na imagem principal do modelo */
+
+.model-hero-image { position: relative; }
+.model-hero-image #model-main-img { cursor: zoom-in; }
+
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.hero-arrow:hover { background: var(--primary); color: #fff; }
+#hero-prev { left: 14px; }
+#hero-next { right: 14px; }
+
+.hero-counter {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  display: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+@media (max-width: 640px) {
+  .hero-arrow { width: 36px; height: 36px; font-size: 15px; }
+  #hero-prev { left: 8px; }
+  #hero-next { right: 8px; }
+}
+.gallery-item { cursor: zoom-in; }
