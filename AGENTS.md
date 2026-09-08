@@ -17,9 +17,9 @@ Photos and site assets are pulled from a shared Google Drive folder (the ROOT fo
   photos (manifest key `<model>`); each color subfolder holds that color's photos (key `<model>/<color>`).
   There is NO "galeria" folder anymore (a one-shot migration, `scripts/drive-migrate-galeria.js`, already moved
   those photos up in Drive).
-- `modelo-detalhe.js` prefers manifest photos over the fixed lists in `data.js`. The gallery shows ALL photos of
-  the model (general + all colors); selecting a color only reorders — that color's photos come first, then the
-  model's general photos, then the other colors.
+- `modelo-detalhe.js` prefers manifest photos over the fixed lists in `data.js`. Presentation (hero image +
+  top carousel) shows ONLY the selected color's photos; the gallery below shows the selected color's photos +
+  the model's GENERAL photos (other colors are left out to avoid piling up near-duplicates).
 - Run on demand: `docker compose -f docker-compose.base44.yml --profile tools run --rm drive-sync`
 - Auto-sync: the `drive-sync-auto` service runs in watch mode (`DRIVE_SYNC_INTERVAL=300`) and pulls new
   Drive photos into `modelos/` + regenerates `manifest.json` every cycle.
@@ -30,6 +30,12 @@ Photos and site assets are pulled from a shared Google Drive folder (the ROOT fo
   don't follow the pattern (e.g. `*-maringa-*.jpg`, `extra-*.webp`) are never touched.
 - Secrets needed (via `/run/base44/app.env`): `GOOGLE_DRIVE_API_KEY` (Google Cloud, Drive API enabled) and
   `GOOGLE_DRIVE_FOLDER_ID` (root folder shared as "anyone with the link can view"; full URL also accepted).
+- FULL PROJECT MIRROR (manual only, on user request) `scripts/drive-push-site.js` mirrors the WHOLE
+  repo (code, images/, data) into the ROOT of the Drive shared folder — the shared root becomes the
+  site root. Skips files that already exist with the same name+size, updates changed ones (PATCH),
+  and never uploads sync-generated photos in `modelos/` (originals already live in Drive `Modelos/`).
+  Run: `docker compose -f docker-compose.base44.yml --profile tools run --rm drive-push-site`
+  (Shared OAuth helpers: `scripts/drive-auth.js`, used by both drive-push scripts.)
 - REVERSE sync (manual only, on user request) `scripts/drive-push.js` uploads repo photos from
   `modelos/<model>/<color>/` into Drive, creating missing `Modelos/<Model>/<Color>/` folders (names translated
   back: branco→White, jet-max→JetMax...). Uses user OAuth (secrets GOOGLE_OAUTH_CLIENT_ID/SECRET/REFRESH_TOKEN)

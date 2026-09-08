@@ -49,3 +49,16 @@ services:
       - path: /run/base44/app.env
         required: false
     command: node scripts/drive-push.js
+
+  # Espelha o projeto inteiro para a raiz da pasta mãe do Drive (manual):
+  # docker compose -f docker-compose.base44.yml --profile tools run --rm drive-push-site
+  drive-push-site:
+    profiles: ["tools"]
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - path: /run/base44/app.env
+        required: false
+    command: node scripts/drive-push-site.js
