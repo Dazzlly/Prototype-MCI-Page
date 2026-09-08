@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="model-hero-inner">
           <div class="model-hero-grid">
             <div class="model-hero-media">
+              <div class="model-type-badge">${vehicle.category}</div>
               <div class="model-hero-image">
                 <img src="${vehicle.image_url}" alt="${vehicle.name}" id="model-main-img" title="Clique para ampliar">
                 <button class="hero-arrow" id="hero-prev" aria-label="Imagem anterior">❮</button>
@@ -239,7 +240,6 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="model-hero-info">
               ${badge}
-              <span class="eyebrow">${vehicle.category}</span>
               <h1>${vehicle.name}</h1>
               <div class="model-hero-stats">
                 ${specs.map(s => `
@@ -257,26 +257,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderPurchase() {
-    const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar em nosso WhatsApp</a>`;
-    if (!vehicle.price) {
-      return `
-        <div class="model-purchase">
-          <h3>Pronto para sua ${shortName}?</h3>
-          <p class="model-price-pix">Sob Consulta</p>
-          <p class="model-price-neg">Fale com nossa equipe e garanta as melhores condições</p>
-          ${wa}
-        </div>`;
-    }
-    const price12x = vehicle.price_12x ? fmtPrice(vehicle.price_12x) : null;
-    const price21x = vehicle.price_21x ? fmtPrice(vehicle.price_21x) : null;
+    const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar no WhatsApp</a>`;
+    const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}</p>` : "") +
+      (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}</p>` : "");
     return `
       <div class="model-purchase">
         <h3>Pronto para sua ${shortName}?</h3>
-        <p class="model-price-pix">PIX ${fmtPrice(vehicle.price)}</p>
-        ${price12x ? `<p class="model-price-parcel">12x sem juros de ${price12x}</p>` : ""}
-        ${price21x ? `<p class="model-price-parcel">21x de ${price21x}</p>` : ""}
-        <p class="model-price-neg">Outros valores negociáveis com valor de entrada pequeno</p>
-        ${wa}
+        <div class="model-purchase-row">
+          <div class="model-price-block">
+            <p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>
+            ${parcelas}
+          </div>
+          ${wa}
+        </div>
+        <p class="model-price-neg">${vehicle.price ? "Outros valores negociáveis com valor de entrada pequeno" : "Fale com nossa equipe e garanta as melhores condições"}</p>
       </div>`;
   }
 
