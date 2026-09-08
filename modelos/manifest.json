@@ -1,5 +1,970 @@
 {
+  "x15/preto": [
+    "modelos/x15/preto/x15-preto-1.jpg",
+    "modelos/x15/preto/x15-preto-2.jpg",
+    "modelos/x15/preto/x15-preto-3.jpg",
+    "modelos/x15/preto/x15-preto-4.jpg",
+    "modelos/x15/preto/x15-preto-5.jpg",
+    "modelos/x15/preto/x15-preto-6.jpg",
+    "modelos/x15/preto/x15-preto-7.jpg",
+    "modelos/x15/preto/x15-preto-8.webp"
+  ],
+  "x15/galeria": [
+    "modelos/x15/galeria/x15-galeria-1.png",
+    "modelos/x15/galeria/x15-galeria-2.png",
+    "modelos/x15/galeria/x15-galeria-3.png",
+    "modelos/x15/galeria/x15-galeria-4.jpg",
+    "modelos/x15/galeria/x15-galeria-5.webp",
+    "modelos/x15/galeria/x15-galeria-6.webp",
+    "modelos/x15/galeria/x15-galeria-7.jpg",
+    "modelos/x15/galeria/x15-galeria-8.jpg",
+    "modelos/x15/galeria/x15-galeria-9.jpg"
+  ],
+  "x15/cinza": [
+    "modelos/x15/cinza/x15-cinza-1.jpg",
+    "modelos/x15/cinza/x15-cinza-2.jpg",
+    "modelos/x15/cinza/x15-cinza-3.jpg",
+    "modelos/x15/cinza/x15-cinza-4.jpg",
+    "modelos/x15/cinza/x15-cinza-5.jpg",
+    "modelos/x15/cinza/x15-cinza-6.jpg",
+    "modelos/x15/cinza/x15-cinza-7.jpg"
+  ],
+  "x15/branco": [
+    "modelos/x15/branco/x15-branco-1.jpg",
+    "modelos/x15/branco/x15-branco-2.jpg",
+    "modelos/x15/branco/x15-branco-3.jpg",
+    "modelos/x15/branco/x15-branco-4.jpg",
+    "modelos/x15/branco/x15-branco-5.jpg",
+    "modelos/x15/branco/x15-branco-6.jpg",
+    "modelos/x15/branco/x15-branco-7.jpg"
+  ],
+  "x11/preto": [
+    "modelos/x11/preto/x11-preto-1.webp"
+  ],
+  "x11/galeria": [
+    "modelos/x11/galeria/x11-galeria-1.webp",
+    "modelos/x11/galeria/x11-galeria-2.png",
+    "modelos/x11/galeria/x11-galeria-3.png",
+    "modelos/x11/galeria/x11-galeria-4.png",
+    "modelos/x11/galeria/x11-galeria-5.png",
+    "modelos/x11/galeria/x11-galeria-6.webp",
+    "modelos/x11/galeria/x11-galeria-7.jpg",
+    "modelos/x11/galeria/x11-galeria-8.jpg",
+    "modelos/x11/galeria/x11-galeria-9.jpg",
+    "modelos/x11/galeria/x11-galeria-10.jpg",
+    "modelos/x11/galeria/x11-galeria-11.jpg",
+    "modelos/x11/galeria/x11-galeria-12.jpg"
+  ],
+  "ved/preto": [
+    "modelos/ved/preto/ved-preto-1.webp"
+  ],
+  "ved/galeria": [
+    "modelos/ved/galeria/ved-galeria-1.webp",
+    "modelos/ved/galeria/ved-galeria-2.jpg",
+    "modelos/ved/galeria/ved-galeria-3.jpg",
+    "modelos/ved/galeria/ved-galeria-4.jpg"
+  ],
+  "style/preto": [
+    "modelos/style/preto/style-preto-1.jpg",
+    "modelos/style/preto/style-preto-2.jpg",
+    "modelos/style/preto/style-preto-3.jpg",
+    "modelos/style/preto/style-preto-4.jpg",
+    "modelos/style/preto/style-preto-5.jpg",
+    "modelos/style/preto/style-preto-6.jpg",
+    "modelos/style/preto/style-preto-7.jpg",
+    "modelos/style/preto/style-preto-8.jpg",
+    "modelos/style/preto/style-preto-9.jpg",
+    "modelos/style/preto/style-preto-10.jpg",
+    "modelos/style/preto/style-preto-11.webp"
+  ],
+  "style/galeria": [
+    "modelos/style/galeria/style-galeria-1.webp",
+    "modelos/style/galeria/style-galeria-2.jpg",
+    "modelos/style/galeria/style-galeria-3.jpg",
+    "modelos/style/galeria/style-galeria-4.jpg",
+    "modelos/style/galeria/style-galeria-5.jpg"
+  ],
+  "style/cinza": [
+    "modelos/style/cinza/style-cinza-1.jpg",
+    "modelos/style/cinza/style-cinza-2.jpg",
+    "modelos/style/cinza/style-cinza-3.jpg",
+    "modelos/style/cinza/style-cinza-4.jpg",
+    "modelos/style/cinza/style-cinza-5.jpg",
+    "modelos/style/cinza/style-cinza-6.jpg",
+    "modelos/style/cinza/style-cinza-7.jpg",
+    "modelos/style/cinza/style-cinza-8.jpg",
+    "modelos/style/cinza/style-cinza-9.jpg",
+    "modelos/style/cinza/style-cinza-10.jpg",
+    "modelos/style/cinza/style-cinza-11.jpg",
+    "modelos/style/cinza/style-cinza-12.jpg",
+    "modelos/style/cinza/style-cinza-13.jpg",
+    "modelos/style/cinza/style-cinza-14.jpg"
+  ],
+  "space/preto": [
+    "modelos/space/preto/space-preto-1.webp"
+  ],
+  "space/galeria": [
+    "modelos/space/galeria/space-galeria-1.webp"
+  ],
+  "sofia/preto": [
+    "modelos/sofia/preto/sofia-preto-1.webp"
+  ],
+  "sofia/galeria": [
+    "modelos/sofia/galeria/sofia-galeria-1.webp",
+    "modelos/sofia/galeria/sofia-galeria-2.webp",
+    "modelos/sofia/galeria/sofia-galeria-3.webp",
+    "modelos/sofia/galeria/sofia-galeria-4.webp",
+    "modelos/sofia/galeria/sofia-galeria-5.webp",
+    "modelos/sofia/galeria/sofia-galeria-6.webp",
+    "modelos/sofia/galeria/sofia-galeria-7.jpg",
+    "modelos/sofia/galeria/sofia-galeria-8.jpg"
+  ],
+  "ret/preto": [
+    "modelos/ret/preto/ret-preto-1.jpg",
+    "modelos/ret/preto/ret-preto-2.jpg",
+    "modelos/ret/preto/ret-preto-3.jpg",
+    "modelos/ret/preto/ret-preto-4.jpg",
+    "modelos/ret/preto/ret-preto-5.jpg",
+    "modelos/ret/preto/ret-preto-6.jpg",
+    "modelos/ret/preto/ret-preto-7.jpg",
+    "modelos/ret/preto/ret-preto-8.jpg",
+    "modelos/ret/preto/ret-preto-9.jpg",
+    "modelos/ret/preto/ret-preto-10.jpg",
+    "modelos/ret/preto/ret-preto-11.webp"
+  ],
+  "ret/galeria": [
+    "modelos/ret/galeria/ret-galeria-1.jpg",
+    "modelos/ret/galeria/ret-galeria-2.jpg",
+    "modelos/ret/galeria/ret-galeria-3.jpg",
+    "modelos/ret/galeria/ret-galeria-4.png",
+    "modelos/ret/galeria/ret-galeria-5.png",
+    "modelos/ret/galeria/ret-galeria-6.png",
+    "modelos/ret/galeria/ret-galeria-7.jpg",
+    "modelos/ret/galeria/ret-galeria-8.jpg",
+    "modelos/ret/galeria/ret-galeria-9.jpg",
+    "modelos/ret/galeria/ret-galeria-10.jpg",
+    "modelos/ret/galeria/ret-galeria-11.jpg",
+    "modelos/ret/galeria/ret-galeria-12.jpg",
+    "modelos/ret/galeria/ret-galeria-13.jpg"
+  ],
+  "ret/cinza": [
+    "modelos/ret/cinza/ret-cinza-1.jpg",
+    "modelos/ret/cinza/ret-cinza-2.jpg",
+    "modelos/ret/cinza/ret-cinza-3.jpg",
+    "modelos/ret/cinza/ret-cinza-4.jpg",
+    "modelos/ret/cinza/ret-cinza-5.jpg",
+    "modelos/ret/cinza/ret-cinza-6.jpg",
+    "modelos/ret/cinza/ret-cinza-7.jpg",
+    "modelos/ret/cinza/ret-cinza-8.jpg",
+    "modelos/ret/cinza/ret-cinza-9.jpg",
+    "modelos/ret/cinza/ret-cinza-10.jpg",
+    "modelos/ret/cinza/ret-cinza-11.jpg",
+    "modelos/ret/cinza/ret-cinza-12.jpg"
+  ],
+  "ret/branco": [
+    "modelos/ret/branco/ret-branco-1.jpg",
+    "modelos/ret/branco/ret-branco-2.jpg",
+    "modelos/ret/branco/ret-branco-3.jpg",
+    "modelos/ret/branco/ret-branco-4.jpg",
+    "modelos/ret/branco/ret-branco-5.jpg",
+    "modelos/ret/branco/ret-branco-6.jpg",
+    "modelos/ret/branco/ret-branco-7.jpg",
+    "modelos/ret/branco/ret-branco-8.jpg",
+    "modelos/ret/branco/ret-branco-9.jpg",
+    "modelos/ret/branco/ret-branco-10.jpg"
+  ],
+  "ret/azul": [
+    "modelos/ret/azul/ret-azul-1.jpg",
+    "modelos/ret/azul/ret-azul-2.jpg"
+  ],
+  "pitica/preto": [
+    "modelos/pitica/preto/pitica-preto-1.jpg",
+    "modelos/pitica/preto/pitica-preto-2.jpg",
+    "modelos/pitica/preto/pitica-preto-3.jpg",
+    "modelos/pitica/preto/pitica-preto-4.jpg",
+    "modelos/pitica/preto/pitica-preto-5.jpg",
+    "modelos/pitica/preto/pitica-preto-6.jpg",
+    "modelos/pitica/preto/pitica-preto-7.jpg",
+    "modelos/pitica/preto/pitica-preto-8.jpg",
+    "modelos/pitica/preto/pitica-preto-9.webp"
+  ],
+  "pitica/galeria": [
+    "modelos/pitica/galeria/pitica-galeria-1.webp",
+    "modelos/pitica/galeria/pitica-galeria-2.webp",
+    "modelos/pitica/galeria/pitica-galeria-3.webp",
+    "modelos/pitica/galeria/pitica-galeria-4.webp",
+    "modelos/pitica/galeria/pitica-galeria-5.webp",
+    "modelos/pitica/galeria/pitica-galeria-6.webp",
+    "modelos/pitica/galeria/pitica-galeria-7.webp",
+    "modelos/pitica/galeria/pitica-galeria-8.jpg",
+    "modelos/pitica/galeria/pitica-galeria-9.jpg",
+    "modelos/pitica/galeria/pitica-galeria-10.jpg",
+    "modelos/pitica/galeria/pitica-galeria-11.jpg",
+    "modelos/pitica/galeria/pitica-galeria-12.jpg",
+    "modelos/pitica/galeria/pitica-galeria-13.jpg"
+  ],
+  "pitica/cinza-claro": [
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-1.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-2.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-3.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-4.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-5.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-6.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-7.jpg",
+    "modelos/pitica/cinza-claro/pitica-cinza-claro-8.jpg"
+  ],
+  "pitica/cinza": [
+    "modelos/pitica/cinza/pitica-cinza-1.webp"
+  ],
+  "pitica/branco": [
+    "modelos/pitica/branco/pitica-branco-1.jpg",
+    "modelos/pitica/branco/pitica-branco-2.jpg",
+    "modelos/pitica/branco/pitica-branco-3.jpg",
+    "modelos/pitica/branco/pitica-branco-4.jpg",
+    "modelos/pitica/branco/pitica-branco-5.jpg",
+    "modelos/pitica/branco/pitica-branco-6.jpg",
+    "modelos/pitica/branco/pitica-branco-7.jpg",
+    "modelos/pitica/branco/pitica-branco-8.jpg",
+    "modelos/pitica/branco/pitica-branco-9.webp"
+  ],
+  "mia-tri/vermelho": [
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-1.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-2.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-3.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-4.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-5.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-6.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-7.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-8.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-9.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-10.jpg",
+    "modelos/mia-tri/vermelho/mia-tri-vermelho-11.jpg"
+  ],
+  "mia-tri/preto": [
+    "modelos/mia-tri/preto/mia-tri-preto-1.jpg",
+    "modelos/mia-tri/preto/mia-tri-preto-2.jpg",
+    "modelos/mia-tri/preto/mia-tri-preto-3.jpg",
+    "modelos/mia-tri/preto/mia-tri-preto-4.jpg",
+    "modelos/mia-tri/preto/mia-tri-preto-5.jpg",
+    "modelos/mia-tri/preto/mia-tri-preto-6.jpg",
+    "modelos/mia-tri/preto/mia-tri-preto-7.webp"
+  ],
+  "mia-tri/galeria": [
+    "modelos/mia-tri/galeria/mia-tri-galeria-1.webp",
+    "modelos/mia-tri/galeria/mia-tri-galeria-2.jpg",
+    "modelos/mia-tri/galeria/mia-tri-galeria-3.jpg",
+    "modelos/mia-tri/galeria/mia-tri-galeria-4.jpg",
+    "modelos/mia-tri/galeria/mia-tri-galeria-5.jpg"
+  ],
+  "mia-tri/branco": [
+    "modelos/mia-tri/branco/mia-tri-branco-1.jpg",
+    "modelos/mia-tri/branco/mia-tri-branco-2.jpg",
+    "modelos/mia-tri/branco/mia-tri-branco-3.jpg",
+    "modelos/mia-tri/branco/mia-tri-branco-4.jpg",
+    "modelos/mia-tri/branco/mia-tri-branco-5.jpg",
+    "modelos/mia-tri/branco/mia-tri-branco-6.jpg",
+    "modelos/mia-tri/branco/mia-tri-branco-7.jpg"
+  ],
+  "mia-tri/azul": [
+    "modelos/mia-tri/azul/mia-tri-azul-1.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-2.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-3.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-4.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-5.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-6.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-7.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-8.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-9.jpg",
+    "modelos/mia-tri/azul/mia-tri-azul-10.jpg"
+  ],
+  "liberty/preto": [
+    "modelos/liberty/preto/liberty-preto-1.webp"
+  ],
+  "liberty/galeria": [
+    "modelos/liberty/galeria/liberty-galeria-1.webp"
+  ],
+  "joyzinha/preto": [
+    "modelos/joyzinha/preto/joyzinha-preto-1.webp"
+  ],
+  "joyzinha/galeria": [
+    "modelos/joyzinha/galeria/joyzinha-galeria-1.webp",
+    "modelos/joyzinha/galeria/joyzinha-galeria-2.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-3.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-4.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-5.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-6.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-7.png",
+    "modelos/joyzinha/galeria/joyzinha-galeria-8.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-9.jpg",
+    "modelos/joyzinha/galeria/joyzinha-galeria-10.jpg"
+  ],
+  "joy-tri/preto": [
+    "modelos/joy-tri/preto/joy-tri-preto-1.webp"
+  ],
+  "joy-tri/galeria": [
+    "modelos/joy-tri/galeria/joy-tri-galeria-1.webp",
+    "modelos/joy-tri/galeria/joy-tri-galeria-2.jpg",
+    "modelos/joy-tri/galeria/joy-tri-galeria-3.jpg",
+    "modelos/joy-tri/galeria/joy-tri-galeria-4.jpg"
+  ],
+  "grid/preto": [
+    "modelos/grid/preto/grid-preto-1.webp",
+    "modelos/grid/preto/grid-preto-2.webp"
+  ],
+  "grid/galeria": [
+    "modelos/grid/galeria/grid-galeria-1.webp",
+    "modelos/grid/galeria/grid-galeria-2.webp"
+  ],
+  "bob/preto": [
+    "modelos/bob/preto/bob-preto-1.jpg",
+    "modelos/bob/preto/bob-preto-2.jpg",
+    "modelos/bob/preto/bob-preto-3.jpg",
+    "modelos/bob/preto/bob-preto-4.jpg",
+    "modelos/bob/preto/bob-preto-5.jpg",
+    "modelos/bob/preto/bob-preto-6.jpg",
+    "modelos/bob/preto/bob-preto-7.jpg",
+    "modelos/bob/preto/bob-preto-8.jpg",
+    "modelos/bob/preto/bob-preto-9.jpg",
+    "modelos/bob/preto/bob-preto-10.jpg",
+    "modelos/bob/preto/bob-preto-11.webp",
+    "modelos/bob/preto/bob-preto-12.webp"
+  ],
+  "bob/galeria": [
+    "modelos/bob/galeria/bob-galeria-1.jpg",
+    "modelos/bob/galeria/bob-galeria-2.jpg",
+    "modelos/bob/galeria/bob-galeria-3.jpg",
+    "modelos/bob/galeria/bob-galeria-4.jpg",
+    "modelos/bob/galeria/bob-galeria-5.jpg",
+    "modelos/bob/galeria/bob-galeria-6.jpg",
+    "modelos/bob/galeria/bob-galeria-7.jpg",
+    "modelos/bob/galeria/bob-galeria-8.webp",
+    "modelos/bob/galeria/bob-galeria-9.webp",
+    "modelos/bob/galeria/bob-galeria-10.webp",
+    "modelos/bob/galeria/bob-galeria-11.webp",
+    "modelos/bob/galeria/bob-galeria-12.webp",
+    "modelos/bob/galeria/bob-galeria-13.jpg",
+    "modelos/bob/galeria/bob-galeria-14.jpg",
+    "modelos/bob/galeria/bob-galeria-15.jpg",
+    "modelos/bob/galeria/bob-galeria-16.jpg",
+    "modelos/bob/galeria/bob-galeria-17.jpg",
+    "modelos/bob/galeria/bob-galeria-18.jpg",
+    "modelos/bob/galeria/bob-galeria-19.jpg",
+    "modelos/bob/galeria/bob-galeria-20.webp",
+    "modelos/bob/galeria/bob-galeria-21.webp",
+    "modelos/bob/galeria/bob-galeria-22.webp",
+    "modelos/bob/galeria/bob-galeria-23.webp",
+    "modelos/bob/galeria/bob-galeria-24.webp"
+  ],
+  "bob/cinza": [
+    "modelos/bob/cinza/bob-cinza-1.jpg",
+    "modelos/bob/cinza/bob-cinza-2.jpg",
+    "modelos/bob/cinza/bob-cinza-3.jpg",
+    "modelos/bob/cinza/bob-cinza-4.jpg",
+    "modelos/bob/cinza/bob-cinza-5.jpg",
+    "modelos/bob/cinza/bob-cinza-6.jpg",
+    "modelos/bob/cinza/bob-cinza-7.jpg",
+    "modelos/bob/cinza/bob-cinza-8.jpg",
+    "modelos/bob/cinza/bob-cinza-9.jpg"
+  ],
+  "bob/branco": [
+    "modelos/bob/branco/bob-branco-1.jpg",
+    "modelos/bob/branco/bob-branco-2.jpg",
+    "modelos/bob/branco/bob-branco-3.jpg",
+    "modelos/bob/branco/bob-branco-4.jpg",
+    "modelos/bob/branco/bob-branco-5.jpg",
+    "modelos/bob/branco/bob-branco-6.jpg",
+    "modelos/bob/branco/bob-branco-7.jpg",
+    "modelos/bob/branco/bob-branco-8.jpg",
+    "modelos/bob/branco/bob-branco-9.jpg"
+  ],
+  "big-tri/preto": [
+    "modelos/big-tri/preto/big-tri-preto-1.jpg",
+    "modelos/big-tri/preto/big-tri-preto-2.jpg",
+    "modelos/big-tri/preto/big-tri-preto-3.jpg",
+    "modelos/big-tri/preto/big-tri-preto-4.jpg",
+    "modelos/big-tri/preto/big-tri-preto-5.jpg",
+    "modelos/big-tri/preto/big-tri-preto-6.jpg",
+    "modelos/big-tri/preto/big-tri-preto-7.jpg",
+    "modelos/big-tri/preto/big-tri-preto-8.jpg",
+    "modelos/big-tri/preto/big-tri-preto-9.jpg",
+    "modelos/big-tri/preto/big-tri-preto-10.jpg",
+    "modelos/big-tri/preto/big-tri-preto-11.jpg",
+    "modelos/big-tri/preto/big-tri-preto-12.webp",
+    "modelos/big-tri/preto/big-tri-preto-13.webp"
+  ],
+  "big-tri/galeria": [
+    "modelos/big-tri/galeria/big-tri-galeria-1.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-2.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-3.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-4.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-5.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-6.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-7.webp",
+    "modelos/big-tri/galeria/big-tri-galeria-8.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-9.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-10.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-11.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-12.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-13.jpg",
+    "modelos/big-tri/galeria/big-tri-galeria-14.webp"
+  ],
+  "big-tri/cinza-claro": [
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-1.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-2.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-3.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-4.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-5.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-6.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-7.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-8.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-9.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-10.jpg",
+    "modelos/big-tri/cinza-claro/big-tri-cinza-claro-11.jpg"
+  ],
+  "20-mini/preto": [
+    "modelos/20-mini/preto/20-mini-preto-1.webp",
+    "modelos/20-mini/preto/20-mini-preto-2.webp"
+  ],
+  "20-mini/galeria": [
+    "modelos/20-mini/galeria/20-mini-galeria-1.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-2.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-3.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-4.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-5.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-6.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-7.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-8.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-9.webp",
+    "modelos/20-mini/galeria/20-mini-galeria-10.webp"
+  ],
+  "20/preto": [
+    "modelos/20/preto/20-preto-1.webp",
+    "modelos/20/preto/20-preto-2.webp"
+  ],
   "20/galeria": [
-    "modelos/20/galeria/20-galeria-1.jpg"
+    "modelos/20/galeria/20-galeria-1.jpg",
+    "modelos/20/galeria/20-galeria-2.jpg",
+    "modelos/20/galeria/20-galeria-3.jpg",
+    "modelos/20/galeria/20-galeria-4.jpg",
+    "modelos/20/galeria/20-galeria-5.jpg",
+    "modelos/20/galeria/20-galeria-6.jpg",
+    "modelos/20/galeria/20-galeria-7.webp",
+    "modelos/20/galeria/20-galeria-8.jpg",
+    "modelos/20/galeria/20-galeria-9.jpg",
+    "modelos/20/galeria/20-galeria-10.jpg",
+    "modelos/20/galeria/20-galeria-11.jpg",
+    "modelos/20/galeria/20-galeria-12.jpg",
+    "modelos/20/galeria/20-galeria-13.webp"
+  ],
+  "r10/galeria": [
+    "modelos/r10/galeria/r10-galeria-1.webp",
+    "modelos/r10/galeria/r10-galeria-2.webp",
+    "modelos/r10/galeria/r10-galeria-3.webp",
+    "modelos/r10/galeria/r10-galeria-4.webp",
+    "modelos/r10/galeria/r10-galeria-5.webp",
+    "modelos/r10/galeria/r10-galeria-6.png"
+  ],
+  "soma/preto": [
+    "modelos/soma/preto/soma-preto-1.jpg",
+    "modelos/soma/preto/soma-preto-2.jpg",
+    "modelos/soma/preto/soma-preto-3.jpg",
+    "modelos/soma/preto/soma-preto-4.jpg",
+    "modelos/soma/preto/soma-preto-5.jpg",
+    "modelos/soma/preto/soma-preto-6.jpg"
+  ],
+  "soma/prata": [
+    "modelos/soma/prata/soma-prata-1.webp"
+  ],
+  "soma/galeria": [
+    "modelos/soma/galeria/soma-galeria-1.jpg",
+    "modelos/soma/galeria/soma-galeria-2.jpg",
+    "modelos/soma/galeria/soma-galeria-3.jpg",
+    "modelos/soma/galeria/soma-galeria-4.jpg",
+    "modelos/soma/galeria/soma-galeria-5.jpg",
+    "modelos/soma/galeria/soma-galeria-6.jpg",
+    "modelos/soma/galeria/soma-galeria-7.jpg",
+    "modelos/soma/galeria/soma-galeria-8.jpg"
+  ],
+  "soma/cinza": [
+    "modelos/soma/cinza/soma-cinza-1.jpg",
+    "modelos/soma/cinza/soma-cinza-2.jpg",
+    "modelos/soma/cinza/soma-cinza-3.jpg",
+    "modelos/soma/cinza/soma-cinza-4.jpg",
+    "modelos/soma/cinza/soma-cinza-5.jpg",
+    "modelos/soma/cinza/soma-cinza-6.jpg"
+  ],
+  "soma/branco": [
+    "modelos/soma/branco/soma-branco-1.jpg",
+    "modelos/soma/branco/soma-branco-2.jpg",
+    "modelos/soma/branco/soma-branco-3.jpg",
+    "modelos/soma/branco/soma-branco-4.jpg",
+    "modelos/soma/branco/soma-branco-5.jpg",
+    "modelos/soma/branco/soma-branco-6.jpg"
+  ],
+  "joy-super/vermelho": [
+    "modelos/joy-super/vermelho/joy-super-vermelho-1.jpg",
+    "modelos/joy-super/vermelho/joy-super-vermelho-2.jpg",
+    "modelos/joy-super/vermelho/joy-super-vermelho-3.jpg",
+    "modelos/joy-super/vermelho/joy-super-vermelho-4.jpg",
+    "modelos/joy-super/vermelho/joy-super-vermelho-5.jpg",
+    "modelos/joy-super/vermelho/joy-super-vermelho-6.jpg",
+    "modelos/joy-super/vermelho/joy-super-vermelho-7.jpg"
+  ],
+  "joy-super/preto": [
+    "modelos/joy-super/preto/joy-super-preto-1.jpg",
+    "modelos/joy-super/preto/joy-super-preto-2.jpg",
+    "modelos/joy-super/preto/joy-super-preto-3.jpg",
+    "modelos/joy-super/preto/joy-super-preto-4.jpg",
+    "modelos/joy-super/preto/joy-super-preto-5.jpg",
+    "modelos/joy-super/preto/joy-super-preto-6.jpg",
+    "modelos/joy-super/preto/joy-super-preto-7.jpg"
+  ],
+  "joy-super/galeria": [
+    "modelos/joy-super/galeria/joy-super-galeria-1.webp",
+    "modelos/joy-super/galeria/joy-super-galeria-2.webp",
+    "modelos/joy-super/galeria/joy-super-galeria-3.webp",
+    "modelos/joy-super/galeria/joy-super-galeria-4.webp",
+    "modelos/joy-super/galeria/joy-super-galeria-5.webp",
+    "modelos/joy-super/galeria/joy-super-galeria-6.webp",
+    "modelos/joy-super/galeria/joy-super-galeria-7.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-8.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-9.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-10.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-11.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-12.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-13.jpg",
+    "modelos/joy-super/galeria/joy-super-galeria-14.jpg"
+  ],
+  "joy-super/cinza": [
+    "modelos/joy-super/cinza/joy-super-cinza-1.jpg",
+    "modelos/joy-super/cinza/joy-super-cinza-2.jpg",
+    "modelos/joy-super/cinza/joy-super-cinza-3.jpg",
+    "modelos/joy-super/cinza/joy-super-cinza-4.jpg",
+    "modelos/joy-super/cinza/joy-super-cinza-5.jpg",
+    "modelos/joy-super/cinza/joy-super-cinza-6.jpg",
+    "modelos/joy-super/cinza/joy-super-cinza-7.jpg"
+  ],
+  "joy-super/branco": [
+    "modelos/joy-super/branco/joy-super-branco-1.jpg",
+    "modelos/joy-super/branco/joy-super-branco-2.jpg",
+    "modelos/joy-super/branco/joy-super-branco-3.jpg",
+    "modelos/joy-super/branco/joy-super-branco-4.jpg",
+    "modelos/joy-super/branco/joy-super-branco-5.jpg",
+    "modelos/joy-super/branco/joy-super-branco-6.jpg"
+  ],
+  "joy-super/azul": [
+    "modelos/joy-super/azul/joy-super-azul-1.jpg",
+    "modelos/joy-super/azul/joy-super-azul-2.jpg",
+    "modelos/joy-super/azul/joy-super-azul-3.jpg",
+    "modelos/joy-super/azul/joy-super-azul-4.jpg",
+    "modelos/joy-super/azul/joy-super-azul-5.jpg",
+    "modelos/joy-super/azul/joy-super-azul-6.jpg",
+    "modelos/joy-super/azul/joy-super-azul-7.jpg",
+    "modelos/joy-super/azul/joy-super-azul-8.webp"
+  ],
+  "giga/vasco": [
+    "modelos/giga/vasco/giga-vasco-1.webp",
+    "modelos/giga/vasco/giga-vasco-2.webp",
+    "modelos/giga/vasco/giga-vasco-3.webp",
+    "modelos/giga/vasco/giga-vasco-4.webp",
+    "modelos/giga/vasco/giga-vasco-5.webp",
+    "modelos/giga/vasco/giga-vasco-6.webp",
+    "modelos/giga/vasco/giga-vasco-7.webp"
+  ],
+  "giga/preto": [
+    "modelos/giga/preto/giga-preto-1.jpg",
+    "modelos/giga/preto/giga-preto-2.jpg",
+    "modelos/giga/preto/giga-preto-3.jpg",
+    "modelos/giga/preto/giga-preto-4.jpg",
+    "modelos/giga/preto/giga-preto-5.jpg",
+    "modelos/giga/preto/giga-preto-6.jpg",
+    "modelos/giga/preto/giga-preto-7.jpg",
+    "modelos/giga/preto/giga-preto-8.jpg",
+    "modelos/giga/preto/giga-preto-9.webp",
+    "modelos/giga/preto/giga-preto-10.webp"
+  ],
+  "giga/galeria": [
+    "modelos/giga/galeria/giga-galeria-1.jpg",
+    "modelos/giga/galeria/giga-galeria-2.jpg",
+    "modelos/giga/galeria/giga-galeria-3.jpg",
+    "modelos/giga/galeria/giga-galeria-4.jpg",
+    "modelos/giga/galeria/giga-galeria-5.jpg",
+    "modelos/giga/galeria/giga-galeria-6.jpg",
+    "modelos/giga/galeria/giga-galeria-7.jpg",
+    "modelos/giga/galeria/giga-galeria-8.jpg",
+    "modelos/giga/galeria/giga-galeria-9.jpg",
+    "modelos/giga/galeria/giga-galeria-10.jpg",
+    "modelos/giga/galeria/giga-galeria-11.jpg",
+    "modelos/giga/galeria/giga-galeria-12.jpg",
+    "modelos/giga/galeria/giga-galeria-13.jpg",
+    "modelos/giga/galeria/giga-galeria-14.jpg",
+    "modelos/giga/galeria/giga-galeria-15.jpg",
+    "modelos/giga/galeria/giga-galeria-16.jpg",
+    "modelos/giga/galeria/giga-galeria-17.jpg",
+    "modelos/giga/galeria/giga-galeria-18.jpg",
+    "modelos/giga/galeria/giga-galeria-19.jpg",
+    "modelos/giga/galeria/giga-galeria-20.jpg"
+  ],
+  "giga/cinza": [
+    "modelos/giga/cinza/giga-cinza-1.jpg",
+    "modelos/giga/cinza/giga-cinza-2.jpg",
+    "modelos/giga/cinza/giga-cinza-3.jpg",
+    "modelos/giga/cinza/giga-cinza-4.jpg",
+    "modelos/giga/cinza/giga-cinza-5.jpg",
+    "modelos/giga/cinza/giga-cinza-6.jpg",
+    "modelos/giga/cinza/giga-cinza-7.jpg",
+    "modelos/giga/cinza/giga-cinza-8.jpg"
+  ],
+  "giga/azul": [
+    "modelos/giga/azul/giga-azul-1.jpg",
+    "modelos/giga/azul/giga-azul-2.jpg",
+    "modelos/giga/azul/giga-azul-3.jpg",
+    "modelos/giga/azul/giga-azul-4.jpg",
+    "modelos/giga/azul/giga-azul-5.jpg",
+    "modelos/giga/azul/giga-azul-6.jpg",
+    "modelos/giga/azul/giga-azul-7.jpg",
+    "modelos/giga/azul/giga-azul-8.jpg"
+  ],
+  "roma/preto": [
+    "modelos/roma/preto/roma-preto-1.jpg",
+    "modelos/roma/preto/roma-preto-2.jpg",
+    "modelos/roma/preto/roma-preto-3.jpg",
+    "modelos/roma/preto/roma-preto-4.jpg",
+    "modelos/roma/preto/roma-preto-5.jpg",
+    "modelos/roma/preto/roma-preto-6.jpg"
+  ],
+  "roma/galeria": [
+    "modelos/roma/galeria/roma-galeria-1.webp",
+    "modelos/roma/galeria/roma-galeria-2.webp",
+    "modelos/roma/galeria/roma-galeria-3.webp",
+    "modelos/roma/galeria/roma-galeria-4.webp",
+    "modelos/roma/galeria/roma-galeria-5.webp",
+    "modelos/roma/galeria/roma-galeria-6.jpg",
+    "modelos/roma/galeria/roma-galeria-7.jpg",
+    "modelos/roma/galeria/roma-galeria-8.jpg"
+  ],
+  "roma/creme": [
+    "modelos/roma/creme/roma-creme-1.jpg",
+    "modelos/roma/creme/roma-creme-2.jpg",
+    "modelos/roma/creme/roma-creme-3.jpg",
+    "modelos/roma/creme/roma-creme-4.jpg",
+    "modelos/roma/creme/roma-creme-5.jpg",
+    "modelos/roma/creme/roma-creme-6.jpg",
+    "modelos/roma/creme/roma-creme-7.jpg"
+  ],
+  "roma/azul-retro": [
+    "modelos/roma/azul-retro/roma-azul-retro-1.jpg",
+    "modelos/roma/azul-retro/roma-azul-retro-2.jpg",
+    "modelos/roma/azul-retro/roma-azul-retro-3.jpg",
+    "modelos/roma/azul-retro/roma-azul-retro-4.jpg",
+    "modelos/roma/azul-retro/roma-azul-retro-5.jpg",
+    "modelos/roma/azul-retro/roma-azul-retro-6.jpg"
+  ],
+  "roma/azul": [
+    "modelos/roma/azul/roma-azul-1.webp"
+  ],
+  "mia/violeta-escuro": [
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-1.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-2.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-3.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-4.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-5.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-6.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-7.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-8.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-9.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-10.jpg",
+    "modelos/mia/violeta-escuro/mia-violeta-escuro-11.jpg"
+  ],
+  "mia/preto": [
+    "modelos/mia/preto/mia-preto-1.jpg",
+    "modelos/mia/preto/mia-preto-2.jpg",
+    "modelos/mia/preto/mia-preto-3.jpg",
+    "modelos/mia/preto/mia-preto-4.jpg",
+    "modelos/mia/preto/mia-preto-5.jpg",
+    "modelos/mia/preto/mia-preto-6.jpg",
+    "modelos/mia/preto/mia-preto-7.jpg",
+    "modelos/mia/preto/mia-preto-8.jpg",
+    "modelos/mia/preto/mia-preto-9.jpg",
+    "modelos/mia/preto/mia-preto-10.jpg",
+    "modelos/mia/preto/mia-preto-11.jpg"
+  ],
+  "mia/preta": [
+    "modelos/mia/preta/mia-preta-1.webp"
+  ],
+  "mia/galeria": [
+    "modelos/mia/galeria/mia-galeria-1.webp",
+    "modelos/mia/galeria/mia-galeria-2.webp",
+    "modelos/mia/galeria/mia-galeria-3.webp",
+    "modelos/mia/galeria/mia-galeria-4.webp",
+    "modelos/mia/galeria/mia-galeria-5.webp",
+    "modelos/mia/galeria/mia-galeria-6.jpg",
+    "modelos/mia/galeria/mia-galeria-7.jpg",
+    "modelos/mia/galeria/mia-galeria-8.jpg",
+    "modelos/mia/galeria/mia-galeria-9.jpg",
+    "modelos/mia/galeria/mia-galeria-10.jpg",
+    "modelos/mia/galeria/mia-galeria-11.webp"
+  ],
+  "mia/branco": [
+    "modelos/mia/branco/mia-branco-1.jpg",
+    "modelos/mia/branco/mia-branco-2.jpg",
+    "modelos/mia/branco/mia-branco-3.jpg",
+    "modelos/mia/branco/mia-branco-4.jpg",
+    "modelos/mia/branco/mia-branco-5.jpg",
+    "modelos/mia/branco/mia-branco-6.jpg",
+    "modelos/mia/branco/mia-branco-7.jpg",
+    "modelos/mia/branco/mia-branco-8.jpg",
+    "modelos/mia/branco/mia-branco-9.jpg",
+    "modelos/mia/branco/mia-branco-10.jpg",
+    "modelos/mia/branco/mia-branco-11.jpg",
+    "modelos/mia/branco/mia-branco-12.jpg"
+  ],
+  "mia/azul": [
+    "modelos/mia/azul/mia-azul-1.jpg",
+    "modelos/mia/azul/mia-azul-2.jpg",
+    "modelos/mia/azul/mia-azul-3.jpg",
+    "modelos/mia/azul/mia-azul-4.jpg",
+    "modelos/mia/azul/mia-azul-5.jpg",
+    "modelos/mia/azul/mia-azul-6.jpg",
+    "modelos/mia/azul/mia-azul-7.jpg",
+    "modelos/mia/azul/mia-azul-8.jpg",
+    "modelos/mia/azul/mia-azul-9.jpg",
+    "modelos/mia/azul/mia-azul-10.jpg",
+    "modelos/mia/azul/mia-azul-11.jpg",
+    "modelos/mia/azul/mia-azul-12.jpg"
+  ],
+  "jet/preto": [
+    "modelos/jet/preto/jet-preto-1.jpg",
+    "modelos/jet/preto/jet-preto-2.jpg",
+    "modelos/jet/preto/jet-preto-3.jpg",
+    "modelos/jet/preto/jet-preto-4.jpg",
+    "modelos/jet/preto/jet-preto-5.jpg",
+    "modelos/jet/preto/jet-preto-6.jpg",
+    "modelos/jet/preto/jet-preto-7.jpg",
+    "modelos/jet/preto/jet-preto-8.jpg"
+  ],
+  "jet/galeria": [
+    "modelos/jet/galeria/jet-galeria-1.webp",
+    "modelos/jet/galeria/jet-galeria-2.webp",
+    "modelos/jet/galeria/jet-galeria-3.webp",
+    "modelos/jet/galeria/jet-galeria-4.webp",
+    "modelos/jet/galeria/jet-galeria-5.webp",
+    "modelos/jet/galeria/jet-galeria-6.webp",
+    "modelos/jet/galeria/jet-galeria-7.webp",
+    "modelos/jet/galeria/jet-galeria-8.webp",
+    "modelos/jet/galeria/jet-galeria-9.jpg",
+    "modelos/jet/galeria/jet-galeria-10.jpg",
+    "modelos/jet/galeria/jet-galeria-11.jpg",
+    "modelos/jet/galeria/jet-galeria-12.jpg",
+    "modelos/jet/galeria/jet-galeria-13.jpg",
+    "modelos/jet/galeria/jet-galeria-14.jpg",
+    "modelos/jet/galeria/jet-galeria-15.jpg",
+    "modelos/jet/galeria/jet-galeria-16.webp",
+    "modelos/jet/galeria/jet-galeria-17.jpg",
+    "modelos/jet/galeria/jet-galeria-18.jpg",
+    "modelos/jet/galeria/jet-galeria-19.jpg",
+    "modelos/jet/galeria/jet-galeria-20.jpg",
+    "modelos/jet/galeria/jet-galeria-21.jpg",
+    "modelos/jet/galeria/jet-galeria-22.jpg",
+    "modelos/jet/galeria/jet-galeria-23.jpg",
+    "modelos/jet/galeria/jet-galeria-24.webp"
+  ],
+  "jet/cinza": [
+    "modelos/jet/cinza/jet-cinza-1.jpg",
+    "modelos/jet/cinza/jet-cinza-2.jpg",
+    "modelos/jet/cinza/jet-cinza-3.jpg",
+    "modelos/jet/cinza/jet-cinza-4.jpg",
+    "modelos/jet/cinza/jet-cinza-5.jpg",
+    "modelos/jet/cinza/jet-cinza-6.jpg"
+  ],
+  "jet/branco": [
+    "modelos/jet/branco/jet-branco-1.jpg",
+    "modelos/jet/branco/jet-branco-2.jpg",
+    "modelos/jet/branco/jet-branco-3.jpg",
+    "modelos/jet/branco/jet-branco-4.jpg",
+    "modelos/jet/branco/jet-branco-5.jpg",
+    "modelos/jet/branco/jet-branco-6.jpg"
+  ],
+  "jet/azul-escuro": [
+    "modelos/jet/azul-escuro/jet-azul-escuro-1.jpg",
+    "modelos/jet/azul-escuro/jet-azul-escuro-2.jpg",
+    "modelos/jet/azul-escuro/jet-azul-escuro-3.jpg",
+    "modelos/jet/azul-escuro/jet-azul-escuro-4.jpg",
+    "modelos/jet/azul-escuro/jet-azul-escuro-5.jpg",
+    "modelos/jet/azul-escuro/jet-azul-escuro-6.jpg"
+  ],
+  "jet/azul": [
+    "modelos/jet/azul/jet-azul-1.webp",
+    "modelos/jet/azul/jet-azul-2.webp"
+  ],
+  "jet-max/vermelho-escuro": [
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-1.jpg",
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-2.jpg",
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-3.jpg",
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-4.jpg",
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-5.jpg",
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-6.jpg",
+    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-7.jpg"
+  ],
+  "jet-max/galeria": [
+    "modelos/jet-max/galeria/jet-max-galeria-1.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-2.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-3.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-4.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-5.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-6.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-7.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-8.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-9.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-10.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-11.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-12.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-13.jpg"
+  ],
+  "jet-max/cinza-claro": [
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-1.jpg",
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-2.jpg",
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-3.jpg",
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-4.jpg",
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-5.jpg",
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-6.jpg",
+    "modelos/jet-max/cinza-claro/jet-max-cinza-claro-7.jpg"
+  ],
+  "jet-max/azul-escuro": [
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-1.jpg",
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-2.jpg",
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-3.jpg",
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-4.jpg",
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-5.jpg",
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-6.jpg",
+    "modelos/jet-max/azul-escuro/jet-max-azul-escuro-7.jpg"
+  ],
+  "jet-max/azul": [
+    "modelos/jet-max/azul/jet-max-azul-1.webp",
+    "modelos/jet-max/azul/jet-max-azul-2.webp"
+  ],
+  "jet-max/branco": [
+    "modelos/jet-max/branco/jet-max-branco-1.jpg",
+    "modelos/jet-max/branco/jet-max-branco-2.jpg",
+    "modelos/jet-max/branco/jet-max-branco-3.jpg",
+    "modelos/jet-max/branco/jet-max-branco-4.jpg",
+    "modelos/jet-max/branco/jet-max-branco-5.jpg",
+    "modelos/jet-max/branco/jet-max-branco-6.jpg",
+    "modelos/jet-max/branco/jet-max-branco-7.jpg"
+  ],
+  "jet-max/preto": [
+    "modelos/jet-max/preto/jet-max-preto-1.jpg",
+    "modelos/jet-max/preto/jet-max-preto-2.jpg",
+    "modelos/jet-max/preto/jet-max-preto-3.jpg",
+    "modelos/jet-max/preto/jet-max-preto-4.jpg",
+    "modelos/jet-max/preto/jet-max-preto-5.jpg",
+    "modelos/jet-max/preto/jet-max-preto-6.jpg",
+    "modelos/jet-max/preto/jet-max-preto-7.jpg"
+  ],
+  "x12/vermelho-escuro": [
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-1.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-2.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-3.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-4.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-5.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-6.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-7.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-8.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-9.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-10.jpg",
+    "modelos/x12/vermelho-escuro/x12-vermelho-escuro-11.jpg"
+  ],
+  "x12/galeria": [
+    "modelos/x12/galeria/x12-galeria-1.webp",
+    "modelos/x12/galeria/x12-galeria-2.webp",
+    "modelos/x12/galeria/x12-galeria-3.webp",
+    "modelos/x12/galeria/x12-galeria-4.webp",
+    "modelos/x12/galeria/x12-galeria-5.webp",
+    "modelos/x12/galeria/x12-galeria-6.webp",
+    "modelos/x12/galeria/x12-galeria-7.jpg",
+    "modelos/x12/galeria/x12-galeria-8.jpg",
+    "modelos/x12/galeria/x12-galeria-9.jpg",
+    "modelos/x12/galeria/x12-galeria-10.jpg",
+    "modelos/x12/galeria/x12-galeria-11.jpg",
+    "modelos/x12/galeria/x12-galeria-12.jpg",
+    "modelos/x12/galeria/x12-galeria-13.jpg",
+    "modelos/x12/galeria/x12-galeria-14.jpg",
+    "modelos/x12/galeria/x12-galeria-15.jpg"
+  ],
+  "x12/cinza": [
+    "modelos/x12/cinza/x12-cinza-1.jpg",
+    "modelos/x12/cinza/x12-cinza-2.jpg",
+    "modelos/x12/cinza/x12-cinza-3.jpg",
+    "modelos/x12/cinza/x12-cinza-4.jpg",
+    "modelos/x12/cinza/x12-cinza-5.jpg",
+    "modelos/x12/cinza/x12-cinza-6.jpg",
+    "modelos/x12/cinza/x12-cinza-7.jpg",
+    "modelos/x12/cinza/x12-cinza-8.jpg",
+    "modelos/x12/cinza/x12-cinza-9.jpg",
+    "modelos/x12/cinza/x12-cinza-10.jpg"
+  ],
+  "x12/azul-escuro": [
+    "modelos/x12/azul-escuro/x12-azul-escuro-1.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-2.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-3.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-4.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-5.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-6.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-7.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-8.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-9.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-10.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-11.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-12.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-13.jpg",
+    "modelos/x12/azul-escuro/x12-azul-escuro-14.jpg"
+  ],
+  "x12/azul": [
+    "modelos/x12/azul/x12-azul-1.jpg",
+    "modelos/x12/azul/x12-azul-2.jpg",
+    "modelos/x12/azul/x12-azul-3.jpg",
+    "modelos/x12/azul/x12-azul-4.jpg",
+    "modelos/x12/azul/x12-azul-5.jpg",
+    "modelos/x12/azul/x12-azul-6.jpg",
+    "modelos/x12/azul/x12-azul-7.jpg",
+    "modelos/x12/azul/x12-azul-8.jpg",
+    "modelos/x12/azul/x12-azul-9.jpg",
+    "modelos/x12/azul/x12-azul-10.jpg",
+    "modelos/x12/azul/x12-azul-11.jpg",
+    "modelos/x12/azul/x12-azul-12.jpg"
+  ],
+  "x12/palmeiras": [
+    "modelos/x12/palmeiras/x12-palmeiras-1.webp"
+  ],
+  "x12/branco": [
+    "modelos/x12/branco/x12-branco-1.jpg",
+    "modelos/x12/branco/x12-branco-2.jpg",
+    "modelos/x12/branco/x12-branco-3.jpg",
+    "modelos/x12/branco/x12-branco-4.jpg",
+    "modelos/x12/branco/x12-branco-5.jpg",
+    "modelos/x12/branco/x12-branco-6.jpg",
+    "modelos/x12/branco/x12-branco-7.jpg",
+    "modelos/x12/branco/x12-branco-8.jpg",
+    "modelos/x12/branco/x12-branco-9.jpg",
+    "modelos/x12/branco/x12-branco-10.jpg",
+    "modelos/x12/branco/x12-branco-11.jpg",
+    "modelos/x12/branco/x12-branco-12.jpg"
+  ],
+  "x12/preto": [
+    "modelos/x12/preto/x12-preto-1.jpg",
+    "modelos/x12/preto/x12-preto-2.jpg",
+    "modelos/x12/preto/x12-preto-3.jpg",
+    "modelos/x12/preto/x12-preto-4.jpg",
+    "modelos/x12/preto/x12-preto-5.jpg",
+    "modelos/x12/preto/x12-preto-6.jpg",
+    "modelos/x12/preto/x12-preto-7.jpg",
+    "modelos/x12/preto/x12-preto-8.jpg",
+    "modelos/x12/preto/x12-preto-9.jpg",
+    "modelos/x12/preto/x12-preto-10.jpg",
+    "modelos/x12/preto/x12-preto-11.jpg",
+    "modelos/x12/preto/x12-preto-12.jpg",
+    "modelos/x12/preto/x12-preto-13.jpg",
+    "modelos/x12/preto/x12-preto-14.jpg",
+    "modelos/x12/preto/x12-preto-15.webp"
   ]
 }
