@@ -42,11 +42,11 @@
 
 /* Color swatches */
 .color-swatches { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start; }
-.color-swatch { display: flex; flex-direction: column; align-items: center; gap: 12px; background: none; border: none; cursor: pointer; padding: 0; transition: transform .3s; }
+.color-swatch { display: flex; flex-direction: column; align-items: center; gap: 12px; background: none; border: none; cursor: pointer; padding: 0; transition: transform .3s; width: 76px; }
 .color-swatch:hover { transform: translateY(-4px); }
 .color-dot { width: 52px; height: 52px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.15); transition: all .3s; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
 .color-swatch.active .color-dot { border-color: var(--primary); box-shadow: 0 0 24px rgba(224,168,46,0.45); transform: scale(1.12); }
-.color-swatch-label { font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; transition: color .3s; }
+.color-swatch-label { font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; transition: color .3s; text-align: center; line-height: 1.35; }
 .color-swatch.active .color-swatch-label { color: var(--primary); }
 
 /* UK swatch (Union Jack dentro do círculo) */
