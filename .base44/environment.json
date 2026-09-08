@@ -5,15 +5,27 @@
   "secrets": [
     {
       "name": "GOOGLE_DRIVE_API_KEY",
-      "description": "Chave de API do Google Cloud Console (com a Google Drive API ativada) — console.cloud.google.com → APIs e Serviços → Biblioteca → ativar 'Google Drive API' → Credenciais → Criar chave de API"
+      "description": "Chave de API do Google Cloud Console (com a Google Drive API ativada) — console.cloud.google.com → APIs e Serviços → Biblioteca → ativar 'Google Drive API' → Credenciais → Criar chave de API. Usada pela sincronização Drive→site (leitura)."
     },
     {
       "name": "GOOGLE_DRIVE_FOLDER_ID",
-      "description": "ID (ou link completo) da pasta raiz compartilhada no Google Drive — deve estar compartilhada como 'Qualquer pessoa com o link: Leitor'"
+      "description": "ID (ou link completo) da pasta raiz compartilhada no Google Drive — deve estar compartilhada como 'Qualquer pessoa com o link: Leitor'."
     },
     {
-      "name": "GOOGLE_SERVICE_ACCOUNT_JSON",
-      "description": "Conteúdo completo do JSON de chave de uma conta de serviço do Google Cloud (usado apenas pela sincronização invertida, site → Drive). Compartilhe a pasta raiz do Drive com o e-mail da conta de serviço como 'Editor'."
+      "name": "GOOGLE_OAUTH_CLIENT_ID",
+      "description": "ID do cliente OAuth (tipo 'Aplicativo para computador') do Google Cloud — Credenciais → Criar credenciais → ID do cliente OAuth. Usado pela sincronização invertida site→Drive."
+    },
+    {
+      "name": "GOOGLE_OAUTH_CLIENT_SECRET",
+      "description": "Chave secreta do cliente OAuth correspondente ao GOOGLE_OAUTH_CLIENT_ID."
+    },
+    {
+      "name": "GOOGLE_OAUTH_CODE",
+      "description": "Código de autorização temporário (fluxo único): valor de code=... da barra de endereço após autorizar o link que o drive-push.js imprime. Só é usado uma vez para gerar o refresh token."
+    },
+    {
+      "name": "GOOGLE_OAUTH_REFRESH_TOKEN",
+      "description": "Refresh token OAuth impresso pelo drive-push.js após a troca do código. Permanente (se a tela de permissão OAuth estiver PUBLICADA)."
     }
   ]
 }

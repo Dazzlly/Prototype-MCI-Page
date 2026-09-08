@@ -8,19 +8,23 @@
  * Nomes são traduzidos de volta: branco→White, preto→Black, jet-max→JetMax etc.
  * Arquivos que já existem na pasta do Drive (mesmo nome) não são enviados de novo.
  *
- * Requer uma CONTA DE SERVIÇO do Google (chave de API não pode escrever):
- *   1. Google Cloud Console → IAM e Administrador → Contas de serviço → Criar
- *   2. Chaves → Adicionar chave → JSON (baixa um arquivo)
- *   3. Compartilhar a pasta raiz do Drive com o e-mail da conta de serviço
- *      como "Editor" (ou "Gerente de conteúdo")
- *   4. Colar o CONTEÚDO do JSON no segredo GOOGLE_SERVICE_ACCOUNT_JSON
+ * Requer AUTORIZAÇÃO OAuth da sua conta Google (contas de serviço não podem
+ * mais gravar em pastas comuns — política do Google desde 2025):
+ *   1. Google Cloud Console → APIs e Serviços → Tela de permissão OAuth:
+ *      tipo Externo → preencher → PUBLICAR APLICATIVO (senão o token expira em 7 dias)
+ *   2. Credenciais → Criar credenciais → ID do cliente OAuth → Aplicativo para
+ *      computador → cadastrar o ID e a chave nos segredos GOOGLE_OAUTH_CLIENT_ID /
+ *      GOOGLE_OAUTH_CLIENT_SECRET
+ *   3. Rodar o script: ele imprime o link de autorização → autorize com a conta
+ *      dona da pasta → copie o "code=..." da barra de endereço → segredo
+ *      GOOGLE_OAUTH_CODE → rode de novo → ele imprime o refresh token → segredo
+ *      GOOGLE_OAUTH_REFRESH_TOKEN (a partir daí só roda e envia)
  *
  * Execução (manual): docker compose -f docker-compose.base44.yml --profile tools run --rm drive-push
  */
 
 const fs = require("fs");
 const path = require("path");
-const { createSign } = require("crypto");
 
 const API = "https://www.googleapis.com/drive/v3";
 const ROOT_DIR = path.join(__dirname, "..", "modelos");
@@ -47,30 +51,65 @@ function fail(msg) {
   process.exit(1);
 }
 
-// --- OAuth2 com conta de serviço (JWT assinado, sem dependências) ---
+// --- OAuth 2.0 (conta do usuário) — sem dependências ---
 let cachedToken = null;
 async function getAccessToken() {
   if (cachedToken) return cachedToken;
-  const sa = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_JSON);
-  const b64 = o => Buffer.from(JSON.stringify(o)).toString("base64url");
-  const now = Math.floor(Date.now() / 1000);
-  const unsigned = b64({ alg: "RS256", typ: "JWT" }) + "." + b64({
-    iss: sa.client_email,
-    scope: "https://www.googleapis.com/auth/drive",
-    aud: "https://oauth2.googleapis.com/token",
-    exp: now + 3600,
-    iat: now,
-  });
-  const signer = createSign("RSA-SHA256");
-  signer.update(unsigned);
-  const assertion = unsigned + "." + signer.sign(sa.private_key, "base64url");
+  const clientId = process.env.GOOGLE_OAUTH_CLIENT_ID;
+  const clientSecret = process.env.GOOGLE_OAUTH_CLIENT_SECRET;
+  const refreshToken = process.env.GOOGLE_OAUTH_REFRESH_TOKEN;
+
+  if (!clientId || !clientSecret) {
+    fail("OAuth incompleto: cadastre GOOGLE_OAUTH_CLIENT_ID e GOOGLE_OAUTH_CLIENT_SECRET (Google Cloud → Credenciais → ID do cliente OAuth, tipo 'Aplicativo para computador').");
+  }
+
+  // Etapa 2 do primeiro uso: troca do código de autorização pelo refresh token
+  if (!refreshToken && process.env.GOOGLE_OAUTH_CODE) {
+    const res = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        code: process.env.GOOGLE_OAUTH_CODE,
+        client_id: clientId,
+        client_secret: clientSecret,
+        redirect_uri: "http://localhost:1",
+        grant_type: "authorization_code",
+      }),
+    });
+    const d = await res.json();
+    if (!res.ok) fail("Falha ao trocar o código de autorização: " + (d.error_description || d.error));
+    console.log("\n✅ Autorização concluída! Para finalizar, cole o valor abaixo no segredo GOOGLE_OAUTH_REFRESH_TOKEN e execute este comando novamente:\n");
+    console.log(d.refresh_token + "\n");
+    process.exit(0);
+  }
+
+  // Primeira execução sem código: mostra o link de autorização
+  if (!refreshToken) {
+    console.log("\n🔗 Acesse no navegador (com a conta DONA da pasta do Drive) e autorize:\n");
+    console.log("https://accounts.google.com/o/oauth2/v2/auth?" + new URLSearchParams({
+      client_id: clientId,
+      redirect_uri: "http://localhost:1",
+      response_type: "code",
+      scope: "https://www.googleapis.com/auth/drive",
+      access_type: "offline",
+      prompt: "consent",
+    }));
+    console.log("\nDepois de autorizar, a página vai falhar a carregar (normal). Copie o valor de code=... da barra de endereço e cadastre no segredo GOOGLE_OAUTH_CODE.\n");
+    process.exit(0);
+  }
+
   const res = await fetch("https://oauth2.googleapis.com/token", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({ grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer", assertion }),
+    body: new URLSearchParams({
+      client_id: clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
+      grant_type: "refresh_token",
+    }),
   });
   const d = await res.json();
-  if (!res.ok) fail("Falha ao autenticar a conta de serviço: " + (d.error_description || res.status));
+  if (!res.ok) fail("Falha ao autenticar via OAuth: " + (d.error_description || d.error));
   cachedToken = d.access_token;
   return cachedToken;
 }
@@ -129,21 +168,19 @@ async function uploadFile(folderId, filePath, mimeType) {
 }
 
 async function main() {
-  if (!process.env.GOOGLE_SERVICE_ACCOUNT_JSON) {
-    fail("GOOGLE_SERVICE_ACCOUNT_JSON ausente. Crie uma conta de serviço no Google Cloud (chave JSON) e compartilhe a pasta do Drive com o e-mail dela como 'Editor'. Cadastre o JSON no segredo.");
-  }
   let root = process.env.GOOGLE_DRIVE_FOLDER_ID;
   if (!root) fail("GOOGLE_DRIVE_FOLDER_ID ausente.");
   const m = /\/folders\/([A-Za-z0-9_-]{10,})/.exec(root);
   if (m) root = m[1];
 
   // fontes locais: modelos/<modelo>/<cor>/*.jpg
+  const hasImages = (dir) => fs.readdirSync(dir, { withFileTypes: true })
+    .some(c => c.isDirectory() && fs.readdirSync(path.join(dir, c.name)).some(f => IMG_RE.test(f)));
   const models = fs.readdirSync(ROOT_DIR, { withFileTypes: true })
-    .filter(d => d.isDirectory() && d.name !== ".git").map(d => d.name)
-    .filter(mn => fs.existsSync(path.join(ROOT_DIR, mn)) && fs.readdirSync(path.join(ROOT_DIR, mn)).some(c =>
-      fs.statSync(path.join(ROOT_DIR, mn, c)).isDirectory() && fs.readdirSync(path.join(ROOT_DIR, mn, c)).some(f => IMG_RE.test(f))));
+    .filter(d => d.isDirectory()).map(d => d.name).filter(mn => hasImages(path.join(ROOT_DIR, mn)));
   if (!models.length) fail("Nenhuma foto encontrada em modelos/ para enviar.");
 
+  await getAccessToken(); // valida/guia o fluxo OAuth antes de começar
   console.log("⬆ Sincronização invertida: enviando fotos do projeto para o Google Drive...\n");
   const modelosFolder = await findOrCreateFolder(root, "Modelos");
 

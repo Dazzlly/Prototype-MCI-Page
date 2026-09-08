@@ -19,8 +19,9 @@ that directly contains images is a COLOR folder, its parent is the MODEL folder)
   `GOOGLE_DRIVE_FOLDER_ID` (root folder shared as "anyone with the link can view"; full URL also accepted).
 - REVERSE sync (manual only, on user request) `scripts/drive-push.js` uploads repo photos from
   `modelos/<model>/<color>/` into Drive, creating missing `Modelos/<Model>/<Color>/` folders (names translated
-  back: branco→White, jet-max→JetMax...). Requires `GOOGLE_SERVICE_ACCOUNT_JSON` (service account key) with the
-  root Drive folder shared to the service-account email as Editor.
+  back: branco→White, jet-max→JetMax...). Uses user OAuth (secrets GOOGLE_OAUTH_CLIENT_ID/SECRET/REFRESH_TOKEN)
+  — service accounts can't write to regular folders anymore (Google 2025 policy). First run guides the OAuth
+  flow (auth link → code secret → refresh token secret).
   Run: `docker compose -f docker-compose.base44.yml --profile tools run --rm drive-push`
 - The Drive root folder must contain one folder per model and, inside each, one folder per color with the photos.
   English folder names are translated by `scripts/drive-sync.js` (JetMax→jet-max, SuperJoy→joy-super,
