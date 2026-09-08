@@ -133,7 +133,7 @@ Object.assign(MODEL_DETAILS, {
         "modelos/jet-max/azul-escuro/jet-max-azul-escuro-6.jpg",
         "modelos/jet-max/azul-escuro/jet-max-azul-escuro-7.jpg",
       ] },
-      { name: "Vermelho escuro", hex: "#a01d1d", images: [
+      { name: "Vermelho Vulcânico", hex: "#a01d1d", images: [
         "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-1.jpg",
         "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-2.jpg",
         "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-3.jpg",

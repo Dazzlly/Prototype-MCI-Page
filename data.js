@@ -188,7 +188,7 @@ const MODEL_DETAILS = {
         "modelos/x12/azul-escuro/x12-azul-escuro-13.jpg",
         "modelos/x12/azul-escuro/x12-azul-escuro-14.jpg",
       ] },
-      { name: "Vermelho escuro", hex: "#a01d1d", images: [
+      { name: "Vermelho Vulcânico", hex: "#a01d1d", images: [
         "modelos/x12/vermelho-escuro/x12-vermelho-escuro-1.jpg",
         "modelos/x12/vermelho-escuro/x12-vermelho-escuro-2.jpg",
         "modelos/x12/vermelho-escuro/x12-vermelho-escuro-3.jpg",
