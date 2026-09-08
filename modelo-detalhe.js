@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const details = MODEL_DETAILS[slug] || {};
   const colors = details.colors || [];
+  const shortName = vehicle.name.replace(/^MC\s+/i, "");
   let selectedColorIndex = 0;
   let heroIndex = 0;
   let driveManifest = null; // fotos sincronizadas do Google Drive (modelos/manifest.json)
@@ -174,8 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- render ---
-  const shortName = vehicle.name.replace(/^MC\s+/i, "");
-
   function renderAll() {
     return renderHero() + renderEditions() + renderSpecsAbout() + renderGallery();
   }
