@@ -30,12 +30,21 @@ Photos and site assets are pulled from a shared Google Drive folder (the ROOT fo
   don't follow the pattern (e.g. `*-maringa-*.jpg`, `extra-*.webp`) are never touched.
 - Secrets needed (via `/run/base44/app.env`): `GOOGLE_DRIVE_API_KEY` (Google Cloud, Drive API enabled) and
   `GOOGLE_DRIVE_FOLDER_ID` (root folder shared as "anyone with the link can view"; full URL also accepted).
-- FULL PROJECT MIRROR (manual only, on user request) `scripts/drive-push-site.js` mirrors the WHOLE
-  repo (code, images/, data) into the ROOT of the Drive shared folder — the shared root becomes the
-  site root. Skips files that already exist with the same name+size, updates changed ones (PATCH),
-  and never uploads sync-generated photos in `modelos/` (originals already live in Drive `Modelos/`).
+- FULL PROJECT MIRROR (manual only, on user request) `scripts/drive-push-site.js` mirrors the repo
+  (code, images/, scripts/) into the ROOT of the Drive shared folder. `modelos/` is NEVER mirrored
+  (photos live in Drive `Modelos/`; mirroring modelos/ would duplicate everything there). Skips
+  files that already exist with the same name+size, updates changed ones (PATCH).
   Run: `docker compose -f docker-compose.base44.yml --profile tools run --rm drive-push-site`
-  (Shared OAuth helpers: `scripts/drive-auth.js`, used by both drive-push scripts.)
+  (Shared OAuth helpers: `scripts/drive-auth.js`, used by all drive-push scripts.)
+- DRIVE → REPO code sync is part of `drive-sync.js`: root FILES of the Drive folder (index.html,
+  data.js, ...) download into the repo when the Drive copy is NEWER than local — so the user can edit
+  the site code directly in Drive and the sync (auto, every 5 min) brings it to the repo/GitHub branch.
+  If local is newer (edits made here), it is NOT overwritten — run drive-push-site after code changes
+  to keep the Drive copies current.
+- `Modelos/` in Drive must contain ONLY photos (per model folder / per color folder). One-shot
+  cleanup: `scripts/drive-clean-modelos.js` trashes site files (info.js/card.js/etc.), duplicate
+  "galeria" folders, static leftovers and empty folders created by past mirrors (recoverable in Drive
+  trash). After ANY change in Drive, drive-sync-auto regenerates `modelos/manifest.json` within 5 min.
 - REVERSE sync (manual only, on user request) `scripts/drive-push.js` uploads repo photos from
   `modelos/<model>/<color>/` into Drive, creating missing `Modelos/<Model>/<Color>/` folders (names translated
   back: branco→White, jet-max→JetMax...). Uses user OAuth (secrets GOOGLE_OAUTH_CLIENT_ID/SECRET/REFRESH_TOKEN)

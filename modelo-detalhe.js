@@ -174,27 +174,55 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- render ---
+  const shortName = vehicle.name.replace(/^MC\s+/i, "");
+
   function renderAll() {
-    return renderHero() + renderColors() + renderEditions() + renderDescription() + renderFeatures() + renderSpecs() + renderGallery() + renderCTA();
+    return renderHero() + renderEditions() + renderSpecsAbout() + renderGallery();
+  }
+
+  function swatchHTML(c, i) {
+    const active = i === 0 ? "active" : "";
+    if (c.type === "shield") {
+      return `<button class="color-swatch color-swatch-shield ${active}" data-index="${i}" aria-label="Edição ${c.edition}">
+        ${SHIELD_SVGS[c.edition] || ""}
+        <span class="color-swatch-label">${c.name || c.edition}</span>
+      </button>`;
+    }
+    if (c.type === "uk") {
+      return `<button class="color-swatch ${active}" data-index="${i}" aria-label="UK">
+        <span class="color-dot color-dot-uk">${UK_FLAG_SVG}</span>
+        <span class="color-swatch-label">UK</span>
+      </button>`;
+    }
+    if (c.type === "carbono") {
+      return `<button class="color-swatch ${active}" data-index="${i}" aria-label="Carbono">
+        <span class="color-dot color-dot-carbono"></span>
+        <span class="color-swatch-label">Carbono</span>
+      </button>`;
+    }
+    return `<button class="color-swatch ${active}" data-index="${i}" aria-label="${c.name}">
+      <span class="color-dot" style="background: ${c.hex}"></span>
+      <span class="color-swatch-label">${c.name}</span>
+    </button>`;
   }
 
   function renderHero() {
     const specs = [
-      { value: vehicle.top_speed_kmh, unit: "km/h", label: "Velocidade" },
       { value: vehicle.power_w, unit: "W", label: "Potência" },
+      { value: vehicle.top_speed_kmh, unit: "km/h", label: "Velocidade" },
       { value: vehicle.range_km, unit: "km", label: "Autonomia" },
     ].filter(s => s.value);
 
     const badge = details.badge ? `<div class="model-edition-badge">${details.badge}</div>` : "";
+    const swatches = colors.length ? `
+              <div class="model-pick-label">Escolha cor</div>
+              <div class="color-swatches" id="color-swatches">${colors.map(swatchHTML).join("")}</div>` : "";
 
     return `
       <section class="model-hero">
         <div class="model-hero-blob1"></div>
         <div class="model-hero-blob2"></div>
         <div class="model-hero-inner">
-          ${badge}
-          <span class="eyebrow">${vehicle.category}</span>
-          <h1>${vehicle.name}</h1>
           <div class="model-hero-grid">
             <div class="model-hero-image">
               <img src="${vehicle.image_url}" alt="${vehicle.name}" id="model-main-img" title="Clique para ampliar">
@@ -202,55 +230,47 @@ document.addEventListener("DOMContentLoaded", () => {
               <button class="hero-arrow" id="hero-next" aria-label="Próxima imagem">❯</button>
               <div class="hero-counter" id="hero-counter"></div>
             </div>
-            <div class="model-hero-specs">
-              ${specs.map(s => `
-                <div class="model-stat">
-                  <span class="model-stat-value">${s.value}</span>
-                  <span class="model-stat-unit">${s.unit}</span>
-                  <span class="model-stat-label">${s.label}</span>
-                </div>`).join("")}
+            <div class="model-hero-info">
+              ${badge}
+              <span class="eyebrow">${vehicle.category}</span>
+              <h1>${vehicle.name}</h1>
+              <div class="model-hero-stats">
+                ${specs.map(s => `
+                  <div class="model-stat">
+                    <div class="model-stat-value">${s.value}<span class="model-stat-unit"> ${s.unit}</span></div>
+                    <div class="model-stat-label">${s.label}</div>
+                  </div>`).join("")}
+              </div>
+              ${swatches}
+              ${renderPurchase()}
             </div>
           </div>
         </div>
       </section>`;
   }
 
-  function renderColors() {
-    if (!colors.length) return "";
+  function renderPurchase() {
+    const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar em nosso WhatsApp</a>`;
+    if (!vehicle.price) {
+      return `
+        <div class="model-purchase">
+          <h3>Pronto para sua ${shortName}?</h3>
+          <p class="model-price-pix">Sob Consulta</p>
+          <p class="model-price-neg">Fale com nossa equipe e garanta as melhores condições</p>
+          ${wa}
+        </div>`;
+    }
+    const price12x = vehicle.price_12x ? fmtPrice(vehicle.price_12x) : null;
+    const price21x = vehicle.price_21x ? fmtPrice(vehicle.price_21x) : null;
     return `
-      <section class="model-colors">
-        <div class="container">
-          <h2 class="section-title">Escolha sua <span class="accent">cor</span></h2>
-          <div class="bar" style="margin: 0 auto 40px;"></div>
-          <div class="color-swatches" id="color-swatches">
-            ${colors.map((c, i) => {
-              if (c.type === "shield") {
-                const svg = SHIELD_SVGS[c.edition] || "";
-                return `<button class="color-swatch color-swatch-shield ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="Edição ${c.edition}">
-                  ${svg}
-                  <span class="color-swatch-label">${c.name || c.edition}</span>
-                </button>`;
-              }
-              if (c.type === "uk") {
-                return `<button class="color-swatch ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="UK">
-                  <span class="color-dot color-dot-uk">${UK_FLAG_SVG}</span>
-                  <span class="color-swatch-label">UK</span>
-                </button>`;
-              }
-              if (c.type === "carbono") {
-                return `<button class="color-swatch ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="Carbono">
-                  <span class="color-dot color-dot-carbono"></span>
-                  <span class="color-swatch-label">Carbono</span>
-                </button>`;
-              }
-              return `<button class="color-swatch ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="${c.name}">
-                <span class="color-dot" style="background: ${c.hex}"></span>
-                <span class="color-swatch-label">${c.name}</span>
-              </button>`;
-            }).join("")}
-          </div>
-        </div>
-      </section>`;
+      <div class="model-purchase">
+        <h3>Pronto para sua ${shortName}?</h3>
+        <p class="model-price-pix">PIX ${fmtPrice(vehicle.price)}</p>
+        ${price12x ? `<p class="model-price-parcel">12x sem juros de ${price12x}</p>` : ""}
+        ${price21x ? `<p class="model-price-parcel">21x de ${price21x}</p>` : ""}
+        <p class="model-price-neg">Outros valores negociáveis com valor de entrada pequeno</p>
+        ${wa}
+      </div>`;
   }
 
   function renderEditions() {
@@ -280,55 +300,46 @@ document.addEventListener("DOMContentLoaded", () => {
     }).join("");
   }
 
-  function renderDescription() {
-    if (!vehicle.description) return "";
-    return `
-      <section class="model-description section-pad">
-        <div class="container">
-          <div class="reveal">
-            <h2 class="section-title">Sobre o <span class="accent">${vehicle.name}</span></h2>
-            <div class="bar" style="margin: 0 auto 40px;"></div>
-            <p class="model-desc-text" id="model-desc-text">${vehicle.description}</p>
-          </div>
-        </div>
-      </section>`;
-  }
+  function renderSpecsAbout() {
+    const hasSpecs = !!(details.specs && details.specs.length);
+    const hasAbout = !!(vehicle.description || (details.features && details.features.length));
+    if (!hasSpecs && !hasAbout) return "";
 
-  function renderFeatures() {
-    if (!details.features || !details.features.length) return "";
-    return `
-      <section class="model-features">
-        <div class="container">
-          <div class="reveal">
-            <h2 class="section-title">Diferenciais <span class="accent">do modelo</span></h2>
-            <div class="bar" style="margin: 0 auto 40px;"></div>
-          </div>
+    const specsCol = hasSpecs ? `
+      <div class="specs-col">
+        <h2 class="section-title">Especificações <span class="accent">técnicas</span></h2>
+        <div class="bar bar-left"></div>
+        <div class="specs-table">
+          ${details.specs.map(s => `
+            <div class="spec-row">
+              <span class="spec-label">${s.label}</span>
+              <span class="spec-value">${s.value}</span>
+            </div>`).join("")}
+        </div>
+      </div>` : "";
+
+    const aboutCol = hasAbout ? `
+      <div class="about-col">
+        ${vehicle.description ? `
+          <h2 class="section-title">Sobre a <span class="accent">${shortName}</span></h2>
+          <div class="bar bar-left"></div>
+          <p class="model-desc-text" id="model-desc-text">${vehicle.description}</p>` : ""}
+        ${(details.features && details.features.length) ? `
+          <h3 class="features-title">Diferenciais do modelo</h3>
           <div class="features-grid">
             ${details.features.map(f => `
-              <div class="feature-item reveal">
+              <div class="feature-item">
                 <span class="feature-icon">${f.icon || "✓"}</span>
                 <span class="feature-text">${f.text}</span>
               </div>`).join("")}
-          </div>
-        </div>
-      </section>`;
-  }
+          </div>` : ""}
+      </div>` : "";
 
-  function renderSpecs() {
-    if (!details.specs || !details.specs.length) return "";
     return `
-      <section class="model-specs section-pad">
+      <section class="model-specs-about section-pad">
         <div class="container">
-          <div class="reveal">
-            <h2 class="section-title">Especificações <span class="accent">técnicas</span></h2>
-            <div class="bar" style="margin: 0 auto 40px;"></div>
-          </div>
-          <div class="specs-table">
-            ${details.specs.map(s => `
-              <div class="spec-row">
-                <span class="spec-label">${s.label}</span>
-                <span class="spec-value">${s.value}</span>
-              </div>`).join("")}
+          <div class="specs-about-grid ${hasSpecs && hasAbout ? "" : "single-col"}">
+            ${specsCol}${aboutCol}
           </div>
         </div>
       </section>`;
@@ -348,37 +359,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${img}" alt="${vehicle.name}" loading="lazy">
               </div>`).join("")}
           </div>
-        </div>
-      </section>`;
-  }
-
-  function renderCTA() {
-    if (!vehicle.price) {
-      return `
-        <section class="model-cta">
-          <div class="model-cta-blob"></div>
-          <div class="container model-cta-inner">
-            <h2>Pronto para o seu ${vehicle.name}?</h2>
-            <p>Sob Consulta — Fale com nossa equipe pelo WhatsApp</p>
-            <a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Falar no WhatsApp</a>
-          </div>
-        </section>`;
-    }
-    const pixPrice = fmtPrice(vehicle.price);
-    const price12x = vehicle.price_12x ? fmtPrice(vehicle.price_12x) : null;
-    const price21x = vehicle.price_21x ? fmtPrice(vehicle.price_21x) : null;
-    return `
-      <section class="model-cta">
-        <div class="model-cta-blob"></div>
-        <div class="container model-cta-inner">
-          <h2>Pronto para o seu ${vehicle.name}?</h2>
-          <div class="model-pricing">
-            <p class="model-price-pix">PIX ${pixPrice}</p>
-            ${price12x ? `<p class="model-price-12x">12x sem juros de ${price12x}</p>` : ''}
-            ${price21x ? `<p class="model-price-21x">21x de ${price21x}</p>` : ''}
-          </div>
-          <p class="model-price-neg">Outros valores negociáveis com valor de entrada pequeno</p>
-          <a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar em nosso WhatsApp</a>
         </div>
       </section>`;
   }
