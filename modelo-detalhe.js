@@ -92,23 +92,35 @@ document.addEventListener("DOMContentLoaded", () => {
     return ed ? details[ed] : null;
   }
 
-  function getCurrentImageList() {
-    // Fotos sincronizadas do Google Drive (modelos/manifest.json) têm prioridade.
-    // A galeria NÃO filtra por cor: mostra todas as fotos do modelo (gerais +
-    // todas as cores). A cor selecionada só muda a ordem — as fotos daquela cor
-    // vêm primeiro, depois as gerais do modelo e, por último, as demais cores.
+  function getHeroList() {
+    // APRESENTAÇÃO (imagem principal + carrossel de cima): apenas as fotos da
+    // pasta da COR selecionada no Drive. Sem pasta dessa cor, cai para as fotos
+    // estáticas; modelo sem cores usa as fotos gerais do modelo.
+    const c = getCurrentColor();
+    if (driveManifest) {
+      if (c) {
+        const pics = driveManifest[`${slug}/${slugKey(c.name)}`] || [];
+        if (pics.length) return pics;
+      } else {
+        const general = driveManifest[slug] || [];
+        if (general.length) return general;
+      }
+    }
+    const ed = getEditionData();
+    if (ed && ed.gallery && ed.gallery.length) return ed.gallery;
+    if (c && c.images && c.images.length) return c.images;
+    return [vehicle.image_url];
+  }
+
+  function getGalleryList() {
+    // GALERIA (embaixo): fotos GERAIS do modelo + as da COR selecionada — as
+    // demais cores ficam de fora para não acumular fotos repetidas.
     const c = getCurrentColor();
     if (driveManifest) {
       const colorKey = c ? `${slug}/${slugKey(c.name)}` : null;
       const colorPics = colorKey ? (driveManifest[colorKey] || []) : [];
       const generalPics = driveManifest[slug] || [];
-      const others = [];
-      for (const key in driveManifest) {
-        if (key !== slug && key !== colorKey && key.startsWith(slug + "/")) {
-          others.push(...driveManifest[key]);
-        }
-      }
-      const full = [...colorPics, ...generalPics, ...others];
+      const full = [...colorPics, ...generalPics];
       if (full.length) return full;
     }
     const ed = getEditionData();
@@ -120,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateHero() {
-    const list = getCurrentImageList();
+    const list = getHeroList();
     if (heroIndex >= list.length) heroIndex = 0;
     const mainImg = document.getElementById("model-main-img");
     if (mainImg) mainImg.src = list[heroIndex] || vehicle.image_url;
@@ -136,9 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function openLightbox(index) {
+  function openLightbox(index, list) {
     if (window.ModelLightbox) {
-      ModelLightbox.open({ images: getCurrentImageList(), index, name: vehicle.name });
+      ModelLightbox.open({ images: list, index, name: vehicle.name });
     }
   }
 
@@ -147,13 +159,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const next = document.getElementById("hero-next");
     const mainImg = document.getElementById("model-main-img");
     const step = (dir) => {
-      const list = getCurrentImageList();
+      const list = getHeroList();
       heroIndex = (heroIndex + dir + list.length) % list.length;
       updateHero();
     };
     if (prev) prev.addEventListener("click", (e) => { e.stopPropagation(); step(-1); });
     if (next) next.addEventListener("click", (e) => { e.stopPropagation(); step(1); });
-    if (mainImg) mainImg.addEventListener("click", () => openLightbox(heroIndex));
+    if (mainImg) mainImg.addEventListener("click", () => openLightbox(heroIndex, getHeroList()));
   }
 
   function getWhatsAppLink() {
@@ -331,7 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="bar" style="margin: 0 auto 40px;"></div>
           </div>
           <div class="gallery-grid" id="gallery-grid">
-            ${getCurrentImageList().map(img => `
+            ${getGalleryList().map(img => `
               <div class="gallery-item">
                 <img src="${img}" alt="${vehicle.name}" loading="lazy">
               </div>`).join("")}
@@ -408,13 +420,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Atualiza galeria (imagens da cor selecionada, se houver)
     const galleryGrid = document.getElementById("gallery-grid");
     if (galleryGrid) {
-      const gallery = getCurrentImageList();
+      const gallery = getGalleryList();
       galleryGrid.innerHTML = gallery.map((img, i) => `
         <div class="gallery-item" data-index="${i}" title="Clique para ampliar">
           <img src="${img}" alt="${vehicle.name}" loading="lazy">
         </div>`).join("");
       galleryGrid.querySelectorAll(".gallery-item").forEach((item, i) => {
-        item.addEventListener("click", () => openLightbox(i));
+        item.addEventListener("click", () => openLightbox(i, gallery));
       });
     }
 
