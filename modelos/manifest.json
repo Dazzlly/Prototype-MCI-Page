@@ -947,15 +947,6 @@
     "modelos/jet/jet-23.jpg",
     "modelos/jet/jet-24.webp"
   ],
-  "jet-max/vermelho-escuro": [
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-1.jpg",
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-2.jpg",
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-3.jpg",
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-4.jpg",
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-5.jpg",
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-6.jpg",
-    "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-7.jpg"
-  ],
   "jet-max/cinza-claro": [
     "modelos/jet-max/cinza-claro/jet-max-cinza-claro-1.jpg",
     "modelos/jet-max/cinza-claro/jet-max-cinza-claro-2.jpg",
@@ -975,8 +966,24 @@
     "modelos/jet-max/azul-escuro/jet-max-azul-escuro-7.jpg"
   ],
   "jet-max/azul": [
-    "modelos/jet-max/azul/jet-max-azul-1.webp",
-    "modelos/jet-max/azul/jet-max-azul-2.webp"
+    "modelos/jet-max/azul/jet-max-azul-1.jpg",
+    "modelos/jet-max/azul/jet-max-azul-2.jpg",
+    "modelos/jet-max/azul/jet-max-azul-3.jpg",
+    "modelos/jet-max/azul/jet-max-azul-4.jpg",
+    "modelos/jet-max/azul/jet-max-azul-5.jpg",
+    "modelos/jet-max/azul/jet-max-azul-6.jpg",
+    "modelos/jet-max/azul/jet-max-azul-7.jpg",
+    "modelos/jet-max/azul/jet-max-azul-8.webp",
+    "modelos/jet-max/azul/jet-max-azul-9.webp"
+  ],
+  "jet-max/vermelho-vulcanico": [
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-1.jpg",
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-2.jpg",
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-3.jpg",
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-4.jpg",
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-5.jpg",
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-6.jpg",
+    "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-7.jpg"
   ],
   "jet-max/branco": [
     "modelos/jet-max/branco/jet-max-branco-1.jpg",
