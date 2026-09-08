@@ -16,18 +16,22 @@
  *   Cores:   White → branco, Black → preto, Cobalt-Blue → azul-cobalto,
  *            Volcanic-Red → vermelho-vulcanico, Grey/Gray → cinza etc.
  *
- * Cada execução:
+ * Cada ciclo:
  *   1. Baixa as imagens para modelos/<modelo>/<cor>/<modelo>-<cor>-<n>.<ext>
  *      (renomeadas automaticamente, em ordem alfabética do Drive)
  *   2. Gera modelos/manifest.json — o site exibe essas fotos em vez das listas
  *      fixas do data.js
  *
+ * Modos:
+ *   - Execução única (padrão):
+ *     docker compose -f docker-compose.base44.yml --profile tools run --rm drive-sync
+ *   - Modo automático (serviço drive-sync-auto, com DRIVE_SYNC_INTERVAL em segundos):
+ *     verifica a pasta em ciclos e sincroniza o que aparecer de novo
+ *
  * Ambiente necessário (entregue via /run/base44/app.env):
  *   GOOGLE_DRIVE_API_KEY  — chave de API do Google Cloud com a "Google Drive API" ativada
  *   GOOGLE_DRIVE_FOLDER_ID — ID da pasta raiz (ou o link completo dela; deve estar
  *                            compartilhada como "Qualquer pessoa com o link: Leitor")
- *
- * Execução: docker compose -f docker-compose.base44.yml --profile tools run --rm drive-sync
  */
 
 const fs = require("fs");
@@ -82,7 +86,7 @@ async function driveFetch(url) {
   const res = await fetch(url);
   if (!res.ok) {
     const body = await res.text().catch(() => "");
-    fail(`Google Drive API respondeu ${res.status}: ${body.slice(0, 300)}`);
+    throw new Error(`Google Drive API respondeu ${res.status}: ${body.slice(0, 300)}`);
   }
   return res;
 }
@@ -123,18 +127,11 @@ async function download(file, destPath) {
   return true;
 }
 
-async function main() {
-  const key = process.env.GOOGLE_DRIVE_API_KEY;
-  let root = process.env.GOOGLE_DRIVE_FOLDER_ID;
-  if (!key) fail("GOOGLE_DRIVE_API_KEY ausente. Crie uma chave no Google Cloud Console (ative a Google Drive API) e cadastre-a nos segredos.");
-  if (!root) fail("GOOGLE_DRIVE_FOLDER_ID ausente. Cadastre o ID (ou link) da pasta raiz compartilhada nos segredos.");
-  const m = /\/folders\/([A-Za-z0-9_-]{10,})/.exec(root);
-  if (m) root = m[1]; // aceita o link completo da pasta
-
-  console.log("🔄 Sincronizando fotos do Google Drive...\n");
+async function runOnce() {
+  console.log("🔄 Sincronizando fotos do Google Drive...");
   const found = [];
-  await collect(root, "", "", found);
-  if (!found.length) fail("Nenhuma foto encontrada. Organize uma pasta por modelo e, dentro dela, uma pasta por cor com as fotos.");
+  await collect(process.env.DRIVE_ROOT_ID, "", "", found);
+  if (!found.length) throw new Error("Nenhuma foto encontrada. Organize uma pasta por modelo e, dentro dela, uma pasta por cor com as fotos.");
 
   const manifest = {};
   let totalNew = 0;
@@ -158,8 +155,32 @@ async function main() {
   }
 
   fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n");
-  console.log(`\n✅ Concluído: ${totalNew} foto(s) nova(s) baixada(s), ${Object.keys(manifest).length} cor(es) no manifesto.`);
-  console.log("   O site agora exibe essas fotos (modelos/manifest.json).");
+  console.log(`✅ Concluído: ${totalNew} foto(s) nova(s) baixada(s), ${Object.keys(manifest).length} cor(es) no manifesto.`);
+}
+
+async function main() {
+  const key = process.env.GOOGLE_DRIVE_API_KEY;
+  let root = process.env.GOOGLE_DRIVE_FOLDER_ID;
+  if (!key) fail("GOOGLE_DRIVE_API_KEY ausente. Crie uma chave no Google Cloud Console (ative a Google Drive API) e cadastre-a nos segredos.");
+  if (!root) fail("GOOGLE_DRIVE_FOLDER_ID ausente. Cadastre o ID (ou link) da pasta raiz compartilhada nos segredos.");
+  const m = /\/folders\/([A-Za-z0-9_-]{10,})/.exec(root);
+  if (m) root = m[1]; // aceita o link completo da pasta
+  process.env.DRIVE_ROOT_ID = root;
+
+  const interval = parseInt(process.env.DRIVE_SYNC_INTERVAL || "0", 10);
+  if (interval > 0) {
+    console.log(`⏱ Modo automático: verificando a pasta a cada ${interval}s (Ctrl+C para parar).`);
+    for (;;) {
+      try {
+        await runOnce();
+      } catch (e) {
+        console.error(`✖ Ciclo falhou (tenta de novo no próximo ciclo): ${e.message}`);
+      }
+      await new Promise(r => setTimeout(r, interval * 1000));
+    }
+  } else {
+    runOnce().catch(e => fail(e.message));
+  }
 }
 
 main().catch(e => fail(e.message));

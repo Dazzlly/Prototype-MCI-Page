@@ -10,7 +10,21 @@ services:
       - "3000:80"
     restart: unless-stopped
 
-  # Sincronizador de fotos do Google Drive (execução sob demanda):
+  # Sincronização AUTOMÁTICA Google Drive → site (verifica a pasta a cada 5 min)
+  drive-sync-auto:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      - DRIVE_SYNC_INTERVAL=300
+    env_file:
+      - path: /run/base44/app.env
+        required: false
+    command: node scripts/drive-sync.js
+    restart: unless-stopped
+
+  # Sincronização manual (uma execução sob demanda):
   # docker compose -f docker-compose.base44.yml --profile tools run --rm drive-sync
   drive-sync:
     profiles: ["tools"]
@@ -22,3 +36,16 @@ services:
       - path: /run/base44/app.env
         required: false
     command: node scripts/drive-sync.js
+
+  # Sincronização INVERSA manual (site → Google Drive), sob demanda:
+  # docker compose -f docker-compose.base44.yml --profile tools run --rm drive-push
+  drive-push:
+    profiles: ["tools"]
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - path: /run/base44/app.env
+        required: false
+    command: node scripts/drive-push.js
