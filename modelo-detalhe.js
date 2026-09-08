@@ -216,6 +216,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const swatches = colors.length ? `
               <div class="model-pick-label">Escolha cor</div>
               <div class="color-swatches" id="color-swatches">${colors.map(swatchHTML).join("")}</div>` : "";
+    const desc = vehicle.description ? `
+              <div class="model-hero-about">
+                <div class="model-pick-label">Sobre a ${shortName}</div>
+                <p class="model-hero-desc-text" id="model-desc-text">${vehicle.description}</p>
+              </div>` : "";
 
     return `
       <section class="model-hero">
@@ -223,11 +228,14 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="model-hero-blob2"></div>
         <div class="model-hero-inner">
           <div class="model-hero-grid">
-            <div class="model-hero-image">
-              <img src="${vehicle.image_url}" alt="${vehicle.name}" id="model-main-img" title="Clique para ampliar">
-              <button class="hero-arrow" id="hero-prev" aria-label="Imagem anterior">❮</button>
-              <button class="hero-arrow" id="hero-next" aria-label="Próxima imagem">❯</button>
-              <div class="hero-counter" id="hero-counter"></div>
+            <div class="model-hero-media">
+              <div class="model-hero-image">
+                <img src="${vehicle.image_url}" alt="${vehicle.name}" id="model-main-img" title="Clique para ampliar">
+                <button class="hero-arrow" id="hero-prev" aria-label="Imagem anterior">❮</button>
+                <button class="hero-arrow" id="hero-next" aria-label="Próxima imagem">❯</button>
+                <div class="hero-counter" id="hero-counter"></div>
+              </div>
+              ${swatches}
             </div>
             <div class="model-hero-info">
               ${badge}
@@ -240,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="model-stat-label">${s.label}</div>
                   </div>`).join("")}
               </div>
-              ${swatches}
+              ${desc}
               ${renderPurchase()}
             </div>
           </div>
@@ -301,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderSpecsAbout() {
     const hasSpecs = !!(details.specs && details.specs.length);
-    const hasAbout = !!(vehicle.description || (details.features && details.features.length));
+    const hasAbout = !!(details.features && details.features.length);
     if (!hasSpecs && !hasAbout) return "";
 
     const specsCol = hasSpecs ? `
@@ -319,19 +327,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const aboutCol = hasAbout ? `
       <div class="about-col">
-        ${vehicle.description ? `
-          <h2 class="section-title">Sobre a <span class="accent">${shortName}</span></h2>
-          <div class="bar bar-left"></div>
-          <p class="model-desc-text" id="model-desc-text">${vehicle.description}</p>` : ""}
-        ${(details.features && details.features.length) ? `
-          <h3 class="features-title">Diferenciais do modelo</h3>
-          <div class="features-grid">
-            ${details.features.map(f => `
-              <div class="feature-item">
-                <span class="feature-icon">${f.icon || "✓"}</span>
-                <span class="feature-text">${f.text}</span>
-              </div>`).join("")}
-          </div>` : ""}
+        <h3 class="features-title">Diferenciais do modelo</h3>
+        <div class="features-grid">
+          ${details.features.map(f => `
+            <div class="feature-item">
+              <span class="feature-icon">${f.icon || "✓"}</span>
+              <span class="feature-text">${f.text}</span>
+            </div>`).join("")}
+        </div>
       </div>` : "";
 
     return `
