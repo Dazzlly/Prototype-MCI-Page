@@ -1,15 +1,23 @@
 #!/usr/bin/env node
 /*
- * drive-sync.js — Sincroniza as fotos das motos de uma pasta compartilhada
- * do Google Drive para a pasta modelos/ do site.
+ * drive-sync.js — Sincroniza o Google Drive (a partir da PASTA MÃE) para o
+ * repositório:
+ *   1) com prioridade, espelha as demais pastas da raiz — ex.: "Imagens" é
+ *      espelhada em images/ com os nomes originais dos arquivos; um vídeo com
+ *      "hero" no nome no primeiro nível vira images/hero.mp4 (vídeo da home);
+ *   2) sincroniza as fotos das motos (Modelos/ → modelos/ + manifest.json).
  *
  * ORGANIZAÇÃO (a hierarquia pode ter níveis extras — o script percorre tudo):
  *   <pasta raiz>
+ *     ├── Imagens/                    → espelhada em images/ (nomes originais)
  *     └── Modelos/                    → níveis intermediários são ignorados
  *           └── X12/                  → pasta do modelo
  *                 └── White/          → pasta da cor (contém as fotos)
  *                       └── foto1.jpg, foto2.jpg ...
- * Quando uma pasta contém imagens: a pasta mãe é o MODELO e ela mesma é a COR.
+ * Classificação: pasta com imagens e SEM subpastas com imagens = COR (o pai é
+ * o MODELO); pasta com imagens E COM subpastas com imagens = pasta do MODELO —
+ * as próprias imagens são as fotos GERAIS do modelo, que ficam direto na pasta
+ * do modelo (não existe mais a pasta "galeria").
  *
  * TRADUÇÃO DE NOMES (para casar com os slugs do site):
  *   Modelos: JetMax → jet-max, SuperJoy → joy-super (demais nomes: slug direto)
@@ -18,9 +26,10 @@
  *
  * Cada ciclo:
  *   1. Baixa as imagens para modelos/<modelo>/<cor>/<modelo>-<cor>-<n>.<ext>
- *      (renomeadas automaticamente, em ordem alfabética do Drive)
+ *      e as gerais para modelos/<modelo>/<modelo>-<n>.<ext> (renomeadas
+ *      automaticamente, em ordem alfabética do Drive)
  *   2. Gera modelos/manifest.json — o site exibe essas fotos em vez das listas
- *      fixas do data.js
+ *      fixas do data.js (chaves: `<modelo>/<cor>` por cor e `<modelo>` p/ gerais)
  *   3. ESPELHAMENTO: o Drive é a fonte da verdade — imagens excluídas ou
  *      movidas de pasta no Drive são removidas do site no próximo ciclo
  *      (arquivos .js/.json do site nunca são tocados)
@@ -51,6 +60,14 @@ const EXT_BY_MIME = {
   "image/webp": "webp",
   "image/gif": "gif",
 };
+
+// Extensões de vídeo (vídeo hero da home) e pastas da raiz → pastas do repositório
+const VIDEO_EXT_BY_MIME = {
+  "video/mp4": "mp4",
+  "video/webm": "webm",
+  "video/quicktime": "mov",
+};
+const TOP_FOLDER_ALIASES = { "imagens": "images" };
 
 // Nomes de pastas no Drive → slugs usados pelo site
 const MODEL_ALIASES = {
@@ -107,17 +124,33 @@ async function listChildren(folderId) {
   return items;
 }
 
-// Percorre a árvore recursivamente; quando uma pasta contém imagens,
-// a pasta mãe é o modelo e ela própria é a cor.
+// Percorre a árvore recursivamente. Classificação:
+//   - pasta com imagens e SEM subpastas com imagens → COR (o pai é o MODELO)
+//   - pasta com imagens E COM subpastas com imagens → pasta do MODELO; as
+//     próprias imagens são as fotos GERAIS do modelo (sem cor específica)
 async function collect(folderId, name, parentName, out) {
   const entries = await listChildren(folderId);
   const images = entries
     .filter(e => (e.mimeType || "").startsWith("image/"))
     .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
-  if (images.length) out.push({ model: parentName, color: name, images });
-  for (const f of entries.filter(e => e.mimeType === FOLDER_MIME)) {
-    await collect(f.id, f.name, name, out);
+  const folders = entries.filter(e => e.mimeType === FOLDER_MIME);
+
+  // Visita as subpastas primeiro para saber se alguma delas contém imagens
+  let childHasImages = false;
+  for (const f of folders) {
+    if (await collect(f.id, f.name, name, out)) childHasImages = true;
   }
+
+  if (images.length) {
+    // Fotos GERAIS do modelo: pasta que também tem subpastas de cor, ou modelo
+    // sem pastas de cor (filho direto da pasta "Modelos", ex.: R10)
+    if (childHasImages || /^modelos$/i.test(parentName)) {
+      out.push({ model: name, color: null, images });
+    } else {
+      out.push({ model: parentName, color: name, images }); // cor
+    }
+  }
+  return images.length > 0 || childHasImages;
 }
 
 async function download(file, destPath) {
@@ -128,6 +161,40 @@ async function download(file, destPath) {
   const res = await driveFetch(`${API}/files/${file.id}?alt=media&key=${process.env.GOOGLE_DRIVE_API_KEY}`);
   fs.writeFileSync(destPath, Buffer.from(await res.arrayBuffer()));
   return true;
+}
+
+// Espelha uma pasta da raiz do Drive para a pasta correspondente do repositório
+// (ex.: "Imagens" → images/). Mantém os nomes originais dos arquivos e a
+// estrutura de subpastas; só adiciona/atualiza por tamanho — nada é apagado,
+// então arquivos avulsos do repositório ficam intactos. No primeiro nível, um
+// vídeo com "hero" no nome vira hero.<ext> (vídeo hero da home).
+async function mirrorFolder(folderId, folderName) {
+  const topSlug = TOP_FOLDER_ALIASES[slugify(folderName)] || slugify(folderName);
+  let newCount = 0, heroSaved = false;
+
+  const walk = async (driveId, relParts) => {
+    const destDir = path.join(__dirname, "..", topSlug, ...relParts);
+    fs.mkdirSync(destDir, { recursive: true });
+    const entries = await listChildren(driveId);
+    entries.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+    for (const e of entries) {
+      if (e.mimeType === FOLDER_MIME) {
+        await walk(e.id, [...relParts, slugify(e.name)]);
+        continue;
+      }
+      let dest = path.join(destDir, e.name);
+      const vExt = VIDEO_EXT_BY_MIME[e.mimeType];
+      if (vExt && relParts.length === 0 && !heroSaved && /^hero/.test(slugify(e.name))) {
+        dest = path.join(destDir, `hero.${vExt}`);
+        heroSaved = true;
+      }
+      if (await download(e, dest)) newCount++;
+    }
+  };
+
+  await walk(folderId, []);
+  if (newCount) console.log(`  ✔ ${topSlug}/: ${newCount} arquivo(s) novo(s)/atualizado(s)`);
+  return newCount;
 }
 
 // Espelhamento: remove imagens locais que não existem mais no Drive
@@ -164,30 +231,41 @@ function pruneLocal(manifest) {
 }
 
 async function runOnce() {
-  console.log("🔄 Sincronizando fotos do Google Drive...");
+  console.log("🔄 Sincronizando arquivos do Google Drive...");
+  const rootFolders = (await listChildren(process.env.DRIVE_ROOT_ID)).filter(e => e.mimeType === FOLDER_MIME);
+
+  // 1) Espelho das demais pastas da raiz (prioridade: "Imagens" → images/)
+  const mirrorList = rootFolders
+    .filter(f => !/^modelos$/i.test(f.name))
+    .sort((a, b) => Number(slugify(b.name) === "imagens") - Number(slugify(a.name) === "imagens"));
+  let totalNew = 0;
+  for (const f of mirrorList) totalNew += await mirrorFolder(f.id, f.name);
+
+  // 2) Fotos das motos (Modelos/ → modelos/ + manifest.json)
   const found = [];
-  await collect(process.env.DRIVE_ROOT_ID, "", "", found);
+  const modelosFolder = rootFolders.find(f => /^modelos$/i.test(f.name));
+  if (modelosFolder) await collect(modelosFolder.id, "Modelos", "", found);
   if (!found.length) throw new Error("Nenhuma foto encontrada. Organize uma pasta por modelo e, dentro dela, uma pasta por cor com as fotos.");
 
   const manifest = {};
-  let totalNew = 0;
 
   for (const f of found) {
     const mSlug = modelSlug(f.model);
-    const cSlug = colorSlug(f.color);
-    const dir = path.join(ROOT_DIR, mSlug, cSlug);
+    const cSlug = f.color === null ? null : colorSlug(f.color); // null = fotos gerais do modelo
+    const dir = cSlug ? path.join(ROOT_DIR, mSlug, cSlug) : path.join(ROOT_DIR, mSlug);
     fs.mkdirSync(dir, { recursive: true });
 
     const paths = [];
     for (const [i, img] of f.images.entries()) {
       const ext = EXT_BY_MIME[img.mimeType] || (img.name.split(".").pop() || "jpg").toLowerCase();
-      const dest = path.join(dir, `${mSlug}-${cSlug}-${i + 1}.${ext}`);
+      const base = cSlug ? `${mSlug}-${cSlug}-${i + 1}` : `${mSlug}-${i + 1}`;
+      const dest = path.join(dir, `${base}.${ext}`);
       const isNew = await download(img, dest);
       if (isNew) totalNew++;
-      paths.push(`modelos/${mSlug}/${cSlug}/${path.basename(dest)}`);
+      paths.push(`modelos/${path.relative(ROOT_DIR, dest).split(path.sep).join("/")}`);
     }
-    manifest[`${mSlug}/${cSlug}`] = paths;
-    console.log(`  ✔ ${mSlug}/${cSlug}: ${f.images.length} foto(s)`);
+    manifest[cSlug ? `${mSlug}/${cSlug}` : mSlug] = paths;
+    console.log(`  ✔ ${cSlug ? `${mSlug}/${cSlug}` : mSlug}: ${f.images.length} foto(s)${cSlug ? "" : " (gerais)"}`);
   }
 
   fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n");

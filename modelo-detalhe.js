@@ -93,11 +93,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getCurrentImageList() {
-    // Fotos sincronizadas do Google Drive (modelos/manifest.json) têm prioridade
+    // Fotos sincronizadas do Google Drive (modelos/manifest.json) têm prioridade.
+    // A galeria NÃO filtra por cor: mostra todas as fotos do modelo (gerais +
+    // todas as cores). A cor selecionada só muda a ordem — as fotos daquela cor
+    // vêm primeiro, depois as gerais do modelo e, por último, as demais cores.
     const c = getCurrentColor();
-    if (c && driveManifest) {
-      const synced = driveManifest[`${slug}/${slugKey(c.name)}`];
-      if (synced && synced.length) return synced;
+    if (driveManifest) {
+      const colorKey = c ? `${slug}/${slugKey(c.name)}` : null;
+      const colorPics = colorKey ? (driveManifest[colorKey] || []) : [];
+      const generalPics = driveManifest[slug] || [];
+      const others = [];
+      for (const key in driveManifest) {
+        if (key !== slug && key !== colorKey && key.startsWith(slug + "/")) {
+          others.push(...driveManifest[key]);
+        }
+      }
+      const full = [...colorPics, ...generalPics, ...others];
+      if (full.length) return full;
     }
     const ed = getEditionData();
     if (ed && ed.gallery && ed.gallery.length) return ed.gallery;
@@ -311,8 +323,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderGallery() {
-    const gallery = details.gallery || [];
-    if (!gallery.length) return "";
     return `
       <section class="model-gallery">
         <div class="container">
@@ -321,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="bar" style="margin: 0 auto 40px;"></div>
           </div>
           <div class="gallery-grid" id="gallery-grid">
-            ${gallery.map(img => `
+            ${getCurrentImageList().map(img => `
               <div class="gallery-item">
                 <img src="${img}" alt="${vehicle.name}" loading="lazy">
               </div>`).join("")}
