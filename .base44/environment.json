@@ -1,1 +1,15 @@
-{"previewPort":3000,"healthPath":"/","startCommand":"docker compose -f docker-compose.base44.yml up -d","secrets":[]}
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "GOOGLE_DRIVE_API_KEY",
+      "description": "Chave de API do Google Cloud Console (com a Google Drive API ativada) — console.cloud.google.com → APIs e Serviços → Biblioteca → ativar 'Google Drive API' → Credenciais → Criar chave de API"
+    },
+    {
+      "name": "GOOGLE_DRIVE_FOLDER_ID",
+      "description": "ID (ou link completo) da pasta raiz compartilhada no Google Drive — deve estar compartilhada como 'Qualquer pessoa com o link: Leitor'"
+    }
+  ]
+}

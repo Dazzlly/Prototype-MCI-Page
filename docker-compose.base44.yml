@@ -9,3 +9,16 @@ services:
     ports:
       - "3000:80"
     restart: unless-stopped
+
+  # Sincronizador de fotos do Google Drive (execução sob demanda):
+  # docker compose -f docker-compose.base44.yml --profile tools run --rm drive-sync
+  drive-sync:
+    profiles: ["tools"]
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    env_file:
+      - path: /run/base44/app.env
+        required: false
+    command: node scripts/drive-sync.js

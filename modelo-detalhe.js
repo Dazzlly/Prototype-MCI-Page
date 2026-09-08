@@ -29,6 +29,9 @@ const UK_FLAG_SVG = `<svg class="uk-flag" viewBox="0 0 60 60" xmlns="http://www.
   </g>
 </svg>`;
 
+// Slug com remoção de acentos — mesma chave usada pelo sincronizador do Google Drive (scripts/drive-sync.js)
+const slugKey = (s) => slugify(String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("m");
@@ -54,12 +57,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const colors = details.colors || [];
   let selectedColorIndex = 0;
   let heroIndex = 0;
+  let driveManifest = null; // fotos sincronizadas do Google Drive (modelos/manifest.json)
 
   const page = document.getElementById("model-page");
   page.innerHTML = renderAll();
   setupColorSelector();
   setupCarousel();
   updateColorSelection();
+
+  // Manifesto de fotos sincronizadas do Google Drive (gerado por scripts/drive-sync.js)
+  fetch("modelos/manifest.json").then(r => r.ok ? r.json() : {}).then(m => {
+    if (Object.keys(m).length) {
+      driveManifest = m;
+      updateColorSelection(); // re-renderiza com as fotos da pasta do Drive
+    }
+  }).catch(() => {});
 
   // --- helpers ---
   function getCurrentColor() { return colors[selectedColorIndex]; }
@@ -81,9 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getCurrentImageList() {
+    // Fotos sincronizadas do Google Drive (modelos/manifest.json) têm prioridade
+    const c = getCurrentColor();
+    if (c && driveManifest) {
+      const synced = driveManifest[`${slug}/${slugKey(c.name)}`];
+      if (synced && synced.length) return synced;
+    }
     const ed = getEditionData();
     if (ed && ed.gallery && ed.gallery.length) return ed.gallery;
-    const c = getCurrentColor();
     if (c && c.images && c.images.length) return c.images;
     const list = [vehicle.image_url];
     (details.gallery || []).forEach(g => { if (!list.includes(g)) list.push(g); });
