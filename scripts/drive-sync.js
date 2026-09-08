@@ -21,6 +21,9 @@
  *      (renomeadas automaticamente, em ordem alfabética do Drive)
  *   2. Gera modelos/manifest.json — o site exibe essas fotos em vez das listas
  *      fixas do data.js
+ *   3. ESPELHAMENTO: o Drive é a fonte da verdade — imagens excluídas ou
+ *      movidas de pasta no Drive são removidas do site no próximo ciclo
+ *      (arquivos .js/.json do site nunca são tocados)
  *
  * Modos:
  *   - Execução única (padrão):
@@ -127,6 +130,39 @@ async function download(file, destPath) {
   return true;
 }
 
+// Espelhamento: remove imagens locais que não existem mais no Drive
+// (foram excluídas ou movidas de pasta). Só toca em arquivos de imagem —
+// .js/.json do site e o manifest.json nunca são afetados.
+function pruneLocal(manifest) {
+  const wanted = new Set();
+  for (const paths of Object.values(manifest)) {
+    for (const p of paths) wanted.add(path.relative(ROOT_DIR, path.join(__dirname, "..", p)));
+  }
+  const IMAGE_RE = /\.(jpe?g|png|webp|gif)$/i;
+  let removed = 0;
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        walk(full);
+        // Remove pastas de cor que ficaram vazias (as do site têm .js/.json)
+        if (!fs.readdirSync(full).length) fs.rmdirSync(full);
+      } else if (entry.isFile() && IMAGE_RE.test(entry.name) && !wanted.has(path.relative(ROOT_DIR, full))) {
+        // Só remove arquivos no padrão gerado pela sincronização (<modelo>-<cor>-<n>.<ext>);
+        // imagens avulsas do projeto (fora do Drive) ficam intactas.
+        const rel = path.relative(ROOT_DIR, full);
+        const prefix = path.dirname(rel).replace(/[\\/]/g, "-") + "-";
+        if (entry.name.startsWith(prefix) && /^\d+\.[a-z0-9]+$/i.test(entry.name.slice(prefix.length))) {
+          fs.unlinkSync(full);
+          removed++;
+        }
+      }
+    }
+  };
+  if (fs.existsSync(ROOT_DIR)) walk(ROOT_DIR);
+  return removed;
+}
+
 async function runOnce() {
   console.log("🔄 Sincronizando fotos do Google Drive...");
   const found = [];
@@ -155,7 +191,8 @@ async function runOnce() {
   }
 
   fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n");
-  console.log(`✅ Concluído: ${totalNew} foto(s) nova(s) baixada(s), ${Object.keys(manifest).length} cor(es) no manifesto.`);
+  const removed = pruneLocal(manifest);
+  console.log(`✅ Concluído: ${totalNew} foto(s) nova(s) baixada(s), ${removed} removida(s) (excluída/movida no Drive), ${Object.keys(manifest).length} cor(es) no manifesto.`);
 }
 
 async function main() {

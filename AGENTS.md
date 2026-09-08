@@ -15,6 +15,11 @@ that directly contains images is a COLOR folder, its parent is the MODEL folder)
 - Run on demand: `docker compose -f docker-compose.base44.yml --profile tools run --rm drive-sync`
 - Auto-sync: the `drive-sync-auto` service runs in watch mode (`DRIVE_SYNC_INTERVAL=300`) and pulls new
   Drive photos into `modelos/` + regenerates `manifest.json` every cycle.
+- MIRRORING: the Drive is the source of truth for sync-managed photos. Each cycle also deletes local
+  files matching the sync naming pattern (`<model>-<color>-<n>.<ext>`) that are no longer in
+  `manifest.json` — so deleting or moving a photo between color folders in Drive removes/moves it on
+  the site at the next cycle (renames in Drive only change gallery order). Project-only images that
+  don't follow the pattern (e.g. `*-maringa-*.jpg`, `extra-*.webp`) are never touched.
 - Secrets needed (via `/run/base44/app.env`): `GOOGLE_DRIVE_API_KEY` (Google Cloud, Drive API enabled) and
   `GOOGLE_DRIVE_FOLDER_ID` (root folder shared as "anyone with the link can view"; full URL also accepted).
 - REVERSE sync (manual only, on user request) `scripts/drive-push.js` uploads repo photos from
