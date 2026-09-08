@@ -158,7 +158,7 @@ const MODEL_DETAILS = {
   },
   x12: {
     colors: [
-      { name: "Azul", hex: "#4a90d9", images: [
+      { name: "UK", type: "uk", images: [
         "modelos/x12/azul/x12-azul-1.jpg",
         "modelos/x12/azul/x12-azul-2.jpg",
         "modelos/x12/azul/x12-azul-3.jpg",
@@ -172,7 +172,7 @@ const MODEL_DETAILS = {
         "modelos/x12/azul/x12-azul-11.jpg",
         "modelos/x12/azul/x12-azul-12.jpg",
       ] },
-      { name: "Azul escuro", hex: "#1e5b94", images: [
+      { name: "Azul Cobalto", hex: "#1e5b94", images: [
         "modelos/x12/azul-escuro/x12-azul-escuro-1.jpg",
         "modelos/x12/azul-escuro/x12-azul-escuro-2.jpg",
         "modelos/x12/azul-escuro/x12-azul-escuro-3.jpg",
@@ -201,7 +201,7 @@ const MODEL_DETAILS = {
         "modelos/x12/vermelho-escuro/x12-vermelho-escuro-10.jpg",
         "modelos/x12/vermelho-escuro/x12-vermelho-escuro-11.jpg",
       ] },
-      { name: "Cinza", hex: "#6b6b6b", images: [
+      { name: "Carbono", type: "carbono", images: [
         "modelos/x12/cinza/x12-cinza-1.jpg",
         "modelos/x12/cinza/x12-cinza-2.jpg",
         "modelos/x12/cinza/x12-cinza-3.jpg",
@@ -243,9 +243,9 @@ const MODEL_DETAILS = {
         "modelos/x12/preto/x12-preto-13.jpg",
         "modelos/x12/preto/x12-preto-14.jpg",
       ] },
-      { name: "Carbono", hex: "#3a3a3a" },
-      { name: "Amarelo", hex: "#d4a017" },
-      { name: "Palmeiras", type: "shield", edition: "palmeiras" },
+      { name: "Palmeiras", type: "shield", edition: "palmeiras", images: [
+        // TODO: adicionar aqui as fotos da X12 Palmeiras na cor verde
+      ] },
     ],
     gallery: [
       "modelos/x12/galeria/x12-gallery-1.webp",

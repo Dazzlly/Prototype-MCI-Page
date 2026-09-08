@@ -15,6 +15,20 @@ const SHIELD_SVGS = {
 
 const EDITION_COLORS = { vasco: "#cc0000", palmeiras: "#006437" };
 
+// Bandeira do Reino Unido (Union Jack) para o círculo da cor UK
+const UK_FLAG_SVG = `<svg class="uk-flag" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><clipPath id="uk-dot-clip"><circle cx="30" cy="30" r="30"/></clipPath></defs>
+  <g clip-path="url(#uk-dot-clip)">
+    <rect width="60" height="60" fill="#012169"/>
+    <path d="M-6,-6 L66,66 M66,-6 L-6,66" stroke="#fff" stroke-width="12"/>
+    <path d="M-6,-6 L66,66 M66,-6 L-6,66" stroke="#C8102E" stroke-width="6"/>
+    <rect x="20" width="20" height="60" fill="#fff"/>
+    <rect y="20" width="60" height="20" fill="#fff"/>
+    <rect x="24" width="12" height="60" fill="#C8102E"/>
+    <rect y="24" width="60" height="12" fill="#C8102E"/>
+  </g>
+</svg>`;
+
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("m");
@@ -174,6 +188,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 return `<button class="color-swatch color-swatch-shield ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="Edição ${c.edition}">
                   ${svg}
                   <span class="color-swatch-label">${c.name || c.edition}</span>
+                </button>`;
+              }
+              if (c.type === "uk") {
+                return `<button class="color-swatch ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="UK">
+                  <span class="color-dot color-dot-uk">${UK_FLAG_SVG}</span>
+                  <span class="color-swatch-label">UK</span>
+                </button>`;
+              }
+              if (c.type === "carbono") {
+                return `<button class="color-swatch ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="Carbono">
+                  <span class="color-dot color-dot-carbono"></span>
+                  <span class="color-swatch-label">Carbono</span>
                 </button>`;
               }
               return `<button class="color-swatch ${i === 0 ? "active" : ""}" data-index="${i}" aria-label="${c.name}">

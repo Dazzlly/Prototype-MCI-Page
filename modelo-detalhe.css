@@ -29,6 +29,18 @@
 .color-swatch-label { font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; transition: color .3s; }
 .color-swatch.active .color-swatch-label { color: var(--primary); }
 
+/* UK swatch (Union Jack dentro do círculo) */
+.color-dot-uk { padding: 0; overflow: hidden; background: #012169; }
+.color-dot-uk .uk-flag { display: block; width: 100%; height: 100%; }
+
+/* Carbono swatch (fibra de carbono dentro do círculo) */
+.color-dot-carbono {
+  background-color: #1c1c1c;
+  background-image:
+    repeating-linear-gradient(45deg, #303030 0 3px, #161616 3px 6px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,0.08) 0 3px, transparent 3px 6px);
+}
+
 /* Shield swatch (Vasco / Palmeiras) */
 .color-swatch-shield .shield-mini { width: 48px; height: 57px; border: 3px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 3px; background: rgba(0,0,0,0.3); transition: all .3s; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: block; }
 .color-swatch-shield:hover .shield-mini { border-color: rgba(255,255,255,0.3); }
