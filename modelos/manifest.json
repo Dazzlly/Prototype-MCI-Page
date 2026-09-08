@@ -41,15 +41,20 @@
     "modelos/joy-super/azul/joy-super-azul-8.webp",
     "modelos/joy-super/azul/joy-super-azul-9.webp"
   ],
-  "jet-max/silvered": [
-    "modelos/jet-max/silvered/jet-max-silvered-1.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-2.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-3.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-4.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-5.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-6.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-7.jpg",
-    "modelos/jet-max/silvered/jet-max-silvered-8.webp"
+  "jet-max/galeria": [
+    "modelos/jet-max/galeria/jet-max-galeria-1.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-2.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-3.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-4.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-5.webp",
+    "modelos/jet-max/galeria/jet-max-galeria-6.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-7.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-8.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-9.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-10.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-11.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-12.jpg",
+    "modelos/jet-max/galeria/jet-max-galeria-13.jpg"
   ],
   "jet-max/azul": [
     "modelos/jet-max/azul/jet-max-azul-1.jpg",
@@ -59,6 +64,16 @@
     "modelos/jet-max/azul/jet-max-azul-5.jpg",
     "modelos/jet-max/azul/jet-max-azul-6.jpg",
     "modelos/jet-max/azul/jet-max-azul-7.jpg"
+  ],
+  "jet-max/silvered": [
+    "modelos/jet-max/silvered/jet-max-silvered-1.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-2.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-3.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-4.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-5.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-6.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-7.jpg",
+    "modelos/jet-max/silvered/jet-max-silvered-8.webp"
   ],
   "jet-max/vermelho-vulcanico": [
     "modelos/jet-max/vermelho-vulcanico/jet-max-vermelho-vulcanico-1.jpg",
@@ -126,6 +141,17 @@
     "modelos/x15/preto/x15-preto-8.webp",
     "modelos/x15/preto/x15-preto-9.webp"
   ],
+  "x15/galeria": [
+    "modelos/x15/galeria/x15-galeria-1.png",
+    "modelos/x15/galeria/x15-galeria-2.png",
+    "modelos/x15/galeria/x15-galeria-3.png",
+    "modelos/x15/galeria/x15-galeria-4.jpg",
+    "modelos/x15/galeria/x15-galeria-5.webp",
+    "modelos/x15/galeria/x15-galeria-6.webp",
+    "modelos/x15/galeria/x15-galeria-7.jpg",
+    "modelos/x15/galeria/x15-galeria-8.jpg",
+    "modelos/x15/galeria/x15-galeria-9.jpg"
+  ],
   "x15/cinza": [
     "modelos/x15/cinza/x15-cinza-1.jpg",
     "modelos/x15/cinza/x15-cinza-2.jpg",
@@ -167,6 +193,20 @@
   "x11/preto": [
     "modelos/x11/preto/x11-preto-1.webp",
     "modelos/x11/preto/x11-preto-2.webp"
+  ],
+  "x11/galeria": [
+    "modelos/x11/galeria/x11-galeria-1.webp",
+    "modelos/x11/galeria/x11-galeria-2.png",
+    "modelos/x11/galeria/x11-galeria-3.png",
+    "modelos/x11/galeria/x11-galeria-4.png",
+    "modelos/x11/galeria/x11-galeria-5.png",
+    "modelos/x11/galeria/x11-galeria-6.webp",
+    "modelos/x11/galeria/x11-galeria-7.jpg",
+    "modelos/x11/galeria/x11-galeria-8.jpg",
+    "modelos/x11/galeria/x11-galeria-9.jpg",
+    "modelos/x11/galeria/x11-galeria-10.jpg",
+    "modelos/x11/galeria/x11-galeria-11.jpg",
+    "modelos/x11/galeria/x11-galeria-12.jpg"
   ],
   "x11": [
     "modelos/x11/x11-1.webp",
@@ -1225,6 +1265,41 @@
     "modelos/jet/jet-23.jpg",
     "modelos/jet/jet-24.webp"
   ],
+  "x12/preto": [
+    "modelos/x12/preto/x12-preto-1.jpg",
+    "modelos/x12/preto/x12-preto-2.jpg",
+    "modelos/x12/preto/x12-preto-3.jpg",
+    "modelos/x12/preto/x12-preto-4.jpg",
+    "modelos/x12/preto/x12-preto-5.jpg",
+    "modelos/x12/preto/x12-preto-6.jpg",
+    "modelos/x12/preto/x12-preto-7.jpg",
+    "modelos/x12/preto/x12-preto-8.jpg",
+    "modelos/x12/preto/x12-preto-9.jpg",
+    "modelos/x12/preto/x12-preto-10.jpg",
+    "modelos/x12/preto/x12-preto-11.jpg",
+    "modelos/x12/preto/x12-preto-12.jpg",
+    "modelos/x12/preto/x12-preto-13.jpg",
+    "modelos/x12/preto/x12-preto-14.jpg",
+    "modelos/x12/preto/x12-preto-15.webp",
+    "modelos/x12/preto/x12-preto-16.webp"
+  ],
+  "x12/galeria": [
+    "modelos/x12/galeria/x12-galeria-1.webp",
+    "modelos/x12/galeria/x12-galeria-2.webp",
+    "modelos/x12/galeria/x12-galeria-3.webp",
+    "modelos/x12/galeria/x12-galeria-4.webp",
+    "modelos/x12/galeria/x12-galeria-5.webp",
+    "modelos/x12/galeria/x12-galeria-6.webp",
+    "modelos/x12/galeria/x12-galeria-7.jpg",
+    "modelos/x12/galeria/x12-galeria-8.jpg",
+    "modelos/x12/galeria/x12-galeria-9.jpg",
+    "modelos/x12/galeria/x12-galeria-10.jpg",
+    "modelos/x12/galeria/x12-galeria-11.jpg",
+    "modelos/x12/galeria/x12-galeria-12.jpg",
+    "modelos/x12/galeria/x12-galeria-13.jpg",
+    "modelos/x12/galeria/x12-galeria-14.jpg",
+    "modelos/x12/galeria/x12-galeria-15.jpg"
+  ],
   "x12/uk": [
     "modelos/x12/uk/x12-uk-1.jpg",
     "modelos/x12/uk/x12-uk-2.jpg",
@@ -1268,24 +1343,6 @@
     "modelos/x12/branco/x12-branco-10.jpg",
     "modelos/x12/branco/x12-branco-11.jpg",
     "modelos/x12/branco/x12-branco-12.jpg"
-  ],
-  "x12/preto": [
-    "modelos/x12/preto/x12-preto-1.jpg",
-    "modelos/x12/preto/x12-preto-2.jpg",
-    "modelos/x12/preto/x12-preto-3.jpg",
-    "modelos/x12/preto/x12-preto-4.jpg",
-    "modelos/x12/preto/x12-preto-5.jpg",
-    "modelos/x12/preto/x12-preto-6.jpg",
-    "modelos/x12/preto/x12-preto-7.jpg",
-    "modelos/x12/preto/x12-preto-8.jpg",
-    "modelos/x12/preto/x12-preto-9.jpg",
-    "modelos/x12/preto/x12-preto-10.jpg",
-    "modelos/x12/preto/x12-preto-11.jpg",
-    "modelos/x12/preto/x12-preto-12.jpg",
-    "modelos/x12/preto/x12-preto-13.jpg",
-    "modelos/x12/preto/x12-preto-14.jpg",
-    "modelos/x12/preto/x12-preto-15.webp",
-    "modelos/x12/preto/x12-preto-16.webp"
   ],
   "x12/azul-cobalto": [
     "modelos/x12/azul-cobalto/x12-azul-cobalto-1.jpg",
