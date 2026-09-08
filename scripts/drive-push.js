@@ -113,17 +113,18 @@ async function listFileNames(folderId) {
 }
 
 async function uploadFile(folderId, filePath, mimeType) {
-  const boundary = "motochefe-" + Date.now();
-  const meta = JSON.stringify({ name: path.basename(filePath), parents: [folderId] });
-  const body = Buffer.concat([
-    Buffer.from(`--${boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n${meta}\r\n--${boundary}\r\nContent-Type: ${mimeType}\r\n\r\n`),
-    fs.readFileSync(filePath),
-    Buffer.from(`\r\n--${boundary}--`),
-  ]);
-  await apiFetch(`${API}/files?uploadType=multipart&fields=id`, {
+  // 1. cria o arquivo com nome e pasta de destino
+  const res = await apiFetch(`${API}/files?fields=id`, {
     method: "POST",
-    headers: { "Content-Type": `multipart/related; boundary=${boundary}` },
-    body,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name: path.basename(filePath), parents: [folderId] }),
+  });
+  const { id } = await res.json();
+  // 2. envia o conteúdo binário
+  await apiFetch(`https://www.googleapis.com/upload/drive/v3/files/${id}?uploadType=media`, {
+    method: "PATCH",
+    headers: { "Content-Type": mimeType },
+    body: fs.readFileSync(filePath),
   });
 }
 
