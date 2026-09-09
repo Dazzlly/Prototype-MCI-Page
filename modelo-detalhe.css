@@ -41,7 +41,7 @@
 .model-price-parcel { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 2px; }
 .model-price-total { display: block; font-size: 11px; color: var(--muted-fg); }
 .model-price-neg { font-size: 12px; color: var(--muted-fg); margin-top: 8px; }
-.model-purchase .btn-cta-wa { margin-top: 0; padding: 13px 16px; font-size: 13px; border-radius: 4px; white-space: normal; text-align: center; flex-shrink: 0; box-shadow: 0 0 24px -8px rgba(37,211,102,0.6); }
+.model-purchase .btn-cta-wa { margin-top: 0; padding: 13px 16px; font-size: 13px; border-radius: 12px; border: 1px solid rgba(224,168,46,0.4); white-space: normal; text-align: center; flex-shrink: 0; box-shadow: 0 0 24px -8px rgba(37,211,102,0.6); }
 
 /* Color swatches */
 .color-swatches { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start; }
