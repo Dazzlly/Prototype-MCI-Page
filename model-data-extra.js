@@ -142,7 +142,7 @@ Object.assign(MODEL_DETAILS, {
         "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-6.jpg",
         "modelos/jet-max/vermelho-escuro/jet-max-vermelho-escuro-7.jpg",
       ] },
-      { name: "Silvered", hex: "#6b6b6b", images: [
+      { name: "Prateado", hex: "#6b6b6b", images: [
         "modelos/jet-max/silvered/jet-max-silvered-1.jpg",
         "modelos/jet-max/silvered/jet-max-silvered-2.jpg",
         "modelos/jet-max/silvered/jet-max-silvered-3.jpg",
