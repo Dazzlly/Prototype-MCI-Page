@@ -1,7 +1,7 @@
 /* === Página de detalhe do modelo === */
 
 /* Hero */
-.model-hero { position: relative; min-height: 60vh; display: flex; align-items: center; overflow: hidden; background: var(--secondary); padding: 120px 0 80px; }
+.model-hero { position: relative; min-height: 60vh; display: flex; align-items: center; overflow: hidden; background: var(--secondary); padding: 120px 0 48px; }
 .model-hero-blob1 { position: absolute; top: 10%; left: -100px; width: 400px; height: 400px; background: rgba(224,168,46,0.15); border-radius: 50%; filter: blur(120px); animation: floatA 10s ease-in-out infinite; }
 .model-hero-blob2 { position: absolute; bottom: 10%; right: -100px; width: 350px; height: 350px; background: rgba(224,168,46,0.1); border-radius: 50%; filter: blur(120px); animation: floatB 8s ease-in-out 2s infinite; }
 .model-hero-inner { position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 0 24px; width: 100%; }
@@ -40,7 +40,7 @@
 .model-price-pix { font-size: clamp(22px, 2.4vw, 28px); font-weight: 900; color: var(--primary); margin-top: 2px; line-height: 1.1; }
 .model-price-parcel { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 2px; }
 .model-price-neg { font-size: 12px; color: var(--muted-fg); margin-top: 8px; }
-.model-purchase .btn-cta-wa { margin-top: 0; padding: 13px 18px; font-size: 13px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; box-shadow: 0 0 24px -8px rgba(37,211,102,0.6); }
+.model-purchase .btn-cta-wa { margin-top: 0; padding: 13px 16px; font-size: 13px; border-radius: 4px; white-space: normal; text-align: center; flex-shrink: 0; box-shadow: 0 0 24px -8px rgba(37,211,102,0.6); }
 
 /* Color swatches */
 .color-swatches { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: flex-start; }
@@ -85,7 +85,7 @@
 .edition-detail-item p { font-size: 14px; color: rgba(255,255,255,0.65); margin-top: 8px; line-height: 1.6; }
 
 /* Especificações + Sobre (duas colunas) */
-.model-specs-about { padding: 80px 0; }
+.model-specs-about { padding: 44px 0 80px; }
 .model-specs-about .section-title { text-align: left; }
 .bar-left { margin: 0 0 28px; }
 .specs-about-grid { display: grid; grid-template-columns: 1fr; gap: 56px; }

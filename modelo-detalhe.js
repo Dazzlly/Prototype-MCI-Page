@@ -258,8 +258,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderPurchase() {
     const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar no WhatsApp</a>`;
-    const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}</p>` : "") +
-      (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}</p>` : "");
+    const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">Total ${fmtPrice(vehicle.price_12x * 12)} · 12x sem juros de ${fmtPrice(vehicle.price_12x)}</p>` : "") +
+      (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">Total ${fmtPrice(vehicle.price_21x * 21)} · 21x de ${fmtPrice(vehicle.price_21x)}</p>` : "");
     return `
       <div class="model-purchase">
         <h3>Pronto para sua ${shortName}?</h3>
@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           ${wa}
         </div>
-        <p class="model-price-neg">${vehicle.price ? "Outros valores negociáveis com valor de entrada pequeno" : "Fale com nossa equipe e garanta as melhores condições"}</p>
+        <p class="model-price-neg">${vehicle.price ? "Valores Especiais são Negociáveis com Vendedores" : "Fale com nossa equipe e garanta as melhores condições"}</p>
       </div>`;
   }
 
