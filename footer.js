@@ -1,4 +1,5 @@
-document.getElementById('footer-dinamico').innerHTML = `
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById('footer-dinamico').innerHTML = `
   <footer class="site-footer">
     <div class="footer-blob"></div>
     <div class="container">
@@ -36,4 +37,5 @@ document.getElementById('footer-dinamico').innerHTML = `
     </div>
   </footer>
 `;
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
+});

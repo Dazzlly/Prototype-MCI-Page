@@ -1,0 +1,117 @@
+/* modelo-lightbox.css — Visualizador de imagem em tela cheia com zoom */
+
+.mlb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 10, 12, 0.94);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: mlb-fade 0.2s ease;
+}
+
+@keyframes mlb-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mlb-img {
+  max-width: min(92vw, 1200px);
+  max-height: 86vh;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+  cursor: zoom-in;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.mlb-img.mlb-zoomed {
+  cursor: grab;
+}
+
+.mlb-img.mlb-zoomed:active {
+  cursor: grabbing;
+}
+
+.mlb-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.mlb-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: rotate(90deg);
+}
+
+.mlb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mlb-nav:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.mlb-prev { left: 22px; }
+.mlb-next { right: 22px; }
+
+.mlb-counter {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 6px 16px;
+  border-radius: 999px;
+}
+
+.mlb-zoom-hint {
+  position: absolute;
+  bottom: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: opacity 0.6s;
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .mlb-nav { width: 42px; height: 42px; font-size: 18px; }
+  .mlb-prev { left: 10px; }
+  .mlb-next { right: 10px; }
+  .mlb-close { top: 12px; right: 14px; width: 40px; height: 40px; }
+  .mlb-zoom-hint { display: none; }
+}

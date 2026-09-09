@@ -1,0 +1,74 @@
+// Dados do modelo MC Liberty — carregado dinamicamente na página do modelo
+// Gerado automaticamente — NÃO editar manualmente (edite info.json)
+window.MODEL_DATA = window.MODEL_DATA || {};
+window.MODEL_DATA["liberty"] = {
+  "slug": "liberty",
+  "nome": "MC Liberty",
+  "categoria": "E-bike",
+  "apresentacao": "Estilo, design e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia. Sem necessidade de CNH.",
+  "sobre": "Estilo, design e dia a dia. Scooter elétrica autopropelida com 600W e 40 km de autonomia. Sem necessidade de CNH.",
+  "especificacoes": {
+    "Motor": "500W",
+    "Autonomia": "até 35 km",
+    "Velocidade Máxima": "32 km/h",
+    "Bateria": "Removível",
+    "Freios": "Disco",
+    "Extras": "Dobrável, Assento garupa"
+  },
+  "diferenciais": [
+    {
+      "icone": "🚫",
+      "texto": "Sem necessidade de CNH"
+    },
+    {
+      "icone": "📋",
+      "texto": "Dispensa emplacamento"
+    },
+    {
+      "icone": "🔄",
+      "texto": "Modelo dobrável"
+    },
+    {
+      "icone": "🔋",
+      "texto": "Bateria removível"
+    },
+    {
+      "icone": "🔧",
+      "texto": "Freios a disco"
+    },
+    {
+      "icone": "👥",
+      "texto": "Assento para garupa"
+    }
+  ],
+  "valores": {
+    "a_vista": null,
+    "parcelado_12x": null,
+    "parcelado_21x": null,
+    "sob_consulta": true
+  },
+  "cores": [
+    {
+      "nome": "Preto",
+      "slug": "preto",
+      "hex": "#1a1a1a",
+      "pasta": "preto",
+      "imagens": [
+        "modelos/liberty/preto/liberty.webp"
+      ]
+    }
+  ],
+  "edicao_especial": false,
+  "imagens": {
+    "card": "modelos/liberty/preto/liberty.webp",
+    "galeria": [
+      "modelos/liberty/galeria/extra-liberty_product_web.webp"
+    ]
+  },
+  "product_url": "https://itaim.motochefe.com.br",
+  "featured": false,
+  "power_w": 600,
+  "range_km": 35,
+  "top_speed_kmh": 32,
+  "badge": "MODELO DOBRÁVEL"
+};

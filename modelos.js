@@ -16,24 +16,29 @@ function vehicleCard(v) {
   if (v.top_speed_kmh) specs.push(`<span class="veh-spec">${specIcon("speed")} ${v.top_speed_kmh} km/h</span>`);
   
   const priceBlock = v.price 
-    ? `<p class="veh-price">${fmtPrice(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` 
+    ? `<p class="veh-price">PIX ${fmtPrice(v.price)}</p>${v.price_12x ? `<p class="veh-price-12x">ou 12x de ${fmtPrice(v.price_12x)}</p>` : ''}<p class="veh-price-neg">Outros valores negociáveis com entrada pequena</p>` 
     : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`;
     
   return `
     <article class="veh-card reveal" data-delay="0">
-      <div class="veh-img">
-        <img src="${v.image_url}" alt="${v.name}" loading="lazy">
-        <span class="veh-badge">${v.category}</span>
-      </div>
+      <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
+        <div class="veh-img">
+          <img src="${v.image_url}" alt="${v.name}" loading="lazy">
+          <span class="veh-badge">${v.category}</span>
+        </div>
+      </a>
       <div class="veh-body">
-        <h3>${v.name}</h3>
+        <a href="./modelo.html?m=${slugify(v.name)}" class="veh-title-link"><h3>${v.name}</h3></a>
         <p class="veh-desc">${v.description || ""}</p>
         <div class="veh-specs">${specs.join("")}</div>
         <div class="veh-foot">
           <div>${priceBlock}</div>
-          <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
+          <div class="veh-foot-actions">
+            <a class="veh-details-link" href="./modelo.html?m=${slugify(v.name)}">Ver detalhes</a>
+            <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
         </div>
       </div>
     </article>`;

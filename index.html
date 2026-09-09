@@ -7,7 +7,7 @@
   <meta name="description" content="Loja Oficial Motochefe em São Paulo. O melhor em Bikes, Motos e Scooters Elétricas no Itaim Bibi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/webp" href="https://motochefeitaim.com.br/wp-content/uploads/2024/07/Logo-Branco-1024x422.webp">
+  <link rel="icon" type="image/webp" href="images/logo-branco.webp">
   <link rel="stylesheet" href="./styles.css">
   
   -<style>
@@ -57,15 +57,41 @@
     .mci-adv-item { text-align: center; padding: 30px 20px; background-color: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;}
     .mci-adv-item:hover { transform: translateY(-5px); border-color: rgba(224,168,46,0.3); }
     .mci-adv-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+    /* Destaques — pista horizontal deslizante */
+    .featured-track-wrap {
+      overflow: hidden;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+    #featured-grid {
+      display: flex !important;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 24px;
+      padding: 12px 24px 0;
+      -webkit-overflow-scrolling: touch;
+    }
+    #featured-grid::-webkit-scrollbar { height: 12px; }
+    #featured-grid::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 6px; }
+    #featured-grid::-webkit-scrollbar-thumb { background: rgba(224,168,46,0.4); border-radius: 6px; }
+    #featured-grid::-webkit-scrollbar-thumb:hover { background: rgba(224,168,46,0.6); }
+    #featured-grid .veh-card {
+      flex: 0 0 300px;
+    }
+    @media (max-width: 639px) {
+      #featured-grid .veh-card { flex: 0 0 85%; }
+    }
   </style>
 </head>
 <body>
 <div id="header-dinamico"></div>
-  <script src="./menu.js"></script>
+  <script src="./menu.js" defer></script>
   
   <!-- Hero -->
   <section class="hero">
     <video autoplay muted loop playsinline>
+      <source src="images/hero.mp4" type="video/mp4">
       <source src="https://motochefeitaim.com.br/wp-content/uploads/2024/08/copy_858DBB0B-331D-4BF6-BDB2-CD21B0F731C7.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
@@ -88,19 +114,19 @@
     <div class="container">
       <div class="cat-grid">
         <a href="./modelos.html?cat=Autopropelidos" class="cat-card reveal" data-delay="0">
-          <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2024/09/mia.webp" alt="Autopropelidos"></div>
+          <div class="cat-img"><img src="images/cat-autopropelidos.webp" alt="Autopropelidos"></div>
           <div class="cat-body"><h3>AUTOPROPELIDOS</h3><p id="count-Autopropelidos">Calculando...</p></div>
         </a>
         <a href="./modelos.html?cat=Ciclomotores" class="cat-card reveal" data-delay="100">
-          <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2024/09/x11.webp" alt="Ciclomotores"></div>
+          <div class="cat-img"><img src="images/cat-ciclomotores.webp" alt="Ciclomotores"></div>
           <div class="cat-body"><h3>CICLOMOTORES</h3><p id="count-Ciclomotores">Calculando...</p></div>
         </a>
         <a href="./modelos.html?cat=Triciclos" class="cat-card reveal" data-delay="200">
-          <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2025/11/ved_product.webp" alt="Triciclos"></div>
+          <div class="cat-img"><img src="images/cat-triciclos.webp" alt="Triciclos"></div>
           <div class="cat-body"><h3>TRICICLOS</h3><p id="count-Triciclos">Calculando...</p></div>
         </a>
         <a href="./modelos.html?cat=E-bikes" class="cat-card reveal" data-delay="300">
-          <div class="cat-img"><img src="https://itaim.motochefe.com.br/wp-content/uploads/2025/10/Style_prodc.webp" alt="E-bikes"></div>
+          <div class="cat-img"><img src="images/cat-ebikes.webp" alt="E-bikes"></div>
           <div class="cat-body"><h3>E-BIKES</h3><p id="count-E-bikes">Calculando...</p></div>
         </a>
       </div>
@@ -142,7 +168,12 @@
         <h2 class="section-title">Destaques <span class="accent">da Loja</span></h2>
         <div class="bar" style="margin: 0 auto;"></div>
       </div>
-      <div class="veh-grid" id="featured-grid"></div>
+      </div>
+    </div>
+    <div class="featured-track-wrap">
+      <div id="featured-grid"></div>
+    </div>
+    <div class="container">
       <div style="text-align:center;margin-top:48px;">
         <a href="./modelos.html" class="btn btn-outline" style="padding:12px 32px;border-color:rgba(224,168,46,0.4);color:var(--primary);">Ver Catálogo Completo →</a>
       </div>
@@ -157,8 +188,9 @@
       <div class="mci-advantages-grid">
         <div class="mci-adv-item">
           <div class="mci-adv-icon">🔧</div>
-          <h4>Oficina Própria</h4>
-          <p style="color: var(--muted-fg, #aaa); font-size: 0.9rem; margin-top: 8px;">Técnicos especializados</p>
+          <h4>Oficina + Estoque de peças</h4>
+          <p style="color: var(--muted-fg, #aaa); font-size: 0.9rem; margin-top: 8px;">Com nossos Técnicos especializados, realizamos Serviços de Revisões &amp; Manutenções Próprias</p>
+          <p style="color: var(--muted-fg, #aaa); font-size: 0.75rem; margin-top: 6px;">assim como uma concessionária</p>
         </div>
         <div class="mci-adv-item">
           <div class="mci-adv-icon">🛡️</div>
@@ -168,7 +200,9 @@
         <div class="mci-adv-item">
           <div class="mci-adv-icon">💳</div>
           <h4>Pagamento Facilitado</h4>
-          <p style="color: var(--muted-fg, #aaa); font-size: 0.9rem; margin-top: 8px;">Em até 12x no cartão</p>
+          <p style="color: var(--muted-fg, #aaa); font-size: 0.9rem; margin-top: 8px;">Pix e Cartão</p>
+          <p style="color: var(--muted-fg, #aaa); font-size: 0.9rem; margin-top: 4px;">em até 12x sem juros ou opções de financiamento de 21x</p>
+          <p style="color: var(--muted-fg, #aaa); font-size: 0.75rem; margin-top: 6px;">*sujeito a consulta</p>
         </div>
         <div class="mci-adv-item">
           <div class="mci-adv-icon">🧪</div>
@@ -260,31 +294,37 @@
 
   <!-- Footer -->
   <div id="footer-dinamico"></div>
-  <script src="./footer.js"></script>
+  <script src="./footer.js" defer></script>
 
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  <script src="./data.js"></script>
+  <script src="./data.js" defer></script>
   <script>
-    // Render destaques na home (após data.js)
-    const featured = VEHICLES.filter(v => v.featured).slice(0, 4);
-    const fmtP = v => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
-    document.getElementById("featured-grid").innerHTML = featured.map(v => `
-      <article class="veh-card reveal" data-delay="0">
-        <div class="veh-img">
-          <img src="${v.image_url}" alt="${v.name}" loading="lazy">
-          <span class="veh-badge">${v.category}</span>
-        </div>
-        <div class="veh-body">
-          <h3>${v.name}</h3>
-          <p class="veh-desc">${v.description || ""}</p>
-          <div class="veh-foot">
-            <div>${v.price ? `<p class="veh-price">${fmtP(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`}</div>
-            <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+    // Render destaques na home (após data.js defer + DOM pronto)
+    document.addEventListener("DOMContentLoaded", () => {
+      const featuredOrder = ["MC Mia", "MC X12", "MC Giga", "MC Roma", "MC Jet", "MC Big Tri"];
+      const featured = featuredOrder.map(name => VEHICLES.find(v => v.name === name)).filter(Boolean);
+      const fmtP = v => v ? "R$ " + Number(v).toLocaleString("pt-BR") : null;
+      document.getElementById("featured-grid").innerHTML = featured.map(v => `
+        <article class="veh-card" data-delay="0">
+          <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
+            <div class="veh-img">
+              <img src="${v.featured_image || v.image_url}" alt="${v.name}" loading="lazy">
+              <span class="veh-badge">${v.category}</span>
+            </div>
+          </a>
+          <div class="veh-body">
+            <a href="./modelo.html?m=${slugify(v.name)}" class="veh-title-link"><h3>${v.name}</h3></a>
+            <p class="veh-desc">${v.description || ""}</p>
+            <div class="veh-foot">
+              <div>${v.price ? `<p class="veh-price">${fmtP(v.price)}</p><p class="veh-price-install">em até 12x sem juros</p>` : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`}</div>
+              <div class="veh-foot-actions">
+                <a class="veh-details-link" href="./modelo.html?m=${slugify(v.name)}">Ver detalhes</a>
+                <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+              </div>
+            </div>
           </div>
-        </div>
-      </article>`).join("");
+        </article>`).join("");
+    });
   </script>
-  <script src="./data.js"></script>
   <script>
     // Atualiza dinamicamente a contagem real de modelos em cada categoria na Home
     document.addEventListener("DOMContentLoaded", () => {
@@ -305,6 +345,6 @@
       }
     });
   </script>
-  <script src="./app.js"></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>
