@@ -1,8 +1,8 @@
-# Política de Privacidade — Moto Chef
+# Política de Privacidade — Prototype-MCI-Page
 
 **Última atualização:** 08/09/2026
 
-O aplicativo **Moto Chef** é um catálogo de motos que exibe fotos e informações dos modelos
+O aplicativo **Prototype-MCI-Page** é um catálogo de motos que exibe fotos e informações dos modelos
 disponíveis na loja.
 
 ## Quais dados coletamos
