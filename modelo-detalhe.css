@@ -41,9 +41,10 @@
 .model-price-parcel { font-size: 13px; color: rgba(255,255,255,0.85); margin-top: 2px; }
 .model-price-total { display: block; font-size: 11px; color: var(--muted-fg); }
 .model-price-neg { font-size: 12px; color: var(--muted-fg); margin-top: 8px; }
-.model-includes-tab { display: inline-flex; align-self: flex-start; align-items: center; gap: 8px; margin-top: 16px; padding: 10px 26px; background: var(--primary); color: #000; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 12px 12px 0 0; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.model-includes-wrap { display: inline-flex; flex-direction: column; align-items: flex-start; margin-bottom: 20px; }
+.model-includes-tab { padding: 10px 26px; background: var(--primary); color: #000; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 12px 12px 0 0; margin-bottom: -1px; }
 
-.model-includes { margin-bottom: 20px; background: rgba(0,0,0,0.35); border: 1px solid rgba(224,168,46,0.4); border-radius: 12px; padding: 16px 18px; }
+.model-includes { background: rgba(0,0,0,0.35); border: 1px solid rgba(224,168,46,0.4); border-radius: 0 12px 12px 12px; padding: 16px 18px; }
 .model-includes-chips { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .model-include-chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600; color: #fff; }
 .model-include-chip .model-include-check { color: var(--primary); font-weight: 800; }
