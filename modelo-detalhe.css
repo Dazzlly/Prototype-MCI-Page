@@ -1,7 +1,7 @@
 /* === Página de detalhe do modelo === */
 
 /* Hero */
-.model-hero { position: relative; min-height: 60vh; display: flex; align-items: center; overflow: hidden; background: var(--secondary); padding: 120px 0 48px; }
+.model-hero { position: relative; min-height: 60vh; display: flex; align-items: center; overflow: hidden; background: var(--secondary); padding: 120px 0 32px; }
 .model-hero-blob1 { position: absolute; top: 10%; left: -100px; width: 400px; height: 400px; background: rgba(224,168,46,0.15); border-radius: 50%; filter: blur(120px); animation: floatA 10s ease-in-out infinite; }
 .model-hero-blob2 { position: absolute; bottom: 10%; right: -100px; width: 350px; height: 350px; background: rgba(224,168,46,0.1); border-radius: 50%; filter: blur(120px); animation: floatB 8s ease-in-out 2s infinite; }
 .model-hero-inner { position: relative; z-index: 10; max-width: 1280px; margin: 0 auto; padding: 0 24px; width: 100%; }
@@ -45,7 +45,7 @@
 .model-includes-tab { padding: 10px 26px; background: var(--primary); color: #000; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 12px 12px 0 0; margin-bottom: -1px; }
 
 .model-includes { background: rgba(0,0,0,0.35); border: 1px solid rgba(224,168,46,0.4); border-radius: 0 12px 12px 12px; padding: 16px 18px; }
-@media (min-width: 960px) { .model-includes-wrap { margin-top: -84px; } }
+@media (min-width: 960px) { .model-includes-wrap { margin-top: -64px; } }
 .model-includes-chips { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .model-include-chip { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 8px 14px; font-size: 13px; font-weight: 600; color: #fff; }
 .model-include-chip .model-include-check { color: var(--primary); font-weight: 800; }
@@ -95,7 +95,7 @@
 .edition-detail-item p { font-size: 14px; color: rgba(255,255,255,0.65); margin-top: 8px; line-height: 1.6; }
 
 /* Especificações + Sobre (duas colunas) */
-.model-specs-about { padding: 44px 0 80px; }
+.model-specs-about { padding: 24px 0 80px; }
 .model-specs-about .section-title { text-align: left; }
 .bar-left { margin: 0 0 28px; }
 .specs-about-grid { display: grid; grid-template-columns: 1fr; gap: 56px; }
