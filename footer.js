@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="./index.html"><img class="site-logo" src="./MCI-Tw.png" alt="Motochefe Itaim"></a>
+          <a href="./index.html"><img class="site-logo" src="./images/MCI-Tw.png" alt="Motochefe Itaim"></a>
           <p>Loja Oficial Motochefe em São Paulo. O melhor em Bikes, Motos e Scooters Elétricas!</p>
           <div class="social-row">
             <a class="social-ig" href="https://www.instagram.com/motochefe.itaim/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
