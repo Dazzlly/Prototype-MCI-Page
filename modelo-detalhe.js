@@ -256,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               ${desc}
               ${renderPurchase()}
+              ${renderIncludesTab()}
             </div>
           </div>
         </div>
@@ -294,12 +295,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderIncludesList() {
     return `
-      <div class="model-includes-wrap">
-        ${renderIncludesTab()}
-        <div class="model-includes">
-          <div class="model-includes-chips">
-            ${getIncludes().map(i => `<span class="model-include-chip"><span class="model-include-check">✓</span>${i}</span>`).join("")}
-          </div>
+      <div class="model-includes">
+        <div class="model-includes-chips">
+          ${getIncludes().map(i => `<span class="model-include-chip"><span class="model-include-check">✓</span>${i}</span>`).join("")}
         </div>
       </div>`;
   }
