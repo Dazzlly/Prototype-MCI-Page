@@ -257,9 +257,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderPurchase() {
-    const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar no WhatsApp</a>`;
-    const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">Total ${fmtPrice(vehicle.price_12x * 12)} · 12x sem juros de ${fmtPrice(vehicle.price_12x)}</p>` : "") +
-      (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">Total ${fmtPrice(vehicle.price_21x * 21)} · 21x de ${fmtPrice(vehicle.price_21x)}</p>` : "");
+    const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar<br>no WhatsApp</a>`;
+    const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_12x * 12)}</span></p>` : "") +
+      (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_21x * 21)}</span></p>` : "");
     return `
       <div class="model-purchase">
         <h3>Pronto para sua ${shortName}?</h3>
