@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById('header-dinamico').innerHTML = `
   <header class="site-header">
     <div class="container header-inner">
-      <a href="./index.html"><img class="site-logo" src="./MCI-Tw.png" alt="Motochefe Itaim"></a>
+      <a href="./index.html"><img class="site-logo" src="./images/MCI-Tw.png" alt="Motochefe Itaim"></a>
       <nav class="nav-links">
         <a href="./index.html">Início</a>
         <a href="./modelos.html">Modelos</a>
