@@ -256,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
               ${desc}
               ${renderPurchase()}
+              ${renderIncludesTab()}
             </div>
           </div>
         </div>
@@ -277,6 +278,27 @@ document.addEventListener("DOMContentLoaded", () => {
           ${wa}
         </div>
         <p class="model-price-neg">${vehicle.price ? "Valores Especiais são Negociáveis com Vendedores" : "Fale com nossa equipe e garanta as melhores condições"}</p>
+      </div>`;
+  }
+
+  function getIncludes() {
+    const charger = { "jet-max": "72V 5A", "r10": "72V 5A", "x12": "67V 5A", "roma": "72V 5A" }[slug] || "67V 3A";
+    const items = ["2 Chaves", "2 Controles de Alarme", "2 Tags NFC"];
+    if (slug === "jet-max" || slug === "r10") items.push("1 Pulseira NFC");
+    items.push("Carregador " + charger);
+    return items;
+  }
+
+  function renderIncludesTab() {
+    return `<div class="model-includes-tab">O que acompanha a Scooter</div>`;
+  }
+
+  function renderIncludesList() {
+    return `
+      <div class="model-includes">
+        <div class="model-includes-chips">
+          ${getIncludes().map(i => `<span class="model-include-chip"><span class="model-include-check">✓</span>${i}</span>`).join("")}
+        </div>
       </div>`;
   }
 
@@ -327,6 +349,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const aboutCol = hasAbout ? `
       <div class="about-col">
+        ${renderIncludesList()}
         <h3 class="features-title">Diferenciais do modelo</h3>
         <div class="features-grid">
           ${details.features.map(f => `
