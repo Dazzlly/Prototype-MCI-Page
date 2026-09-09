@@ -181,6 +181,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function swatchHTML(c, i) {
     const active = i === 0 ? "active" : "";
+    if (c.type === "shield" && c.edition === "palmeiras") {
+      return `<button class="color-swatch ${active}" data-index="${i}" aria-label="Verde x Palmeiras">
+        <span class="color-dot" style="background: #006437"></span>
+        <span class="color-swatch-label">Verde<br>x<br>Palmeiras</span>
+      </button>`;
+    }
     if (c.type === "shield") {
       return `<button class="color-swatch color-swatch-shield ${active}" data-index="${i}" aria-label="Edição ${c.edition}">
         ${SHIELD_SVGS[c.edition] || ""}
