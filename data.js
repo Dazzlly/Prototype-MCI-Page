@@ -5,7 +5,7 @@ const WHATSAPP = "5511948711047";
 const INSTAGRAM = "https://www.instagram.com/motochefe.itaim/";
 const FACEBOOK = "https://www.facebook.com/profile.php?id=61562114171718";
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Rua+João+Cachoeira+1387+Itaim+Bibi+São+Paulo";
-const LOGO_URL = "images/logo-branco.webp";
+const LOGO_URL = "images/MCI-Tw.png";
 const HERO_VIDEO = "https://motochefeitaim.com.br/wp-content/uploads/2024/08/copy_858DBB0B-331D-4BF6-BDB2-CD21B0F731C7.mp4";
 
 const waLink = (name, price, url) =>
