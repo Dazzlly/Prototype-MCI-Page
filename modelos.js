@@ -1,5 +1,5 @@
 // Render do catálogo com busca e filtro (página Modelos)
-const FILTERS = ["Todos", "Autopropelidos", "Ciclomotores", "Triciclos", "E-bikes"];
+const FILTERS = ["Todos", "Autopropelidos", "Ciclomotores", "Triciclos", "E-bikes", "Especiais"];
 
 function specIcon(type) {
   // ícones SVG simples

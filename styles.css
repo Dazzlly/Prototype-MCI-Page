@@ -228,6 +228,17 @@ section { position: relative; }
 .filter-btn.active { background: var(--primary); color: hsl(0,0%,4.7%); border-color: var(--primary); box-shadow: 0 8px 20px -5px rgba(224,168,46,0.3); }
 .empty { text-align: center; color: var(--muted-fg); padding: 64px 0; }
 
+/* ---------- Catalog layout ---------- */
+.catalog-section { padding-top: 48px; }
+.catalog-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.catalog-controls .search-wrap { order: 2; flex: 0 1 440px; margin-bottom: 0; }
+.catalog-controls .filter-row { order: 1; flex: 1; margin-bottom: 0; }
+
+@media (max-width: 899px) {
+  .catalog-controls { align-items: stretch; flex-direction: column; gap: 20px; }
+  .catalog-controls .search-wrap { max-width: none; width: 100%; }
+}
+
 /* ---------- Guarantee ---------- */
 .guarantee { background: var(--secondary); padding: 80px 0; overflow: hidden; }
 .guarantee-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
@@ -282,7 +293,8 @@ section { position: relative; }
 @keyframes floatB { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-15px) rotate(-2deg); } }
 
 /* CONFIGURAÇÕES GLOBAIS DO HEADER E SEÇÕES (MCI) */
-.site-header { position: fixed !important; top: 0; left: 0; width: 100%; z-index: 1000; background-color: rgba(10, 10, 10, 0.6) !important; backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.site-header { position: fixed !important; top: 0; left: 0; width: 100%; z-index: 1000; background-color: transparent !important; backdrop-filter: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.site-header.scrolled { background-color: rgba(10, 10, 10, 0.85) !important; backdrop-filter: blur(12px); }
 .site-header .header-inner { max-width: 96% !important; width: 100% !important; justify-content: space-between !important; }
 .site-logo { height: 45px !important; object-fit: contain; }
 .nav-links a { font-family: 'Montserrat', sans-serif !important; font-size: 1.15rem !important; font-weight: 500 !important; color: #ffffff !important; text-decoration: none !important; position: relative; padding-bottom: 5px; }
@@ -303,3 +315,6 @@ button, .btn, a.btn, [class*="btn"], [class*="button"] { border-radius: 0 !impor
 .mci-adv-item { text-align: center; padding: 30px 20px; background-color: rgba(0,0,0,0.3); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); transition: transform 0.3s;}
 .mci-adv-item:hover { transform: translateY(-5px); border-color: rgba(224,168,46,0.3); }
 .mci-adv-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+/* Keep the page hero content clear of the fixed header. */
+.page-hero { padding-top: 80px; }
