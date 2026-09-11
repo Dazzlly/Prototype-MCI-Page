@@ -24,13 +24,8 @@ imagens padrão, edite `data.js`.
 ## Publicação
 
 O conteúdo público é composto pelos arquivos HTML, CSS, JavaScript, imagens e JSON deste
-repositório. O GitHub Pages publica diretamente esses arquivos. Scripts de sincronização,
-Docker, credenciais e ferramentas de geração não fazem parte do site.
-
-Para testar localmente, abra `index.html` no navegador ou use qualquer servidor HTTP estático.
-Não é necessário instalar Node.js, Python, Docker ou outra ferramenta de desenvolvimento.
+repositório.
 
 ## Segurança
 
-Não coloque tokens, chaves privadas, arquivos `.env`, credenciais ou dados pessoais neste
-repositório. Consulte [SECURITY.md](./SECURITY.md) para o procedimento de comunicação.
+Consulte [SECURITY.md](./SECURITY.md) para o procedimento de comunicação.
