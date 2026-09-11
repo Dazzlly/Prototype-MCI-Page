@@ -1,46 +1,31 @@
 # Prototype-MCI-Page
 
-Protótipo de apresentação de página com foco em informação, vendas e contato.
+Site estático da Motochefe Itaim, construído com HTML, CSS e JavaScript puro para GitHub
+Pages. Não há backend, processo de build ou dependências de runtime.
 
-Uma versão estática em HTML/CSS/JS puro pensada para demonstrar layouts, catálogo de modelos e fluxo de contato via WhatsApp.
+## Páginas principais
 
----
+- `index.html` — página inicial, categorias, destaques e contato.
+- `modelos.html` — catálogo com busca e filtros.
+- `modelo.html` — detalhes de um modelo, acessados por `?m=slug`.
+- `oficina.html` — página da oficina.
+- `contato.html` — formulário que monta uma mensagem para o WhatsApp.
 
-## Resumo (English)
+## Arquivos de dados e configuração
 
-Static prototype for a product/showcase page focused on information, sales and contact. Built with plain HTML, CSS and JavaScript (no backend). Data for the vehicle listings is embedded in `data.js`.
+- `data.js` — veículos, preços, imagens e dados compartilhados.
+- `model-data-extra.js` — informações complementares das páginas de modelo.
+- `social-links.js` — única fonte para Instagram, Facebook e WhatsApp.
+- `modelos/manifest.json` — manifesto local de imagens usado pela galeria.
 
----
+Para alterar links sociais, edite somente `social-links.js`. Para alterar veículos, preços ou
+imagens padrão, edite `data.js`.
 
-## Estrutura do projeto
+## Publicação
 
-Estrutura principal dentro da pasta `static-site/`:
+O conteúdo público é composto pelos arquivos HTML, CSS, JavaScript, imagens e JSON deste
+repositório.
 
-- `index.html`      — Home (hero, categorias, destaques, localização, CTA)
-- `modelos.html`    — Catálogo completo com busca e filtros
-- `contato.html`    — Formulário (envia para WhatsApp) + mapa e contatos
-- `styles.css`      — Estilos (replica o design system do app)
-- `data.js`         — Dados dos veículos e links (EDITE AQUI para atualizar)
-- `app.js`          — Header, menu mobile, animações gerais
-- `modelos.js`      — Renderização e filtros do catálogo
-- `contato.js`      — Lógica do formulário -> WhatsApp
-- `README.md`       — Este arquivo
+## Segurança
 
-> Observação: o protótipo é um site estático; todo o conteúdo está embarcado em `data.js`.
-
-## Atualizando dados (veículos e links)
-
-Os dados do catálogo estão em `static-site/data.js`. Para atualizar modelos, preços, imagens ou links, edite esse arquivo seguindo o formato já presente.
-
-## Contribuições
-
-Pull requests são bem-vindos. Para pequenas edições (texto, dados), você pode abrir um PR diretamente com a alteração no `data.js` ou no `README.md`.
-
-Sugestões de fluxo:
-1. Crie uma branch a partir da `main` com um nome descritivo.
-2. Faça suas alterações e rode o servidor local para ver o resultado.
-3. Abra um pull request descrevendo as mudanças.
-
-## Agradecimentos
-
-Protótipo inspirado no design system do app principal; usado para demonstração e vendas.
+Consulte [SECURITY.md](./SECURITY.md) para o procedimento de comunicação.

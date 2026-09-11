@@ -36,7 +36,7 @@ const BRAZIL_FLAG_SVG = `<svg class="brazil-flag" viewBox="0 0 60 60" xmlns="htt
   <path d="M21 27.5 C26 25 34 25 39 27.5" fill="none" stroke="#fff" stroke-width="2"/>
 </svg>`;
 
-// Slug com remoção de acentos — mesma chave usada pelo sincronizador do Google Drive (scripts/drive-sync.js)
+// Slug com remoção de acentos — mesma chave usada pelas pastas do manifesto local.
 const slugKey = (s) => slugify(String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const shortName = vehicle.name.replace(/^MC\s+/i, "");
   let selectedColorIndex = 0;
   let heroIndex = 0;
-  let driveManifest = null; // fotos sincronizadas do Google Drive (modelos/manifest.json)
+  let driveManifest = null; // fotos do manifesto local (modelos/manifest.json)
 
   const page = document.getElementById("model-page");
   page.innerHTML = renderAll();
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCarousel();
   updateColorSelection();
 
-  // Manifesto de fotos sincronizadas do Google Drive (gerado por scripts/drive-sync.js)
+  // Manifesto local de fotos publicado junto com o site.
   fetch("modelos/manifest.json").then(r => r.ok ? r.json() : {}).then(m => {
     if (Object.keys(m).length) {
       driveManifest = m;
