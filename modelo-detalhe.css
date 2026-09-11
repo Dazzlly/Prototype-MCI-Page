@@ -16,7 +16,7 @@
 .model-type-badge { align-self: flex-start; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.18em; color: #000; background: var(--primary); padding: 6px 14px; border-radius: 4px; margin-bottom: 14px; }
 .model-hero-media { display: flex; flex-direction: column; }
 .model-hero-media .model-pick-label { margin-top: 14px; }
-.model-hero-media .color-swatches { justify-content: flex-start; gap: 14px 18px; margin-top: 10px; }
+.model-hero-media .color-swatches { justify-content: flex-start; gap: 14px 18px; margin-top: 10px; position: relative; z-index: 3; }
 .model-hero-media .color-dot { width: 44px; height: 44px; }
 .model-hero-media .color-swatch-label { font-size: 11px; }
 .model-hero-about { margin-top: 18px; }
@@ -60,10 +60,15 @@
 .color-swatch.active .color-dot { border-color: var(--primary); box-shadow: 0 0 24px rgba(224,168,46,0.45); transform: scale(1.12); }
 .color-swatch-label { font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; transition: color .3s; text-align: center; line-height: 1.35; }
 .color-swatch.active .color-swatch-label { color: var(--primary); }
+.color-swatch-unavailable { opacity: .48; }
+.color-swatch-unavailable:hover { transform: none; }
+.color-unavailable-mark { position: absolute; margin: -48px -52px 0 0; width: 18px; height: 18px; border-radius: 50%; background: #c62828; color: #fff; font-size: 17px; line-height: 16px; font-weight: 900; }
 
 /* UK swatch (Union Jack dentro do círculo) */
 .color-dot-uk { padding: 0; overflow: hidden; background: #012169; }
 .color-dot-uk .uk-flag { display: block; width: 100%; height: 100%; }
+.color-dot-brazil { padding: 0; overflow: hidden; background: #009c3b; }
+.color-dot-brazil .brazil-flag { display: block; width: 100%; height: 100%; }
 
 /* Carbono swatch (fibra de carbono dentro do círculo) */
 .color-dot-carbono {
@@ -80,7 +85,7 @@
 .color-swatch-shield.active .color-swatch-label { color: var(--primary); }
 
 /* Edition section (Vasco / Palmeiras) */
-.edition-section { background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%); padding: 80px 0; text-align: center; overflow: hidden; }
+.edition-section { position: relative; z-index: 1; background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%); padding: 80px 0; text-align: center; overflow: hidden; }
 .edition-badge { display: inline-block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 700; border: 1px solid; padding: 8px 20px; margin-bottom: 24px; }
 .edition-title { font-size: clamp(32px, 6vw, 56px); font-weight: 900; text-transform: uppercase; color: #fff; line-height: 1.1; }
 .edition-subtitle { font-size: 14px; color: var(--muted-fg); margin-top: 16px; text-transform: uppercase; letter-spacing: 0.1em; }

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <nav class="nav-links">
         <a href="./index.html">Início</a>
         <a href="./modelos.html">Modelos</a>
+        <a href="./oficina.html">Oficina</a>
         <a href="./contato.html">Contato</a>
       </nav>
       <div class="header-actions">
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav class="mobile-menu" id="mobile-menu">
       <a href="./index.html">Início</a>
       <a href="./modelos.html">Modelos</a>
+      <a href="./oficina.html">Oficina</a>
       <a href="./contato.html">Contato</a>
       <a class="btn btn-wa" href="https://wa.me/5511948711047" target="_blank" rel="noopener">WhatsApp</a>
     </nav>

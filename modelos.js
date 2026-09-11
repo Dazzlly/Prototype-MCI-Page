@@ -19,11 +19,14 @@ function vehicleCard(v) {
     ? `<p class="veh-price">PIX ${fmtPrice(v.price)}</p>${v.price_12x ? `<p class="veh-price-12x">ou 12x de ${fmtPrice(v.price_12x)}</p>` : ''}<p class="veh-price-neg">Outros valores negociáveis com entrada pequena</p>` 
     : `<p class="veh-consult">Sob Consulta</p><p class="veh-price-install">em nosso WhatsApp</p>`;
     
+  const imageUrl = v.special && document.getElementById("catalog-filter").dataset.current === "Especiais"
+    ? v.special_image_url
+    : v.image_url;
   return `
     <article class="veh-card reveal" data-delay="0">
       <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
         <div class="veh-img">
-          <img src="${v.image_url}" alt="${v.name}" loading="lazy">
+          <img src="${imageUrl}" alt="${v.name}" loading="lazy">
           <span class="veh-badge">${v.category}</span>
         </div>
       </a>
@@ -62,7 +65,9 @@ function renderCatalog() {
     const productCategories = (v.category || "").split(',').map((c) => normalizeCategory(c.trim()));
     const cleanFilter = normalizeCategory(filter);
     
-    const matchCat = (filter === "Todos") || productCategories.some((cat) => cat === cleanFilter || cat.includes(cleanFilter));
+    const matchCat = filter === "Todos"
+      || (filter === "Especiais" && v.special === true)
+      || productCategories.some((cat) => cat === cleanFilter || cat.includes(cleanFilter));
     
     const searchStr = (search || "").toLowerCase();
     const matchSearch = !search || 

@@ -230,13 +230,22 @@ section { position: relative; }
 
 /* ---------- Catalog layout ---------- */
 .catalog-section { padding-top: 48px; }
-.catalog-controls { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.catalog-controls { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
 .catalog-controls .search-wrap { order: 2; flex: 0 1 440px; margin-bottom: 0; }
 .catalog-controls .filter-row { order: 1; flex: 1; margin-bottom: 0; }
+.catalog-controls .filter-row { min-width: 0; }
 
 @media (max-width: 899px) {
   .catalog-controls { align-items: stretch; flex-direction: column; gap: 20px; }
   .catalog-controls .search-wrap { max-width: none; width: 100%; }
+}
+@media (max-width: 639px) {
+  .site-header .header-inner { height: 62px; gap: 12px; }
+  .site-header .site-logo { height: 30px; }
+  .site-header .nav-links { display: flex; gap: 14px; }
+  .site-header .nav-links a:nth-child(n+3) { display: none; }
+  .site-header .menu-toggle { margin-left: auto; }
+  .mobile-menu { padding-top: 18px; }
 }
 
 /* ---------- Guarantee ---------- */

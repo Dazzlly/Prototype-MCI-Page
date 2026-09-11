@@ -16,9 +16,9 @@ const waLink = (name, price, url) =>
 const VEHICLES = [
   { name: "MC Mia", category: "Autopropelido", price: 9490, price_12x: 749.16, price_21x: 460.74, power_w: 1000, range_km: 40, top_speed_kmh: 32, description: "A Scooter Elétrica MIA 1000w da Moto Chefe é a opção ideal para você que procura mobilidade prática, econômica e sustentável!", image_url: "modelos/mia/preta/mia-preta.webp", product_url: "https://motochefeitaim.com.br/product/mc-mia-1000w-autopropelido-sem-cnh/", featured: true },
   { name: "MC Jet Max", category: "Autopropelido", price: 11990, price_12x: 1082, price_21x: 691.39, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "A Jet Max combina design robusto e moderno com tecnologia inteligente para o dia a dia. Motor de 1000W, 32 km/h, bateria de lítio 60V 30Ah de longa duração. Sem necessidade de CNH.", image_url: "modelos/jet-max/azul/jetmax.webp", product_url: "https://motochefeitaim.com.br/product/motochefe-jetmax-1000w-autopropelido-sem-cnh-copia/", featured: false },
-  { name: "MC R10", category: "Autopropelido, Especiais", price: 11990, price_12x: 1082, price_21x: 691.39, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Edição Limitada Ronaldinho Gaúcho. Inspirada na genialidade do R10, une visual esportivo, detalhes em verde e amarelo, motor de 1000W, autonomia de até 50 km e velocidade de 32 km/h. Sem necessidade de CNH.", image_url: "modelos/r10/galeria/r10.png", product_url: "https://motochefebrasil.com.br/modelos/r10/", featured: false },
-  { name: "MC X12", category: "Autopropelido, Especiais", price: 9990, price_12x: 916, price_21x: 576.06, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "O modelo X12 é estiloso, moderno e inovador. Ideal para o dia a dia e momentos de lazer, com suspensão dupla e banco diferenciado. Sem necessidade de CNH.", image_url: "modelos/x12/preto/x12.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-x12-1000w-autopropelido-sem-cnh/", featured: true },
-  { name: "MC Giga", category: "Autopropelido, Especiais", price: 10990, price_12x: 958, price_21x: 633.73, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Estilo e design. Scooter elétrica autopropelida com 1000W e 50 km de autonomia. Sem necessidade de CNH.", image_url: "modelos/giga/preto/giga.webp", featured_image: "modelos/giga/vasco/giga-featured.webp", product_url: "https://itaim.motochefe.com.br", featured: true },
+  { name: "MC R10", category: "Autopropelido", special: true, special_image_url: "modelos/r10/verde-amarelo/r10-verde-amarelo-1.png", price: 11990, price_12x: 1082, price_21x: 691.39, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Edição Limitada Ronaldinho Gaúcho. Inspirada na genialidade do R10, une visual esportivo, detalhes em verde e amarelo, motor de 1000W, autonomia de até 50 km e velocidade de 32 km/h. Sem necessidade de CNH.", image_url: "modelos/r10/galeria/r10.png", product_url: "https://motochefebrasil.com.br/modelos/r10/", featured: false },
+  { name: "MC X12", category: "Autopropelido", special: true, special_image_url: "modelos/x12/palmeiras/x12.webp", price: 9990, price_12x: 916, price_21x: 576.06, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "O modelo X12 é estiloso, moderno e inovador. Ideal para o dia a dia e momentos de lazer, com suspensão dupla e banco diferenciado. Sem necessidade de CNH.", image_url: "modelos/x12/preto/x12.webp", product_url: "https://motochefeitaim.com.br/product/scooter-eletrica-x12-1000w-autopropelido-sem-cnh/", featured: true },
+  { name: "MC Giga", category: "Autopropelido", special: true, special_image_url: "modelos/giga/vasco/giga-featured.webp", price: 10990, price_12x: 958, price_21x: 633.73, power_w: 1000, range_km: 50, top_speed_kmh: 32, description: "Estilo e design. Scooter elétrica autopropelida com 1000W e 50 km de autonomia. Sem necessidade de CNH.", image_url: "modelos/giga/preto/giga.webp", featured_image: "modelos/giga/vasco/giga-featured.webp", product_url: "https://itaim.motochefe.com.br", featured: true },
   { name: "MC Joy Tri", category: "Triciclo, Autopropelido", price: null, power_w: 600, range_km: 40, top_speed_kmh: 32, description: "Conforto, mobilidade e design. Triciclo elétrico com 600W e 55 km de autonomia. Sem necessidade de CNH.", image_url: "modelos/joy-tri/preto/joy-tri.webp", product_url: "https://itaim.motochefe.com.br" },
   { name: "MC X15", category: "Triciclo, Ciclomotor", price: 14490, price_12x: 1274, price_21x: 835.55, power_w: 3000, range_km: 45, top_speed_kmh: 50, description: "Potência, design e agilidade. Scooter elétrica de 3000W que atinge 50 km/h. Exige CNH e emplacamento.", image_url: "modelos/x15/preto/x15.webp", product_url: "https://itaim.motochefe.com.br" },
   { name: "MC VED", category: "Triciclo, Autopropelido", price: 14990, price_12x: 1274, price_21x: 864.38, power_w: 1000, range_km: 45, top_speed_kmh: 32, description: "A VED 1000W oferece uma maneira ecologicamente correta de se locomover e prioriza o conforto.", image_url: "modelos/ved/preto/ved.webp", product_url: "https://motochefeitaim.com.br/product/triciclo-ventane-1000w-autopropelido-sem-cnh/" },
@@ -374,6 +374,25 @@ const MODEL_DETAILS = {
   },
   r10: {
     badge: "EDIÇÃO LIMITADA · RONALDINHO GAÚCHO",
+    colors: [
+      { name: "Verde Amarelo", type: "brazil", hex: "#16813b", edition: "verde-amarelo", images: [
+        "modelos/r10/verde-amarelo/r10-verde-amarelo-1.png",
+        "modelos/r10/galeria/r10.png",
+        "modelos/r10/galeria/r10-galeria-6.png"
+      ] }
+    ],
+    "verde-amarelo": {
+      badge: "EDIÇÃO LIMITADA",
+      title: "R10 VERDE E AMARELO",
+      subtitle: "Ronaldinho Gaúcho × MotoChefe",
+      description: "Uma edição exclusiva inspirada na genialidade do R10, com identidade verde e amarela e os recursos da scooter elétrica MC R10.",
+      limitedUnits: 100,
+      details: [
+        { title: "Identidade exclusiva", text: "Acabamento esportivo com detalhes em verde e amarelo." },
+        { title: "Tecnologia e autonomia", text: "Motor de 1000W, bateria removível e até 50 km de autonomia." },
+        { title: "Mobilidade sem CNH", text: "Modelo autopropelido para deslocamentos práticos no dia a dia." }
+      ]
+    },
     features: [
       { icon: "🏆", text: "Edição Limitada Ronaldinho Gaúcho" },
       { icon: "🚫", text: "Sem necessidade de CNH" },
