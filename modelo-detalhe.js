@@ -279,6 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderPurchase() {
     const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar<br>no WhatsApp</a>`;
+    const unavailable = getCurrentColor() && getCurrentColor().unavailable;
     const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_12x * 12)}</span></p>` : "") +
       (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_21x * 21)}</span></p>` : "");
     return `
@@ -286,12 +287,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>Pronto para sua ${shortName}?</h3>
         <div class="model-purchase-row">
           <div class="model-price-block">
-            <p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>
-            ${parcelas}
+            ${unavailable
+              ? `<p class="model-price-unavailable">Cor selecionada indisponível ou fora de estoque.</p>`
+              : `<p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>${parcelas}`}
           </div>
           ${wa}
         </div>
-        <p class="model-price-neg">${vehicle.price ? "Condições de pagamento negociáveis com vendedores" : "Fale com nossa equipe e garanta as melhores condições"}</p>
+        <p class="model-price-neg" id="model-price-neg">${unavailable ? "Para consultar disponibilidade, fale com um vendedor." : (vehicle.price ? "Condições de pagamento negociáveis com vendedores" : "Fale com nossa equipe e garanta as melhores condições")}</p>
       </div>`;
   }
 
@@ -437,6 +439,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const descText = document.getElementById("model-desc-text");
     if (descText) {
       descText.textContent = (ed && ed.description) ? ed.description : (vehicle.description || "");
+    }
+
+    const priceBlock = document.querySelector(".model-price-block");
+    const priceNeg = document.getElementById("model-price-neg");
+    const unavailable = getCurrentColor() && getCurrentColor().unavailable;
+    if (priceBlock) {
+      priceBlock.innerHTML = unavailable
+        ? '<p class="model-price-unavailable">Cor selecionada indisponível ou fora de estoque.</p>'
+        : `<p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>${(vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_12x * 12)}</span></p>` : "")}${(vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_21x * 21)}</span></p>` : "")}`;
+    }
+    if (priceNeg) {
+      priceNeg.textContent = unavailable ? "Para consultar disponibilidade, fale com um vendedor." : (vehicle.price ? "Condições de pagamento negociáveis com vendedores" : "Fale com nossa equipe e garanta as melhores condições");
     }
 
     // Atualiza galeria (imagens da cor selecionada, se houver)

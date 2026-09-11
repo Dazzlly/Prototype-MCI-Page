@@ -242,8 +242,7 @@ section { position: relative; }
 @media (max-width: 639px) {
   .site-header .header-inner { height: 62px; gap: 12px; }
   .site-header .site-logo { height: 30px; }
-  .site-header .nav-links { display: flex; gap: 14px; }
-  .site-header .nav-links a:nth-child(n+3) { display: none; }
+  .site-header .nav-links { display: none; }
   .site-header .menu-toggle { margin-left: auto; }
   .mobile-menu { padding-top: 18px; }
 }
@@ -302,7 +301,8 @@ section { position: relative; }
 @keyframes floatB { 0%,100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-15px) rotate(-2deg); } }
 
 /* CONFIGURAÇÕES GLOBAIS DO HEADER E SEÇÕES (MCI) */
-.site-header { position: fixed !important; top: 0; left: 0; width: 100%; z-index: 1000; background-color: transparent !important; backdrop-filter: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.site-header { position: fixed !important; top: 0; left: 0; width: 100%; z-index: 1000; background-color: var(--bg) !important; backdrop-filter: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.home-page .site-header { background-color: transparent !important; }
 .site-header.scrolled { background-color: rgba(10, 10, 10, 0.85) !important; backdrop-filter: blur(12px); }
 .site-header .header-inner { max-width: 96% !important; width: 100% !important; justify-content: space-between !important; }
 .site-logo { height: 45px !important; object-fit: contain; }
