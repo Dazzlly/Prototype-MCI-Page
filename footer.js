@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="./index.html"><img class="site-logo" src="./images/MCI-Tw.png" alt="Motochefe Itaim"></a>
-          <p>Loja Oficial Motochefe em São Paulo. O melhor em Bikes, Motos e Scooters Elétricas!</p>
+          <a href="./index.html"><img class="site-logo" src="./images/MCI-Tw.png" alt="MotoChefe Itaim"></a>
+          <p>Loja Oficial MotoChefe Itaim em São Paulo. O melhor em Bikes, Motos e Scooters Elétricas!</p>
           <div class="social-row">
             <a class="social-ig" data-social-link="instagram" href="${SOCIAL_LINKS.instagram}" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
             <a class="social-fb" data-social-link="facebook" href="${SOCIAL_LINKS.facebook}" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
@@ -18,10 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <ul><li><a href="./index.html">Início</a></li><li><a href="./modelos.html">Modelos</a></li><li><a href="./oficina.html">Oficina</a></li><li><a href="./contato.html">Contato</a></li></ul>
         </div>
         <div class="footer-col">
-          <h4>Categorias</h4>
-          <ul><li><a href="./modelos.html">Scooters</a></li><li><a href="./modelos.html">Bicicletas</a></li><li><a href="./modelos.html">Triciclos</a></li><li><a href="./modelos.html">Autopropelidos</a></li></ul>
-        </div>
-        <div class="footer-col">
           <h4>Contato</h4>
           <ul>
             <li><a href="https://www.google.com/maps/search/?api=1&query=Rua+João+Cachoeira+1387+Itaim+Bibi+São+Paulo" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Rua João Cachoeira, 1387 — Itaim Bibi, SP</a></li>
@@ -31,11 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>
       <div class="footer-base">
-        <p>© <span id="year"></span> Motochefe Itaim. Todos os direitos reservados.</p>
-        <p>Loja Oficial Motochefe em São Paulo</p>
+        <p>© <span id="year"></span> MotoChefe Itaim. Todos os direitos reservados.</p>
+        <p>Loja Oficial MotoChefe Itaim em São Paulo</p>
       </div>
     </div>
   </footer>
 `;
   document.getElementById("year").textContent = new Date().getFullYear();
+  const updateFooterLogo = () => {
+    const logo = document.querySelector(".footer-brand .site-logo");
+    if (logo)         logo.src = "./images/MCI-Tw.png";
+  };
+  document.addEventListener("themechange", updateFooterLogo);
+  updateFooterLogo();
 });
