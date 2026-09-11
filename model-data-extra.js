@@ -22,7 +22,7 @@ Object.assign(MODEL_DETAILS, {
         "modelos/mia/azul/mia-azul-11.jpg",
         "modelos/mia/azul/mia-azul-12.jpg",
       ] },
-      { name: "Violeta escuro", hex: "#7a3aa8", images: [
+      { name: "Violeta escuro", hex: "#7a3aa8", unavailable: true, images: [
         "modelos/mia/violeta-escuro/mia-violeta-escuro-1.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-2.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-3.jpg",
