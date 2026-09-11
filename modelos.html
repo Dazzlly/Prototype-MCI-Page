@@ -12,6 +12,7 @@
 </head>
 <body>
   <div id="header-dinamico"></div>
+  <script src="./social-links.js" defer></script>
   <script src="./menu.js" defer></script>
 
   <section class="page-hero">
@@ -32,7 +33,7 @@
           <input id="catalog-search" class="search-input" type="text" placeholder="Buscar por modelo, categoria...">
         </div>
         <div id="filter-row" class="filter-row">
-          <span class="filter-label"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg> Filtrar por:</span>
+          <button class="filter-label filter-toggle" type="button" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg> Filtrar por:</button>
         </div>
       </div>
       <div id="catalog-filter" data-current="Todos"></div>

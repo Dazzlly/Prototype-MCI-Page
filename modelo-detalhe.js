@@ -29,6 +29,13 @@ const UK_FLAG_SVG = `<svg class="uk-flag" viewBox="0 0 60 60" xmlns="http://www.
   </g>
 </svg>`;
 
+const BRAZIL_FLAG_SVG = `<svg class="brazil-flag" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <circle cx="30" cy="30" r="30" fill="#009c3b"/>
+  <path d="M30 8 L52 30 L30 52 L8 30 Z" fill="#ffdf00"/>
+  <circle cx="30" cy="30" r="10" fill="#002776"/>
+  <path d="M21 27.5 C26 25 34 25 39 27.5" fill="none" stroke="#fff" stroke-width="2"/>
+</svg>`;
+
 // Slug com remoção de acentos — mesma chave usada pelo sincronizador do Google Drive (scripts/drive-sync.js)
 const slugKey = (s) => slugify(String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
 
@@ -79,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getSelectedEdition() {
     const c = getCurrentColor();
-    return (c && c.type === "shield") ? c.edition : null;
+    return c && c.edition ? c.edition : null;
   }
 
   function getColorLabel() {
@@ -199,15 +206,23 @@ document.addEventListener("DOMContentLoaded", () => {
         <span class="color-swatch-label">UK</span>
       </button>`;
     }
+    if (c.type === "brazil") {
+      return `<button class="color-swatch ${active}" data-index="${i}" aria-label="Verde Amarelo">
+        <span class="color-dot color-dot-brazil">${BRAZIL_FLAG_SVG}</span>
+        <span class="color-swatch-label">Verde<br>Amarelo</span>
+      </button>`;
+    }
     if (c.type === "carbono") {
       return `<button class="color-swatch ${active}" data-index="${i}" aria-label="Carbono">
         <span class="color-dot color-dot-carbono"></span>
         <span class="color-swatch-label">Carbono</span>
       </button>`;
     }
-    return `<button class="color-swatch ${active}" data-index="${i}" aria-label="${c.name}">
+    const unavailable = c.unavailable ? " color-swatch-unavailable" : "";
+    return `<button class="color-swatch${unavailable} ${active}" data-index="${i}" aria-label="${c.name}">
       <span class="color-dot" style="background: ${c.hex}"></span>
       <span class="color-swatch-label">${c.name}</span>
+      ${c.unavailable ? '<span class="color-unavailable-mark" aria-hidden="true">×</span>' : ""}
     </button>`;
   }
 
@@ -264,6 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderPurchase() {
     const wa = `<a class="btn-cta-wa" href="${getWhatsAppLink()}" target="_blank" rel="noopener" id="model-cta-wa">💬 Consultar<br>no WhatsApp</a>`;
+    const unavailable = getCurrentColor() && getCurrentColor().unavailable;
     const parcelas = (vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_12x * 12)}</span></p>` : "") +
       (vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_21x * 21)}</span></p>` : "");
     return `
@@ -271,12 +287,13 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>Pronto para sua ${shortName}?</h3>
         <div class="model-purchase-row">
           <div class="model-price-block">
-            <p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>
-            ${parcelas}
+            ${unavailable
+              ? `<p class="model-price-unavailable">Cor selecionada indisponível ou fora de estoque.</p>`
+              : `<p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>${parcelas}`}
           </div>
           ${wa}
         </div>
-        <p class="model-price-neg">${vehicle.price ? "Valores Especiais são Negociáveis com Vendedores" : "Fale com nossa equipe e garanta as melhores condições"}</p>
+        <p class="model-price-neg" id="model-price-neg">${unavailable ? "Para consultar disponibilidade, fale com um vendedor." : (vehicle.price ? "Condições de pagamento negociáveis com vendedores" : "Fale com nossa equipe e garanta as melhores condições")}</p>
       </div>`;
   }
 
@@ -305,7 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderEditions() {
-    const editions = colors.filter(c => c.type === "shield" && details[c.edition]);
+    const editions = colors.filter(c => c.edition && details[c.edition]);
     return editions.map(c => {
       const ed = details[c.edition];
       const color = EDITION_COLORS[c.edition] || "#cc0000";
@@ -412,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mostra/esconde seções de edição especial
     const selectedEd = getSelectedEdition();
-    colors.filter(c => c.type === "shield").forEach(c => {
+    colors.filter(c => c.edition).forEach(c => {
       const section = document.getElementById(`edition-${c.edition}`);
       if (section) section.style.display = (c.edition === selectedEd) ? "block" : "none";
     });
@@ -422,6 +439,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const descText = document.getElementById("model-desc-text");
     if (descText) {
       descText.textContent = (ed && ed.description) ? ed.description : (vehicle.description || "");
+    }
+
+    const priceBlock = document.querySelector(".model-price-block");
+    const priceNeg = document.getElementById("model-price-neg");
+    const unavailable = getCurrentColor() && getCurrentColor().unavailable;
+    if (priceBlock) {
+      priceBlock.innerHTML = unavailable
+        ? '<p class="model-price-unavailable">Cor selecionada indisponível ou fora de estoque.</p>'
+        : `<p class="model-price-pix">${vehicle.price ? "PIX " + fmtPrice(vehicle.price) : "Sob Consulta"}</p>${(vehicle.price && vehicle.price_12x ? `<p class="model-price-parcel">12x sem juros de ${fmtPrice(vehicle.price_12x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_12x * 12)}</span></p>` : "")}${(vehicle.price && vehicle.price_21x ? `<p class="model-price-parcel">21x de ${fmtPrice(vehicle.price_21x)}<span class="model-price-total">Total ${fmtPrice(vehicle.price_21x * 21)}</span></p>` : "")}`;
+    }
+    if (priceNeg) {
+      priceNeg.textContent = unavailable ? "Para consultar disponibilidade, fale com um vendedor." : (vehicle.price ? "Condições de pagamento negociáveis com vendedores" : "Fale com nossa equipe e garanta as melhores condições");
     }
 
     // Atualiza galeria (imagens da cor selecionada, se houver)

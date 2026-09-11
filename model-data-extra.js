@@ -22,7 +22,7 @@ Object.assign(MODEL_DETAILS, {
         "modelos/mia/azul/mia-azul-11.jpg",
         "modelos/mia/azul/mia-azul-12.jpg",
       ] },
-      { name: "Violeta escuro", hex: "#7a3aa8", images: [
+      { name: "Violeta escuro", hex: "#7a3aa8", unavailable: true, images: [
         "modelos/mia/violeta-escuro/mia-violeta-escuro-1.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-2.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-3.jpg",
@@ -34,6 +34,11 @@ Object.assign(MODEL_DETAILS, {
         "modelos/mia/violeta-escuro/mia-violeta-escuro-9.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-10.jpg",
         "modelos/mia/violeta-escuro/mia-violeta-escuro-11.jpg",
+      ] },
+      { name: "Verde", hex: "#16813b", images: [
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-1.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-2.jpg",
+        "modelos/mia/violeta-escuro/mia-violeta-escuro-3.jpg"
       ] },
       { name: "Branca", hex: "#e8e8e8", images: [
         "modelos/mia/branco/mia-branco-1.jpg",
