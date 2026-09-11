@@ -276,22 +276,23 @@ section { position: relative; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  width: 36px;
+  height: 36px;
   min-height: 36px;
-  padding: 0 11px;
+  padding: 0;
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 50% !important;
   background: var(--surface-2, hsl(0, 0%, 10.6%));
   color: var(--fg);
   font: inherit;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   cursor: pointer;
   transition: background .25s, color .25s, border-color .25s;
 }
 .theme-toggle:hover { border-color: var(--primary); color: var(--primary); }
 .theme-toggle-icon { font-size: 17px; line-height: 1; }
-.theme-toggle-mobile { justify-content: flex-start; width: 100%; border-radius: 8px; padding: 10px 14px; }
+.theme-toggle-mobile { width: 36px; height: 36px; justify-content: center; }
 
 /* The light palette keeps the gold and purple identity while changing only surfaces and contrast. */
 :root[data-theme="light"] {
