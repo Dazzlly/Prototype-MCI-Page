@@ -139,6 +139,53 @@
 .model-error h1 { font-size: 32px; color: #fff; margin-bottom: 12px; }
 .model-error p { color: var(--muted-fg); }
 
+:root[data-theme="light"] .feature-item,
+:root[data-theme="light"] .edition-detail-item {
+  background: rgba(255, 255, 255, .08);
+  border-color: rgba(255, 255, 255, .18);
+}
+:root[data-theme="light"] .spec-row:nth-child(odd) { background: rgba(255,255,255,.06); }
+:root[data-theme="light"] .model-specs-about {
+  background: var(--bg);
+}
+:root[data-theme="light"] .model-desc-text,
+:root[data-theme="light"] .feature-text,
+:root[data-theme="light"] .spec-value {
+  color: var(--card-fg);
+}
+:root[data-theme="light"] .spec-row {
+  border-bottom-color: var(--border);
+}
+:root[data-theme="light"] .feature-item {
+  background: #f0eee8;
+  border-color: var(--border);
+  box-shadow: 0 8px 22px rgba(44,35,20,.07);
+}
+:root[data-theme="light"] .feature-item:hover {
+  border-color: var(--primary);
+}
+
+/* Keep secondary text readable on the dark model hero and purchase panels. */
+:root[data-theme="light"] .model-hero-desc-text,
+:root[data-theme="light"] .model-stat-label,
+:root[data-theme="light"] .model-price-parcel,
+:root[data-theme="light"] .model-price-total,
+:root[data-theme="light"] .model-price-neg {
+  color: #f0eee8;
+}
+:root[data-theme="light"] .model-purchase h3 {
+  color: #fff;
+}
+:root[data-theme="light"] .model-includes {
+  background: #292b40;
+  border-color: rgba(208, 154, 36, .62);
+}
+:root[data-theme="light"] .model-include-chip {
+  background: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.2);
+  color: #fff;
+}
+
 /* Catalog card links */
 .veh-img-link { display: block; }
 .veh-title-link { text-decoration: none; }

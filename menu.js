@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <a href="./contato.html">Contato</a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Ativar modo claro" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+        </button>
         <a class="icon-btn" data-social-link="instagram" href="${SOCIAL_LINKS.instagram}" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c72eff" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
         </a>
@@ -38,8 +41,30 @@ document.addEventListener("DOMContentLoaded", () => {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#148aff" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
         </a>
       </div>
+      <button class="theme-toggle theme-toggle-mobile" type="button" data-theme-toggle aria-label="Ativar modo claro" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true">☼</span>
+      </button>
       <a class="btn btn-wa" data-social-link="whatsapp" href="https://wa.me/${SOCIAL_LINKS.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>
     </nav>
   </header>
 `;
+
+  const updateThemeControls = () => {
+    const isLight = ThemeController.get() === "light";
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      button.setAttribute("aria-pressed", String(isLight));
+      button.setAttribute("aria-label", isLight ? "Ativar modo escuro" : "Ativar modo claro");
+      const icon = button.querySelector(".theme-toggle-icon");
+      if (icon) icon.textContent = isLight ? "☾" : "☼";
+    });
+    document.querySelectorAll(".site-logo").forEach((logo) => {
+      logo.src = isLight ? "./images/MCI-Tb.png" : "./images/MCI-Tw.png";
+    });
+  };
+
+  document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+    button.addEventListener("click", () => ThemeController.toggle());
+  });
+  document.addEventListener("themechange", updateThemeControls);
+  updateThemeControls();
 });

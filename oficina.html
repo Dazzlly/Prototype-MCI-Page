@@ -4,39 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oficina — Motochefe Itaim</title>
-  <meta name="description" content="Oficina Motochefe Itaim — manutenção e suporte para sua mobilidade elétrica.">
+  <meta name="description" content="Pre-agendamento de revisao e manutencao para bikes, motos e scooters eletricas Motochefe Itaim.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/mc_icon.png">
   <link rel="stylesheet" href="./styles.css">
+  <script src="./theme.js"></script>
 </head>
 <body>
   <div id="header-dinamico"></div>
   <script src="./social-links.js" defer></script>
   <script src="./menu.js" defer></script>
 
-  <section class="page-hero">
-    <div class="page-hero-blob1"></div>
-    <div class="page-hero-blob2"></div>
-    <div class="page-hero-inner">
-      <span class="eyebrow">Motochefe Itaim</span>
-      <h1>Nossa <span class="accent">Oficina</span></h1>
-      <p>Em breve, informações completas sobre manutenção, revisão e suporte para sua mobilidade elétrica.</p>
-    </div>
-  </section>
-
-  <section class="section-pad">
-    <div class="container">
-      <div class="contact-form-card reveal" style="max-width:760px;margin:0 auto;text-align:center;">
-        <h2>Oficina em preparação</h2>
-        <p>Estamos preparando esta página com os serviços, condições e informações definitivas da oficina.</p>
-        <a class="btn btn-wa btn-lg" data-social-link="whatsapp" href="https://wa.me/5511948711047" target="_blank" rel="noopener">Falar com a equipe</a>
+  <main>
+    <section class="workshop-hero">
+      <div class="page-hero-blob1"></div>
+      <div class="page-hero-blob2"></div>
+      <div class="container workshop-hero-inner">
+        <span class="eyebrow">Oficina da Concessionária MotoChefe Itaim</span>
+        <h1>Cuide da sua <span class="accent">mobilidade</span></h1>
+        <p>Pre-agende sua revisao ou manutencao e conte com uma equipe especializada em mobilidade eletrica.</p>
+        <a class="btn btn-primary btn-lg" href="#agendamento">Solicitar pre-agendamento <span aria-hidden="true">↓</span></a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="workshop-section workshop-process">
+      <div class="container">
+        <div class="workshop-heading reveal">
+          <span class="eyebrow">Processo simples</span>
+          <h2 class="section-title">Como funciona</h2>
+          <p>Organizamos cada etapa para que seu veiculo volte a rodar com seguranca e tranquilidade.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal"><span>01</span><h3>Pre-agende</h3><p>Informe seus dados, o modelo e o tipo de atendimento que precisa.</p></article>
+          <article class="process-card reveal" data-delay="80"><span>02</span><h3>Escolha o melhor horario</h3><p>Envie sua preferencia de dia e horario para a nossa equipe.</p></article>
+          <article class="process-card reveal" data-delay="160"><span>03</span><h3>Avaliamos o veiculo</h3><p>O diagnostico e o orcamento sao feitos com transparencia antes do servico.</p></article>
+          <article class="process-card reveal" data-delay="240"><span>04</span><h3>Confirmamos no WhatsApp</h3><p>Voce recebe a confirmacao final e as orientacoes para a entrega.</p></article>
+        </div>
+        <div class="workshop-notice reveal"><strong>Importante:</strong> o envio do formulario e uma solicitacao de horario. O atendimento fica confirmado somente apos o retorno da equipe.</div>
+      </div>
+    </section>
+
+    <section class="workshop-section workshop-services">
+      <div class="container">
+        <div class="workshop-heading reveal"><span class="eyebrow">Servicos</span><h2 class="section-title">Revisao ou manutencao?</h2><p>Escolha o fluxo que melhor descreve o que sua bike, moto ou scooter precisa.</p></div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-icon">R</div><h3>Revisao periodica</h3><p>Check-up preventivo, ajustes, conferencia de componentes e cuidados para manter o veiculo em dia.</p><a href="#agendamento">Agendar revisao <span>→</span></a></article>
+          <article class="service-card reveal" data-delay="100"><div class="service-icon">M</div><h3>Manutencao</h3><p>Diagnostico e reparos para freios, pneus, bateria, carregador, parte eletrica, ruidos ou colisao.</p><a href="#agendamento">Solicitar manutencao <span>→</span></a></article>
+        </div>
+        <div class="workshop-info-subheading reveal">
+          <span class="eyebrow">Informacoes da oficina</span>
+          <h2>Valores, garantia e facilidades</h2>
+          <p>Consulte os principais detalhes antes de solicitar seu atendimento.</p>
+        </div>
+        <div id="workshop-info-grid" class="workshop-info-grid workshop-info-grid--services"></div>
+      </div>
+    </section>
+
+    <section class="workshop-section workshop-details">
+      <div class="container details-grid">
+        <div class="detail-panel reveal"><span class="eyebrow">Antes do atendimento</span><h2>O que voce precisa saber</h2><ul><li>Traga a chave e o carregador do veiculo, quando aplicavel.</li><li>O responsavel pela entrega deve ser o proprietario ou pessoa autorizada.</li><li>Faremos um check-list de entrada antes de iniciar o servico.</li><li>Servicos e pecas adicionais sao apresentados para aprovacao.</li></ul></div>
+        <div class="detail-panel detail-highlight reveal" data-delay="120"><span class="eyebrow">Facilidade Motochefe</span><h2>Leva e traz sob consulta</h2><p>Precisa de mais comodidade? Consulte nossa equipe sobre retirada e devolucao do seu veiculo na regiao de Sao Paulo.</p><div class="detail-price">Consulte disponibilidade</div><a class="btn btn-outline" data-social-link="whatsapp" href="https://wa.me/5511948711047" target="_blank" rel="noopener">Falar com a oficina</a></div>
+      </div>
+    </section>
+
+    <section id="agendamento" class="workshop-section workshop-booking">
+      <div class="container">
+        <div class="booking-shell reveal">
+          <aside class="booking-sidebar">
+            <a class="booking-logo" href="./index.html"><img src="./images/MCI-Tb.png" alt="Motochefe Itaim"></a>
+            <strong>Oficina da Concessionária MotoChefe Itaim</strong>
+            <span class="booking-meta">Revisao e manutencao</span>
+            <div class="booking-instructions">
+              <p>Como funciona o pre-agendamento:</p>
+              <ol><li>Preencha os dados do veiculo</li><li>Escolha o tipo de servico</li><li>Informe sua preferencia</li><li>Receba a confirmacao pelo WhatsApp</li></ol>
+            </div>
+            <div class="booking-warning"><strong>Importante</strong><br>O horario solicitado depende da analise e confirmacao da equipe.</div>
+          </aside>
+          <div class="booking-main">
+            <div class="booking-progress" aria-label="Progresso do formulario">
+              <span class="progress-step is-active" data-progress="1"></span><span class="progress-step" data-progress="2"></span><span class="progress-step" data-progress="3"></span><span class="progress-step" data-progress="4"></span><span class="progress-step" data-progress="5"></span><span class="progress-step" data-progress="6"></span>
+            </div>
+            <form id="workshop-form">
+              <section class="form-step is-active" data-step="1"><span class="form-kicker">Formulario</span><h2>Pre-agendamento Oficina</h2><p class="form-intro">Comece escolhendo o tipo de servico e preenchendo seus dados basicos.</p><fieldset><legend>Tipo de servico *</legend><div class="choice-grid"><label class="choice-card"><input type="radio" name="service" value="Revisao periodica" required><span><strong>Revisao periodica</strong><small>Manutencao preventiva</small></span></label><label class="choice-card"><input type="radio" name="service" value="Manutencao"><span><strong>Manutencao</strong><small>Reparo ou diagnostico</small></span></label></div></fieldset><div class="form-row"><div class="field"><label for="workshop-name">Nome completo *</label><input id="workshop-name" name="name" required placeholder="Seu nome completo"></div><div class="field"><label for="workshop-phone">Telefone / WhatsApp *</label><input id="workshop-phone" name="phone" required placeholder="(11) 90000-0000"></div></div><div class="form-row"><div class="field"><label for="workshop-city">Cidade *</label><input id="workshop-city" name="city" required placeholder="Ex.: Sao Paulo"></div><div class="field"><label for="workshop-email">E-mail</label><input id="workshop-email" name="email" type="email" placeholder="seu@email.com"></div></div><button class="btn btn-primary wizard-next" type="button">Continuar</button></section>
+              <section class="form-step" data-step="2"><span class="form-kicker">Secao 2</span><h2>Dados do veiculo</h2><p class="form-intro">Conte qual veiculo recebera o atendimento.</p><div class="form-row"><div class="field"><label for="workshop-model">Modelo do veiculo *</label><input id="workshop-model" name="model" required placeholder="Ex.: Motochefe Joy"></div><div class="field"><label for="workshop-km">Quilometragem atual</label><input id="workshop-km" name="km" placeholder="Ex.: 1000 km"></div></div><div class="field"><label>Voce comprou na Motochefe?</label><div class="choice-grid"><label class="choice-card compact"><input type="radio" name="purchased" value="Sim"><span>Sim</span></label><label class="choice-card compact"><input type="radio" name="purchased" value="Nao"><span>Nao</span></label></div></div><div class="field"><label>Como prefere realizar o atendimento?</label><div class="choice-grid"><label class="choice-card compact"><input type="radio" name="delivery" value="Levar a moto na unidade" checked><span>Vou levar na unidade</span></label><label class="choice-card compact"><input type="radio" name="delivery" value="Quero leva e traz"><span>Quero leva e traz</span></label></div></div><div class="wizard-actions"><button class="btn btn-outline wizard-back" type="button">Voltar</button><button class="btn btn-primary wizard-next" type="button">Continuar</button></div></section>
+              <section class="form-step" data-step="3"><span class="form-kicker">Secao 3</span><h2>Detalhes do servico — <span class="service-name">Revisao</span></h2><p class="form-intro">Selecione os detalhes que ajudam nossa equipe a preparar o atendimento.</p><div class="conditional-service" data-service="Revisao"><div class="field"><label>Qual revisao deseja agendar?</label><div class="choice-grid option-grid"><label class="choice-card compact"><input type="radio" name="revision" value="R1"><span>Revisao 1</span></label><label class="choice-card compact"><input type="radio" name="revision" value="R2"><span>Revisao 2</span></label><label class="choice-card compact"><input type="radio" name="revision" value="R3"><span>Revisao 3</span></label><label class="choice-card compact"><input type="radio" name="revision" value="R4"><span>Revisao 4</span></label><label class="choice-card compact"><input type="radio" name="revision" value="R5"><span>Revisao 5</span></label></div></div></div><div class="conditional-service is-hidden" data-service="Manutencao"><div class="field"><label>Qual o problema?</label><div class="choice-grid option-grid"><label class="choice-card compact"><input type="checkbox" name="problem" value="Nao liga / nao acelera"><span>Nao liga / nao acelera</span></label><label class="choice-card compact"><input type="checkbox" name="problem" value="Bateria / autonomia"><span>Bateria / autonomia</span></label><label class="choice-card compact"><input type="checkbox" name="problem" value="Freios"><span>Freios</span></label><label class="choice-card compact"><input type="checkbox" name="problem" value="Barulho estranho"><span>Barulho estranho</span></label><label class="choice-card compact"><input type="checkbox" name="problem" value="Pneu / rodas"><span>Pneu / rodas</span></label><label class="choice-card compact"><input type="checkbox" name="problem" value="Outro"><span>Outro</span></label></div></div></div><div class="field"><label for="workshop-message">Descreva o problema identificado</label><textarea id="workshop-message" name="message" rows="4" placeholder="Quanto mais detalhes, melhor sera a analise tecnica."></textarea></div><div class="wizard-actions"><button class="btn btn-outline wizard-back" type="button">Voltar</button><button class="btn btn-primary wizard-next" type="button">Continuar</button></div></section>
+              <section class="form-step" data-step="4"><span class="form-kicker">Secao 4</span><h2>Entrega do veiculo</h2><p class="form-intro">Informe quem entregara o veiculo para a equipe.</p><div class="field"><label>Quem vai trazer a moto?</label><div class="choice-grid"><label class="choice-card compact"><input type="radio" name="responsible" value="Proprietario" checked><span>Proprietario</span></label><label class="choice-card compact"><input type="radio" name="responsible" value="Terceiro autorizado"><span>Terceiro autorizado</span></label></div></div><div class="field"><label for="workshop-responsible">Nome de quem vai trazer</label><input id="workshop-responsible" name="responsibleName" placeholder="Nome completo"></div><div class="field"><label for="workshop-observations">Observacoes</label><textarea id="workshop-observations" name="observations" rows="4" placeholder="Campo aberto para comentarios"></textarea></div><div class="field"><label for="workshop-files">Anexos do veiculo</label><input id="workshop-files" name="files" type="file" accept=".jpg,.jpeg,.png,.pdf" multiple><small class="field-help">Opcional. JPG, PNG ou PDF.</small></div><div class="wizard-actions"><button class="btn btn-outline wizard-back" type="button">Voltar</button><button class="btn btn-primary wizard-next" type="button">Escolher data e hora</button></div></section>
+              <section class="form-step" data-step="5"><span class="form-kicker">Ultimo passo</span><h2>Selecione data e hora</h2><p class="form-intro">Escolha uma preferencia. A confirmacao sera feita pelo WhatsApp apos a analise da equipe.</p><div class="form-row"><div class="field"><label for="workshop-date">Data desejada</label><input id="workshop-date" name="date" type="date"></div><div class="field"><label for="workshop-time">Horario desejado</label><select id="workshop-time" name="time"><option value="">Selecione</option><option>Manha (10h - 13h)</option><option>Tarde (13h - 17h)</option><option>Fim de tarde (17h - 19h)</option></select></div></div><div class="calendar-note"><strong>Pre-agendamento:</strong> a data escolhida sera validada pela oficina antes da confirmacao.</div><div class="wizard-actions"><button class="btn btn-outline wizard-back" type="button">Voltar</button><button class="btn btn-primary wizard-next" type="button">Revisar dados</button></div></section>
+              <section class="form-step" data-step="6"><span class="form-kicker">Conclua sua solicitacao</span><h2>Confira seus dados</h2><p class="form-intro">Tudo certo? Envie a solicitacao e fale diretamente com nossa equipe.</p><div id="workshop-summary" class="workshop-summary"></div><div class="wizard-actions"><button class="btn btn-outline wizard-back" type="button">Voltar</button><button class="btn btn-wa btn-lg" type="submit">Enviar pelo WhatsApp</button></div><p id="workshop-status" class="form-status" role="status">Abrimos o WhatsApp para voce concluir o envio.</p></section>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <div id="footer-dinamico"></div>
   <script src="./footer.js" defer></script>
+  <script src="./oficina.js" defer></script>
   <script src="./app.js" defer></script>
 </body>
 </html>

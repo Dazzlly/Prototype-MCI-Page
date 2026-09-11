@@ -115,3 +115,9 @@
   .mlb-close { top: 12px; right: 14px; width: 40px; height: 40px; }
   .mlb-zoom-hint { display: none; }
 }
+
+:root[data-theme="light"] .mlb-close,
+:root[data-theme="light"] .mlb-nav {
+  border-color: rgba(255,255,255,.35);
+  background: rgba(255,255,255,.12);
+}
