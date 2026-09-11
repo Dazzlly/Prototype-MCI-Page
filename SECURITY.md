@@ -1,6 +1,6 @@
 # Termos de Serviço — Prototype-MCI-Page
 
-**Última atualização:** 08/09/2026
+**Última atualização:** 10/09/2026
 
 O **Prototype-MCI-Page** é um catálogo online que exibe fotos e informações de modelos de motos
 disponíveis na loja.
@@ -13,8 +13,8 @@ disponíveis na loja.
 
 ## Propriedade das imagens
 
-As fotos exibidas são gerenciadas pela própria loja em sua pasta do Google Drive. É proibida
-a reprodução das imagens sem autorização.
+As fotos exibidas são arquivos publicados neste site e continuam protegidas pelos direitos
+da loja. É proibida a reprodução das imagens sem autorização.
 
 ## Alterações
 
