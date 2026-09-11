@@ -2,9 +2,9 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // Header scroll state
-  const header = document.querySelector(".site-header");
-  if (header) {
-    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 20);
+  const siteHeader = document.querySelector(".site-header");
+  if (siteHeader) {
+    const onScroll = () => siteHeader.classList.toggle("scrolled", window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     onScroll();
   }
@@ -12,8 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mobile menu
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".mobile-menu");
+  const header = document.querySelector(".site-header");
   if (toggle && menu) {
-    toggle.addEventListener("click", () => menu.classList.toggle("open"));
+    toggle.addEventListener("click", () => {
+      const isOpen = menu.classList.toggle("open");
+      if (header) header.classList.toggle("mobile-menu-open", isOpen);
+    });
   }
 
   // Reveal on scroll

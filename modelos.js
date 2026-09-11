@@ -10,6 +10,8 @@ function specIcon(type) {
 }
 
 function vehicleCard(v) {
+  const isSpecialFilter = document.getElementById("catalog-filter").dataset.current === "Especiais";
+  const displayName = isSpecialFilter && v.special_name ? v.special_name : v.name;
   const specs = [];
   if (v.power_w) specs.push(`<span class="veh-spec">${specIcon("power")} ${v.power_w}W</span>`);
   if (v.range_km) specs.push(`<span class="veh-spec">${specIcon("range")} ${v.range_km} km</span>`);
@@ -26,19 +28,19 @@ function vehicleCard(v) {
     <article class="veh-card reveal" data-delay="0">
       <a class="veh-img-link" href="./modelo.html?m=${slugify(v.name)}">
         <div class="veh-img">
-          <img src="${imageUrl}" alt="${v.name}" loading="lazy">
+          <img src="${imageUrl}" alt="${displayName}" loading="lazy">
           <span class="veh-badge">${v.category}</span>
         </div>
       </a>
       <div class="veh-body">
-        <a href="./modelo.html?m=${slugify(v.name)}" class="veh-title-link"><h3>${v.name}</h3></a>
+        <a href="./modelo.html?m=${slugify(v.name)}" class="veh-title-link"><h3>${displayName}</h3></a>
         <p class="veh-desc">${v.description || ""}</p>
         <div class="veh-specs">${specs.join("")}</div>
         <div class="veh-foot">
           <div>${priceBlock}</div>
           <div class="veh-foot-actions">
             <a class="veh-details-link" href="./modelo.html?m=${slugify(v.name)}">Ver detalhes</a>
-            <a class="veh-arrow" href="${waLink(v.name, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${v.name}">
+            <a class="veh-arrow" href="${waLink(displayName, v.price, v.product_url)}" target="_blank" rel="noopener" aria-label="Consultar ${displayName}">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
@@ -98,6 +100,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // filtros
   const filterRow = document.getElementById("filter-row");
   if (filterRow) {
+    const filterToggle = filterRow.querySelector(".filter-toggle");
+    if (filterToggle) {
+      filterToggle.addEventListener("click", () => {
+        const isOpen = filterRow.classList.toggle("filters-open");
+        filterToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    }
     FILTERS.forEach((f) => {
       const b = document.createElement("button");
       const isActive = f.toLowerCase() === initialFilter.toLowerCase();
@@ -109,13 +118,26 @@ document.addEventListener("DOMContentLoaded", () => {
         b.classList.add("active");
         document.getElementById("catalog-filter").dataset.current = f;
         renderCatalog();
+        if (filterToggle && window.matchMedia("(max-width: 899px)").matches) {
+          filterRow.classList.remove("filters-open");
+          filterToggle.setAttribute("aria-expanded", "false");
+        }
       });
       filterRow.appendChild(b);
     });
   }
   
   const search = document.getElementById("catalog-search");
-  if (search) search.addEventListener("input", renderCatalog);
+  if (search) {
+    const updateSearchIcon = () => {
+      search.closest(".search-wrap")?.classList.toggle("has-value", search.value.trim().length > 0);
+    };
+    search.addEventListener("input", () => {
+      updateSearchIcon();
+      renderCatalog();
+    });
+    updateSearchIcon();
+  }
   
   renderCatalog();
 });
